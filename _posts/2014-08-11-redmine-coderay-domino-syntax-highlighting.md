@@ -5,7 +5,7 @@ description: "getting the syntax highlighting everyone wants"
 category: xpages
 tags: [xpages, domino, redmine, source control]
 modified: 2014-08-11
-
+comments: true
 share: true
 ---
 
