@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,100,700);
-@import url(http://fonts.googleapis.com/css?family=Sacramento);
+@import url(http://fonts.googleapis.com/css?family='Arizonia');
 
 /*!
  * HMFAYSAL OMEGA v1.0.0
@@ -109,7 +109,7 @@ blockquote:before {
   width: 4px;
 }
 .cursive {
-  font-family: 'Sacramento', cursive;
+  font-family: 'Arizonia', cursive;
   color: #17e4d8;
   font-size: 34px;
   text-align: center;
@@ -786,7 +786,7 @@ h3.lighter,
 h4.lighter,
 h5.lighter,
 h6.lighter {
-  font-weight: 200 !important;
+  font-weight: 300 !important;
 }
 /* ---------- */
 /* ANIMATIONS */
@@ -3821,7 +3821,7 @@ button.menu-button {
   color: #fff
 }
 button.menu-button:hover {
-  background-color: #39c492 ;
+  background-color: #d07922 ;
   color: #fff
   box-shadow: rgba(0,0,0,0.2) 0 0 0 3px;
 }
@@ -3864,11 +3864,12 @@ a#slide{
     }
 
 a#slide:hover{
-    background:#39c492
+    /* background:#39c492 */
+	background: #d07922;
     }
 
 a#slide:after{
-    content:"F"
+    content:"M"
     }
 
 a#slide.slide:after{
