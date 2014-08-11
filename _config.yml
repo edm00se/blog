@@ -1,7 +1,7 @@
 title:            Dev|Blog
 description:      "A blog for my shared trials, tribulations, and triumphs in the world of Lotus/IBM Domino/XPages and more."
 logo:             logo_finalWhite_130.png
-disqus_shortname: edm00se
+disqus_shortname: em-devblog
 # Assign a default image for your site's header and footer
 default_bg:       aBridgeInTime.jpg
 search:           true
