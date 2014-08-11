@@ -7,7 +7,7 @@ image:
   feature: BeardedManiac_profile.png
 ---
 <figure>
-  <img src="{{site.url}}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive"/>
+  <img src="{{site.url}}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive" style="max-width:260px;" />
   <figcaption>Eric McCormick</figcaption>
 </figure>
 
