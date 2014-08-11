@@ -7,7 +7,7 @@ image:
   feature: BeardedManiac_profile.png
 ---
 <figure>
-  <img src="{{ site.url }}/images/BeardedManiac_profile.jpg" alt="Eric McCormick" class="post-avatar img-circle img-responsive">
+  <img src="{{ site.url }}/images/BeardedManiac_profile.png" alt="Eric McCormick" class="post-avatar img-circle img-responsive">
   <figcaption>Eric McCormick</figcaption>
 </figure>
 
