@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Redmine, CodeRay, and Domino, Oh My!"
-description: "getting the syntax highlighting your manager wants"
+description: "getting the syntax highlighting everyone wants"
 category: xpages
 tags: [xpages, domino, redmine, source control]
 modified: 2014-08-11
