@@ -9,7 +9,7 @@ modified: 2014-08-11
 share: true
 ---
 
-### The Situation
+### Syntax Highlighting in Redmine Project Repository
 
 Redmine is a greate way to track projects and their code repositories in a "one stop shopping" locale. The only issue is that, while Redmine makes use of its syntax highlighter of choice (CodeRay, by default), it doesn't know about the custom file extensions used by Domino Designer. This can be easily remedied with a few quick edits.
 
