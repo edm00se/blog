@@ -9,13 +9,15 @@
     <div class="container">
         <div class="row">
             <article class="post col-md-8 col-md-offset-2 hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            {% assign ert = page.content | strip_html | number_of_words | divided_by:180 %}
+            <!--
+			{% assign ert = page.content | strip_html | number_of_words | divided_by:180 %}
             {% assign ertremainder = page.content | strip_html | number_of_words | modulo:180 %}
-            {% if ertremainder >= 90 %}
+			{% if ertremainder >= 90 %}
                 {% assign readtime = ert | plus:1 %}
             {% else %}
                 {% assign readtime = ert %}
             {% endif %}
+			-->
             {% assign modifiedtime = page.modified | date: "%Y%m%d" %} 
             {% assign posttime = page.date | date: "%Y%m%d" %} 
                     <header class="post-header entry-header">
