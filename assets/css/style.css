@@ -3879,7 +3879,7 @@ a#slide.slide:after{
     left:50%;
     width:40px;
     height:40px;
-    margin:0 0 0 -20px;
+    margin:-3px 0 0 -20px;
     font:18px "icon" !important;
     vertical-align:middle
     }
