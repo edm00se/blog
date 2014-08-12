@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,100,700);
-@import url(http://fonts.googleapis.com/css?family='Arizonia');
+@import url(http://fonts.googleapis.com/css?family=Marck+Script);
 
 /*!
  * HMFAYSAL OMEGA v1.0.0
@@ -109,7 +109,7 @@ blockquote:before {
   width: 4px;
 }
 .cursive {
-  font-family: 'Arizonia', cursive;
+  font-family: 'Marck Script', cursive;
   color: #17e4d8;
   font-size: 34px;
   text-align: center;
@@ -4057,3 +4057,8 @@ body.slide{
 
 
 /*      End-Responsive      */
+
+/* override */
+.icon-time {
+	display: none !important;
+}
