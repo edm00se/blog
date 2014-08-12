@@ -3869,7 +3869,7 @@ a#slide:hover{
     }
 
 a#slide:after{
-    content:'&#9776;';
+    content:"\2261";
     }
 
 a#slide.slide:after{
