@@ -1,5 +1,6 @@
 ---
 layout: post
+type: gist
 title: "Redmine, CodeRay, and Domino, Oh My!"
 description: "getting the syntax highlighting everyone wants"
 category: xpages
