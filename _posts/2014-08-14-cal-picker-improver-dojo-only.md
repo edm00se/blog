@@ -2,7 +2,7 @@
 layout: post
 type: gist
 title: "Variations on a Function: XPages Calendar Picker Improver, a Dojo Version"
-description: "a dojo-only version of the calendar picker improver script"
+description: "a dojo-only version of the calendar picker improver script by Mark Roden"
 category: xpages
 tags: [xpages, domino, javascript, dojo]
 modified: 2014-08-14
