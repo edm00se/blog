@@ -17,14 +17,14 @@
   * 
   */
   
-div.gist {
+.no-touch div.gist {
 	overflow-x: scroll !important;
 	transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -webkit-transition: 0.2s all ease;
 }
   
-div.gist:hover {
+.no-touch div.gist:hover {
 	margin-left: -20%;
 	width: 150%;
 }

@@ -63,5 +63,10 @@
 
     
 {% include scripts.html %} 
+<script type="text/javascript">
+if (!("ontouchstart" in document.documentElement)) {
+	document.documentElement.className += " no-touch";
+}
+</script>
 </body>
 </html>
