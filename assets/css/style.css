@@ -6,11 +6,29 @@
 /*!
  * HMFAYSAL OMEGA v1.0.0
  * Responsive Jekyll Theme
- *
- * Copyright 2014 Hossain Mohd Faysal
- *
+ * 
  * Designed and built with all the love in the world by @hmfaysal
+ * 
+ * Modified by Eric McCormick.
+ *
  */
+ 
+ /*
+  * 
+  */
+  
+div.gist {
+	overflow-x: scroll !important;
+	transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+}
+  
+div.gist:hover {
+	margin-left: -20%;
+	width: 150%;
+}
+ 
 /* ------------------------ */
 /* GENERAL TYPOGRAPHY RULES */
 /* ------------------------ */
