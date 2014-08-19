@@ -5,7 +5,7 @@ title: "Server REST Consumption with Authentication"
 description: "consuming data on another server"
 category: xpages
 tags: [xpages, domino, java, rest, authentication]
-modified: 2014-08-18
+modified: 2014-08-19
 comments: true
 share: true
 ---
