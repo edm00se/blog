@@ -4003,6 +4003,10 @@ a#slide.slide{
     left:308px;
     pointer-events:none
     }
+	
+a#slide.slide{
+    background-color: #d07922;
+    }
 
 body.slide{
     left:298px;
