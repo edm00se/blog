@@ -60,5 +60,7 @@ In client-side JavaScript, you can programmatically determine whether to take on
 
 
 ### Handling the Data
+[Update:] [As pointed out by Paul T. Calhoun](http://twitter.com/ptcalhoun/status/503993722556940288), a package available, if you're not looking to add the Google GSON jar, or any external library, you can implement [com.ibm.commons.util.io.json](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/package-summary.html). The largest difference I saw was the syntax. I'm sure someone more learned could tell me about the mechanics of the two packages. To view my Class with the IBM com.ibm.commons.util.io.json library implementation, check out [this gist here](http://gist.github.com/edm00se/e5626f63ef7573fd2f3e).
+
 Here's my method, complete with slightly rambling, but hopefully insightful to a newbie, comments.
 {% gist ce4206cf3daff409b8f3 DataProvider.java %}
