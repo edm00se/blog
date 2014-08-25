@@ -11,10 +11,10 @@ share: true
 ---
 
 ### TL;DR
-Impatient and want to see the code, jump down to [my Java class](#handling-the-data).
+Impatient and want to see the code? Jump down to [my Java class](#handling-the-data).
 
 ### What and Why?
-Generating custom JSON data is, unless you're on a verison of Domino server previous to 8.5.3 UP1, virtually unnecessary. Everything you see below can be fully replicated via the Domino Data/Access Services. The reason for that is the fact that I made use of a simple NotesView iteration pattern to generate and return the application/json data. The missing piece, the whole reason why, is on your **application requirements**. When you need JSON formatted data in a custom format due to formatting preferences or application logic needs, and it can't just be in a View, that's when this comes into play. So if you start doing what I've done, ask yourself first, can it be just in a View?
+Generating custom JSON data is, unless you're on a verison of Domino server previous to 8.5.3 UP1, _virtually_ unnecessary. Everything you see below can be fully replicated via the Domino Data/Access Services. The reason for that is the fact that I made use of a simple NotesView iteration pattern to generate and return the application/json data. The missing piece, the _whole reason why_, is on _your_ **application requirements**. When you need JSON formatted data in a custom format due to formatting preferences or application logic needs, and it can't just be in a View, that's when this comes into play. So if you start doing what I've done, ask yourself first, can it be just in a View?
 
 <a href="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png" data-toggle="tooltip" title="if you can, use DAS"><img src="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png"></a>
 
@@ -55,7 +55,7 @@ New to Chrome DevTools? Check out [this free primer course](http://discover-devt
 
 ### A Brief [AngularJS](http://angularjs.org/) Plug
 In client-side JavaScript, you can programmatically determine whether to take one path or another, but with AngularJS, this gets much easier with [_ng-show_](http://docs.angularjs.org/api/ng/directive/ngShow) and [_ng-hide_](http://docs.angularjs.org/api/ng/directive/ngHide). For those used to computing the visibility property in XPages, similar to
-<pre>&lt;xp:div rendered="#{javascript:myVariable==true}"&gt;</pre>, this is mildly analagous; as such:
+<pre>&lt;xp:div rendered="#{javascript:myVariable==true}"&gt;</pre>, this is _mildly_ analagous; as such:
 <pre>&lt;div ng-show="myData.error == false"&gt;</pre>
 
 
