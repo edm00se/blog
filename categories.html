@@ -19,7 +19,7 @@ description: "An archive of posts sorted by categories."
       <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
     {% endfor %}
   {% endif %}
-{% assign tags_list = nil %}
+{% assign tags_list = null %}
 </ul>
 
 {% for tag in site.categories %} 
@@ -33,7 +33,7 @@ description: "An archive of posts sorted by categories."
       {% endif %}
       {% endif %}
     {% endfor %}
-    {% assign pages_list = nil %}
-    {% assign group = nil %}
+    {% assign pages_list = null %}
+    {% assign group = null %}
   </ul>
 {% endfor %}

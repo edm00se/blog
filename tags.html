@@ -16,7 +16,7 @@ description: "An archive of posts sorted by tag."
     	<li><a href="#{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
     {% endfor %}
   {% endif %}
-{% assign tags_list = nil %}
+{% assign tags_list = null %}
 </ul>
 
 {% for tag in site.tags %} 
@@ -30,7 +30,7 @@ description: "An archive of posts sorted by tag."
 			{% endif %}
 			{% endif %}
 		{% endfor %}
-		{% assign pages_list = nil %}
-		{% assign group = nil %}
+		{% assign pages_list = null %}
+		{% assign group = null %}
 	</ul>
 {% endfor %}
