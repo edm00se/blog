@@ -4,7 +4,7 @@ permalink: /about.html
 title: Eric McCormick
 tags: [Eric, McCormick, edm00se, author]
 image:
-  feature: BeardedManiac_profile.png
+  feature: new_profile.jpg
 ---
 <figure>
   <img src="{{site.url}}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive" style="max-width:260px;" />
