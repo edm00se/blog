@@ -22,7 +22,7 @@ Friday concluded my trip to MWLUG 2014 in Grand Rapids, MI. It was an excellent 
 Between my own advancements as a Domino/XPages developer and the XPage community's progression, we've all come a long way. All this relates to the ideal evolutionary progression of an XPage developer. This [isn't entirely a new concept](http://heidloff.net/home.nsf/dx/08172011032738AMNHEART.htm) as people do develop at differing degrees of difficultiy, and the subject has been talked about in length by many in the community. The bottom line is: you get better or not based on your drive and will to learn, combined with the accessibility of information, examples, and flat out aid from others.
 
 #### 2. Community Accessibility
-That last bit, about getting better ideas and new ways of doing things in an accessible community is why this all works for us. I started on XPages under three years ago and I've learned at a steep curve, thanks to TLCC courses, webinars, the occasional conference/*LUG, and blogs of others.
+That last bit, about getting better ideas and new ways of doing things in an accessible community is why this all works for us. I started on XPages under three years ago and I've learned at a steep curve, thanks to TLCC courses, Notes in 9, webinars, the occasional conference/*LUG, and blogs of others.
 
 #### 3. Beer
 
