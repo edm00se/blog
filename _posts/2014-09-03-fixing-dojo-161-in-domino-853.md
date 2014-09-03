@@ -9,6 +9,8 @@ modified: 2014-09-03
 comments: true
 share: true
 ---
+#### CLARIFICATION
+This all stems form an issue with Dojo less than 1.6.2 in Chrome 29 and any browser that used the same child node reference. This post specifically covers how to fix this (as it occurs with Domino 8.5.3) and get one of the most popular web standards compliant browsers back in the game with Domino and the ExtLib/UP1 controls.
 
 ### Fixing Dojo 1.6.1 in Domino 8.5.3
 I ran into a situation recently that required a bit of determination to fix. The BLUF: my implementation of the [Dojo Enhanced DataGrid was breaking when applying the dojox.grid.enhanced.plugins.Filter](http://xcellerant.net/2013/05/01/dojo-data-grid-part-14-enhanced-filtering-with-no-coding/comment-page-1/#comment-2498) due to an issue with the Dojo queries [of elements rooted at the specified element](http://dojotoolkit.org/reference-guide/1.6/dojo/query.html#queries-rooted-at-a-given-element). For example:
@@ -18,7 +20,7 @@ Thankfully, that [doesn't keep a good developer down](http://xcellerant.net/2013
 ### Domino 9, 8.5.3 UP1, and my Woes
 IBM Domino 9 brings a great many changes to the Domino server and has been fairly well received. Stuck, for now, with 8.5.3, I was at least able to get Upgrade Pack 1 applied, giving me the basic level of the majority of the same new controls.
 
-That being said, I still had the controls I wanted to play with, so I still tried the "play at home" version of [Brad Balassaitis](https://twitter.com/Balassaitis)' excellent series on [Dojo Grids in XPages](http://xcellerant.net/dojo-grids-in-xpages/). When I hit [Part 14: Enhanced Filtering with No Coding](http://xcellerant.net/dojo-data-grid-part-14-enhanced-filtering-with-no-coding), I found that the Filtering plugin would cause my control to break in a rather unexpected fashion.
+That being said, I still had the controls I wanted to play with, so I still tried the "play at home" version of [Brad Balassaitis](http://twitter.com/Balassaitis)' excellent series on [Dojo Grids in XPages](http://xcellerant.net/dojo-grids-in-xpages/). When I hit [Part 14: Enhanced Filtering with No Coding](http://xcellerant.net/dojo-data-grid-part-14-enhanced-filtering-with-no-coding), I found that the Filtering plugin would cause my control to break in a rather unexpected fashion.
 
 ### Dojo 1.6.1
 Domino 8.5.3 has Dojo 1.6.1. The culprit in question, as I found out from attempting to use Chrome with the Enhanced Grid, the issue was with the child selector call.
