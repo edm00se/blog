@@ -1,8 +1,8 @@
 ---
 layout: post
 type: post
-title: "Something Awesome This Way Comes"
-description: "better Domino and XPages app structure"
+title: "Fortune and Glory"
+description: "MVC with Java, Domino, and XPages"
 category: xpages
 tags: [xpages, domino, java, rest, api]
 modified: 2014-09-04
