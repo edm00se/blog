@@ -55,7 +55,7 @@ links:
     icon: home
   - title: JSON with Java in XPages
     url: /json-with-java-in-xpages
-  #- title: XPages MVC
+  #- title: MVC in XPages
   #  url: /xpages-mvc
   - title: Categories
     url: /categories
