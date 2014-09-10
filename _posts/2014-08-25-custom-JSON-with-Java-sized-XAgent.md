@@ -18,7 +18,7 @@ Generating custom JSON data is, unless you're on a verison of Domino server prev
 
 <a href="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png" data-toggle="tooltip" title="if you can, use DAS"><img src="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png"></a>
 
-If that's the case, make sure you've turned on Domino Data/Access Services for your NSF and the View you need. If your use case is more specific, that's what follows.
+If that's the case, make sure you've turned on Domino Data Services for your NSF and the View you need. If your use case is more specific, that's what follows.
 
 ### Custom JSON Data Generation
 My approach here is super simple, at least as far as the XPages part goes. The only thing I'm using the XPage for is as an end point, in [XAgent fashion](http://www.wissel.net/blog/d6plinks/shwl-7mgfbn). Seriously, it's just a hook into the Java method, have a look:
