@@ -1,5 +1,5 @@
 ---
-layout: null 
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
@@ -29,7 +29,7 @@ layout: null
     <uri>{{ site.url }}</uri>
     <email>{{ site.owner.email }}</email>
   </author>
-  <content type="html">{{ post.content | xml_escape }}
+  <content type="html">{{ post.content | strip_html | truncatewords: 100 }}
   &lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; was originally published by {{ site.owner.name }} at &lt;a href=&quot;{{ site.url }}&quot;&gt;{{ site.title }}&lt;/a&gt; on {{ post.date | date: "%B %d, %Y" }}.&lt;/p&gt;</content>
 </entry> 
 {% endfor %}
