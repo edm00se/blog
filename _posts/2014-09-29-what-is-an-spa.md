@@ -79,4 +79,7 @@ Leading us to XPages' strengths, the ability to adapt and adopt newer (yes, it's
 ### Want More AngularJS?
 I recommend checking out <a href="http://www.youtube.com/watch?v=i9MHigUZKEM">Dan Wahlin's AngularJS Fundamentals in 60-ish Minutes</a>. It's a good overview and he can probably sell you on the concepts a bit better than myself.
 
+### Want More on SPAs?
+The hall mark for comparison of front-end JavaScript frameworks has tended of late towards <a href="//todomvc.com/">TodoMVC</a>. This is geared towards assisting a person to select a (client-side) MV* framework. It also shows the same, simple but illustrative application in use on numerous frameworks. It's also an SPA.
+
 I hope you (are starting to?) see how a more robust front-end application logic can compliment your applications. No one development style or individual tool can "do it all", but why not have another tool that can help you do your job? It never hurts to expand the skill set. Even if it's not the best tool for you right now, it's worth getting a little familiar with some client-side frameworks, even if it just gives you new or different, hopefully better, ideas in your application development.
