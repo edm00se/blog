@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "How SPAs Work"
+title: "What's an SPA?"
 description: "leveraging browser loading for a smoother user experience"
 category: SPA
 tags: [xpages, spa, angularjs, rest]
