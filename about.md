@@ -4,10 +4,10 @@ permalink: /about.html
 title: Eric McCormick
 tags: [Eric, McCormick, edm00se, author]
 image:
-  feature: {{ site.owner.avatar }}
+  feature: {{ site.owner.gravatar }}
 ---
 <figure>
-  <img src="{{site.url}}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive" style="max-width:260px;" />
+  <img src="{{ site.owner.gravatar }}?s=260" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive" style="max-width:260px;" />
   <figcaption>Eric McCormick</figcaption>
 </figure>
 
