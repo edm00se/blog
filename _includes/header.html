@@ -12,6 +12,7 @@
     <nav id="navigation">
     <h2>MENU</h2>
     <hr>
+		<ul>
 {% for link in site.links %}
             <li>{% if link.external %}
                     <a href="{{ link.url }}">{{ link.title }}</a>
@@ -21,6 +22,7 @@
 {% endfor %}            
            <li><a href="{{ site.url }}/atom.xml" title="Atom feed"><i class="icon-rss"></i> Atom Feed</a></li>
 		   <li><a href="{{ site.url }}/rss.xml" title="RSS feed"><i class="icon-rss"></i> RSS Feed</a></li>
+		  </ul>
     </nav>
     
     
