@@ -10,6 +10,12 @@ comments: true
 share: true
 ---
 
+[EDIT]
+#### Regarding XHRs
+XMLHTTPRequests encompass nearly every partial refresh under the sun. I loosely use AJAX calls to encompass "fat XHRs", or XHRs which include _markup_ in their response. This is a terrible way of doing business, as we as developers ought to _ligthen the load_ a bit in the age of mobile devices and cellular connections. I touched on this when I originally wrote the post, but thought that it could use some clarification up front. So, transport data for partials, not markup.
+
+[/EDIT]
+
 ### REST is Best
 Recently I became a father. It's pretty awesome. I've got a daughter who gives me some pretty good smiles and other funny faces, so I've always got some good motivation to go home at the end of the day. This also means I've gone through some birthing classes in recent history. So consider this post's title to be a play on words, regarding the interpretation of infant feeding. You know, the old adage of "&lt;piece of mammalian anatomy that rhymes with REST&gt; is best" (unless contraindicated by medical or other conditions).
 
