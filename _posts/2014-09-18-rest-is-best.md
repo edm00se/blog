@@ -12,7 +12,7 @@ share: true
 
 [EDIT]
 #### Regarding XHRs
-XMLHTTPRequests encompass nearly every partial refresh under the sun. I loosely use AJAX calls to encompass "fat XHRs", or XHRs which include _markup_ in their response. This is a terrible way of doing business, as we as developers ought to _ligthen the load_ a bit in the age of mobile devices and cellular connections. I touched on this when I originally wrote the post, but thought that it could use some clarification up front. So, transport data for partials, not markup.
+XMLHTTPRequests encompass nearly every partial refresh under the sun. I loosely describe AJAX calls (and XPages' dojo.xhrPost calls) to encompass "fat XHRs", or XHRs which include _markup_ in their response. This is a terrible way of doing business, as we as developers ought to _ligthen the load_ a bit in the age of mobile devices and cellular connections. I touched on this when I originally wrote the post, but thought that it could use some clarification up front. So, transport data for partials, not markup.
 
 [/EDIT]
 
