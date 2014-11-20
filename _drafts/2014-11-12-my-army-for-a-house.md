@@ -18,16 +18,7 @@ The eagle-eyed of you may have caught on to my thorough appreciate for George R.
 So, without further ado, here is the ground work for Swords 4 Hire.
 
 ### A House
-The intent of my application is two-fold; tracking of the characters affiliations with the major houses of Westeros, and the relationships between characters and houses. 
-
-### Leal Service
-asdf
-
-### Sellswords For Hire
-asdf
-
-### Defining Westeros
-asdf
+The intent of my application is two-fold; to track characters and their traits and track houses for potential affiliation or "hiring" of sell swords. I mean to track the characters, their affiliations with the major houses of Westeros, the relationships between characters and houses, and the traits associated with both houses and characters. 
 
 ### Setting Up My Classes
 asdf
