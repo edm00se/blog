@@ -61,6 +61,8 @@ links:
     url: /tags
   - title: about.me
     url: //about.me/EricMcCormick
+  - title: License
+    url: /license.html
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Chicago
