@@ -28,7 +28,6 @@ owner:
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for Node/Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
   # Social networking links used in footer. Update and remove as you like.
-  # To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk
   twitter:        edm00se
   facebook:       eric.n.mccormick
   github:         edm00se
@@ -36,8 +35,6 @@ owner:
   linkedin:       https://www.linkedin.com/in/emccormick/
   instagram:      edm00se
   flickr:         edm00se
-  tumblr:         
-  hmfaysalsocial: 
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/+EricMcCormickThereCanBeOnlyOne/
 
@@ -63,7 +60,7 @@ links:
   - title: Tags
     url: /tags
   - title: about.me
-    url: https://about.me/EricMcCormick
+    url: //about.me/EricMcCormick
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Chicago
