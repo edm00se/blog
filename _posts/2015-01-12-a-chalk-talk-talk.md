@@ -46,6 +46,6 @@ So here are my current aims:
 * complement the talk with a short series on my blog
 * provide my demo application via GitHub, for others to play with and learn from (this is the same, thankfully)
 
-So that's what I'm thinking. My only fear is that my once sweeping epic of a session is now significantly subdued, in my mined. Only time will tell.
+So that's what I'm thinking. My only fear is that my once sweeping epic of a session is now significantly subdued, in my mind. Only time will tell.
 
 
