@@ -446,12 +446,15 @@ blockquote:before {
 #footer h1,
 #masthead h1,
 #footer h2,
-#masthead h2,
+/* #masthead h2, */
 #footer a,
 #masthead a,
 #footer p,
 #masthead p {
   color: #fff;
+}
+#masthead h2 {
+  color: #efefef;
 }
 /* ----------- */
 /* BLOG HEADER */
