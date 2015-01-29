@@ -38,6 +38,12 @@
                     console.log(y);
                     console.log(z);
                     // x.responseText should have what's wrong
+                },
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                },
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
                 }
             });
         }
