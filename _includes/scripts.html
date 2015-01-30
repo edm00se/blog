@@ -45,7 +45,7 @@ $("a#click-pages").click(function(){
   (function( $, window, undefined ) {
     
      var bs = {
-          close: $(".icon-remove-sign"),
+          close: $(".fa-times-circle"),
           searchform: $(".search-form"),
           canvas: $("body"),
           dothis: $('.dosearch')
@@ -64,6 +64,9 @@ $("a#click-pages").click(function(){
         bs.canvas.removeClass('search-overlay');
     });
   })( jQuery, window );
+  $(document).keyup(function(e) {
+    (e.keyCode == 27)?$('.fa-times-circle').click():null;
+  });
 </script>
 {% endif %}
 {% if site.google_analytics %}

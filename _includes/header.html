@@ -1,7 +1,7 @@
 {% if site.search %}<div class="search-wrapper">
     <div class="search-form">
         <input type="text" class="search-field" placeholder="Search...">
-        <i class="icon-remove-sign"></i>
+        <i class="fa fa-times-circle"></i>
         <ul class="search-results post-list"></ul><!-- /.search-results -->
     </div><!-- /.search-form -->
 </div><!-- ./search-wrapper -->{% endif %}
@@ -20,8 +20,8 @@
                     <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
                 {% endif %} </li>
 {% endfor %}            
-           <li><a href="{{ site.url }}/atom.xml" title="Atom feed"><i class="icon-rss"></i> Atom Feed</a></li>
-		   <li><a href="{{ site.url }}/rss.xml" title="RSS feed"><i class="icon-rss"></i> RSS Feed</a></li>
+           <li><a href="{{ site.url }}/atom.xml" title="Atom feed"><i class="fa fa-rss"></i> Atom Feed</a></li>
+		   <li><a href="{{ site.url }}/rss.xml" title="RSS feed"><i class="fa fa-rss"></i> RSS Feed</a></li>
 		  </ul>
     </nav>
     
@@ -33,7 +33,7 @@
 {% endif %}
 {% if site.search %}
     <button class="menu-button animated fade dosearch">
-        <i class="icon-search"></i>
+        <i class="fa fa-search"></i>
     </button>
 {% endif %}
 {% if page.headline %}
