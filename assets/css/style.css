@@ -24,6 +24,11 @@
 	margin-left: -20%;
 	width: 150%;
 }
+
+iframe.twitter-tweet {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
  
 /* ------------------------ */
 /* GENERAL TYPOGRAPHY RULES */
