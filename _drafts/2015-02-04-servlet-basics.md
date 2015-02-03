@@ -5,7 +5,7 @@ title: "Servlet Basics"
 description: "an introduction"
 category: xpages-servlets
 tags: [xpages, domino, java, servlet]
-modified: 2015-01-30
+modified: 2015-02-04
 comments: true
 share: true
 ---
