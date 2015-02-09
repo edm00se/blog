@@ -10,11 +10,14 @@ comments: true
 share: true
 ---
 
+### Preface
+Either I just didn't know that this was a viable option or we've all been living in the dark for too long. My suspicion is the former, but what follows is a quick run down of my preferred approach for using the _com.google.gson_ library (or any JAR), server-wide (without OSGi deployment). TLDR; drop it in &lt;install&gt;/jvm/lib/ext/ and restart your Domino server (don't forget to do it with your local/dev environment as well).
+
 ### What?
 While preparing for my <span data-toggle-tooltip title="I swear it's coming!">impending blog series on servlets</span>, I've been hammering out a couple of details regarding external dependencies (aka- JAR files). The short story is that I assumed things had to be a certain way (including the java.policy edit for granting all permissions), but that wasn't the case. If you want to read the full circle of comments, [go check them out](//disqus.com/home/discussion/em-devblog/building_java_objects_from_json_93/#comment-1813504147).
 
 ### Why?
-It seems that setting up what I regard as server elements, even these add-on ones, is something I don't do every day. Any developer can see quickly that re-importing the same JAR file you use across your application instances can become quite tedious, quickly. But it would seem that there is a better way of doing things than just adding your JAR and needing to add 
+It seems that setting up what I regard as server elements, even these add-on ones, is something I don't do every day. Any developer can see quickly that re-importing the same JAR file you use across your application instances can become quite tedious, quickly. But it would seem that there is a better way of doing things than just importing your JAR to each NSF and needing to add a line on the server (in &lt;install&gt;/jvm/lib/security/java.policy) of
 ```
 grant { permission java.security.AllPermission; }
 ```
@@ -28,7 +31,7 @@ So, without the need to edit the java.policy file, this makes things a much easi
 ### See It In Action
 <div class="row">
 <div class="col-md-6">
-Here's my import from my series demo code imported into my fresh install via my Git repo. As expected, without any JAR to find, it's going to fail.
+Here's my import from my series demo code imported into my fresh DDE install via my Git repo. As expected, without any JAR to find, it's going to fail.
 </div>
 <div class="col-md-6">
 <a href="{{ site.url }}/images/post_images/JARs/ImportingGsonWithoutJAR.png" data-toggle="tooltip" title="hey look, nothing"><img src="{{ site.url }}/images/post_images/JARs/ImportingGsonWithoutJAR.png" class="img-responsive center-block" /></a>
@@ -37,7 +40,7 @@ Here's my import from my series demo code imported into my fresh install via my 
 
 <div class="row">
 <div class="col-md-6">
-Having shut down Designer and placing the com.google.gson JAR into the &lt;install&gt;/jvm/lib/ext/ path and then starting it back up again, you can see that it's now resolved. All without touching the java.policy file.
+Having shut down Designer and placing the _com.google.gson_ JAR into the &lt;install&gt;/jvm/lib/ext/ path and then starting it back up again, you can see that it's now resolved. All without touching the java.policy file.
 </div>
 <div class="col-md-6">
 <a href="{{ site.url }}/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png" data-toggle="tooltip" title="looking? found someone I would say you have, hmmm?"><img src="{{ site.url }}/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png" class="img-responsive center-block" /></a>
