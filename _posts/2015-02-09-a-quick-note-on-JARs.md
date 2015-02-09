@@ -50,3 +50,11 @@ Having shut down Designer and placing the _com.google.gson_ JAR into the &lt;ins
 ##### Added Benefit
 The plus side to this approach is that it's now also available in Java agents.
 <a href="{{ site.url }}/images/post_images/JARs/JARaccessibleFromJavaAgent.png" data-toggle="tooltip" title=""><img src="{{ site.url }}/images/post_images/JARs/JARaccessibleFromJavaAgent.png" class="img-responsive center-block" /></a>
+
+### Caveat
+As is inevitable with such things, there is a caveat to the use of the &lt;install&gt;/jvm/lib/ext/ path for JAR inclusion, primarily revolving around any libraries which are already a part of Domino.
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p><a href="https://twitter.com/edm00se">@edm00se</a> IIRC ext/lib is in there since 8.0. Do watch out if you put versions of libraries shipping with domino in there, like Abdera.</p>&mdash; Martin Leyrer (@leyrer) <a href="https://twitter.com/leyrer/status/564821946270240769">February 9, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Ultimately, I'm aiming to get into OSGi plugins for a first go by including my hit list of usual JAR files, so I can import them on a per-project basis. For example, if I'm building out a RESTful end point with GSON, I'm also probably using a couple Apache Commons libraries. It makes sense to package accordingly. One day, I'll have all the cool toys. 
