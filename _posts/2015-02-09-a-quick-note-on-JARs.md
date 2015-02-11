@@ -40,7 +40,7 @@ Here's my import from my series demo code imported into my fresh DDE install via
 
 <div class="row">
 <div class="col-md-6">
-Having shut down Designer and placing the _com.google.gson_ JAR into the &lt;install&gt;/jvm/lib/ext/ path and then starting it back up again, you can see that it's now resolved. All without touching the java.policy file.
+Having shut down Designer and placing the <em>com.google.gson</em> JAR into the &lt;install&gt;/jvm/lib/ext/ path and then starting it back up again, you can see that it's now resolved. All without touching the java.policy file.
 </div>
 <div class="col-md-6">
 <a href="{{ site.url }}/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png" data-toggle="tooltip" title="looking? found someone I would say you have, hmmm?"><img src="{{ site.url }}/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png" class="img-responsive center-block" /></a>
