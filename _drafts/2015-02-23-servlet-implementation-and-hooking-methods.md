@@ -1,0 +1,23 @@
+---
+layout: post
+type: post
+title: "Servlet Implementation"
+description: "time for a ServletFactory"
+category: xpages-servlets
+tags: [xpages, domino, java, servlet]
+modified: 2015-02-23
+comments: true
+share: true
+---
+
+### Intro
+The first post covered the first two parts of this series, the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement these servlets so that they're actually accessable via an end point.
+
+### ServletFactory
+In order for these servlets to be "registered" with the application to be end point accessible, they need to be provided by a ServletFactory; specifically, one that implements _com.ibm.designer.runtime.domino.adapter.IServletFactory_. This will register an end point via a pair of <span data-toggle="tooltip" title="java.util.Map">Map</span>s which match, via a key, the package.class name to the end point name. This makes the servlet accessible via &lt;your NSF&gt;/xsp/&lt;end-point-name&gt;.
+
+#### Note on IServletFactory
+In one of the more counterintuitive things I've run into since starting Domino/XPages development, the IServletFactory package is fully there on the server and usable, but the _lwpd.domino.adapter.jar_ needs to be added as an external JAR to the build path in Designer. Sven Hasselbach has done an excellent job of showing how to do this in [his blog post on the subject](//hasselba.ch/blog/?p=746).
+
+### Registering Your Servlet Classes
+asfd
