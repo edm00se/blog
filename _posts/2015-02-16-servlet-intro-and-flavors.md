@@ -11,10 +11,10 @@ share: true
 ---
 
 #### Preface
-This post is essentially the first two parts of the several I've already identified I'll be blogging about. I kept waffling between wanting the first three in one post, which would have been huge, and just one, which would have been short. Here's what I came up with. You can also keep track of this and the other parts of the series on the [servlet series](/servlet-series/) page.
+This post is essentially the first two parts of the several I've already identified I'll be blogging about. I kept waffling between wanting the first three in one post, which would have been huge, and just one, which would have been short. Here's what I came up with. You can also keep track of this and the other parts of the series on the [servlet series]({{ site.url}}/servlet-series/) page.
 
 ### A Series on Servlets
-This is the first post in [a short series on servlets](/servlet-series) I'll be posting over the next month or two. It's going to take some time to go through, but I hope you'll stick with me through to the end. I was originally going to speed through the whole process and give a lengthy one-shot, one-kill post on the topic; but servlets, while simple in nature, can be complex depending on your implementation. I've learned a couple things since I started assembling and hopefully this will be useful to some out there.
+This is the first post in [a short series on servlets]({{ site.url}}/servlet-series) I'll be posting over the next month or two. It's going to take some time to go through, but I hope you'll stick with me through to the end. I was originally going to speed through the whole process and give a lengthy one-shot, one-kill post on the topic; but servlets, while simple in nature, can be complex depending on your implementation. I've learned a couple things since I started assembling and hopefully this will be useful to some out there.
 
 ### What Is A Servlet?
 In case you haven't run into the term before, [a servlet is](//docs.oracle.com/javaee/5/tutorial/doc/bnafe.html), semantically, a portmanteau of the words server and applet. This stems from the origins of Java dating to the early years of many of the conventions that we take for granted now, in terms of web technology. Functionally speaking, a servlet is a registered Class which connects via URI to provide or consume _something_; this can be data (XML, JSON, others), messages (e.g.- plain text), or more.
