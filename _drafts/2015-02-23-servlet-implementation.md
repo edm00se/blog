@@ -67,4 +67,4 @@ Aside from a bit of voodoo, this should show how we can map our end point names 
 | /xsp/exabstractservlet                 | com.hello.servlets.ExampleAbstractedServlet   | Example AbstractXSPServlet |
 
 ### Summary
-Now we have a servlet and it's fully registered with the application and accessible via an HTTP endpoint. The next post will get into what we do with those servlets.
+Now we have a servlet and it's fully registered with the application and accessible via an HTTP endpoint. The next post will get into what we do with these servlets.

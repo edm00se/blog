@@ -49,22 +49,32 @@ bing_verify:        CF8CC97BDE62BF3EBFCFFDEB4EB79E74
 links:
   - title: Home
     url: /
+    icon: fa-home
     external: false
-    icon: home
   - title: JSON with Java in XPages
     url: /json-with-java-in-xpages
-  #- title: MVC in XPages
-  #  url: /xpages-mvc
-  #- title: Servlet Series
-  #  url: /servlet-series
+    icon: fa-rocket
+  - title: Servlet Series
+    url: /servlet-series
+    icon: fa-rocket
   - title: Categories
     url: /categories
+    icon: fa-list-ul
   - title: Tags
     url: /tags
+    icon: fa-tags
   - title: about.me
     url: //about.me/EricMcCormick
+    icon: fa-user
   - title: License
     url: /license.html
+    icon: fa-list-alt
+  - title: Atom Feed
+    url: /atom.xml
+    icon: fa-rss
+  - title: RSS Feed
+    url: /rss.xml
+    icon: fa-rss
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Chicago

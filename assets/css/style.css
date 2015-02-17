@@ -2402,13 +2402,14 @@ a#slide:hover{
 	background: #d07922;
     }
 
+/*
 a#slide:after{
     content:"\2261";
-    }
+}*/
 
 a#slide.slide:after{
     position:absolute;
-    content:"X";
+    /* content:"X"; */
     top:11px;
     left:50%;
     width:40px;

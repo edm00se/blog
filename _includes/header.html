@@ -7,7 +7,9 @@
 </div><!-- ./search-wrapper -->{% endif %}
 
 <div id="fade"></div>
-<a id="slide" class="animated fade"></a>
+<a id="slide" class="animated fade">
+	<i class="fa fa-bars"></i>
+</a>
 <aside id="sidebar">
     <nav id="navigation">
     <h2>MENU</h2>
@@ -17,11 +19,14 @@
             <li>{% if link.external %}
                     <a href="{{ link.url }}">{{ link.title }}</a>
                 {% else %}
-                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
-                {% endif %} </li>
-{% endfor %}            
-           <li><a href="{{ site.url }}/atom.xml" title="Atom feed"><i class="fa fa-rss"></i> Atom Feed</a></li>
-		   <li><a href="{{ site.url }}/rss.xml" title="RSS feed"><i class="fa fa-rss"></i> RSS Feed</a></li>
+					{% if link.icon %}
+						<a href="{{ site.url }}{{ link.url }}"><i class="fa {{ link.icon }}"></i>&nbsp;{{ link.title }}</a>
+					{% else %}
+						<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+					{% endif %}
+                {% endif %}
+			</li>
+{% endfor %}         
 		  </ul>
     </nav>
     
