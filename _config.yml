@@ -103,8 +103,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://edm00se.github.io/DevBlog/'
-  relativeLinks: 'http://edm00se.github.io/DevBlog/links.jsonp'
+  siteurl: '//edm00se.github.io/DevBlog/'
+  relativeLinks: '//edm00se.github.io/DevBlog/links.jsonp'
   media: 'images'
   metadata:
     _posts:
