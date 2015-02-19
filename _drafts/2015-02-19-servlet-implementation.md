@@ -57,7 +57,7 @@ Now that we finally have our _adapter.servletFactory_ file pointing at our Servl
 
 {% gist dcefcc6474defcb9b380 %}<br />
 
-Aside from a bit of voodoo, this should show how we can map our end point names to the class names and proper names, respectively. As you can see, I mapped each of my example servlets (_HttpServlet_, _DesignerFacesServlet_, and _AbstractXSPServlet_) from the last post into respective end point names/keys.
+Aside from a bit of voodoo, this should show how we can map our end point names to the class names and proper names, respectively. As you can see, I mapped each of my example servlets (_HttpServlet_, _DesignerFacesServlet_, and _AbstractXSPServlet_) from the last post into respective endpoint names/keys.
 
 {:.table .table-bordered}
 | Servlet Endpoint                       | Servlet Class                                 | Name                 |
