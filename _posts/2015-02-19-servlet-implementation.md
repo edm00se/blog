@@ -11,7 +11,7 @@ share: true
 ---
 
 ### Intro
-The [first post]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) covered the first two parts of [this series](/servlet-series/), the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement a servlet so that they're actually accessable via an end point.
+The [first post]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) covered the first two parts of [this series]({{ site.url }}/servlet-series/), the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement a servlet so that they're actually accessable via an end point.
 
 ### ServletFactory
 [A factory is](//en.wikipedia.org/wiki/Factory_(object-oriented_programming)), [in OOP](//en.wikipedia.org/wiki/Object-oriented_programming), an object for creating other objects. In order for these servlets to be "registered" with the application to be end point accessible, they need to be provided by a ServletFactory; specifically, one that implements _com.ibm.designer.runtime.domino.adapter.IServletFactory_. This will register an end point via a pair of <span data-toggle="tooltip" title="java.util.Map">Map</span>s which match, via a key, the package.class name to the end point name. This makes the servlet accessible via &lt;your NSF&gt;/xsp/&lt;end-point-name&gt;.
