@@ -10,6 +10,10 @@ comments: true
 share: true
 ---
 
+[Edit]
+[In the comments, Sven Petri pointed out]({{ site.url }}/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the java.policy file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local _/jvm/lib/ext/_ path.
+[/Edit]
+
 ### Preface
 Either I just didn't know that this was a viable option or we've all been living in the dark for too long. My suspicion is the former, but what follows is a quick run down of my preferred approach for using the _com.google.gson_ library (or any JAR), server-wide (without OSGi deployment). TLDR; drop it in &lt;install&gt;/jvm/lib/ext/ and restart your Domino server (don't forget to do it with your local/dev environment as well).
 
