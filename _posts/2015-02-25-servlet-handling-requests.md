@@ -37,7 +37,7 @@ One major benefit of using a REST API framework in Java is the ability to automa
 #### Route Matching
 We'll be handling multiple routed paths off a single collection endpoint (the collection and the collection/{:id}). The approach I'll be implementing in the route matching will make use of regular expressions. This involves defining a pattern and testing that against the requested path for a match. This will make use of _java.util.regex.Pattern_ and _java.util.regex.Matcher_, respectively.
 
-Since we will get a true math with [_Matcher.find()_](//docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
+Since we will get a true match with [_Matcher.find()_](//docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
 
 {% gist 0ce40310e6c2497145a6 PatternMatchingRoute.java %}<br />
 
