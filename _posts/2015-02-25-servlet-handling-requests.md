@@ -53,14 +53,14 @@ Route parameters are a way of handling required, hierarchically defining values 
 {% gist 0ce40310e6c2497145a6 ServletRouteParamsOnly.java %}<br />
 
 #### Query Parameters
-Query parameters should be familiar to every XPages developer. In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String[]&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()).
+Query parameters should be familiar to every XPages developer. In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String[]&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.
 
 ```
 Map<String, String[]> param = (Map<String, String>) ExtLibUtil.resolveVariable(facesContext, "param");
 ```
 
 ### RESTful APIs?
-How is this all REST? REST is an approach, it has to do with stateless data requests, uses the HTTP VERBs, and is generally descriptive in format. There's not a governing true specification, just some basic rules. If you want to read more on REST in general, I recommend [this scotch.io post](//scotch.io/bar-talk/designing-a-restful-web-api).
+How is this all REST? How is it an API? APIs, for those living under a rock, are an Application Programming Interface; the Notes/Domino API is how we interact with, reference, and use Notes/Domino entities. Providing access to invoke calls and operations over a REST API means that we have logic build into our network calls to our endpoint. REST is an approach, it has to do with stateless data requests, uses the HTTP VERBs, and is generally descriptive in format. There's not a governing true specification, just some basic rules. If you want to read more on REST in general, I recommend [this scotch.io post](//scotch.io/bar-talk/designing-a-restful-web-api).
 
 ### Next Time
 Up next will be a bit more code heavy, as I'll be walking the life cycle of data reception and response handling. It will cover an endpoint governing a certain data type, provide a collection at the collection level, establish a data model that both our responses will use and the ingested data types will instantiate, and provide CRUD operations against a given document (the data object instance). It will be a fast-paced post, but it should be worth the read.
