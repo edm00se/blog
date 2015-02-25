@@ -41,6 +41,10 @@ Since we will get a true match with [_Matcher.find()_](//docs.oracle.com/javase/
 
 {% gist 0ce40310e6c2497145a6 PatternMatchingRoute.java %}<br />
 
+[EDIT]
+It was brought to my attention that route matching is easier via @ annotations, as one might use via an approach [with Jersey](//jersey.java.net/). I absolutely agree, but up until now, for this series, I've taken a framework-free approach to generating and implementing servlets. I'll just say that there's a very good reason that such frameworks are out there, and even implementing just the pieces for the @ annotations could be effort well spent. I fully welcome any response piece on this topic, as I'm not experienced with Jersey (my preference to RegEx matching comes from my NodeJS/Express API experience).
+[/EDIT]
+
 #### Route Parameters
 Now that we've handled the route, it's time to handle any route parameters. Route parameters can be a little confusing, seeing how they look just like another route, but they can also be useful. Strictly speaking, the /{:id} is a form of route parameter, but they can also be nested (sequential?) to provide more echelons in a hierarchy. I previously built a single-purpose NodeJS/Express app that provided an API to handles requests to our IBM i for DB2 access; the specifics of that project were to have a three-level deep hierarchy of required information. This is generally a bit deeper than most people will go with route parameters, but it serves to illustrate the concept. My requests look like this:
 
