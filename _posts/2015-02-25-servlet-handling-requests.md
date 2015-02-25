@@ -21,7 +21,7 @@ A servlet can be just about anything. It can receive a payload of data (or just 
 * and provide a layer of business logic for those interactions, enforcing a set of rules by which all data objects will adhere to (I have previously described this as "loose schema", which is a misnomer, as the entire purpose of a schema is to provide [_strict_ provisioning](//en.wikipedia.org/wiki/Database_schema) at the db level; aka- integrity constraints)
 
 ### Receiving Requests
-As I've mentioned above, I've referenced a pattern of /collection/{:id} for an endpoint. The basic premise is that you provide the base endpoint of .../collection (usually shown as the plural version, so for a collection of users, it would be /user**s**) which at the base level gives the full collection, but when is followed by a route parameter of an ID (for example, a 32-character length hexadecimal value, like our Notes Document UNIDs), it will handle requests specific to that document. This effectively makes our servlet at one endpoint a two-part affair. Here's the approach I'll be using, with strictly _application/json_ content type.
+As I've mentioned above, I've referenced a pattern of /collection/{:id} for an endpoint. The basic premise is that you provide the base endpoint of .../collection (usually shown as the plural version, so for a collection of users, it would be /user**s**) which at the base level gives the full collection, but when is followed by a route parameter of an ID (for example, a 32-character length hexadecimal value,< like our Notes Document UNIDs), it will handle requests specific to that document. This effectively makes our servlet at one endpoint a two-part affair. Here's the approach I'll be using, with strictly _application/json_ content type.
 
 #### Formatting and Documentation
 
@@ -42,7 +42,9 @@ Since we will get a true match with [_Matcher.find()_](//docs.oracle.com/javase/
 {% gist 0ce40310e6c2497145a6 PatternMatchingRoute.java %}<br />
 
 [EDIT]
+
 It was brought to my attention that route matching is easier via @ annotations, as one might use via an approach [with Jersey](//jersey.java.net/). I absolutely agree, but up until now, for this series, I've taken a framework-free approach to generating and implementing servlets. I'll just say that there's a very good reason that such frameworks are out there, and even implementing just the pieces for the @ annotations could be effort well spent. I fully welcome any response piece on this topic, as I'm not experienced with Jersey (my preference to RegEx matching comes from my NodeJS/Express API experience).
+
 [/EDIT]
 
 #### Route Parameters
@@ -57,11 +59,17 @@ Route parameters are a way of handling required, hierarchically defining values 
 {% gist 0ce40310e6c2497145a6 ServletRouteParamsOnly.java %}<br />
 
 #### Query Parameters
-Query parameters should be familiar to every XPages developer. In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String[]&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.
+Query parameters should be familiar to every XPages developer. <s>In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.</s>
+
+[Edit]
+
+Thanks to [Jesse Gallagher](//twitter.com/Gidgerby) for catching something here. You can resolve _param_, but it would be better to use something else as it behaves as a _Map&lt;String,String&gt;_, **not** a _Map&lt;String,String[]&gt;_. If you're performing an _HttpServletRequest.getQueryString()_,  you will get a _java.lang.String_ back, with which contains your results. You can manually pull this apart, but you should really use the [**_getParameterMap_** method](//docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getParameterMap()) on your _HttpServletRequest_ (the method is inherited from _ServletRequest_) as this _does return_ a _Map&lt;String,String[]&gt;_, ensuring you get keyed values for each of multiple values per key. I've used the method elsewhere, I'm not sure what my brain was thinking up above, but I suspect it was a lack of caffeine <i class="twa twa-coffee"></i>.
 
 ```
-Map<String, String[]> param = (Map<String, String>) ExtLibUtil.resolveVariable(facesContext, "param");
+Map<String, String[]> param = (Map<String, String[]>) req.getParameterMap();
 ```
+
+[/Edit]
 
 ### RESTful APIs?
 How is this all REST? How is it an API? APIs, for those living under a rock, are an Application Programming Interface; the Notes/Domino API is how we interact with, reference, and use Notes/Domino entities. Providing access to invoke calls and operations over a REST API means that we have logic build into our network calls to our endpoint. REST is an approach, it has to do with stateless data requests, uses the HTTP VERBs, and is generally descriptive in format. There's not a governing true specification, just some basic rules. If you want to read more on REST in general, I recommend [this scotch.io post](//scotch.io/bar-talk/designing-a-restful-web-api).
