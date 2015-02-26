@@ -56,9 +56,9 @@
             {% for link in site.links %}
             <li>
                 {% if link.external %}
-                    <a href="{{ link.url }}">{% if link.icon %}<i class="fa fa-{{ link.icon }}"></i>{% else %}{{ link.title }}{% endif %}</a>&nbsp;&bull;
+                    <a href="{{ link.url }}">{% if link.icon %}<i class="fa fa-{{ link.icon }}"></i>{% else %}{{ link.title }}{% endif %}</a>&nbsp;
                 {% else %}
-                    <a href="{{ site.url }}{{ link.url }}">{% if link.icon %}<i class="fa fa-{{ link.icon }}"></i>{% else %}{{ link.title }}{% endif %}</a>&nbsp;&bull;
+                    <a href="{{ site.url }}{{ link.url }}">{% if link.icon %}<i class="fa {{ link.icon }}"></i>{{ link.title }}{% else %}{{ link.title }}{% endif %}</a>&nbsp;
                 {% endif %} 
             </li>
             {% endfor %}
