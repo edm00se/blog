@@ -26,7 +26,7 @@ owner:
   gravatar:		  //www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d
   email:          edm00se@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for Node/Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
+  description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for NodeJS+Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
   # Social networking links used in footer. Update and remove as you like.
   twitter:        edm00se
   facebook:       eric.n.mccormick
