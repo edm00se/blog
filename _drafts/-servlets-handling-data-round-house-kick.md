@@ -29,16 +29,17 @@ It's straight forward and follows with the approach I've previously laid out.
 #### Collection
 The collection will iterate records and return the JSON array of objects representing each house. I'm going to wrap the array as a data element, to give some mild metadata I usually provide, including a simple version of any request parameters and, lastly, an error flag (with an error message, if the boolean _error_ property is true); this is consistent with [what I've done before]({{ site.url }}/xpages/custom-JSON-with-Java-sized-XAgent).
 
-I'm also going to create the JSON with the GSON library, as I've covered both the GSON and [com.ibm.commons.util.io.json](//gist.github.com/edm00se/e5626f63ef7573fd2f3e) approaches before, when it comes to streaming/creating a JSON string, so I won't repeat myself here. Below, when I handle the reflection of JSON to a Java Object, I will show how to use both.
+Below, when I handle the reflection of JSON to a Java Object (in conjunction with the ), I will show how to use both.
 
-{% gist x %}
+{% gist x %}<br />
+
 
 #### Document
 asdf
 ... implements data model, provides JSON
 
 #### ToJson
-asdf
+I'm also going to create the JSON with the GSON library, as I've covered both the GSON and [com.ibm.commons.util.io.json](//gist.github.com/edm00se/e5626f63ef7573fd2f3e) approaches before, when it comes to streaming/creating a JSON string, so I won't repeat myself here. The only thing of major difference is to build out your response into a Java object, then use [a _com.ibm.commons.util.io.json.JsonGenerator_'s _toJson_ method](//public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonGenerator.html#toJson(com.ibm.commons.util.io.json.JsonFactory, java.lang.Object)). 
 
 * GSON
 * ibm.commons
