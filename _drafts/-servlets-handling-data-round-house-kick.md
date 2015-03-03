@@ -19,12 +19,12 @@ Note: I'll be sticking to the same, vanilla Java approach I've used previously i
 The endpoint will accept (and return) only _application/json_. Here's the structure it'll take.
 
 {:.table .table-bordered}
-| Route                   | Methods Allowed        |
-|-------------------------|------------------------|
-| .../xsp/houses          | GET                    |
-| .../xsp/houses/{:unid}  | GET, POST, PUT, DELETE |
+| Route                   | Methods Allowed  |
+|-------------------------|------------------|
+| .../xsp/houses          | GET, POST        |
+| .../xsp/houses/{:unid}  | GET, PUT, DELETE |
 
-It's straight forward and follows with the approach I've previously laid out.
+It's straight forward and follows with the approach I've previously laid out. Do note that to create a new entry, it will be taking a POST against the collection, whereas the individual entry will be accessed via GET to send the existing document, PUT to update partial information, and DELETE to do the obvious.
 
 #### Collection
 The collection will iterate records and return the JSON array of objects representing each house. I'm going to wrap the array as a data element, to give some mild metadata I usually provide, including a simple version of any request parameters and, lastly, an error flag (with an error message, if the boolean _error_ property is true); this is consistent with [what I've done before]({{ site.url }}/xpages/custom-JSON-with-Java-sized-XAgent).
