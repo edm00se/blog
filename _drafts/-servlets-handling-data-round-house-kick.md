@@ -5,7 +5,7 @@ title: "Handling Data in a Servlet"
 description: “going Chuck Norris on some data“
 category: xpages-servlets
 tags: [xpages, domino, java, servlet]
-modified: 2015-03-02
+modified: 2015-03-06
 comments: true
 share: true
 ---
@@ -29,10 +29,11 @@ It's straight forward and follows with the approach I've previously laid out. Do
 #### Collection
 The collection will iterate records and return the JSON array of objects representing each house. I'm going to wrap the array as a data element, to give some mild metadata I usually provide, including a simple version of any request parameters and, lastly, an error flag (with an error message, if the boolean _error_ property is true); this is consistent with [what I've done before]({{ site.url }}/xpages/custom-JSON-with-Java-sized-XAgent).
 
-Below, when I handle the reflection of JSON to a Java Object (in conjunction with the ), I will show how to use both.
+Below, when I handle the reflection of JSON to a Java Object (in conjunction with the ), I will show how to use both. Here's the providing of a collection, pulling entry information from a _ViewNavigator_ into the Java object that will become the JSON string. I'm going to use a _HashMap_ as my base object, with an _ArrayList_ which will hold the individual data entries. As I like to do, I'm going to wrap some basic request info up front and, provided it successfully gets to the end of the request, provide an _error_ property as a boolean.
 
 {% gist x %}<br />
 
+Fairly straight forward
 
 #### Document
 asdf
