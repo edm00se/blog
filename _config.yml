@@ -104,7 +104,7 @@ kramdown:
 prose:
   rooturl: '_posts'
   siteurl: '//edm00se.io/'
-  relativeLinks: '//edm00se.io/links.jsonp
+  relativeLinks: '//edm00se.io/links.jsonp'
   media: 'images'
   metadata:
     _posts:
