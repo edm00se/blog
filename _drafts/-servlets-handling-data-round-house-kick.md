@@ -19,10 +19,13 @@ Note: I'll be sticking to the same, vanilla Java approach I've used previously i
 The endpoint will accept (and return) only _application/json_. Here's the structure it'll take.
 
 {:.table .table-bordered}
-| Route                   | Methods Allowed  |
-|-------------------------|------------------|
-| .../xsp/houses          | GET, POST        |
-| .../xsp/houses/{:unid}  | GET, PUT, DELETE |
+| Route                    | Methods Allowed	|
+|--------------------------|-------------------|
+| .../xsp/houses       		| GET				|
+|							|POST        		|
+| .../xsp/houses/{:unid}	| GET				|
+|							|PUT				|
+|							|DELETE				|
 
 It's straight forward and follows with the approach I've previously laid out. Do note that to create a new entry, it will be taking a POST against the collection, whereas the individual entry will be accessed via GET to send the existing document, PUT to update partial information, and DELETE to do the obvious.
 
@@ -46,7 +49,7 @@ I'm also going to create the JSON with the GSON library, as I've covered both th
 * ibm.commons
 * others?
 
-### An Object Model for Everyone
+### An Object Model for (Almost) Everyone
 asdf
 
 #### Generating the Model: POJO
@@ -55,9 +58,13 @@ asdf
 #### Helper: jsonschema2pojo.org ?
 asdf
 
+#### Uniqueness of Using an Abstracted Document
+asdf
+
 ### Receiving Data from POST or PUT (or PATCH)
 
 #### BufferedReader vs InputStream?
+asdf
 
 #### FromJson
 [getReader](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getReader())
@@ -69,17 +76,21 @@ Gson gson = new Gson();
 MyBean myBean = gson.fromJson(reader, MyBean.class);
 ```
 
-### Controller Logic
+#### Controller Logic
 asdf
 
-#### Validate
+* Validate
+* Perform Actions
+* Perform CRUD Operations
 
-#### Perform Actions
+#### Provide Response
+asdf
 
-#### Perform CRUD Operations
+#### Response Codes and Error Handling
 
-### Provide Response
+### Note: On PUT and DELETE Methods
+asdf
 
-#### Success
-
-#### HTTP Codes for RESTful APIsß
+* enable in Internet Site
+* enable in Notes.ini
+* work around using X-Http-Method-Override
