@@ -5,7 +5,7 @@ title: "Handling Data in a Servlet"
 description: “going Chuck Norris on some data“
 category: xpages-servlets
 tags: [xpages, domino, java, servlet]
-modified: 2015-03-20
+modified: 2015-03-19
 comments: true
 share: true
 ---
@@ -198,4 +198,4 @@ I've covered a whole heck of a lot in this post. We split our servlet to handle 
 
 I also know there are people out there thinking, "but there's this better way to do this part!" Great! Please show us and/or me how. I also welcome all constructive comments below.
 
-To see my application code to this point, by all means check out [my GitHub repository]() for it. Follow the ReadMe.md instructions to get started. This repository will update once I've completed the next two posts. I still want to cover how to convert XAgent logic to a servlet and creating a basic front-end interface to this servlet with <span data-toggle="tooltip" title="my MV* framework of choice">AngularJS</span>. So please stay tuned to this series, as there's more to come!
+To see my application code to this point, by all means check out [my GitHub repository](//github.com/edm00se/AnAppOfIceAndFire) for it. Follow the ReadMe.md instructions to get started. This repository will update once I've completed the next two posts. I still want to cover how to convert XAgent logic to a servlet and creating a basic front-end interface to this servlet with <span data-toggle="tooltip" title="my MV* framework of choice">AngularJS</span>. So please stay tuned to this series, as there's more to come!
