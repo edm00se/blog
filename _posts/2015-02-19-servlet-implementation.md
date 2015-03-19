@@ -47,9 +47,9 @@ You'll need to right-click on your _Code/Java_ folder and select New, followed b
 
 Then do the same, selecting file, and call it _com.ibm.xsp.adapter.servletFactory_. In this file, we put a single line for the class which will do the assigning of end points to servlet Classes.
 
-```
+{% highlight java %}
 com.eric.test.ServletFactory
-```
+{% endhighlight %}
 
 
 ### Registering Your Servlet Classes
