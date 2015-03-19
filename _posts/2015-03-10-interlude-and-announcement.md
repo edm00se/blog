@@ -20,7 +20,7 @@ My [series on servlets]( {{ site.url }}/servlet-series ) is in a temporary inter
 Over the last week or so, I started to run into an issue I had trouble quantifying. Thankfully, with the help of some intelligent people on twitter (Jesse for one, who seemed to know what I ran into almost immediately) I once again appreciate the fact that our #XPages developer community is a strong one which is almost always willing to help someone through an issue. It's a credit to this community and one of the reasons that this blog exists. When David Leedy suggested those with anything they could share, ought to, it hit home as I've benefited greatly from the work of others.
 
 ##### The Issue
-I shifted my development environment to a new vm and, while doing some actual code work in preparation for the next post in the servlet series, I noticed that my servlets that depended _DesignerFacesServlet_ had stopped working. After consulting with Jesse Gallagher, 
+I shifted my development environment to a new vm and, while doing some actual code work in preparation for the next post in the servlet series, I noticed that my servlets that depended _DesignerFacesServlet_ had stopped working. After consulting with Jesse Gallagher, there seems to be some issues with ClassLoader outside of XPages design elements without this.
 
 So, it seems that while I can keep my JARs in &lt;install&gt;/jvm/lib/ext/, it *also* seems that I need to continue to apply the *lady-of-the-evening* approach to my java.pol(icy) file to get _FacesContext_ access in my servlets; with the following:
 
