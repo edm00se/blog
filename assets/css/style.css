@@ -2587,18 +2587,22 @@ body.slide{
     #permalink .permalink-box{
         width:90%
         }
-
+}
 
 @media screen and (max-width:500px){
     
     a#slide{
         position:absolute    
         }
-
+}
 
 /*      End-Responsive      */
 
 /* override */
 .fa-time {
 	display: none !important;
+}
+
+img.emoji {
+	margin-bottom: auto !important;
 }

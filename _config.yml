@@ -215,3 +215,6 @@ prose:
 
 include: [".htaccess"]
 exclude: ["arch", "documentation.md", "_drafts", "_odin.yml", "_drafts/pending_thoughts", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "*.wip"]
+
+gems:
+  - jemoji
