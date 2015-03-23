@@ -11,7 +11,7 @@ share: true
 ---
 
 ### Intro
-This is a brief intro to nginx, the reverse proxying web server I've 
+This is a brief intro to nginx, the reverse proxying web server I've fallen in love with every time I've used it. I'm by far [not the first person to blog on the subject](//frostillic.us/blog/search?q=nginx), but this may be a good starting point for some people.
 
 While setting myself up for editing the AngularJS version of my app for [my Java servlet series]({{ site.url/servlet-series/ }}), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
 
