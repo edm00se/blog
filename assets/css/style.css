@@ -112,6 +112,7 @@ a:hover {
 .lead {
   font-size: 21px;
   line-height: 2em;
+  word-wrap: break-word; 
 }
 /* - Blockquote - */
 blockquote {
