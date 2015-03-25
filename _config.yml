@@ -1,6 +1,6 @@
 title:            Dev|Blog
 description:      "A blog for my shared trials, tribulations, and triumphs in the world of IBM Domino/XPages and more."
-logo:             logo_finalWhite_120.png
+logo:             logo_finalWhite.svg
 disqus_shortname: em-devblog
 # Assign a default image for your site's header and footer
 default_bg:       aBridgeInTime.jpg
