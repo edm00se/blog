@@ -218,3 +218,4 @@ exclude: ["arch", "documentation.md", "_drafts", "_odin.yml", "_drafts/pending_t
 
 gems:
   - jemoji
+  - jekyll-press
