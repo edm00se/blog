@@ -27,6 +27,9 @@ David Leedy said some horrendously nice things about me I'd like to clear up. I'
 That being said, I may sound smart on occasion, I tend to know what I know and <span data-toggle="tooltip" title="really not know it, f.e.- I never took high school chemistry">be aware of what I don't</span>, I will never claim to be the smartest person in any room. I value intelligence in all its forms, from raw knowledge to deductive reasoning or plain and simple critical thinking. I also have the great advantage of being a (relatively new) member of an excellent community, which has a number of greatly talented members, who by far out shine my abilities, and I'm happy to be counted among them.
 
 
+### A Promise
+I'll get an external microphone by the time I record my next Notesin9 video.
+
 ### My Company
 As David mentioned, I work for an IBM customer. I don't usually chuck my company's name around. My company is privately held, a fourth-generation family owned business, headquartered in Appleton, WI, and all around an excellent company to work for. My company is [The Boldt Company](//www.theboldtcompany.com/), which just finished celebrating its [125th year](//www.theboldtcompany.com/125-anniversary/home.php) in operation and we provide construction management and services to many across the country and have done and continue to do some international work.
 
