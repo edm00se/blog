@@ -9,7 +9,7 @@ image:
 <figure>
   <img src="{{ site.owner.gravatar }}?s=260" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle img-responsive" style="max-width:260px;" data-toggle="tooltip" title="that's me!" />
   <!-- <figcaption style="font-size:x-large;font-style:inherit;">Eric McCormick</figcaption> -->
-  <img src="{{ site.url }}/images/ibmchampion.jpg" alt="IBM Champion logo" itemprop="image" class="img-responsive" data-toggle="tooltip" title="who knew?" />
+  <img src="//i.stack.imgur.com/YcEnK.png" alt="IBM Champion logo" itemprop="image" class="img-responsive" data-toggle="tooltip" title="who knew?" />
 </figure>
 
 >Developer
