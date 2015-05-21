@@ -5,7 +5,7 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for link in site.links %}{% if link.external %}{% else %} 
     <url>
-        <loc>{{ site.url }}{{ link.url }}</loc>
+        <loc>http://{{ site.url }}{{ link.url }}</loc>
     </url>{% endif %}{% endfor %}
     
     {% for post in site.posts %}
