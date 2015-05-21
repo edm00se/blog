@@ -10,7 +10,7 @@ layout: null
     
     {% for post in site.posts %}
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
+        <loc>http://{{ site.url }}{{ post.url }}</loc>
     </url>
     {% endfor %}
 </urlset>
