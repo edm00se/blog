@@ -17,13 +17,18 @@ I had some trepidation about this post; it revolves around the fact that I'm "co
 I've referred to this series as [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets). While most Java servlets are intended for use over HTTP (at least from a JEE, web container standpoint), this is not exclusive; I've used HTTPServlet as analagous to Servlet (for better or for worse).
 
 ##### RESTful API
-A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions (previously covered).
+A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered]({{ site.url }}/xpages/rest-is-best/)); this generally boils down to generally following HATEOAS principles (descriptive paths, route parameters where required for depth of information, query parameters for optional data, and consistency of formatting).
 
 ##### "Stack" Development
 Part of my crucade in the realm of segregating application development concerns into the front-end and back-end revolves around the concept of these "ends" to the application. Both play an important role, but work best together. By building your back-end to adhere to certain conventions, you can create your front-end with any front-end technology. This is why 
 
-##### XPages is Full-Stack Development?
+Where XPages fits in as a component in all of this can be a little tricky. Obviously, XPages design elements encompass the applicaiton, but 
+
+##### XPages: Full-Stack Development?
 adsf
+
+Domino Database with striped XPages application layer.
+XSP runtime: http://www.slideshare.net/MartinDonnelly1/connected2015-domino-apps-for-bluemix/9
 
 ### Front-End Consumption
 -any JS consumption
