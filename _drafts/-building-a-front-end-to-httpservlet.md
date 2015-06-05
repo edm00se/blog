@@ -5,7 +5,7 @@ title: "Building a Front-End"
 description: "An App with AngularJS and our RESTful HTTPServlet"
 category: xpages-servlets
 tags: [xpages, domino, javascript, servlet, angularjs]
-modified: 2015-05-26
+modified: 2015-06-09
 comments: true
 share: true
 ---
@@ -20,21 +20,21 @@ I've referred to this series as [#ASagaOfServlets](//twitter.com/search?q=%23ASa
 A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered]({{ site.url }}/xpages/rest-is-best/)); this generally boils down to generally following HATEOAS principles (descriptive paths, route parameters where required for depth of information, query parameters for optional data, and consistency of formatting).
 
 ##### "Stack" Development
-Part of my crucade in the realm of segregating application development concerns into the front-end and back-end revolves around the concept of these "ends" to the application. Both play an important role, but work best together. By building your back-end to adhere to certain conventions, you can create your front-end with any front-end technology. This is why 
+Part of my crucade in the realm of segregating application development concerns into the front-end and back-end revolves around the concept of these "ends" to the application. Both play an important role, but work best together. By building your back-end to adhere to certain conventions, you can create your front-end with any front-end technology. This is why I'm such a huge fan. At my company, we have a large number of in-house systems, many of which talk to each other. By segregating the primary business logic (governing how we store the data, events that trigger from the server, and steps in workflow) as being a part of how the server components work, then any client playing by the rules can be a valid interface; whether that's an automated agent which checks for non-interface updates, or the front-end which contains all the user interaction at the UI level. The business logic become much more maintainable and documentable in the process.
 
-Where XPages fits in as a component in all of this can be a little tricky. Obviously, XPages design elements encompass the applicaiton, but 
+Where XPages fits in as a component in all of this can be a little tricky. Obviously, XPages design elements encompass the application layer, but deciding how that maps to a front-end as opposed to a back-end is a bit trickier. ...
 
 ##### XPages: Full-Stack Development?
-adsf
+Obviously, certain beginner XPages development approaches (conducive to SSJS spaghetti code<sup>&#8482;</sup>) can be quite the antithesis of what the segregated stack approach gives us. This makes our XPages design elements, containing not just the markup and layout of elements (fields, labels, etc.), but also logic, `if(status.equals("certainStep")){ doSomethingUnique(); }`, and actions (since these 5 conditions are true, send an email to these 12 people). Combine this with the unique, noSQL database handling via the _NotesDominoAPI_, it's my belief that XPages development is by default a full-stack application stack; for better or for worse.
 
-Domino Database with striped XPages application layer.
-XSP runtime: http://www.slideshare.net/MartinDonnelly1/connected2015-domino-apps-for-bluemix/9
+Ultimately, the point I'm trying to make, is that we have a lot of options and decisions we can make with Domino/XPages, but with any ambiguity, there are potential pitfalls. One way this is changing, IMO, is [the bringing of the XSP(XPages) runtime to Bluemix](http://www.slideshare.net/MartinDonnelly1/connected2015-domino-apps-for-bluemix/9). In case you missed it, [I've posted a couple early thoughts on Bluemix]({{ site.url }}/bluemix/bluemix-chalky-soup/), and I'm both impressed and excited for what it can and will bring to the table for my company and I.
 
 ### Front-End Consumption
--any JS consumption
--framework what you want to do
--play to their strengths
--play to your strengths
+
+* any JS consumption
+* framework what you want to do
+* play to their strengths
+* play to your strengths
 
 
 ### Why AngularJS?
@@ -43,6 +43,9 @@ https://www.google.com/trends/explore?hl=en-US#q=ember.js,+angularjs,+backbone.j
 https://www.airpair.com/js/javascript-framework-comparison
 
 ToDoMVC
+
+### My Example
+AppOfIceAndFire.nsf
 
 #### Resources ad Nauseum
 asdf
