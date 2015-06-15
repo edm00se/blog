@@ -5,7 +5,7 @@ title: "Building a Front-End"
 description: "An App with AngularJS and our RESTful HTTPServlet"
 category: xpages-servlets
 tags: [xpages, domino, javascript, servlet, angularjs]
-modified: 2015-06-09
+modified: 2015-06-16
 comments: true
 share: true
 ---
@@ -17,12 +17,20 @@ I had some trepidation about this post; it revolves around the fact that I'm "co
 I've referred to this series as [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets). While most Java servlets are intended for use over HTTP (at least from a JEE, web container standpoint), this is not exclusive; I've used HTTPServlet as analagous to Servlet (for better or for worse).
 
 ##### RESTful API
-A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered]({{ site.url }}/xpages/rest-is-best/)); this generally boils down to generally following HATEOAS principles (descriptive paths, route parameters where required for depth of information, query parameters for optional data, and consistency of formatting).
+A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered]({{ site.url }}/xpages/rest-is-best/)); this generally boils down to:
+
+* a resource based interface, following <span data-toggle="tooltip" title="Hypermedia as the Engine of Application State">HATEOAS</span>
+* be stateless (no server session required, the URI request gives all the server needs to know)
+* be cachable or not (depending on what sort of data you're providing)
+* work entirely independent of any particular client format (while adhering to certain things like authentication and formatted requests)
+
+
+There are more that a RESTful API _can_ do or rules that can be applied, but that's the high level stuff. As you can see, this is part of the core of the segregation of data and primary business logic from the client-layer side of the application.
 
 ##### "Stack" Development
 Part of my crucade in the realm of segregating application development concerns into the front-end and back-end revolves around the concept of these "ends" to the application. Both play an important role, but work best together. By building your back-end to adhere to certain conventions, you can create your front-end with any front-end technology. This is why I'm such a huge fan. At my company, we have a large number of in-house systems, many of which talk to each other. By segregating the primary business logic (governing how we store the data, events that trigger from the server, and steps in workflow) as being a part of how the server components work, then any client playing by the rules can be a valid interface; whether that's an automated agent which checks for non-interface updates, or the front-end which contains all the user interaction at the UI level. The business logic become much more maintainable and documentable in the process.
 
-Where XPages fits in as a component in all of this can be a little tricky. Obviously, XPages design elements encompass the application layer, but deciding how that maps to a front-end as opposed to a back-end is a bit trickier. ...
+Where XPages fits in as a component in all of this can be a little tricky. Obviously, XPages design elements encompass the application layer, but deciding how that maps to a front-end as opposed to a back-end is a bit trickier. TODO:...
 
 ##### XPages: Full-Stack Development?
 Obviously, certain beginner XPages development approaches (those conducive to SSJS spaghetti code<sup>&#8482;</sup>) can be quite the antithesis of what the segregated stack approach gives us. This makes our XPages design elements, containing not just the markup and layout of elements (fields, labels, etc.), but also logic, `if(status.equals("certainStep")){ doSomethingUnique(); }`, and actions (since these X conditions are true, send an email to these 12 people). Combine this with the unique, [NoSQL database](https://en.wikipedia.org/wiki/NoSQL) handling via the _NotesDominoAPI_, it's my belief that XPages development is by default a full-stack application stack; for better or for worse.
@@ -35,10 +43,27 @@ Ultimately, the point I'm trying to make, is that we have a lot of options and d
 ### Front-End Consumption
 Having shaped our back-end [earlier in this series]({{ site.url }}/xpages-servlets/servlets-handling-data-round-house-kick/) to adhere to a primarily RESTful API format, we can now consume that API by _some front-end_. In the [Notes in 9 173: Getting Started With (HTTP)Servlets](https://www.youtube.com/watch?v=stJ3Yc1BOnU&t=32m47s) video, I demonstrated this principle via the [Postman REST client](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) (a Chrome extension). There are others out there and you could even [test from your command line via cURL](http://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/), if you're so inclined. What this demonstrates is that virtually _any_ front-end can consume the API, it just comes down to how you expose/provision that API and what you point to it.
 
+It also shows the method of data transfer. In order for a front-end to work with my RESTful API, it will need to:
+
+* provide/receive all data in application/json
+* stick to the available resources (_houses_)
+* create a new entry, one-at-a-time, against the collection endpoint (_/houses_)
+* read, update, delete against the (UN)ID keyed URI (_/houses/[0-9a-zA-Z]{32}_)
+* collection data is accessible via _/houses_
+
+
 ##### JavaScript Consumption
 Front-end development in this day and age focuses on JavaScript usage. Most people use a framework of some flavor, to automate the things they'd rather not spend too much time on. Some of these things include standardizing how you interact with an HTTP RESTful API endpoint, or automate the updating of data between bound components. The fact of the matter is, there are plenty of frameworks out there, many which can help you in your quest.
 
+##### JavaScript Frameworks
+Choosing a JavaScript framework can be a little daunting, if you're doing so for the first time. There's a long history of many web applications making use of jQuery or Dojo, both of which are libraries(/frameworks) that automate quite a bit, they're not of the MVC/MV* flavor I'm looking for. The fact remains, one can make a fully-formed application out of either, I just won't focus on them.
 
+[Aside]
+There are [jQuery UI](https://jqueryui.com/) ([and mobile](https://jquerymobile.com/)) and [Dojox MVC](https://dojotoolkit.org/reference-guide/1.10/dojox/mvc.html), but I'm moving on for simplicity's sake.
+[/Aside]
+
+##### MVC/MV* Architecture
+asdf
 
 * any JS consumption
 * framework what you want to do
