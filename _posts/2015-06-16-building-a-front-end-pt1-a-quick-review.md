@@ -143,6 +143,6 @@ So, all those naysayers, I say pick a framework. I'm going with AngularJS and it
 <a href="//www.bennadel.com/blog/2439-my-experience-with-angularjs-the-super-heroic-javascript-mvw-framework.htm" data-toggle="tooltip" title="my feelings about AngularJS over time"><img src="//www.bennadel.com/resources/uploads/2013/feelings_about_angularjs_over_time.png" class="img-responsive center-block" /></a>
 
 ### Tomorrow
-Come back tomorrow for the conclusion of this epic journey.
+[Come back tomorrow for the conclusion of this epic journey]({{ site.url }}/xpages-servlets/building-a-front-end-pt2-an-app-with-angular).
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/1P3P2L0Q25Y?start=28" frameborder="0" allowfullscreen></iframe>
