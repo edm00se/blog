@@ -5,7 +5,7 @@ title: "Prettify Your Error Code"
 description: "adding style to a custom error XPage"
 category: self-promotion
 tags: [xpages, domino, javascript, servlet, angularjs]
-modified: 2015-06-22
+modified: 2015-07-02
 comments: true
 share: true
 ---
