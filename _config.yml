@@ -219,3 +219,4 @@ exclude: ["arch", "documentation.md", "_drafts", "_drafts/depr", "_drafts/pendin
 
 gems:
   - jemoji
+  - jekyll-redirect-from

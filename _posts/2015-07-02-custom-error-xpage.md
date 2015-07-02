@@ -2,9 +2,10 @@
 layout: post
 type: post
 title: "Prettify Your Error Code"
+redirect_from: "/self-promotion/custom-error-xpage/"
 description: "adding style to a custom error XPage"
-category: self-promotion
-tags: [xpages, domino, javascript, servlet, angularjs]
+category: xpages
+tags: [xpages, domino, javascript]
 modified: 2015-07-02
 comments: true
 share: true
