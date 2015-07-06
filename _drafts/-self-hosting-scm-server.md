@@ -14,7 +14,7 @@ share: true
 I've gone through a couple rounds of preferences when it comes to self-hosted source control servers in the past couple years. I'm going to break down what I like about externally hosted solutions and then get into the benefits and trade-offs of a few of the (freely available) self-hosted solutions.
 
 ### Externally Hosted
-There are two major players in the externally hosted (free) realm. There are more, but these are the big ones.
+There are two major players in the (free) externally hosted realm. There are more, but the two big ones of late are [GitHub](//github.com) and [Bitbucket](//bitbucket.org).
 
 ##### GitHub
 asdf
