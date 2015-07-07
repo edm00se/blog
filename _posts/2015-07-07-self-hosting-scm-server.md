@@ -11,6 +11,8 @@ share: true
 ---
 
 ### Intro
+Source Control has become a rallying point of sorts for me in the last few years. It has saved my bacon on a few occassions and source control in general (and git, specifically) is near and dear to me. I'm always on the quest for the best application development workflow, which can sometimes be difficult to achieve, depending on varying development team sizes.
+
 I've gone through a couple rounds of preferences when it comes to self-hosted source control servers in the past couple years. I'm going to break down what I like about externally hosted solutions and then get into the benefits and trade-offs of a few of the (freely available) self-hosted solutions.
 
 ### Externally Hosted
