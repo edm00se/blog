@@ -71,3 +71,7 @@ All in all, if you're looking to go your own way, most of the self-hosted option
 * Fredrik Norling's blog post on how to [Setup a Free Git Server with Domino Credentials in a Few Minutes](//www.xpagedeveloper.com/2014/setup-a-free-git-server-with-domino-credentials-in-a-few-minutes), which uses [GitBlit](//gitblit.com/)
 * Notes in 9 #131: [Use SourceTree for Better XPages Source Control](//www.notesin9.com/2013/11/12/notesin9-131-use-sourcetree-for-better-xpages-source-control/)
 * Notes in 9 #140: [SourceTree Deep Dive](//www.notesin9.com/2014/03/24/sourcetreedeepdive/)
+
+[Edit]
+You should also check out [Show 103: The Show & Tell on Source Control - An End to End Solution](//www.intec.co.uk/show-103-source-control-an-end-to-end-solution/) presentation from IBM Connect 2014 by Paul Withers and Declan Lynch. It's worth a read as these two go into some excellent detail on both the hosting solutions, SourceTree, DORA, and some specifics in using them all together.
+[/Edit]
