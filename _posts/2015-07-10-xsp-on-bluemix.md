@@ -30,6 +30,10 @@ Plenty more, it would seem. This is just the initial launch and brings in line s
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="und" dir="ltr"><a href="https://twitter.com/TweeterDonnelly">@TweeterDonnelly</a> <a href="http://t.co/zJGdJvAeLB">pic.twitter.com/zJGdJvAeLB</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/619506133452103680">July 10, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+The XPages runtime is considered "experimental", it's not 'alpha' but it's not 'beta'. I still managed to throw together some Pratt Keeping for Bluemix though.
+
+<a href="{{ site.url }}/images/post_images/XPagesOnBluemix_PrattKeeping.png" data-toggle="tooltip" title="you're my boy Blue!"><img src="{{ site.url }}/images/post_images/XPagesOnBluemix_PrattKeeping.png" class="img-responsive center-block" /></a>
+
 ### A Quick Plug
 For those with an interest in XPages use on Bluemix, I recommend attending the webinar, "An introduction to creating Domino Applications in the Bluemix Environment" on 
 
