@@ -20,6 +20,17 @@
 	width: 150%;
 }
 
+.smallGistScroller {
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+.smallGistScroller > div.gist {
+	margin-left: initial !important;
+	width: initial !important;
+}
+
 iframe.twitter-tweet {
   margin-left: auto !important;
   margin-right: auto !important;
