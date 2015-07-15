@@ -23,7 +23,7 @@ share: true
 <br />
 
 ### Intro
-It's no secret I'm a strong advocated for segregated application design practices. In my quest to "make everything work the way I want it", I've chosen a front-end framework that my ui-level application is written in, structured my primary application layer into RESTful Java *HTTPServlet*s (*DesignerFacesServlet*s, specifically), and life is generally good. My endeavors in this area are for a few, specific reasons, namely:
+It's no secret I'm a strong advocate for segregated application design practices. In my quest to "make everything work the way I want it", I've chosen a front-end framework that my ui-level application is written in, structured my primary application layer into RESTful Java *HTTPServlet*s (*DesignerFacesServlet*s, specifically), and life is generally good. My endeavors in this area are for a few, specific reasons, namely:
 
 * keep my development efforts focused (e.g.- identifying whether a problem is front-end or back-end can greatly speed up trouble shooting)
 * focus on data as a service (which makes it easily consumed by other systems)
