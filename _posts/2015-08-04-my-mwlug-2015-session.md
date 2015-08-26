@@ -10,6 +10,8 @@ comments: true
 share: true
 ---
 
+#### [My Post-Conference Post with goodies!]({{site.url}}/self-promotion/mwlug-ad113-success)
+
 ### MWLUG is Nearly Here
 
 <a href="http://i.giphy.com/mPOGx4hJtOWSA.gif" data-toggle="tooltip" title="call me excited"><img src="http://i.giphy.com/mPOGx4hJtOWSA.gif" class="img-responsive center-block" /></a>
