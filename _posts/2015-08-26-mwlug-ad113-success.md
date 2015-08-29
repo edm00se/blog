@@ -4,7 +4,7 @@ type: post
 title: "MWLUG2015: AD113"
 description: "Speed Up Your Applications With Nginx and PageSpeed"
 category: self-promotion
-tags: [mwlug, structure, mvc, rest, xpages]
+tags: [mwlug, nginx, xpages]
 modified: 2015-08-26
 comments: true
 share: true
