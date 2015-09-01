@@ -13,6 +13,10 @@ share: true
 #### Intro
 This is a quick post, covering something I overheard while at MWLUG and comes back to some application architectural principles which I have a bit of a passion for. Read on at your own peril :wink:
 
+[Update]
+I added a bit from a tweet by Tony McGuckin about the XPages runtime's components.
+[/Update]
+
 ### Back to the Grind After MWLUG
 There's an intersting slump I experience after getting back from a conference. Not only do I get to clear out of the mountain of things that seem to crop up only while I'm out of the office, but it seems that I'm able to come away from such a gathering with other developers with lots of great ideas for both my growth as a developer but also for what I'm able to accomplish for my company and its users that it's a nearly unbearable amount to be able to extract from my own head, but I try. For this last week though, I just worked the tasks at hand.
 
@@ -23,6 +27,17 @@ While at MWLUG, I overheard someone make a reference to people "not liking POST"
 * a striped database (though for performance it's best to separate it)
 * with a greatly convenient security model (that makes it _very_ easy to map roles and groups across applications)
 * and a bunch of OoB (out of the box) controls that aid in [RAD](//en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](//www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
+
+[Update]
+As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than just the JSF runtime components. Since it's a larger list than my couple of bullet points, I'll let the tweet and screen shot from the liked XPages Masterclass video do the talking.
+
+##### The Tweet
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr"><a href="https://twitter.com/flinden68">@flinden68</a> Congrats Frank! +1 <a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a> includes features not even in JSF2.2 - some info at 1min 22secs in <a href="https://t.co/Yzzvf2BhYx">https://t.co/Yzzvf2BhYx</a> <a href="https://twitter.com/hashtag/GoodPoint?src=hash">#GoodPoint</a></p>&mdash; Tony McGuckin (@tonymcguckin) <a href="https://twitter.com/tonymcguckin/status/638678645595336704">September 1, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+##### The Screen Shot
+<a href="{{ site.url }}/images/post_images/XPages_runtime.png" data-toggle="tooltip" data-placement="left" title="the XPages runtime and its components from JSF and additions"><img src="{{ site.url }}/images/post_images/XPages_runtime.png" class="img-responsive center-block" /></a>
+[/Update]
 
 #### My Beef With Transporting Markup
 My list above of what XPages provides us lists the controls that we most often associate as being "XPages" (specifically the design elements of XPages and Custom Controls, along with the _xp_ and _xe_ controls) at the end. My approach is opinionated in the absolute segregation of front-end and back-end, but it uses the application runtime provided by XPages (and its JSF implementation) to provide a great experience with excellent results. The OoB elements give us _one way_ of doing things, so since it bugs me, I'm going a different way, without issue.
