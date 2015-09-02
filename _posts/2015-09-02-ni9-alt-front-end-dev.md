@@ -16,7 +16,11 @@ I'm on Notes in 9 again! This is my second video and one where I tried out my ne
 This episode also highlights my ability to mis-speak. I've been working on Notes/Domino, primarily XPages, since November of 2011; I erroneously said fall of 2012 in the video. But hey, you want to see my awesome ways of code-fu, so my ability to speak English should be mildly irrelevant :stuck_out_tongue_winking_eye:.
 
 ### The Video
-Found [on Notes in 9](//www.notesin9.com/2015/09/01/notesin9-180-alternative-frontend-development-for-xpages/) or [on YouTube](//www.youtube.com/watch?v=_lHGZiD-aE0).
+Found [on Notes in 9](//www.notesin9.com/2015/09/01/notesin9-180-alternative-frontend-development-for-xpages/) or [on YouTube](//www.youtube.com/watch?v=_lHGZiD-aE0) (including here).
+
+<div class="embed-responsive embed-responsive-16by9 center-block">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/_lHGZiD-aE0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### The Premise
 The style of front-end development I'm demonstrating falls into the category of things we have, given by Domino, that can easily be overlooked. We can run _entire web sites_ out of the _WebContent_ folder. This means we don't have an XPage as our root design element, but that's not to say we are unable to do so. Since the _HttpServlets_ I'm using (_DesignerFacesServlets_) run from the XPages runtime, they still pick up a logged in user's session as it's still them. If you want to look at the set up for this style, just look back at my [Saga of Servlets]({{ site.url }}/servlet-series/) or my [GitHub repository](//github.com/edm00se/AnAppOfIceAndFire) for my App of Ice and Fire.
