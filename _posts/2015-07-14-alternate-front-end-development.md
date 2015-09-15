@@ -10,6 +10,10 @@ comments: true
 share: true
 ---
 
+[Update]
+This topic is so awesome I turned it into [a video for Notes in 9, check it out]({{ site.url }}/self-promotion/ni9-alt-front-end-dev).
+[/Update]
+
 <!-- auto-magic TOC! -->
 <section>
   <header data-toggle="tooltip" title="it's dangerous to go alone, take this!">
