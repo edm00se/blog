@@ -7,6 +7,10 @@
  * Customized by @edm00se.
  *
  */
+ 
+ .img-no-btm-margin {
+ 	margin-bottom: initial !important;
+ }
   
 .no-touch div.gist {
 	overflow-x: scroll !important;
