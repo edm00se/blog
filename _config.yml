@@ -65,7 +65,7 @@ links:
     url: /tags
     icon: fa-tags
   - title: about.me
-    url: //about.me/EricMcCormick
+    url: https://about.me/EricMcCormick
     icon: fa-user
   - title: License
     url: /license.html
