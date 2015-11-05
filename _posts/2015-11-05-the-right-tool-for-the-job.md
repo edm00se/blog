@@ -24,10 +24,10 @@ share: true
 ### Before We Get Started
 I'm currently following along with [Jesse Gallagher](https://frostillic.us/)'s "That Java Thing" series, as I'm hoping it demystifies the process of creating an OSGi plug-in for me, and I highly recommend any XPages developer out there follow along as well. Jesse is approaching things from a pretty good stand point and I'm sure it'll be worth the ride.
 
-Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016. I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
+Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016 :tada:! I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
 
 ### Intro
-Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime for which I spend most of my day job working with.
+Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime with which I spend most of my day job working.
 
 <a href="{{ site.url }}/images/post_images/right-tool-for-job-jekyll/scottySays.jpg" data-toggle="tooltip" title="do as Scotty says, he's a miracle worker"><img src="{{ site.url }}/images/post_images/right-tool-for-job-jekyll/scottySays.jpg" class="img-responsive center-block" /></a>
 
@@ -57,7 +57,7 @@ Jekyll has been around longer than others (like Hugo) and is generally a mature 
 For those looking to get started with Jekyll, you'll need to have a working install of ruby >= version 2.0 and install the jekyll gem (gems in ruby are effectively packages). One good way of managing package dependencies is to use [bundler](http://bundler.io/), which in combination with a Gemfile allows you to define dependencies and perform the install via `bundle install`. If you're going this whole route and expect to need to work with more than one version of ruby on your machine, you'll want to use [rbenv](https://github.com/sstephenson/rbenv) to help manage that chaos (each gem you install is installed to the version of ruby you're using).
 
 #### GitHub Pages
-[GitHub Pages](https://pages.github.com/) offers one of two things; static site hosting or a [specific implementation of Jekyll](https://help.github.com/articles/using-jekyll-with-pages/) that generates and serves the generated site. It allows [a subset of plugins](https://help.github.com/articles/using-jekyll-with-pages/#keeping-jekyll-up-to-date) and installs as a gem itself. Strictly speaking, a person can set up a GitHub Pages site with Jekyll and not need to install any local dependencies, provided the lack of local preview and total reliance on a live environment is acceptable. GitHub Pages is:
+[GitHub Pages](https://pages.github.com/) offers one of two things; static site hosting or a [specific implementation of Jekyll](https://help.github.com/articles/using-jekyll-with-pages/) that generates and serves the generated site. It allows [a subset of plugins](https://help.github.com/articles/using-jekyll-with-pages/#keeping-jekyll-up-to-date) and installs as a gem itself. Strictly speaking, a person _can_ set up a GitHub Pages site with Jekyll and not need to install any local dependencies, provided the lack of local preview and total reliance on a live environment is acceptable. GitHub Pages is:
 
 * free
 * ubiquitous with all GitHub accounts and repositories
