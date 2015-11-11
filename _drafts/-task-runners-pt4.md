@@ -10,6 +10,8 @@ comments: true
 share: true
 ---
 
+{% include task-runners-series.md %}
+
 <!-- auto-magic TOC! -->
 <section>
   <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
@@ -20,8 +22,6 @@ share: true
 {:toc}
 </div>
 </section>
-
-{% include task-runners-series.md %}
 
 ### Intro
 Last time...

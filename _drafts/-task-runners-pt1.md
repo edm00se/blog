@@ -10,6 +10,8 @@ comments: true
 share: true
 ---
 
+{% include task-runners-series.md %}
+
 <!-- auto-magic TOC! -->
 <section>
   <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
@@ -20,8 +22,6 @@ share: true
 {:toc}
 </div>
 </section>
-
-{% include task-runners-series.md %}
 
 ### Intro
 The front-end web development scene is abundant with various tools and plugins designed to help make our lives easier. In my last post, I showed how to get set up with some front-end tooling to pre-process our primarily markdown content and HTML partial driven structure of a site to create a full blown, static blog. This pre-processing of our assets can do lots of things like convert/parse content (like markdown to HTML) but can also be used against more "normal" web assets, for a more optimized delivery of our web content. Today, I'm going to talk about two popular and useful "task runners" which help with running (you guessed it) tasks such as minification of CSS, uglification (think minification) and concatenation of JavaScript, and even optimization of images.
