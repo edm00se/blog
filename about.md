@@ -14,11 +14,15 @@ image:
 
 >Developer
 >
->Guru
->
 >Tinkerer
+>
+>Bearded
 
-I make some pretty cool stuff. I use the expectation that technology should let us be smarter, faster, or stronger in what we accomplish.
+I have an passion for application structure, RESTful API design, embracing M-V-C for its benefits, integrating development environments, automating tasks, and making leaner, faster applications for end users.
+
+When I'm not developing for a Java-heavy Domino back-end, I like to develop with Node.js + Express. I love creating front-ends for my applications in Angular, as I love focusing on the data and letting my markup (in my HTML partials) be _only_ markup (a theme which carries true with my avid adoption of managed beans on Domino).
+
+I am not perfect in anything, but I am always learning and welcome the input of others. The XPages community took me in when I came to the Domino platform and I try to give back when I can; in this blog, through various other projects, Notes in 9 videos, and speaking at conferences.
 
 I was [named an IBM Champion for 2015](/self-promotion/they-made-me-a-champion) (in Collaboration Solutions).
 
