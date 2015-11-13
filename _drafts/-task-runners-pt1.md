@@ -5,7 +5,7 @@ title: "Task Runners pt.1"
 description: "optimizing web content"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-13
+modified: 2015-11-16
 comments: true
 share: true
 ---
@@ -86,4 +86,4 @@ We will set up a task for our CSS and JavaScript files to accomplish about the s
 Images are tricky in that they only get rendered in the dimensions they are displayed at. Quite frequently, an image is slightly larger than it needs to be. We will set up a task to detect and optimize our image tagged files accordingly.
 
 ### To Be Continued...
-Part 2 covering the use of Grunt is coming soon.
+...in part 2, covering the install and use of Grunt.

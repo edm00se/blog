@@ -5,7 +5,7 @@ title: "Task Runners pt.2"
 description: "grunt through some tough tasks"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-05
+modified: 2015-11-18
 comments: true
 share: true
 ---
@@ -24,7 +24,7 @@ share: true
 </section>
 
 ### Intro
-Last time...
+Last time we covered what task runners are and why we should want to use them.
 
 ### Task Runners of Note: Grunt and Gulp
 The two most common and well known task runners (though there are [others, of course](http://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
@@ -84,6 +84,5 @@ Note: for the JavaScript files, be careful to only specify those JS scripts that
 * run server task and watch for changes
 * implements json-server in place of default grunt server task (my `npm start` script, but with reload and automatic grunt builds)
 
-### Break!
-*lt;separate into second post, a part 2&gt;
-To be continued in part 3, with gulp!
+### To Be Continued...
+...in part 3, with gulp!

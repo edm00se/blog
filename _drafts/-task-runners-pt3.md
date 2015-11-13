@@ -5,7 +5,7 @@ title: "Task Runners pt.3"
 description: "a refreshing gulp"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-05
+modified: 2015-11-20
 comments: true
 share: true
 ---
@@ -24,7 +24,7 @@ share: true
 </section>
 
 ### Intro
-Last time...
+Last time, we covered how to install, configure, and use Grunt to automate some common web optimization tasks to aid our development workflow.
 
 ### Gulp
 asdf
@@ -46,3 +46,6 @@ If you're looking to read up more on these tasks, I recommend checking out the s
 
 #### Related Topics
 Some people go a level beyond for various reasons. There are those that like to write their stylesheets in a language that compiles down into CSS (like [LESS](http://lesscss.org/) or [Sass](http://sass-lang.com/)). While I generally find the idea to be a bit odd, the ability to set certain values as re-usable variables (like Bootstrap does) or use mix-ins is somewhat compelling. The same principle is applied to JavaScript, as [CoffeeScript](http://coffeescript.org/) and [TypeScript](http://www.typescriptlang.org/) compile into JavaScript, and [Dart](https://www.dartlang.org/) _can_ be compiled to JavaScript. Each of these tasks can be added in as a task to Grunt or Gulp, so for those that want to use them, it's advantageous.
+
+### To Be Continued...
+...in part 4, additional topics.

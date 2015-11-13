@@ -5,7 +5,7 @@ title: "Task Runners pt.4"
 description: "additional tasks and automation"
 category: web
 tags: [grunt, gulp, git, jenkins-ci, scm, static, generator]
-modified: 2015-11-13
+modified: 2015-11-23
 comments: true
 share: true
 ---
@@ -24,7 +24,7 @@ share: true
 </section>
 
 ### Intro
-Last time...
+Last time, we covered how to install, configure, and use gulp to automate some useful tasks and how gulp is differentiated from Grunt.
 
 ### Taking it Further
 asfd
