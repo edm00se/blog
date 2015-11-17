@@ -1,11 +1,11 @@
 ---
 layout: post
 type: post
-title: "Task Runners pt.1"
-description: "optimizing web content"
+title: "Task Runners pt.1, An Introduction"
+description: "optimizing static web content"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-16
+modified: 2015-11-18
 comments: true
 share: true
 ---
@@ -24,23 +24,25 @@ share: true
 </section>
 
 ### Intro
-The front-end web development scene is abundant with various tools and plugins designed to help make our lives easier. In my last post, I showed how to get set up with some front-end tooling to pre-process our primarily markdown content and HTML partial driven structure of a site to create a full blown, static blog. This pre-processing of our assets can do lots of things like convert/parse content (like markdown to HTML) but can also be used against more "normal" web assets, for a more optimized delivery of our web content. Today, I'm going to talk about two popular and useful "task runners" which help with running (you guessed it) tasks such as minification of CSS, uglification (think minification) and concatenation of JavaScript, and even optimization of images.
+The front-end web development scene is abundant with various tools and plugins designed to help make our lives easier. In my last post, I showed how to get set up with some front-end tooling to pre-process our primarily markdown content and HTML partial driven structure of a site to create a full blown, static blog. This pre-processing of our assets can do lots of things like convert/parse content (like markdown to HTML) but can also be used against more "normal" web assets, for a more optimized delivery of our web content. Over the course of this series, I'm going to cover two popular and useful "task runners" which help with running (you guessed it) tasks such as minification of CSS, [uglification (think minification)](https://github.com/mishoo/UglifyJS2/) and concatenation of JavaScript, optimization of images, and even working in my previously document ability to work on the front-end of my application while [mocking the Domino back-end's servlet responses](({{ site.url }}/front-end/alternate-front-end-development)). There are many more tasks that can be utilized, but those are the ones I'm focusing on as they have (for me) the most utility.
+
+#### XPages
+The subject of task runners is one where the XPages runtime, which is critical to my access to, and handling of, data and how it relates to my user's Session and contingent data stored in a Domino file is explicitly relevant to the back-end of my application. Since this series deals solely with the front-end, you won't see too much specifically relating to XPages controls or design elements. As far as I'm concerned, this highlights the flexibility of the XPages runtime, as I'm getting the best of both Domino/XPages and front-end tooling. For those of you that think this is out of your comfort zone, don't worry, we all develop for the web as it is, so it shouldn't be _too scary_; so please fasten your seat belts, [the exit is located here](http://www.notesin9.com/), and hold on for the ride.
 
 #### Follow Along at Home
-You can either use any existing web applicaiton you have, though if you're working against a Domino/XPages file, it's best if you were to refactor your client-side (web) static assets into your WebContent/ path into respective css and js (or styles and scripts, whichever is your fancy) directories. This means that when you run the task runner against your assets in your On Disk Project (ODP), you won't have to go searching very far and they'll match up with how many non-Domino web apps are structured.
+You can either use any existing web application you have, though if you're working against a Domino/XPages file, it's best if you were to refactor your client-side (web) static assets into your WebContent/ path into respective css and js (or styles and scripts, whichever is your fancy) directories. This means that when you run the task runner against your assets in your On Disk Project (ODP), you won't have to go searching very far and they'll match up with how many non-Domino web apps are structured.
 
 If you need a copy, or just want to try it against someone else's code, here's one I prepared earlier.
 You can either clone the ODP in full or follow the next set of steps for a sparse checkout (which will pull down only what's needed for the client-side assets and the mocked back-end via json-server, as I've previously identified)
 URL: `https://github.com/edm00se/AnAppOfIceAndFire.git`
 
-#### You Should Have
-* Node.js or io.js
-* npm (usually installed with Node installer)
-* git
+##### You Should Have
+* [git](http://git-scm.com/)
+* a current version of [Node](https://nodejs.org/en/) ~~or [io.js](https://iojs.org/en/)~~ (with npm package manager) *note: [io.js merged with Node](http://www.linuxfoundation.org/news-media/announcements/2015/06/nodejs-foundation-advances-community-collaboration-announces-new) again (ca. June 2015), so probably skip io.js
 * familiarity with git (either CLI or SourceTree)
 * an application's client-side / front-end assets against which to work (or follow my next section to clone the necessary parts from a repository of mine)
 
-#### A Git Sparse Checkout of An App of Ice and Fire
+##### A Git Sparse Checkout of An App of Ice and Fire
 This will perform a [git sparse checkout](http://stackoverflow.com/questions/600079/is-there-any-way-to-clone-a-git-repositorys-sub-directory-only/13738951#13738951) of the required web assets and back-end mocking software. I am assuming you have a working copy of git installed (fairly recent) and a working install of node or io.js with npm. Don't worry about bower and json-server, if you don't have them, a command below will install them as a dependency into your local repository, per the specification in the package.json.
 
 * create a new directory to work from, it will be pulling from a git repository (using the [sparse checkout](http://stackoverflow.com/questions/600079/is-there-any-way-to-clone-a-git-repositorys-sub-directory-only/13738951#13738951))
@@ -59,10 +61,10 @@ This will perform a [git sparse checkout](http://stackoverflow.com/questions/600
    * for Windows, you'll need to start up the command prompt (from the Start/search, "cmd", right-click and select "run as administrator")
      * change directory to the root of the working git repository we set up, then run `mklink /d public NSF\WebContent`
   * don't worry about duplicate data, these are both methods for a symbolic link, meaning it's the same file, with multiple path pointers (and the `.gitignore` file is set up to ignore the public path, so we won't pollute our repository with duplicates)
-  * if you forget to set up the symlink, it will give you a screen like this, which basically announces that the resource end points are available, just without any other content being served (handy if you want to test the data structure without worrying about a full UI; aka- via [Postman](https://www.getpostman.com/) or another REST API client)
+  * if you forget to set up the symlink, it will give you a screen like this, which basically announces that the resource end points are available, just without any other content being served (handy if you want to test the data structure without worrying about a full UI; aka- via [Postman](https://www.getpostman.com/) or another REST API client); so go create that symlink!
   * <a href="{{ site.url }}/images/post_images/jsonServerMaintScreen.png" data-toggle="tooltip" title="json-server's default maintenance screen"><img src="{{ site.url }}/images/post_images/jsonServerMaintScreen.png" class="img-responsive center-block" /></a>
 
-#### Up and Running!
+##### Up and Running!
 Give it a test by running from the root of the project folder `npm start`. This runs the command [I outlined in my blog post]({{ site.url }}/front-end/alternate-front-end-development) and [corresponding Notes in 9 episode](https://www.notesin9.com/2015/09/01/notesin9-180-alternative-frontend-development-for-xpages/) on the subject of alternate front-end development with Domino/XPages. Again, this is just mocking the back-end for front-end development, but gives us flexibility for this sort of thing. You can view what npm executes as the "start" command by looking in the `package.json` file at the corresponding JSON key'd "start" line inside the "scripts" object (because `json-server --id unid db.json --watch --routes routes.json` is a fair amount to remember).
 Your CLI will report back the full command I set up as the "start" script for json-server and announce that there are resources available on localhost at your given port (likely 3000) and that other routes exist (my routing to map up to my _DesignerFacesServlet_s, as documented in my [series on servlets]({{ site.url }}/servlet-series/)).
 If you load up `http://localhost:300` in your web browser, you'll find the front-end of the application running. If you forgot to symlink `public` to `NSF/WebContent/`, you'll be greeted with a generic json-server page stating the resources available it loaded from my mock `db.json` file.

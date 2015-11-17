@@ -1,11 +1,11 @@
 ---
 layout: post
 type: post
-title: "Task Runners pt.2"
+title: "Task Runners pt.2: Grunt"
 description: "grunt through some tough tasks"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-18
+modified: 2015-11-20
 comments: true
 share: true
 ---
@@ -52,7 +52,7 @@ Plugin |	Description
 [contrib-cssmin](https://www.npmjs.org/package/grunt-contrib-cssmin)		|	Compress CSS files
 [contrib-imagemin](https://www.npmjs.org/package/grunt-contrib-imagemin)	|	Minify PNG, JPG, and GIFs
 [contrib-htmlmin](https://www.npmjs.org/package/grunt-contrib-htmlmin)		|	Minify HTML files
-[json-server](https://www.npmjs.com/package/grunt-json-server)				|	Run json-server in place of the default grunt server task
+[run](https://www.npmjs.com/package/grunt-run)								|	Run commands in the CLI, how we can invoke `json-server`
 
 The Grunt officially maintained plugins use the `contrib-<name>` convention, which generally relate to `grunt-contrib-<name>` [on GitHub](https://github.com/gruntjs/).
 
@@ -68,20 +68,37 @@ Now that we have the structure, we need to populate our configurations and tell 
 
 You can see that this can quite powerful rather quickly. Any tasks that we we want to take can be automated using some simple, well thought out configurations. Provided we stick to some standardized rules, we can have consistently automated tasks which require minimal input to invoke.
 
-It's easier to keep your static web assets in `WebContent/` in corresponding paths for images, stylesheets, etc., but with some careful configuration, you can work with the ODP's paths. Those corresponding paths are:
+It's easier to keep your static web assets in `WebContent/` in corresponding paths for images, stylesheets, etc., but with some careful configuration, you can work with the "normal" Domino Designer resource paths in the ODP. Those corresponding paths are:
 
 {:.table .table-bordered}
 Resource    	|	Path
-------			|	-----------
+------ | -----------
 Images			|	`NSF/Resources/Images/`
 Style Sheets	|	`NSF/Resources/StyleSheets/`
-JavaScript	|	`NSF/Code/ScriptLibraries/`
+JavaScript 		|	`NSF/Code/ScriptLibraries/`
 
-Note: for the JavaScript files, be careful to only specify those JS scripts that end in `.js` and avoid any that end with `.jss` as the latter are SSJS libraries. You _can_ run operations against those files, but I'm not going to cover the details and nuances of doing so here (aka- have at it, but at your own peril... for now).
+Note: for the JavaScript files, be careful to only specify those JS scripts that end in `.js` and avoid any that end with `.jss` as the latter are SSJS libraries. You _can_ run operations against those files, but I'm not going to cover the details and nuances of doing so here (aka- you can have at it, but it's not something I'm focusing on, as they're server-side assets).
 
 #### Executing Grunt
-* build
-* run server task and watch for changes
+Finally, how do we use this thing?
+
+#### General Gruntfile.js Layout
+asdf
+
+#### Setting Up Our Tasks
+asdf
+
+##### Build
+asdf
+
+##### Run a Server Task and Watch for Changes
+A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. This shows how to use a generic server task, but the next section outlines how to replace that with the `json-server` instance we set up previously.
+
+STUFF!
+
+##### Using Json-Server in Place of Default Server Task
+The use of `json-server` we set up before has a lot of advantages in mocking our back-end, so losing that now would be a silly waste of an otherwise good tool. As you may also find, navigating the plethora of available grunt (or gulp) plug-ins is sometimes a bit tricky. 
+
 * implements json-server in place of default grunt server task (my `npm start` script, but with reload and automatic grunt builds)
 
 ### To Be Continued...
