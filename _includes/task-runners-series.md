@@ -1,4 +1,5 @@
-### A Series on Task Runners
+<!--
+### Series: Task Runners with Domino
 * [Part 1: Introduction, Concepts, and preparing dependencies]({{ site.url }}/web/task-runners-pt1-intro)
 * ...
 

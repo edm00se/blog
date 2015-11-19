@@ -5,7 +5,7 @@ title: "Task Runners pt.4: More Goodies!"
 description: "additional tasks and automation"
 category: web
 tags: [grunt, gulp, git, jenkins-ci, scm, static, generator]
-modified: 2015-11-25
+modified: 2015-11-27
 comments: true
 share: true
 ---
