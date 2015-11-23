@@ -4,7 +4,7 @@ type: post
 title: "They Made Me A Champion"
 description: "IBM Champion 2015"
 category: self-promotion
-tags: [xpages, domino, ibm]
+tags: [xpages, domino, ibm, champion]
 modified: 2014-12-03
 comments: true
 share: true

@@ -24,6 +24,6 @@ When I'm not developing for a Java-heavy Domino back-end, I like to develop with
 
 I am not perfect in anything, but I am always learning and welcome the input of others. The XPages community took me in when I came to the Domino platform and I try to give back when I can; in this blog, through various other projects, Notes in 9 videos, and speaking at conferences.
 
-I was [named an IBM Champion for 2015](/self-promotion/they-made-me-a-champion) (in Collaboration Solutions).
+I was [named an IBM Champion for 2015](/self-promotion/they-made-me-a-champion) [and 2016](https://www.ibm.com/developerworks/community/blogs/ibmchampion/entry/Announcing_the_IBM_Champion_Class_of_2016_for_IBM_Social_Business?lang=en) (in Collaboration Solutions).
 
 For more details, check out my [about.me](//about.me/EricMcCormick) page.
