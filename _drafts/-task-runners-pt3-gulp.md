@@ -5,7 +5,7 @@ title: "Task Runners pt.3"
 description: "a refreshing gulp"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-30
+modified: 2015-12-07
 comments: true
 share: true
 ---

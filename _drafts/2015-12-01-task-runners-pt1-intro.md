@@ -5,7 +5,7 @@ title: "Task Runners pt.1, An Introduction"
 description: "optimizing static web content"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-11-25
+modified: 2015-12-01
 comments: true
 share: true
 ---
@@ -24,6 +24,41 @@ share: true
 </section>
 
 ### Intro
+I hope everyone in my region of the globe had a great Turkey Day. Yes, it's officially called Thanksgiving, but I'm usually thankful for my opportunity to charcoal grill a turkey which usually comes about once a year, so that's what I often lead with. If you have never had properly grilled turkey, I can honestly say you're missing out in life. For now though, I'll just wish everyone a great December and leave you with this (yes, it was as good as it looks, in spite of some crummy weather).
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">My turkey is done. <a href="https://t.co/3xChcBUZre">https://t.co/3xChcBUZre</a> <a href="https://t.co/t9SIT9mINp">pic.twitter.com/t9SIT9mINp</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/669973030035169280">November 26, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+This series has been cooking longer than my turkey (about two weeks longer). It covers ground on a fair number of topics so please bear with me as we get started. I hope you'll find _something_ involved that makes you exclaim something to the effect of "that's really useful! How did I not know about this?! Thank you Eric, your talents and beard are so impressive!" Intrigued? I hope so.
+
+### Why Should I Care?
+A task runner is, at its simplest, a "worker" that peforms tasks (by configuration, definition, or defined standard). This can range from hooping into the npm scripts such as start or test in a `package.json` file (as npm and Node apps do) to more complex setups, such as those I'll get into. Here's a quick example of what I mean by the npm scripts in a node app's `package.json`:
+
+```javascript
+{
+  "name": "ProjectName",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node app.js",
+    "publish": "grunt && git subtree push --prefix site origin gh-pages"
+  },
+  "dependencies": {
+    "some-awesome-package": "^1.0.0",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-ejs-static": "^0.4.3"
+  }
+}
+```
+
+As you can see, this defines two "scripts" that npm will let us invoke from the command line; 'start' and 'publish'; I'm rather fond of the latter of those two, as it is a crafty way for me to be able to update the `gh-pages` (static site) associated with a GitHub repository, after performing the necessary build, all via my credentialed access. This is something that can be easily plugged into any Continuous Integration or Continuous Deployment setup, topics of which have been on my mind for the last few months. In short, with a single CLI entry, I can have current documentation automatically updated and published.
+
+#### Background
 The front-end web development scene is abundant with various tools and plugins designed to help make our lives easier. In my last post, I showed how to get set up with some front-end tooling to pre-process our primarily markdown content and HTML partial driven structure of a site to create a full blown, static blog. This pre-processing of our assets can do lots of things like convert/parse content (like markdown to HTML) but can also be used against more "normal" web assets, for a more optimized delivery of our web content. Over the course of this series, I'm going to cover two popular and useful "task runners" which help with running (you guessed it) tasks such as minification of CSS, [uglification (think minification)](https://github.com/mishoo/UglifyJS2/) and concatenation of JavaScript, optimization of images, and even working in my previously document ability to work on the front-end of my application while [mocking the Domino back-end's servlet responses](({{ site.url }}/front-end/alternate-front-end-development)). There are many more tasks that can be utilized, but those are the ones I'm focusing on as they have (for me) the most utility.
 
 #### XPages
@@ -38,12 +73,12 @@ URL: `https://github.com/edm00se/AnAppOfIceAndFire.git`
 
 ##### You Should Have
 * [git](http://git-scm.com/)
-* a current version of [Node](https://nodejs.org/en/) ~~or [io.js](https://iojs.org/en/)~~ (with npm package manager) *note: [io.js merged with Node](http://www.linuxfoundation.org/news-media/announcements/2015/06/nodejs-foundation-advances-community-collaboration-announces-new) again (ca. June 2015), so probably skip io.js
+* a current version of [Node](https://nodejs.org/en/) <s>or [io.js](https://iojs.org/en/)</s> (with npm package manager) *note: [io.js merged with Node](http://www.linuxfoundation.org/news-media/announcements/2015/06/nodejs-foundation-advances-community-collaboration-announces-new) again (ca. June 2015), so it's probably best to skip io.js if you're not familiar with the distinction
 * familiarity with git (either CLI or SourceTree)
 * an application's client-side / front-end assets against which to work (or follow my next section to clone the necessary parts from a repository of mine)
 
 ##### A Git Sparse Checkout of An App of Ice and Fire
-This will perform a [git sparse checkout](http://stackoverflow.com/questions/600079/is-there-any-way-to-clone-a-git-repositorys-sub-directory-only/13738951#13738951) of the required web assets and back-end mocking software. I am assuming you have a working copy of git installed (fairly recent) and a working install of node or io.js with npm. Don't worry about bower and json-server, if you don't have them, a command below will install them as a dependency into your local repository, per the specification in the package.json.
+This will perform a [git sparse checkout](http://stackoverflow.com/questions/600079/is-there-any-way-to-clone-a-git-repositorys-sub-directory-only/13738951#13738951) of the required web assets and back-end mocking software. I am assuming you have a working copy of git installed (fairly recent) and a working install of node <s>or io.js</s> with npm. Don't worry about bower and json-server, if you don't have them, a command below will install them as a dependency into your local repository, per the specification in the package.json.
 
 * create a new directory to work from, it will be pulling from a git repository (using the [sparse checkout](http://stackoverflow.com/questions/600079/is-there-any-way-to-clone-a-git-repositorys-sub-directory-only/13738951#13738951))
 * change directory into it
@@ -69,7 +104,7 @@ Give it a test by running from the root of the project folder `npm start`. This 
 Your CLI will report back the full command I set up as the "start" script for json-server and announce that there are resources available on localhost at your given port (likely 3000) and that other routes exist (my routing to map up to my _DesignerFacesServlet_s, as documented in my [series on servlets]({{ site.url }}/servlet-series/)).
 If you load up `http://localhost:300` in your web browser, you'll find the front-end of the application running. If you forgot to symlink `public` to `NSF/WebContent/`, you'll be greeted with a generic json-server page stating the resources available it loaded from my mock `db.json` file.
 
-### Task Runners
+### What is a Task Runner Anyway?
 The two task runners that I'll cover and are best known are [Grunt.js](http://gruntjs.com/) and [Gulp](http://gulpjs.com/). There are more, lots more, and some are designed to be extensions of these two, such as Yeoman, which started with Grunt but now works with both, for scaffolding applications quickly, or slush, which does the same but is geared solely for gulp.
 
 A task runner is really just a tool that can process defined tasks on command. These tasks usually take a little configuration the first time, but pay off dividends as they automate the process for every subsequent run. Once it's established, running the task runner is usually as simple as invoking `grunt` or `gulp`, which then perform the defined tasks in their corresponding `Gruntfile.js` or `gulpfile.js`. I'm going to focus on using Grunt for now, though gulp is certainly worth checking out.
@@ -88,4 +123,4 @@ We will set up a task for our CSS and JavaScript files to accomplish about the s
 Images are tricky in that they only get rendered in the dimensions they are displayed at. Quite frequently, an image is slightly larger than it needs to be. We will set up a task to detect and optimize our image tagged files accordingly.
 
 ### To Be Continued...
-...in part 2, covering the install and use of Grunt.
+...in part 2, soon, covering the install and use of Grunt.
