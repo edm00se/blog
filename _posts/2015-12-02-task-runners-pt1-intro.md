@@ -32,7 +32,7 @@ I hope everyone in my region of the globe had a great Turkey Day. Yes, it's offi
 This series has been cooking longer than my turkey (about two weeks longer). It covers ground on a fair number of topics so please bear with me as we get started. I hope you'll find _something_ involved that makes you exclaim something to the effect of "that's really useful! How did I not know about this?! Thank you Eric, your talents and beard are so impressive!" Intrigued? I hope so.
 
 ### Why Should I Care?
-A task runner is, at its simplest, a "worker" that peforms tasks (by configuration, definition, or defined standard). This can range from hooping into the npm scripts such as start or test in a `package.json` file (as npm and Node apps do) to more complex setups, such as those I'll get into. Here's a quick example of what I mean by the npm scripts in a node app's `package.json`:
+A task runner is, at its simplest, a "worker" that peforms tasks (by configuration, definition, or defined standard). This can range from hooking into the npm scripts such as start or test in a `package.json` file (as npm and Node apps do) to more complex setups, such as those I'll get into. Here's a quick example of what I mean by the npm scripts in a node app's `package.json`:
 
 ```javascript
 {
