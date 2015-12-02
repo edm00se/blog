@@ -24,7 +24,7 @@ share: true
 </section>
 
 ### Intro
-Last time we covered what task runners are and why we should want to use them.
+Last time we covered what task runners are and why we should want to use them. Today I'm going to cover some of the foundational elements of using [Grunt](http://gruntjs.com/).
 
 ### Task Runners of Note: Grunt and Gulp
 The two most common and well known task runners (though there are [others, of course](http://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
@@ -95,6 +95,7 @@ asdf
 A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. This shows how to use a generic server task, but the next section outlines how to replace that with the `json-server` instance we set up previously.
 
 STUFF!
+<<Proxy>>
 
 ##### Using Json-Server in Place of Default Server Task
 The use of `json-server` we set up before has a lot of advantages in mocking our back-end, so losing that now would be a silly waste of an otherwise good tool. As you may also find, navigating the plethora of available grunt (or gulp) plug-ins is sometimes a bit tricky. 

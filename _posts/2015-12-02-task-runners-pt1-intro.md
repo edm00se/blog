@@ -34,27 +34,9 @@ This series has been cooking longer than my turkey (about two weeks longer). It 
 ### Why Should I Care?
 A task runner is, at its simplest, a "worker" that peforms tasks (by configuration, definition, or defined standard). This can range from hooking into the npm scripts such as start or test in a `package.json` file (as npm and Node apps do) to more complex setups, such as those I'll get into. Here's a quick example of what I mean by the npm scripts in a node app's `package.json`:
 
-```javascript
-{
-  "name": "ProjectName",
-  "version": "1.0.0",
-  "private": false,
-  "scripts": {
-    "start": "node app.js",
-    "publish": "grunt && git subtree push --prefix site origin gh-pages"
-  },
-  "dependencies": {
-    "some-awesome-package": "^1.0.0",
-    "socket.io": "^1.3.7"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-ejs-static": "^0.4.3"
-  }
-}
-```
+<div class="smallGistScroller">
+{% gist cc61c9817cec013ec55b package.json %}
+</div><br />
 
 As you can see, this defines two "scripts" that npm will let us invoke from the command line; 'start' and 'publish'; I'm rather fond of the latter of those two, as it is a crafty way for me to be able to update the `gh-pages` (static site) associated with a GitHub repository, after performing the necessary build, all via my credentialed access. This is something that can be easily plugged into any Continuous Integration or Continuous Deployment setup, topics of which have been on my mind for the last few months. In short, with a single CLI entry, I can have current documentation automatically updated and published.
 
