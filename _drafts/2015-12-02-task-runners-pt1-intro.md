@@ -5,7 +5,7 @@ title: "Task Runners pt.1, An Introduction"
 description: "optimizing static web content"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-12-01
+modified: 2015-12-02
 comments: true
 share: true
 ---

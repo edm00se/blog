@@ -5,7 +5,7 @@ title: "Task Runners pt.2: Grunt"
 description: "grunt through some tough tasks"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-12-03
+modified: 2015-12-04
 comments: true
 share: true
 ---
