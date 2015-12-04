@@ -58,9 +58,9 @@ links:
   - title: Servlet Series
     url: /servlet-series
     icon: fa-rocket
-#  - title: Task Runners with Domino Apps
-#    url: /task-runners-with-domino-apps
-#    icon: fa-fa-terminal
+  - title: Task Runners with Domino Apps
+    url: /task-runners-with-domino-apps
+    icon: fa-fa-terminal
   - title: Categories
     url: /categories
     icon: fa-list-ul
