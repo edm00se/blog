@@ -5,7 +5,7 @@ title: "Task Runners pt.3"
 description: "a refreshing gulp"
 category: web
 tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-12-07
+modified: 2015-12-08
 comments: true
 share: true
 ---
@@ -24,10 +24,10 @@ share: true
 </section>
 
 ### Intro
-Last time, we covered how to install, configure, and use Grunt to automate some common web optimization tasks to aid our development workflow.
+Last time, we covered how to install, configure, and use Grunt to automate some common web optimization tasks to aid our development workflow. There was a lot to cover and I'm about to segue to a different tool (which performs the same function), which has a couple specific gains beyond some other niceties; I'll get to those in a bit. For now, hang on and enjoy the ride.
 
 ### Gulp
-asdf
+[Gulp](http://gulpjs.com/) advertises that they want to help you "automate and enhance your workflow", which I believe both Grunt and gulp do, but gulp certainly has caught my attention.
 
 #### Install Dependencies
 asdf
