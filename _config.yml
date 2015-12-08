@@ -54,13 +54,13 @@ links:
     external: false
   - title: JSON with Java in XPages
     url: /json-with-java-in-xpages
-    icon: fa-rocket
+    icon: fa-file-text-o
   - title: Servlet Series
     url: /servlet-series
     icon: fa-rocket
   - title: Task Runners with Domino Apps
     url: /task-runners-with-domino-apps
-    icon: fa-fa-terminal
+    icon: fa-terminal
   - title: Categories
     url: /categories
     icon: fa-list-ul

@@ -37,6 +37,7 @@ The code base from my "follow along at home" git repository keeps all my source 
 Enough talk, time for some configs.
 
 ### Grunt
+<!--
 The plugins we'll be using are:
 
 {:.table .table-bordered}
@@ -52,6 +53,8 @@ Plugin |	Description
 [contrib-cssmin](https://www.npmjs.org/package/grunt-contrib-cssmin)		|	Compress CSS files
 [contrib-imagemin](https://www.npmjs.org/package/grunt-contrib-imagemin)	|	Minify PNG, JPG, and GIFs
 [contrib-htmlmin](https://www.npmjs.org/package/grunt-contrib-htmlmin)		|	Minify HTML files
+-->
+[Grunt](http://gruntjs.com/) is a "JavaScript task runner", which runs on top of Node and is installable from npm via `npm install -g grunt-cli` for a global installation or `npm install grunt-cli --save-dev` for installation into your current project and saving as a development dependency in your `package.json`.
 
 The Grunt officially maintained plugins use the `contrib-<name>` convention, which generally relate to `grunt-contrib-<name>` [on GitHub](https://github.com/gruntjs/).
 
