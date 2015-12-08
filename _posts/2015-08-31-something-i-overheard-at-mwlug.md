@@ -29,7 +29,7 @@ While at MWLUG, I overheard someone make a reference to people "not liking POST"
 * and a bunch of OoB (out of the box) controls that aid in [RAD](//en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](//www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
 
 [Update]
-As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than just the JSF runtime components. Since it's a larger list than my couple of bullet points, I'll let the tweet and screen shot from the liked XPages Masterclass video do the talking.
+As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than just the JSF runtime components. Since it's a larger list than my couple of bullet points, I'll let the tweet and screen shot from the linked XPages Masterclass video do the talking.
 
 ##### The Tweet
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr"><a href="https://twitter.com/flinden68">@flinden68</a> Congrats Frank! +1 <a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a> includes features not even in JSF2.2 - some info at 1min 22secs in <a href="https://t.co/Yzzvf2BhYx">https://t.co/Yzzvf2BhYx</a> <a href="https://twitter.com/hashtag/GoodPoint?src=hash">#GoodPoint</a></p>&mdash; Tony McGuckin (@tonymcguckin) <a href="https://twitter.com/tonymcguckin/status/638678645595336704">September 1, 2015</a></blockquote>
