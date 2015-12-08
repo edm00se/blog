@@ -43,7 +43,7 @@ For me, it's come down to three primary reasons:
 [Gulp](http://gulpjs.com/) advertises that they want to help you "automate and enhance your workflow", which I believe both Grunt and gulp do, but gulp certainly has caught my attention.
 
 #### Installing
-Like Grunt, gulp is Node-based and installable via npm. You can install it (globally) with `npm install -g gulp`; to install it into a project (as a development dependency), we drop the global flag and add the save-dev flag, as such `npm install gulp --save-dev`. The latter will save it into the `package.json` which ensures that any cloning of the repository will easily ensure its availability, with any dependencies, via `npm install`.
+Like Grunt, gulp is Node-based and installable via npm. You can install it (globally) with `npm install -g gulp`; to install it into a project (as a development dependency, which you should do), we drop the global flag and add the save-dev flag, as such `npm install gulp --save-dev`. The latter will save it into the `package.json` which ensures that any cloning of the repository will easily ensure its availability, with any dependencies, via `npm install`.
 
 #### Gulpfile Basic Structure and Example
 As before, I'll focus mostly on the jshint plugin for demonstrative purposes, then I'll combine things at the end to compare my `Gruntfile.js` and my `gulpfile.js`.
@@ -56,7 +56,7 @@ var gulp = require('gulp');
 gulp.task('default', ['someTask', 'anotherTask']);
 {% endhighlight %}
 
-That level of simplicity after the `Gruntfile.js` business was something I found quite refreshing (sorry, I had to work it in somehow).
+That level of simplicity after the `Gruntfile.js` business was something I found quite refreshing (sorry, I had to work it in somehow). To get started with gulp and jshint, we need to install jshint to be available as a plugin, again via npm with `npm install gulp-jshint --save-dev`. My basic example includes [gulp-util](https://github.com/gulpjs/gulp-util), which is an excellent package to help with interacting with plugins and the console's output; you'll need to either install that with `npm install gulp-util --save-dev` or ignore it (and remove its corresponding require line).
 
 {% gist 43fcb3fcac536267440d basicGulpfile.js %}
 <br />
@@ -67,7 +67,7 @@ Here, as you can see, even with defining my 'default', 'jshint', and 'watch' tas
 As shown with Grunt, we can invoke a specific task or run the default without arguments. For example `gulp` will runn all specified tasks for 'default' versus `gulp jshint` will only run the 'jshint' task.
 
 #### Expanded Example
-Here's the expanded example, with the same 'jshint', 'watch', and 'browser-reload' tasks. It _also_ has my `json-server` implementation, since my Grunt implementation had me running it as a background task.
+Here's the expanded example, with the same 'jshint', 'watch', and 'browser-reload' tasks. It _also_ has my `json-server` implementation, since my Grunt implementation had me running it as a background task. We again need to install the additional dependent packages of 'gulp-json-srv' and 'browser-sync' (if that isn't already installed from the last post). Again, these packages are listed in the `package.json` I provided in the first post, so if you have run `npm install`, you'll pick up on them.
 
 {% gist 43fcb3fcac536267440d gulpfileWithExpandedExample.js %}
 
