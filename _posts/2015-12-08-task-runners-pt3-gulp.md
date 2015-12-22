@@ -1,16 +1,17 @@
 ---
 layout: post
 type: post
-title: "Task Runners pt.3"
-description: "a refreshing gulp"
+title: "Task Runners pt.3: Gulp"
+description: "quite refreshing"
 category: web
+series: task-runners-with-domino
 tags: [grunt, gulp, git, scm, static, generator]
 modified: 2015-12-08
 comments: true
 share: true
 ---
 
-{% include task-runners-series.md %}
+{% include series.html %}
 
 <!-- auto-magic TOC! -->
 <section>
