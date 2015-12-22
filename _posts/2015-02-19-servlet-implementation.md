@@ -4,11 +4,14 @@ type: post
 title: "Servlet Implementation"
 description: "time for a ServletFactory"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, java, servlet]
 modified: 2015-02-19
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### Intro
 The [first post]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) covered the first two parts of [this series]({{ site.url }}/servlet-series/), the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement a servlet so that they're actually accessable via an end point.

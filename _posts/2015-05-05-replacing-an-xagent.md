@@ -4,11 +4,14 @@ type: post
 title: "From XAgents to Servlets"
 description: "adopt the industry practice, don't forget what you've learned"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, java, servlet]
 modified: 2015-05-05
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### For Starters
 ¡Feliz Cinco de Mayo!

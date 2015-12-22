@@ -1,6 +1,8 @@
 <style type="text/css">
-.seriesNote {
-    font-size: 10 pt;
+.seriesNote,
+.seriesNote * {
+    font-size: 11pt !important;
+	font-weight: normal !important;
 }
 </style>
 
@@ -26,7 +28,11 @@
 		{% if page.url == post.url %}
 			This Article
 		{% else %}
-			<a href="{{post.url}}">{{post.title}}</a>
+			<a href="{{post.url}}">{{post.title}}
+				<span class="entry-date">
+					<time datetime="{{ post.date | date_to_string }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+				</span>
+			</a>
 		{% endif %}
 		</li>
 	{% endif %}

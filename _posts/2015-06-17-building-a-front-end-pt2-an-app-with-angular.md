@@ -4,11 +4,14 @@ type: post
 title: "Building a Front-End, pt.2"
 description: "An App with AngularJS and our RESTful HTTPServlet"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, javascript, servlet, angularjs]
 modified: 2015-06-17
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### Ever Onward
 For as much theory and verbiage as yesterday's post was, today's will be primarily code-driven; something I hope you're ready for. I'll run through this all and hopefully I can illustrate succinctly as we go.

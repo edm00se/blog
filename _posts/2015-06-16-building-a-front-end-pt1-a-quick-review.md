@@ -4,11 +4,14 @@ type: post
 title: "Building a Front-End, pt.1"
 description: "A Quick Review"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, javascript, servlet, angularjs]
 modified: 2015-06-16
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### A Quick Review
 I had some trepidation about this post; it revolves around the fact that I'm "completing" my blog series with multiple giant topics, on top of the one primary one I've focused on for the majority of this blog series. So, before we get started, I'm going to summarize a couple things. But first, a ToC:

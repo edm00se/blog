@@ -4,11 +4,14 @@ type: post
 title: "Handling Data in a Servlet"
 description: “going Chuck Norris on some data“
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, java, servlet]
 modified: 2015-03-19
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### A Fast-Paced, Round-House <s>Kick</s> Tour of Data Interactions
 [As promised at the end of the last post (in this series)]({{ site.url }}/xpages-servlets/servlet-handling-requests/), this post will walk through the entire life cycle of data reception and response handling. This is where my [ConnectED demo app-that-never-was]({{ site.url }}/self-promotion/a-chalk-talk-talk/) comes in, we're going to build part of it. We're going to create an endpoint which governs the provision of a collection of the houses of note in our fictitious land of Os (it's out west). I'll be providing the _com.westeros.servlets.HouseServlet_ class, which is an _AbstractXSPServlet_ ([previously demonstrated]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets)), to my _ServletFactory_.

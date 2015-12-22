@@ -4,11 +4,14 @@ type: post
 title: "Servlet Basics"
 description: "an introduction"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, java, servlet]
 modified: 2015-02-16
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 #### Preface
 This post is essentially the first two parts of the several I've already identified I'll be blogging about. I kept waffling between wanting the first three in one post, which would have been huge, and just one, which would have been short. Here's what I came up with. You can also keep track of this and the other parts of the series on the [servlet series]({{ site.url}}/servlet-series/) page.

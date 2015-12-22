@@ -4,11 +4,14 @@ type: post
 title: "Handling Requests in a Servlet"
 description: "dare we get RESTful?"
 category: xpages-servlets
+series: servlet-series
 tags: [xpages, domino, java, servlet]
 modified: 2015-02-25
 comments: true
 share: true
 ---
+
+{% include series.html %}
 
 ### Previously, on [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets)
 So far in [this series]({{ site.url }}/servlet-series/) I've covered some [basics]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) on servlets, implementing our methods along with a showing of the ["flavors"]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets) of servlets, and how to implement these servlets [via a ServletFactory]({{ site.url }}/xpages-servlets/servlet-implementation/). This has been the ground work for everything that comes next.
