@@ -1,0 +1,25 @@
+{
+  "name": "dev-blog",
+  "version": "1.0.0",
+  "description": "the development blog of edm00se",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edm00se/DevBlog.git"
+  },
+  "author": "Eric McCormick",
+  "license": "CC-BY-SA-3.0",
+  "bugs": {
+    "url": "https://github.com/edm00se/DevBlog/issues"
+  },
+  "homepage": "https://github.com/edm00se/DevBlog#readme",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "compression": "^1.6.0",
+    "gulp": "^3.9.0",
+    "run-sequence": "^1.1.5"
+  }
+}
