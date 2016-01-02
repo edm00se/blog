@@ -4,13 +4,14 @@ type: post
 title: "Task Runners pt.5:"
 description: "tying it all up with a bow"
 category: web
+series: task-runners-with-domino
 tags: [grunt, gulp, git, scm, static, generator]
 modified: 2015-12-10
 comments: true
 share: true
 ---
 
-{% include task-runners-series.md %}
+{% include series.html %}
 
 <!-- auto-magic TOC! -->
 <section>
