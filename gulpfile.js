@@ -10,17 +10,13 @@ var gulp        = require('gulp'),
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
-  gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['jekyll-build-dev', 'browser-sync-reload']);
+  gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['jekyll-build-dev']);
+  gulp.watch(['./_site/**.html'], ['browser-sync-reload']);
 });
 
 // loading browser-sync as a proxy, must load after json-server
 gulp.task('browser-sync', function() {
     browserSync.init({
-        /*
-        proxy: {
-          target: "http://localhost:4000/"
-        },
-        */
         server: {
             baseDir: "./_site/"
         },
