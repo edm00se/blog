@@ -10,7 +10,7 @@ var gulp        = require('gulp'),
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
-  gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['browser-sync-reload']);
+  gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['jekyll-build-dev', 'browser-sync-reload']);
 });
 
 // loading browser-sync as a proxy, must load after json-server
@@ -39,14 +39,14 @@ gulp.task('browser-sync-reload', function(){
 
 gulp.task('jekyll-dev', function(){
   runSequence(
-      'jekyll-build',
+      'jekyll-build-dev',
       'watch',
       'browser-sync');
 });
 
 gulp.task('jekyll-build-dev', function(done){
   browserSync.notify('Building Jekyll');
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--config', '_config.yml,_localPreview.yml' ], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--drafts', '--config', '_config.yml,_localPreview.yml' ], {stdio: 'inherit'})
     .on('close', done);
 });
 
