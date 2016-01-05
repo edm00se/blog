@@ -9,6 +9,8 @@ You are free to fork my blog as a starter to creating one of your own, but you s
 3. check out [my blog post on getting started with static site generators with GitHub Pages](https://edm00se.io/web/the-right-tool-for-the-job)
 4. install ruby, jekyll, and the `github-pages` ruby gem
 
+For more on getting started with GitHub Pages, check out [GitHub's documentation for GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages/).
+
 You should also appreciate and potentially make use of my [gulpfile.js](https://github.com/edm00se/DevBlog/blob/gh-pages/gulpfile.js) with [gulpjs](http://gulpjs.com/), which detatches the need for keeping your local preview (e.g.- with `bundle exec jekyll serve --drafts` after modifying your `_config.yml`) running perpetually in your terminal by instead invoking a `bundle exec jekyll build` with the appropriate config override for local preview, on post or draft content change, reloading the browser page on change to the built post. Gulp, and task runners in general, are a topic of my recent [series on task runners](https://edm00se.io/task-runners-with-domino-apps).
 
 # Thanks
