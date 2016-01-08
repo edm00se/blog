@@ -10,8 +10,21 @@ comments: true
 share: true
 ---
 
+<!-- auto-magic TOC! -->
+<section>
+  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
+    <h2>Contents</h2>
+  </header>
+<div id="drawer" markdown="1">
+*  Auto generated table of contents
+{:toc}
+</div>
+</section>
+
 ### Intro
-I was recently contacted to help clarify a couple of parts involved with getting set up similarly to what I've been moving towards and blogging about, both as far as project folder structure and as far as IDE setup. The developer was looking to get started with an app using a different client-side framework from what I usually work with, but that's far from a problem, since they're both part of the client-side puzzle and fit in as client-side assets. In any case, after keeping some notes from our conversation (and helping another developer find their way to [the XPages Slack chat](https://xpages-slack.herokuapp.com)), I'm using the excuse to further document the "getting set up" process for anyone else looking to do so; even potentially for the ability to follow along in-person at my session at Connect; the session info:
+I was recently contacted to help clarify a couple of parts involved with getting set up similarly to what I've been moving towards and blogging about, both as far as project folder structure and as far as IDE setup. The developer was looking to get started with an app using a different client-side framework from what I usually work with, but that's far from a problem, since they're both part of the client-side puzzle and fit in as client-side assets. In any case, after keeping some notes from our conversation (and helping another developer find their way to [the XPages Slack chat](https://xpages-slack.herokuapp.com)), I'm using the excuse to further document the "getting set up" process for anyone else looking to do so.
+
+This should even potentially assist any attendees for the ability to follow along in-person at my session at Connect, by installing and setting up an environment in advance; the session info:
 
 **[AD-1380
 A Beard, An App, A Blender: One Developer's Take on _Expanding How We Can_ Build<s>ing</s> Apps with Domino/XPages](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=AD-1380)** on Monday, 01-Feb, 04:45 PM-05:45 PM at the Hilton Orlando, in room Florida 6-7
