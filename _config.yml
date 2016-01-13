@@ -223,3 +223,4 @@ exclude: ["arch", "documentation.md", "_drafts/depr", "_drafts/pending_thoughts"
 gems:
   - jemoji
   - jekyll-redirect-from
+  - jekyll-mentions

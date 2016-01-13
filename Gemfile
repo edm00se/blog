@@ -1,6 +1,7 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source "http://rubygems.org"
 
 # gem "rails"
 gem 'github-pages'
 gem 'jemoji'
+gem 'jekyll-mentions'
