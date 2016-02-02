@@ -5,7 +5,7 @@ title: "Connect Success"
 description: "and a demo"
 category: self-promotion
 tags: [dde, scm, git, node, npm, structure, ibm, connect]
-modified: 2016-01-08
+modified: 2016-02-02
 comments: true
 share: true
 ---
