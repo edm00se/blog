@@ -10,6 +10,10 @@ comments: true
 share: true
 ---
 
+[Update]
+I've uploaded a copy of my slide deck and refactored and uploaded [my project repository to GitHub](https://github.com/edm00se/BeardAppBlender); the instructions there do it justice enough to get started with.
+[/Update]
+
 ### Intro
 IBM Connect 2016 is in full swing and I'm enjoying the sessions I've attended, some of the news announced from some of the IBM talent that has presented, and even had a good time at my session.
 
