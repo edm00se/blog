@@ -55,30 +55,39 @@ links:
   - title: JSON with Java in XPages
     url: /json-with-java-in-xpages
     icon: fa-file-text-o
+    external: false
   - title: Servlet Series
     url: /servlet-series
     icon: fa-rocket
+    external: false
   - title: Task Runners with Domino Apps
     url: /task-runners-with-domino-apps
     icon: fa-terminal
+    external: false
   - title: Categories
     url: /categories
     icon: fa-list-ul
+    external: false
   - title: Tags
     url: /tags
     icon: fa-tags
+    external: false
   - title: about.me
     url: https://about.me/EricMcCormick
     icon: fa-user
+    external: true
   - title: License
     url: /license.html
     icon: fa-list-alt
+    external: false
   - title: Atom Feed
     url: /atom.xml
     icon: fa-rss
+    external: false
   - title: RSS Feed
     url: /rss.xml
     icon: fa-rss
+    external: false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Chicago
