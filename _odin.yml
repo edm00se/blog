@@ -1,3 +1,4 @@
-url:				http://edm00se.dnsfor.me/DevBlog
-baseurl:			http://edm00se.dnsfor.me/DevBlog
+url:                http://edm00se.dnsfor.me/DevBlog
+baseurl:			      http://edm00se.dnsfor.me/DevBlog
 google_analytics:   UA-NOTHINGTOSEE-1
+highlighter:        pygments
