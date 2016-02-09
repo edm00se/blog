@@ -7,6 +7,10 @@
  * Customized by @edm00se.
  *
  */
+
+ a.anchorjs-link {
+  border-bottom: initial !important;
+ }
  
  .img-no-btm-margin {
  	margin-bottom: initial !important;
