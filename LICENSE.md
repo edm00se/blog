@@ -1,4 +1,4 @@
-The work contained in [this blog](//edm00se.io/) and [its GitHub Repository](//github.com/edm00se/DevBlog/) is licensed under the [MIT License(MIT)](http://choosealicense.com/licenses/mit). You may use, alter, and redistribute the code herein (with citation), while expecting no warranty for its use.
+The code contained in [this blog](https://edm00se.io/) and [its GitHub Repository](//github.com/edm00se/DevBlog/) is licensed under the [MIT License(MIT)](http://choosealicense.com/licenses/mit). You may use, alter, and redistribute the code herein (with citation), while expecting no warranty for its use.
 
 The MIT License (MIT)
 
