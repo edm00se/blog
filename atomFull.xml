@@ -31,6 +31,14 @@ layout: null
   </author>
   <content type="html">{{ post.content | xml_escape }}
   &lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; was originally published by {{ site.owner.name }} at &lt;a href=&quot;{{ site.url }}&quot;&gt;{{ site.title }}&lt;/a&gt; on {{ post.date | date: "%B %d, %Y" }}.&lt;/p&gt;</content>
+  {% assign images = post.content | split:"<img " %}
+  {% for image in images %}
+    {% if image contains 'src=' %}
+      {% assign imageMarkup = image | split:">" | first %}
+        <media:thumbnail url="{{ imageMarkup }}" />
+      {% break %}
+    {% endif %}
+  {% endfor %}
 </entry> 
 {% endfor %}
 </feed>
