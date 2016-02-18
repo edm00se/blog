@@ -47,11 +47,11 @@ The caveat to using an _HttpServlet_ is the need for reliable _sessionAsSigner_ 
 
 When you do have to use an _XAgent_, I recommend having a single line of invocation in your before/after ...RenderResponse. This should invoke the fully qualified package.class.Method with a parameter being passed as a handle to _sessionAsSigner_. This keeps things clean and simple, and your class will be easily maintained in a consistent fashion to any _HttpServlet_ you create. For example:
 
-{% highlight xml %}
+```xml
 <xp:this.afterRenderResponse>
 	<![CDATA[#{javascript:com.eric.test.DataProvider.GetAllDataAsJson(sessionAsSigner);}]]>
 </xp:this.afterRenderResponse>
-{% endhighlight %}
+```
 
 ### Why Should I Care?
 While we may be using a uniquely abstracted variant of an _HttpServlet_, by building our logic as an _HttpServlet_ as opposed to an equivalent _XAgent_ (especially in Domino/XPage's SSJS), we create our data service in an industry normal fashion. If this on top of the performance increase doesn't sell it for you, I'm not sure what will.

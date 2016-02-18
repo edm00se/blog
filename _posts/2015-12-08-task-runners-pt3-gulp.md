@@ -51,11 +51,11 @@ As before, I'll focus mostly on the jshint plugin for demonstrative purposes, th
 
 Here's a barebones followed by a basic implementation.
 
-{% highlight javascript %}
+``` javascript
 var gulp = require('gulp');
 
 gulp.task('default', ['someTask', 'anotherTask']);
-{% endhighlight %}
+```
 
 That level of simplicity after the `Gruntfile.js` business was something I found quite refreshing (sorry, I had to work it in somehow). To get started with gulp and jshint, we need to install jshint to be available as a plugin, again via npm with `npm install gulp-jshint --save-dev`. My basic example includes [gulp-util](https://github.com/gulpjs/gulp-util), which is an excellent package to help with interacting with plugins and the console's output; you'll need to either install that with `npm install gulp-util --save-dev` or ignore it (and remove its corresponding require line).
 
