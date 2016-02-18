@@ -53,6 +53,9 @@ itemtype="http://schema.org/Blog">
                     </div>
         </div>
                     <footer class="post-footer entry-meta">
+                        <div class="text-center">
+                            <p>Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/master/{{ post.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
+                        </div>
                         {% if site.share %}{% include share.html %}{% endif %}
                         {% include signoff.html %} 
                         {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
