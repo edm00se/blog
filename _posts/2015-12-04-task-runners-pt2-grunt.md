@@ -92,16 +92,16 @@ You can define additional tasks to cover different use cases; one you may see co
 #### General Gruntfile.js Layout
 A `Gruntfile.js` is a JavaScript file. It starts with the following:
 
-{% highlight javascript %}
+```javascript
 module.exports = function(grunt) {
 	// all content in this module export block
 	// which injects grunt as a passed object
 }
-{% endhighlight %}
+```
 
 Now, inside our module export function, we invoke `initConfig` on the grunt handle and pass it an object defining our tasks by name and their respective configuration object.
 
-{% highlight javascript %}
+```javascript
 //...
 grunt.initConfig({
 	// configure the object passed back with task definitions
@@ -112,19 +112,19 @@ grunt.initConfig({
 	
 });
 //...
-{% endhighlight %}
+```
 
 Now we need to register the npm module (the tasks we're using that are development dependencies in our `package.json`) so it can be available as a task. The names correlate, so if you're using a grunt plugin for the first time, make sure to check the readme, which should tell you to install the plugin (`npm install some-package --save-dev`, the last flag saves it to your `package.json`) and then do the appropriate `loadNpmTasks` with documentation on how to configure the task. Here's an example `loadNpmTasks` call:
 
-{% highlight javascript %}
+```javascript
 grunt.loadNpmTasks('grunt-contrib-jshint');
-{% endhighlight %}
+```
 
 Lastly, we register the custom tasks so we can access them from the command line (or the 'default' for the generic `grunt` call). From the below example, `grunt` invokes 'default', but running `grunt jshint` will work, running the configured 'jshint' task only. Think of this block as a custom defined superset of tasks.
 
-{% highlight javascript %}
+```javascript
 grunt.registerTask('default', ['jshint','other tasks you want to include in the default']);
-{% endhighlight %}
+```
 
 Here's how it looks all together for a basic structure (just count to 5):
 
@@ -156,7 +156,7 @@ The warnings can/will still "fail" the task (at least gets in the way of continu
 
 As you can see, the warnings I'm getting are in regards to comparing `null`, booleans, or `undefined` with `==` when I should be using `===`, or a missing semicolon (after function definitions). While great ideas, these are warnings and not errors, so we can configure certain warnings to be suppressed, here's a `jshint` configuration that suppresses those warnings (assuming you're willing to write off those differences as "stylistic" and not needed):
 
-{% highlight javascript %}
+```javascript
 jshint: {
 	options: {
 		reporter: require('jshint-stylish'),
@@ -167,7 +167,7 @@ jshint: {
 	},
 	all: ['Grunfile.js', 'NSF/WebContent/js/*.js']
 },
-{% endhighlight %}
+```
 
 You can find the numeric codes from [jshint's messages.js](https://github.com/jshint/jshint/blob/2.1.4/src/shared/messages.js).
 
@@ -176,7 +176,7 @@ JSHint is a great place to start as it accomplishes some of the trickier tasks, 
 ##### Watch
 If you're wondering if we can monitor our source JS files for changes and invoke the JSHint task again on a save event of the source file, then you're in luck. The watch task (specifically [`grunt-contrib-watch`](https://github.com/gruntjs/grunt-contrib-watch)) is made for just this "watch for save events on files" sort of behavior. Again, our goal is to install (`npm install grunt-contrib-watch --save-dev`), load (into the `Gruntfile.js`) and configure (the task) to point at certain files and trigger other concerned tasks in the process. Like this:
 
-{% highlight javascript %}
+```javascript
 // configure watch to auto update
 watch: {
   scripts: {
@@ -184,7 +184,7 @@ watch: {
     tasks: ['jshint']
   }
 }
-{% endhighlight %}
+```
 
 Here's what [the resulting expanded Gruntfile.js ](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/7b294ea62c84e0e921d32857b857b633ab6ac26c/basicGruntfile_expandedWithJsHintAndWatch.js) does for us:
 
@@ -216,7 +216,7 @@ Side note: for a stand-alone demo, install it via `npm install -g browser-sync` 
 
 The browser-sync Grunt plugin lets us either run with a generic static file server or proxy a different one. Since my end result is to load `json-server`, I'll be taking the door leading to my proxied server. Here's the task configuration I have for the above:
 
-{% highlight javascript %}
+```javascript
 browserSync: {
   dev: {
       bsFiles: {
@@ -228,7 +228,7 @@ browserSync: {
       }
   }
 }
-{% endhighlight %}
+```
 
 Side note: everywhere in my `Gruntfile.js` task configuration blocks, you'll see I have a number of arrays containing a single string. If I know I have the option of multiple paths I can pass (like above), I always put them into an array, so I don't question it later on when I inevitably expand on the config.
 

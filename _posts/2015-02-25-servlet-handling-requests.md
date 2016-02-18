@@ -53,9 +53,9 @@ It was brought to my attention that route matching is easier via @ annotations, 
 #### Route Parameters
 Now that we've handled the route, it's time to handle any route parameters. Route parameters can be a little confusing, seeing how they look just like another route, but they can also be useful. Strictly speaking, the /{:id} is a form of route parameter, but they can also be nested (sequential?) to provide more echelons in a hierarchy. I previously built a single-purpose NodeJS/Express app that provided an API to handles requests to our IBM i for DB2 access; the specifics of that project were to have a three-level deep hierarchy of required information. This is generally a bit deeper than most people will go with route parameters, but it serves to illustrate the concept. My requests look like this:
 
-{% highlight javascript %}
+```javascript
 .../api/{:firstLevelParam}/{:secondLevelParam}/{:thirdLevelParam}
-{% endhighlight %}
+```
 
 Route parameters are a way of handling required, hierarchically defining values in a request. They're not the only way and many people don't like them, but I'm a fan (for such hierarchical requirements). To parse them out, we need a handle on the _HttpServletRequest_'s _pathInfo_ property. We then split it off the _/_ character to have a collection, in this case a _List&lt;String&gt;_ of all the route path elements. Since the first three are related to the structure of the servlet, we need to start checking at the 4th (3rd position).
 
@@ -68,9 +68,9 @@ Query parameters should be familiar to every XPages developer. <s>In fact, it's 
 
 Thanks to [Jesse Gallagher](//twitter.com/Gidgerby) for catching something here. You can resolve _param_, but it would be better to use something else as it behaves as a _Map&lt;String,String&gt;_, **not** a _Map&lt;String,String[]&gt;_. If you're performing an _HttpServletRequest.getQueryString()_,  you will get a _java.lang.String_ back, with which contains your results. You can manually pull this apart, but you should really use the [**_getParameterMap_** method](//docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getParameterMap()) on your _HttpServletRequest_ (the method is inherited from _ServletRequest_) as this _does return_ a _Map&lt;String,String[]&gt;_, ensuring you get keyed values for each of multiple values per key. I've used the method elsewhere, I'm not sure what my brain was thinking up above, but I suspect it was a lack of caffeine :coffee:.
 
-{% highlight java %}
+```java
 Map<String, String[]> param = (Map<String, String[]>) req.getParameterMap();
-{% endhighlight %}
+```
 
 [/Edit]
 

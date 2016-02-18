@@ -1,5 +1,7 @@
 # Contributing
-Let's face it, this is personal blog. If you're looking to get started with your own blog, contribute in part to this one, or even guest write an entire post or series, please contact me first. No Pull Requests will be blindly accepted.
+If you'd like to help spot-check some typos, you can [submit a Pull Request](https://github.com/edm00se/DevBlog/compare) to my GitHub repository's source; simple fixes (e.g.- typos) are much easier to merge from the GitHub interface, so keep your edits as minimal as possible.
+
+If you're looking to contribute to my blog (for some strange reason), contact me first. There will be no blindly accepted PRs.
 
 # Forking
 You are free to fork my blog as a starter to creating one of your own, but you should:

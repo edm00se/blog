@@ -18,12 +18,13 @@ gulp.task('watch', function() {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./_site/"
+            baseDir: "_site"
         },
         ui: {
           weinre: {
               port: 9090
-          }
+          },
+        port: 3000
       }
     });
 });
