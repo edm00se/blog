@@ -70,13 +70,13 @@ Here's my HouseRecord class, explanation afterwards.
 
 Obviously a delete operation is just a delete and we've covered _GET_, but the _PUT_ is where I had fun with things. The _POST_ above assumes an entirely new object, but with the _PUT_ as I've implemented it, allowing for full or partial replacement, I need to instantiate the existing record into an object and then pull and compare/update any values. Just as I'm iterating the _HashMap_'s values in the Collection _POST_, instead of just filling the values, I'm comparing the values and replacing as needed, inside a while loop, iterating the _Map.Entry&lt;String, Object&gt;_ (pair) values, like so:
 
-{% highlight java %}
+```java
 String curProp = pair.getKey();
 String curVal = (String) pair.getValue();
 if( exHouse.getValue(curProp) != curVal ) {
 	exHouse.setValue(curProp, curVal);
 }
-{% endhighlight %}
+```
 
 ##### Uniqueness of Using an Abstracted Document
 This concept relies on having an object model class. The modeling of my house object does what a bean does, has properties which hold values, and interacts via getter and setter methods. For my app, I'm using an (older) implementation of the OpenNTF Domino API; specifically the _AbstractSmartDocumentModel_, as found in [Tim Tripcony](//avatar.red-pill.mobi/tim/blog.nsf/)'s [How Ya Bean application](//bitbucket.org/timtripcony/howyabean) and [affiliated Notesin9 videos](//www.notesin9.com/2013/12/17/notesin9-132-using-java-in-xpages-part-1/). This is to automate the getter/setter methods (it specifically ditches get/set _PropertyName_ in favor of get/set _Value_). It also means that my app is a bit more portable (full project coming to a GitHub repository near you, soon!).
@@ -112,18 +112,18 @@ Performing the _fromJson_ (reading the JSON string into an Object) can be done b
 #### Using the InputStream Directly
 Instead of iterating the bytes of the content from the _InputStream_, we can use another [Apache Commons utility, _IOUtils_](//commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html), to automate this for us. Here's a reflection of a traditional bean (with the usual getter and setter methods) from the InputStream.
 
-{% highlight java %}
+```java
 // req is the passed in HttpServletRequest
 ServletInputStream is = req.getInputStream();
 Gson gson = new Gson();
 
 MyBean myBean = (MyBean) gson.fromJson(IOUtils.toString(is), MyBean.class);
-{% endhighlight %}
+```
 
 #### My Class's Interpretation
 As mentioned above, here's how I'm reading my values into a _HashMap_ and then filling my object with the _setValue_ methods.
 
-{% highlight java %}
+```java
 String reqStr = IOUtils.toString(is);
 Gson g = new Gson();
 // create the tmp HashMap
@@ -147,16 +147,17 @@ nwHouse.save();
 // 201 = "Created", should include "Location" header
 res.setStatus(201);
 res.addHeader("Location", "/xsp/houses/"+nwHouse.getUnid());
-{% endhighlight %}
+```
 
 #### Provide Response
 You'll see I'm relying on the response code to communicate the success. This is what jQuery and AngularJS key off of to determine the success/fail of the network event for their respective callbacks. In my error handling, I respond with a status code of 500, and _application/json_ content in the body, to the effect of:
-{% highlight javascript %}
+
+```javascript
 {
 	error: true,
 	errorMessage: "whatever my Exception.toString() is"
 }
-{% endhighlight %}
+```
 
 This once again highlights the need to document your API. It's okay to use the status codes for primary information, but definitely _at least_ put some error messages in for a failing operation.
 
@@ -171,7 +172,7 @@ To enable PUT and DELETE (or PATCH, though I've avoided it for simplicity's sake
 
 Using the X-Http-Method-Override seems silly, but is pretty easy to use. Here's a jQuery.ajax example of a _PUT_ request being sent as a _POST_, taken from [a StackOverflow answer on the subject](//stackoverflow.com/questions/1813156/x-http-method-override-in-jquery/1813173#1813173):
 
-{% highlight javascript %}
+```javascript
 $.ajax({
     beforeSend: function(xhr) {
         xhr.setRequestHeader('X-HTTP-Method-Override', 'PUT');
@@ -182,7 +183,7 @@ $.ajax({
         // do something...
     }
 });
-{% endhighlight %}
+```
 
 As for the path I took for my personal development environment, I added the following line to notes.ini:
 

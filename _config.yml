@@ -102,10 +102,11 @@ permalink:   /:categories/:title
 
 kramdown:
   auto_ids: true
-  footnote_nr: 1
+  input: GFM
   entity_output: as_char
+  footnote_nr: 1
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: true
 
   coderay:
     coderay_line_numbers: 
@@ -116,8 +117,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: '//edm00se.io/'
-  relativeLinks: '//edm00se.io/links.jsonp'
+  siteurl: 'https://edm00se.io/'
+  relativeLinks: 'https://edm00se.io/links.jsonp'
   media: 'images'
   metadata:
     _posts:
@@ -230,6 +231,10 @@ include: [".htaccess"]
 exclude: ["arch", "documentation.md", "_drafts/depr", "_drafts/pending_thoughts", "_odin.yml", "_drafts/pending_thoughts", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "*.wip", "vendor"]
 
 gems:
+  - github-pages
   - jemoji
   - jekyll-redirect-from
   - jekyll-mentions
+  - jekyll-gist
+  - jekyll-paginate
+  - rouge
