@@ -1,0 +1,32 @@
+---
+layout: null
+---
+
+{% for post in site.posts %}
+  {% assign stuff = post.content | xml_escape %}
+  {% if stuff contains '&lt;img ' %}
+    {% assign image = stuff | split:'&lt;img ' %}
+    {% assign tmp = image[1] | split:'src=' %}
+    {% assign nw = tmp | split:'&quot;' %}
+    {% assign n = nw[1] %}
+    {% if n %}
+      {{ post.title }}
+      {{ n }}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<!--
+{% assign content = '<img src="http://placehold.it/400/200">asdfasdfasdfasfdasdfasdf' %}
+  {% assign images = content | split:"<img " %}
+  {% for image in images %}
+    {{ image }}
+    {% if image contains '<img' %}
+    {% if image contains 'src="' %}
+      {% assign imageMarkup = image | split:'>' | first %}
+        {{ imageMarkup }}
+      {% break %}
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+-->

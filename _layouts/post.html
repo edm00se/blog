@@ -11,9 +11,9 @@ itemtype="http://schema.org/Blog">
         <div class="row">
             <article class="post col-md-10 col-md-offset-1 hentry">
 			{% if site.wpm %}
-				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:site.wpm | round %}
+				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:site.wpm | ceil %}
             {% else %}
-				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:180 | round %}
+				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:180 | ceil %}
             {% endif %}
             {% assign modifiedtime = page.modified | date: "%Y%m%d" %} 
             {% assign posttime = page.date | date: "%Y%m%d" %} 
@@ -73,9 +73,6 @@ if (!("ontouchstart" in document.documentElement)) {
 	document.documentElement.className += " no-touch";
 }
 $(document).ready(function() {
-	$(".time").text(function (index, value) {
-	  return Math.round(parseFloat(value));
-	});
     var selector = '.post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6';
     anchors.options = { placement: 'left' };
     anchors.add(selector);
