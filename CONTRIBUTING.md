@@ -6,7 +6,7 @@ If you're looking to contribute to my blog (for some strange reason), contact me
 # Forking
 You are free to fork my blog as a starter to creating one of your own, but you should:
 
-1. recognize that this blog uses the [HMFAYSAL Omega Theme](https://github.com/hmfaysal/hmfaysal-omega-theme), which is separately maintained, and this blog uhas some unique features changed/added which are my own
+1. recognize that this blog uses the [HMFAYSAL Omega Theme](https://github.com/hmfaysal/hmfaysal-omega-theme), which is separately maintained, and this blog has some unique features changed/added which are my own
 2. remove my post, draft, and image content as all content should be **your own** for your blog
 3. check out [my blog post on getting started with static site generators with GitHub Pages](https://edm00se.io/web/the-right-tool-for-the-job)
 4. install ruby, jekyll, and the `github-pages` ruby gem
