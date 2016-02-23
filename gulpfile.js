@@ -43,7 +43,7 @@ gulp.task('jekyll-dev', function(){
 
 gulp.task('jekyll-build-dev', function(done){
   browserSync.notify('Building Jekyll');
-  return spawn('bundle', ['exec', 'jekyll', 'build', '--drafts', '--config', '_config.yml,_localPreview.yml' ], {stdio: 'inherit'})
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--drafts', '--config', '_config.yml,_localPreview.yml', '--incremental' ], {stdio: 'inherit'})
     .on('close', done);
 });
 
