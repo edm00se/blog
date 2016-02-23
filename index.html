@@ -21,7 +21,7 @@ tags: [Eric, McCormick, Appleton, Wisconsin, Developer, awesome, badass]
 	            <article class="post col-md-10 col-md-offset-1">
 	            	<header class="post-header">
 	                    <h2 class="post-title text-center super lighter">
-	                        <a href="{{ site.url }}{{ post.url }}"><i class="fa fa-quote-left"></i> {{ post.excerpt | strip_html }}</a>
+	                        <a href="{{ site.url }}{{ post.url }}"><i class="fa fa-quote-left"></i> {{ post.excerpt | strip_html | markdownify }}</a>
 	                    </h2>
 	                    <p class="light small text-center">
 	                        Share this Quote
@@ -66,7 +66,7 @@ tags: [Eric, McCormick, Appleton, Wisconsin, Developer, awesome, badass]
 	            <article class="post col-md-10 col-md-offset-1">
 	               <header class="post-header">
 	                    <h2 class="post-title text-center super lighter">
-	                        <a href="{{ site.url }}{{ post.url }}" style="color: #c91b26"><i class="fa fa-retweet"></i> "{{ post.excerpt | strip_html }}"</a>
+	                        <a href="{{ site.url }}{{ post.url }}" style="color: #c91b26"><i class="fa fa-retweet"></i> "{{ post.excerpt | strip_html | markdownify }}"</a>
 	                    </h2>
 	                    <p class="light small text-center">
 	                        Share this Status
@@ -123,9 +123,9 @@ tags: [Eric, McCormick, Appleton, Wisconsin, Developer, awesome, badass]
 	                {% if post.video %}
 	        		{% assign video_embed = post.video | remove:'https://www.youtube.com/watch?v=' %}
                     <p><iframe width="940" height="529" src="//www.youtube.com/embed/{{ video_embed }}?theme=light&amp;color=white" frameborder="0" allowfullscreen> </iframe></p>
-                    <p class="lead">{{ post.content | strip_html | truncatewords:100 }}&hellip;</p>
+                    <p class="lead">{{ post.content | strip_html | truncatewords:100 | markdownify }}&hellip;</p>
                     {% else %}
-	                <p class="lead">{{ post.excerpt }}&hellip;</p>
+	                <p class="lead">{{ post.excerpt | markdownify }}&hellip;</p>
 	                {% endif %}
 	                <div class="text-center">
 	                    {% if post.description %}
@@ -163,7 +163,7 @@ tags: [Eric, McCormick, Appleton, Wisconsin, Developer, awesome, badass]
 	                    </div>
 	                </header>
 	                <div class="post-body bordered-bottom">
-	                    <p>{{ post.content | strip_html | truncatewords:100 }}&hellip;</p>
+	                    <p>{{ post.content | strip_html | truncatewords:100 | markdownify }}&hellip;</p>
 	                    <div class="text-center">
 	                    {% if post.description %}
 		                <a href="{{ site.url }}{{ post.url }}" data-toggle="tooltip" title="{{ post.description }}" class="more-link btn btn-danger btn-large">
@@ -201,8 +201,8 @@ tags: [Eric, McCormick, Appleton, Wisconsin, Developer, awesome, badass]
 	                </header>
 	                <div class="post-body bordered-bottom">
 	                {% assign excerptsize = post.excerpt | number_of_words %}
-	                {% if excerptsize <= 100 and excerptsize >= 50 %}<p class = "lead">{{ post.excerpt | strip_html }}&hellip;</p>{% else %}
-	                    <p>{{ post.content | strip_html | truncatewords:100 }}&hellip;</p>{% endif %}
+	                {% if excerptsize <= 100 and excerptsize >= 50 %}<p class = "lead">{{ post.excerpt | strip_html | markdownify }}&hellip;</p>{% else %}
+	                    <p>{{ post.content | strip_html | markdownify | truncatewords:100 }}&hellip;</p>{% endif %}
 	                    <div class="text-center">
 	                    {% if post.description %}
 		                <a href="{{ site.url }}{{ post.url }}" data-toggle="tooltip" title="{{ post.description }}" class="more-link btn btn-danger btn-large">
