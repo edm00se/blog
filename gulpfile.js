@@ -11,7 +11,7 @@ var gulp        = require('gulp'),
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
   gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['jekyll-build-dev']);
-  gulp.watch(['./_site/**.html'], ['browser-sync-reload']);
+  gulp.watch(['./_site/**/*.html'], ['browser-sync-reload']);
 });
 
 // loading browser-sync as a proxy, must load after json-server
