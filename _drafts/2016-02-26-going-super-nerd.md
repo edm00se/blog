@@ -2,28 +2,30 @@
 layout: post
 type: post
 title: "Nerdy Yet Awesome"
-description: "using web development skills for unconventional purposes"
+description: "using web development skills for less conventional purposes"
 category: web
-tags: [node, cli, emoji, markdown, gitbook]
-modified: 2015-12-22
+tags: [node, npm, cli, emoji, markdown, gitbook, yeoman]
+modified: 2016-02-26
 comments: true
 share: true
 ---
 
 ### Intro
+Here's something that I cooked up a little while back, then found a further use for, then found an even greater use; it was an evolutionary project that sort of took off and helped me to learn a few things and adopt some new tools, which is always nice.
+
 Building on what I've been talking about recently, between a greater understanding of front-end development tooling and practices along with a skill set that reaches outside our day-to-day work, here's an interesting thing I did recently to solve a unique problem.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I just wrote something so nerdy yet so awesome, I&#39;m having trouble containing my excitement.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/664661632337997824">November 12, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Ultra Nerdy
-How nerdy was it? We'll get to that by the end and I'll let you be the judge. The problem I was faced with was that I was working on reconciling some content for a side project, which is in [markdown](https://help.github.com/articles/markdown-basics/) (md). The content I needed to update was a number of emojis which had been rendered via a plugin, which would recognize the short name inside of a colons. For example `:​smile​:` which becomes :smile:, as you can see in this blog post. The plugin isn't available for the destination, but like all Markdown, will render in HTML. While I may be packaging what I've done up for a plugin for that environment _now_, the same functionality wasn't there when I started, so I had to DIY.
+How nerdy was it? We'll get to that by the end and I'll let you be the judge. The problem I was faced with was that I was working on reconciling some content for a side project, which is in [markdown](https://help.github.com/articles/markdown-basics/) (md). The content I needed to update was a number of emojis which had been rendered via a plugin, which would recognize the short name inside of a colons. For example `:​smile​:` which becomes :smile:, as you can see in [this blog post's source vs the rendered content](). The plugin isn't available for the destination, but like all Markdown, will render in HTML. While I may be packaging what I've done up for a plugin for that environment _now_, the same functionality wasn't there when I started, so I had to DIY.
 
 Ultimately, my task was to:
 
-* scan my existing files for occurrences
+* scan my existing files for occurrences (such as `:‌beers‌:`, which happens a surprising amount)
 * register what needed to be replaced
-* replace with a corresponding HTML image tag (or the md image markup, like so `![description of image which becomes the alt value](https://path/to/image.png)`)
+* replace with a corresponding HTML image tag (or the md image markup, like so `<img src="https://path/to/beers.png">`)
 
 ### Something Neat
 The side project I'm working on is collecting my better blog posts into an eBook format. This is mostly to be able to say I've done so, and when that finally hits, it'll be freely available in all major eBook formats. If you keep referencing my blog, that's the primary source, so no worries there.
@@ -42,7 +44,7 @@ Ultimately, not caring about the simple "emojis" (such as `:-D`), rather just th
 
 To make a long story short (ending with a space after the colon, or sentence ending character and accounting for a `+` or `-` explicit character), you can find [my full RegEx test on regex101.com](https://regex101.com/r/hI5qF5/1). The expression I settled on is:
 
-```
+```javascript
 /(\:(\w|\+|\-)+\:)(?=\s|[\!\.\?]|$)/gim
 ```
 
@@ -59,9 +61,9 @@ Before I show you the full version, here's a basic overview of both how my scrip
 {% gist d7215253f732bb198482 test.js %}
 <br />
 
-You may take note of the first line, which is `#! /usr/local/bin/node` and points to my local node binary, after the "hash bang". This is akin to how one might specify a shell script, such as `#!/bin/sh`. Basically, so long as you make the file executable, you can run a node script as if it's a shell script, since the shell script starts by pointing at what interpreter to use, it's legitimate! This is ultimately just a nifty thing, and one should take care as not to use any packages that might not be able to be used from a globally installed context, as most people don't like random `node_modules` directories strewn about their file systems.
+You may take note of the first line, which is `#!/usr/bin/env node` and points to my local node binary (according to its being picked up by the environment), a.k.a- the "hash bang". This is akin to how one might specify a shell script, such as `#!/bin/sh`. Basically, so long as you make the file executable, you can run a node script as if it's a shell script, since the shell script starts by pointing at what interpreter to use; it's perfectly legitimate! This is ultimately just a nifty thing, and one should take care as not to use any packages that might not be able to be used from a globally installed context, as most people don't like random `node_modules` directories strewn about their file systems. It's alternately equivalent to invoking the same script via `node script.js` as opposed to `./script.js` or `sh script.js`.
 
-Here's the full thing:
+Here's the full thing, in its original form:
 
 {% gist d7215253f732bb198482 handleEmojis.js %}
 <br />
@@ -72,9 +74,14 @@ In the end, I had something around 40 occurrences of emoji short names, so this 
 #### Tying Into <s>Build Task</s> Jenkins
 As you may have caught on from my blog series, I'm a big fan of task runners. [Jenkins CI](http://jenkins-ci.org/), another tool I have a great love for, is essentially a highly configurable task runner (and more) in its own right. It's also a great tool for build automation and, if it hasn't hit yet, is the subject in another blog post in the [task runner series of mine]({{ site.url }}/task-runners-with-domino-apps).
 
-As for how to hook this into my Jenkis process, I ultimately am running a shell invocation for my "build" process. I could have multiple, but for this task, it's relatively uncomplicated, so it's just one. There are those in the camp that all build tasks should be contained in individual shell scripts, so that all the Jenkins configuration does is invoke the shell script, which has the advantage that it can be maintained independent of Jenkins, but I find it easy enough to log into my Jenkins instance to do so; this is one of those things that everyone will have a preference for, so go with what works for you.
+As for how to hook this into my Jenkins process, I ultimately am running a shell invocation for my "build" process. I could have multiple, but for this task, it's relatively uncomplicated, so it's just one. There are those in the camp that all build tasks should be contained in individual shell scripts, so that all the Jenkins configuration does is invoke the shell script, which has the advantage that it can be maintained independent of Jenkins, but I find it easy enough to log into my Jenkins instance to do so; this is one of those things that everyone will have a preference for, so go with what works for you.
 
 To add it into my build task, after calling my `npm install` (and `gitbook install`) but before my building of my eBook files (`a`), I 
 
+### One Step Further
+Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](http://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners](http://localhost:3000/task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and...  you get the picture, just check the readme's badges at the top.
+
+[![NPM](https://nodei.co/npm/emoji-transmogrifier.png)](https://nodei.co/npm/emoji-transmogrifier/)
+
 ### Summary
-asdf
+All in all, I learned a few things, found a solution to a problem I had, and grew from the experience. I call this a "win". Hopefully this can inspire some of you to give something new a try, as it never hurts to expand the skill set.
