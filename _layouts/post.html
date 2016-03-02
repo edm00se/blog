@@ -67,6 +67,7 @@ itemtype="http://schema.org/Blog">
 
     
 {% include scripts.html %}
+{% if post.cust_gist_embed %}<script type="text/javascript" src="{{ site.url }}/assets/js/gist-embed.min.js"></script>{% endif %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
 <script type="text/javascript">
 if (!("ontouchstart" in document.documentElement)) {
