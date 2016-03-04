@@ -8,18 +8,10 @@ tags: [xpages, servlets, java]
 modified: 2015-12-07
 comments: true
 share: true
+toc: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
+{% include toc.html %}
 
 ### Intro
 A few things have been on my mind lately, specifically in regard to how I've been framing out a platform which will serve as a base for a couple of things to come. I've been diving through the [OpenNTF Domino API](https://openntf.org/main.nsf/project.xsp?r=project/OpenNTF%20Domino%20API) and Jesse Gallagher's [frostillicus framework](https://github.com/jesse-gallagher/XPages-Scaffolding) to see how they accomplish a couple things. I'm also planning on using ODA and a custom variation on Jesse's framework (I'll probably just extend parts of it) to achieve what I want. In fact, I've been starting to see use cases for abstract classes everywhere, which isn't a bad thing. I've used Jesse Gallagher as my Bob Ross for my purposes of creating a couple of OSGi plugins as he does [his series on OSGi](https://frostillic.us/blog/posts/99CE7CC2CBC3C9DA85257EF200408B6E), so that I can achieve some greater harmony at the server level.

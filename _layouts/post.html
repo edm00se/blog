@@ -54,7 +54,7 @@ itemtype="http://schema.org/Blog">
         </div>
                     <footer class="post-footer entry-meta">
                         <div class="text-center">
-                            <p>Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/master/{{ post.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
+                            <p>Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/master/{{ page.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
                         </div>
                         {% if site.share %}{% include share.html %}{% endif %}
                         {% include signoff.html %} 
@@ -67,8 +67,7 @@ itemtype="http://schema.org/Blog">
 
     
 {% include scripts.html %}
-{% if post.cust_gist_embed %}<script type="text/javascript" src="{{ site.url }}/assets/js/gist-embed.min.js"></script>{% endif %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+{% if page.cust_gist_embed %}<script type="text/javascript" src="{{ site.url }}/assets/js/gist-embed.min.js"></script>{% endif %}
 <script type="text/javascript">
 if (!("ontouchstart" in document.documentElement)) {
 	document.documentElement.className += " no-touch";
