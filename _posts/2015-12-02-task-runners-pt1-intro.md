@@ -9,9 +9,12 @@ tags: [grunt, gulp, git, scm, static, generator]
 modified: 2015-12-02
 comments: true
 share: true
+toc: true
 ---
 
 {% include series.html %}
+
+{% include toc.html %}
 
 <!-- auto-magic TOC! -->
 <section>

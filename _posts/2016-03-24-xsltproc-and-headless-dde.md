@@ -4,12 +4,15 @@ type: post
 title: "XSLTProc in the Buff"
 description: "a modified dora/swiper process for headless dde nsf builds"
 category: xpages
+series: build-automation
 tags: [xpages, dde, xsl, grunt, jenkins]
 modified: 2016-03-24
 comments: true
 share: true
 toc: true
 ---
+
+{% include series.html %}
 
 {% include toc.html %}
 

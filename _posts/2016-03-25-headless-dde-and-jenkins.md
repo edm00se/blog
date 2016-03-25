@@ -4,6 +4,7 @@ type: post
 title: "Headless DDE Builds With Jenkins CI"
 description: "automation is king"
 category: xpages
+series: build-automation
 tags: [xpages, dde, jenkins]
 modified: 2016-03-25
 comments: true
@@ -11,6 +12,7 @@ share: true
 toc: true
 ---
 
+{% include series.html %}
 {% include toc.html %}
 
 ### Intro
