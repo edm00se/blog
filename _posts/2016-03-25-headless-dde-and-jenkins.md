@@ -13,6 +13,7 @@ toc: true
 ---
 
 {% include series.html %}
+
 {% include toc.html %}
 
 ### Intro
