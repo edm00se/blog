@@ -10,7 +10,7 @@ var gulp        = require('gulp'),
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
-  gulp.watch(['./_drafts/*.md','./_posts/*.md'], ['jekyll-build-dev']);
+  gulp.watch(['**/*.md','**/*.md','**/*.html'], ['jekyll-build-dev']);
   gulp.watch(['./_site/**/*.html'], ['browser-sync-reload']);
 });
 
