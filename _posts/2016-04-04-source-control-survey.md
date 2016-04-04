@@ -5,7 +5,7 @@ title: "Source Control Thoughts"
 description: "and a survey"
 category: scm
 tags: [scm, dvcs, vcs, git, hg, svn, cvs, ciao]
-modified: 2016-02-04
+modified: 2016-04-04
 comments: true
 share: true
 ---
