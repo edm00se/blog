@@ -47,6 +47,11 @@ gulp.task('jekyll-build-dev', function(done){
     .on('close', done);
 });
 
+gulp.task('jekyll-build-from-scratch', function(done){
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--drafts', '--config', '_config.yml,_localPreview.yml'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
 gulp.task('jekyll-build', function(done){
   browserSync.notify('Building Jekyll');
   return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
@@ -63,3 +68,4 @@ gulp.task('auto-reload', function(){
 
 // define the default task and add the watch task to it
 gulp.task('default', ['jekyll-dev']);
+gulp.task('rebuild', ['jekyll-build-from-scratch']);
