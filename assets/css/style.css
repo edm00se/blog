@@ -8,6 +8,24 @@
  *
  */
 
+ .post-body .header-link {
+  position: absolute;
+  left: -3rem;
+  opacity: 0;
+
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+.post-body h1:hover .header-link,
+.post-body h2:hover .header-link,
+.post-body h3:hover .header-link,
+.post-body h4:hover .header-link,
+.post-body h5:hover .header-link,
+.post-body h6:hover .header-link {
+  opacity: 1;
+}
+
  a.anchorjs-link {
   border-bottom: initial !important;
  }
