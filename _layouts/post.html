@@ -2,6 +2,25 @@
 <html>
 <head>
 {% include head.html %}
+<style type="text/css">
+.post-body .header-link {
+  position: absolute;
+  left: -3rem;
+  opacity: 0;
+
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+.post-body h1:hover .header-link,
+.post-body h2:hover .header-link,
+.post-body h3:hover .header-link,
+.post-body h4:hover .header-link,
+.post-body h5:hover .header-link,
+.post-body h6:hover .header-link {
+  opacity: 1;
+}
+</style>
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
 {% include header.html %}
@@ -67,16 +86,21 @@ itemtype="http://schema.org/Blog">
 
     
 {% include scripts.html %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
 {% if page.cust_gist_embed %}<script type="text/javascript" src="{{ site.url }}/assets/js/gist-embed.min.js"></script>{% endif %}
 <script type="text/javascript">
 if (!("ontouchstart" in document.documentElement)) {
 	document.documentElement.className += " no-touch";
 }
 $(document).ready(function() {
-    var selector = '.post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6';
-    anchors.options = { placement: 'left' };
-    anchors.add(selector);
+  return $("h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
 });
 </script>
 </body>
