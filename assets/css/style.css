@@ -25,10 +25,6 @@
 .post-body h6:hover .header-link {
   opacity: 1;
 }
-
- a.anchorjs-link {
-  border-bottom: initial !important;
- }
  
  .img-no-btm-margin {
  	margin-bottom: initial !important;
