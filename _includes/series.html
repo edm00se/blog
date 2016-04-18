@@ -18,7 +18,7 @@
 {% endfor %}
 
 <div class="seriesNote">
-	<p>This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.</p>
+	<p>This article is <strong>Part {{ idx }}</strong> in <span data-toggle="tooltip" title="{{ page.series }}">a <strong>{{ count }}-Part</strong> Series</span>.</p>
 	<ul>
 	{% assign count = '0' %}
 	{% for post in site.posts reversed %}
