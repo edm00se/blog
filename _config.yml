@@ -8,23 +8,23 @@ search:           true
 share:            true
 # Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
 readtime:         true
-wpm:			  180
+wpm:        180
 # Turn on or off the fin animations in the header and footer
-triangleheader:		true
-animated_fins:		true
+triangleheader:   true
+animated_fins:    true
 # Specify the fin color in RGB value
 fin_color:        "255,255,255"
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:				  https://edm00se.io
-baseurl:			https://edm00se.io
+url:          https://edm00se.io
+baseurl:      https://edm00se.io
 
 # Owner/author information
 owner:
   name:           Eric McCormick
   avatar:         NewProfilePic.jpg
-  gravatar:		    https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d
+  gravatar:       https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d
   email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for NodeJS+Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
@@ -63,6 +63,10 @@ links:
   - title: Task Runners with Domino Apps
     url: /task-runners-with-domino-apps
     icon: fa-terminal
+    external: false
+  - title: Node+Express App Fun
+    url: /node-express-app-fun
+    icon: fa-code
     external: false
   - title: Categories
     url: /categories
