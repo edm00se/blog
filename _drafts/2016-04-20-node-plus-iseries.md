@@ -73,6 +73,9 @@ This way, if the error handle is null, it will not execute the error block, and 
 
 The other available `routes` all get updated as well, but they're virtually identical, save for the specifics of the SQL query.
 
+### Source Code
+You can find my source code for this version of the project, in full, in [the same GitHub repository as last time, just in the `iseries` branch](https://github.com/edm00se/express-app-fun/tree/iseries).
+
 ### Summary
 As you can see, once we've configured and provisioned our connection, we can use it pretty easily. While wrapping up a bunch of queries to an RDBMS via JDBC can seem a bit silly, I have to say that the performance benchmarks I did at the time were quite impressive and the micro-service had the great benefit of being easily maintained outside my main production application, either by myself or another developer (who helped in setting up the SQL queries, due to their more intimate knowledge of the DB2 tables).
 
