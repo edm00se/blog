@@ -71,6 +71,11 @@ Here's a project tree breakdown, minus the `node_modules` folder, ReadMe, etc.:
     └── index.js
 ```
 
+#### Dependencies
+I breezed over the dependencies when I first posted this, since there are a whopping two (you'll note I require 'path', but that's part of the Node core, so it's a freebie, just like 'os'), and I've [blogged about installing npm packages before]({{ site.url }}/task-runners-with-domino-apps/). To make a long story short, with the required dependencies of [express](https://www.npmjs.com/package/express) and [express-toobusy](https://www.npmjs.com/package/express-toobusy), our install will look like `npm i -S express express-toobusy`. The `i` is short for `install` and the `-S` is short for `--save` (which saves to the `package.json`).
+
+Alternatively, if you [clone the repository's `master` branch](https://github.com/edm00se/express-app-fun/tree/master), all you need is to run `npm install`.
+
 #### `server.js`
 The main server definition, which sets itself up with an [express](http://expressjs.com/) app handle, instantiates [`express-toobusy`](https://www.npmjs.com/package/express-toobusy) (to keep the Node process from melting under _extremely_ high loads), pulls in the `routes` module for the endpoint handling, and creates an error handler. The last thing is telling the app to listen on a port, meaning the app is running.
 
