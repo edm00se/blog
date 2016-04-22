@@ -43,6 +43,9 @@ The best part about this example though, is that it is so consistent with the ot
 ### Specifics With `domino-nsf` and Notes/Domino NSF
 The core connection component here is Domino C and C++ APIs, which are used by the `domino-nsf` package, to provide our available interfacing. Our connection will rely on the local Notes client's ID and the existence and authorization to connect to the specified NSF, View, or Document.
 
+#### Notes ID
+My example is connecting via my local Notes client, which is using my Notes ID (which I'm already signed into), that can access anything my ID has rights to access on either my local or on a server my environment can access. This is quite probably (and more usefully) able to be run in a server context, with a server ID (or dedicated ID file); I've not tried it in that capacity yet, personally.
+
 #### Data Connection Config
 The main config contains only two things of note, the server (black for local) and file name (accessible via the DOM_SRV and DOM_DB environment variables, respectively).
 
