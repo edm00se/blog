@@ -44,29 +44,41 @@ $("a#click-pages").click(function(){
 
   (function( $, window, undefined ) {
     
-     var bs = {
-          close: $(".fa-times-circle"),
-          searchform: $(".search-form"),
-          canvas: $("body"),
-          dothis: $('.dosearch')
-      };
-    
-    bs.dothis.on('click', function() {
-      $('.search-wrapper').css({ display: "block" });
-      bs.searchform.toggleClass('active');
-      bs.searchform.find('input').focus();
-      bs.canvas.toggleClass('search-overlay');
-    });
-    
-      bs.close.on('click', function() {
+    var bs = {
+        close: $(".fa-times-circle"),
+        searchform: $(".search-form"),
+        canvas: $("body"),
+        dothis: $('.dosearch')
+        tmpPos: null
+    };
+
+
+    function openSearch(){
+        $('.search-wrapper').css({ display: "block" });
+        bs.searchform.toggleClass('active');
+        bs.searchform.find('input').focus();
+        bs.canvas.toggleClass('search-overlay');
+        bs.tmpPos = $(window).scrollTop();
+        window.scrollTo(0,0);
+    };
+
+    function closeSearch() {
         $('.search-wrapper').removeAttr( 'style' );
         bs.searchform.toggleClass('active');
         bs.canvas.removeClass('search-overlay');
+        $(window).scrollTop(bs.tmpPos);
+    }
+    
+    bs.dothis.on('click', openSearch);
+    
+    bs.close.on('click', closeSearch);
+
+    $(document).keyup(function(e) {
+        if(e.keyCode == 27){
+            $('button.dosearch').click();
+        }
     });
   })( jQuery, window );
-  $(document).keyup(function(e) {
-    (e.keyCode == 27)?$('.fa-times-circle').click():null;
-  });
 </script>
 {% endif %}
 {% if site.google_analytics %}
