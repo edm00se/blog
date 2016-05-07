@@ -1823,7 +1823,7 @@ img.mfp-img {
   list-style-type: none;
 }
 .menu-items li {
-  display: inline-block;
+  display: inline-flex;
 }
 .notice {
     padding: .5em 1em;
