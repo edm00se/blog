@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/edm00se/DevBlog#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.3",
-    "compression": "^1.6.0",
-    "gulp": "^3.9.0",
+    "browser-sync": "^2.12.8",
+    "compression": "^1.6.2",
+    "gulp": "^3.9.1",
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.1.5"
   }
