@@ -4,7 +4,7 @@ type: post
 title: "Application Logic"
 description: "where to keep it and why that matters"
 category: xpages
-tags: [xpages, javascript, mvc, rest, angular]
+tags: [xpages, javascript, mvc, rest, angularjs]
 modified: 2014-10-24
 comments: true
 share: true
