@@ -15,7 +15,7 @@ animated_fins:    true
 # Specify the fin color in RGB value
 fin_color:        "255,255,255"
 # Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
+# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
 url:          https://edm00se.io
 baseurl:      https://edm00se.io
@@ -25,7 +25,7 @@ owner:
   name:           Eric McCormick
   avatar:         NewProfilePic.jpg
   gravatar:       https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d
-  email:          
+  email:
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for NodeJS+Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
   # Social networking links used in footer. Update and remove as you like.
@@ -36,6 +36,7 @@ owner:
   linkedin:       https://www.linkedin.com/in/emccormick/
   instagram:      edm00se
   flickr:         edm00se
+  othersite:      https://edm00se.github.io/iot-pi/
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/+EricMcCormickThereCanBeOnlyOne/
 
@@ -76,10 +77,6 @@ links:
     url: /tags
     icon: fa-tags
     external: false
-  - title: about.me
-    url: https://about.me/EricMcCormick
-    icon: fa-user
-    external: true
   - title: License
     url: /license.html
     icon: fa-list-alt
@@ -91,6 +88,14 @@ links:
   - title: RSS Feed
     url: /rss.xml
     icon: fa-rss
+    external: false
+  - title: iot-pi μ|blog
+    url: https://edm00se.github.io/iot-pi/
+    icon: fa-fighter-jet
+    external: false
+  - title: GitHub User page
+    url: https://edm00se.github.io/
+    icon: fa-user
     external: false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -113,7 +118,7 @@ kramdown:
   enable_coderay: true
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
@@ -143,7 +148,7 @@ prose:
           placeholder: "Choose your type"
           options:
             - name: "Standard"
-              value: 
+              value:
             - name: "Quote"
               value: quote
             - name: "Status"
