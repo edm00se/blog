@@ -2,7 +2,7 @@
 <html>
 <head>
 {% include head.html %}
-<link rel="amphtml" href="http://mercury.postlight.com/amp?url={{ page.path | prepend: site.baseurl | replace: '.md', '/' }}">
+<link rel="amphtml" href="http://mercury.postlight.com/amp?url={{ page.url | prepend: site.baseurl | replace: '.md', '/' }}">
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 {% include header.html %}
