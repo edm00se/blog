@@ -2,10 +2,11 @@
 <html>
 <head>
 {% include head.html %}
+<link rel="amphtml" href="http://mercury.postlight.com/amp?url={{ page.url }}">
 </head>
-<body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 {% include header.html %}
-<div id="main" class="content" role="main" itemprop="mainEntity" itemscope 
+<div id="main" class="content" role="main" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/Blog">
     <div class="container">
         <div class="row">
@@ -15,8 +16,8 @@ itemtype="http://schema.org/Blog">
             {% else %}
 				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:180 | ceil %}
             {% endif %}
-            {% assign modifiedtime = page.modified | date: "%Y%m%d" %} 
-            {% assign posttime = page.date | date: "%Y%m%d" %} 
+            {% assign modifiedtime = page.modified | date: "%Y%m%d" %}
+            {% assign posttime = page.date | date: "%Y%m%d" %}
                     <header class="post-header entry-header">
                     {% if page.featured %}<div class="cursive">this post is featured</div>{% endif %}
                         {% if page.link %}
@@ -45,9 +46,9 @@ itemtype="http://schema.org/Blog">
                     {% assign tagsize = page.tags.size %}
                     {% if tagsize != 0 %}
                     <div class="entry-tags text-center">
-                    
+
                         <i class="fa fa-tags"></i>&nbsp;Tagged with {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}
-                    
+
                     </div>
                     {% endif %}
                     </div>
@@ -57,7 +58,7 @@ itemtype="http://schema.org/Blog">
                             <p>Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/gh-pages/{{ page.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
                         </div>
                         {% if site.share %}{% include share.html %}{% endif %}
-                        {% include signoff.html %} 
+                        {% include signoff.html %}
                         {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
                     </footer>
             </article>
@@ -65,7 +66,7 @@ itemtype="http://schema.org/Blog">
 </div>
 {% include footer.html %}
 
-    
+
 {% include scripts.html %}
 {% if page.cust_gist_embed %}<script type="text/javascript" src="{{ site.url }}/assets/js/gist-embed.min.js"></script>{% endif %}
 <script type="text/javascript">
