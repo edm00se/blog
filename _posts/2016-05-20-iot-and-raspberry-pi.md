@@ -35,6 +35,8 @@ So, in keeping with the intention behind the giveaway, I'm going to do a few nea
 
 ### Where Can I Find This Amazing Thing?
 
+#### [edm00se.github.io/iot-pi](https://edm00se.github.io/iot-pi)
+
 There are two places, the first of mention is the micro-blog. It's a blog, but it will be a bit less frequently updated, with a more in-depth approach for each of the mini-projects/"experiments" in the series. You can find that here: [https://edm00se.github.io/iot-pi/](https://edm00se.github.io/iot-pi/).
 
 As for the other place, once the "experimensts" are published, you can find those in the corresponding GitHub project repository; [edm00se/iot-pi](https://github.com/edm00se/iot-pi).
