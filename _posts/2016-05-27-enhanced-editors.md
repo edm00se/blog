@@ -28,6 +28,7 @@ Recently, I had a couple of experiences stick out in my mind that made me think 
 There are plenty of "fancy editors" to choose from. The fact of the matter is that we live in a post-Notepad++ world, as far as strong text editors (but short of full-blown IDEs) go. The advantage of not going "full IDE" is to, in theory, remain more flexible and fast. These fancy editors are becoming far more configurable as they progress, so I would also argue that the grey area in which these reside has only malleable barriers separating them from "IDEs" and text editors.
 
 The main contenders I see, at the moment, in no particular order, are:
+
 - [SublimeText](https://www.sublimetext.com/)* (my previous favorite)
 - [Atom](https://atom.io/)
 - [VS Code](https://code.visualstudio.com/)
