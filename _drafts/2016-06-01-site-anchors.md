@@ -5,7 +5,7 @@ title: "Site Anchors"
 description: "a simple thing can be overcomplicated"
 category: web
 tags: [web, css, javascript, plugin, jquery, xpages]
-modified: 2016-05-31
+modified: 2016-06-01
 comments: true
 share: true
 ---
