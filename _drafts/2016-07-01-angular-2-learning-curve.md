@@ -49,6 +49,8 @@ We even had the ability to [make use of templates](https://jsfiddle.net/edm00se/
 
 <script async src="https://jsfiddle.net/edm00se/qf5trmkn/embed/html,result/"></script><br />
 
+The code samples above are all still fully capable in Angular 2 and I would argue that Angular 2 can do much more than Angular 1.x, but there's a touch more to it. I still think it's fully worth learning Angular 2 and, if you _don't_ know Angular 1.x, my recommendation is to skip it and jump to 2.
+
 ### Angular 2's Progression
 
 Learning Angular 2 can seem a bit daunting. In fact, it's still something I'm wrapping my head around. The fact of the matter is, that Angular 1 brought so many great features and capabilities in under a single framework that was easily picked up, albeit a bit thick on the CS theory.
@@ -122,4 +124,4 @@ The Angular team created a CLI tool that can help scaffold out, perform local se
 
 ### Summary
 
-Angular 2 is now available as [RC3 (release candidate 3)](http://angularjs.blogspot.com/2016/06/rc3-now-available.html), meaning that it is soon to hit full version 2.0. I had personally held off on Angular 2 for a while, as I believe many have, just to allow myself to catch up on all the other things I'm trying to shove into my own head (knowledge, nothing crazy now). Now is the time, at least if you wish to learn on the early side of things. It's my belief that the doors Angular 2 is opening, due in no small part to its embracing of TypeScript and the NativeScript implications, that Angular 2 will only grow in relevance.
+Angular 2 is now available as [RC4 (release candidate 3)](https://angularjs.blogspot.com/2016/06/rc4-now-available.html), meaning that it is soon to hit full version 2.0. I had personally held off on Angular 2 for a while, as I believe many have, just to allow myself to catch up on all the other things I'm trying to shove into my own head (knowledge, nothing crazy now). Now is the time, at least if you wish to learn on the early side of things. It's my belief that the doors Angular 2 is opening, due in no small part to its embracing of TypeScript and the NativeScript implications, that Angular 2 will only grow in relevance.
