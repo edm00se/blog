@@ -5,7 +5,7 @@ title: "Angular 2's Learning Curve"
 description: "don't ignore it, as its gains are pretty amazing"
 category: web
 tags: [angular, typescript, es6, es5, npm]
-modified: 2016-07-01
+modified: 2016-07-05
 comments: true
 share: true
 ---
@@ -124,4 +124,4 @@ The Angular team created a CLI tool that can help scaffold out, perform local se
 
 ### Summary
 
-Angular 2 is now available as [RC4 (release candidate 3)](https://angularjs.blogspot.com/2016/06/rc4-now-available.html), meaning that it is soon to hit full version 2.0. I had personally held off on Angular 2 for a while, as I believe many have, just to allow myself to catch up on all the other things I'm trying to shove into my own head (knowledge, nothing crazy now). Now is the time, at least if you wish to learn on the early side of things. It's my belief that the doors Angular 2 is opening, due in no small part to its embracing of TypeScript and the NativeScript implications, that Angular 2 will only grow in relevance.
+Angular 2 is now available as [RC4 (release candidate 4)](https://angularjs.blogspot.com/2016/06/rc4-now-available.html), meaning that it is soon to hit full version 2.0. I had personally held off on Angular 2 for a while, as I believe many have, just to allow myself to catch up on all the other things I'm trying to shove into my own head (knowledge, nothing crazy now). Now is the time, at least if you wish to learn on the early side of things. It's my belief that the doors Angular 2 is opening, due in no small part to its embracing of TypeScript and the NativeScript implications, that Angular 2 will only grow in relevance.
