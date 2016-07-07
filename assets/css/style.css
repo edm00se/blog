@@ -1,12 +1,17 @@
 /*!
  * HMFAYSAL OMEGA v1.0.0
  * Responsive Jekyll Theme
- * 
+ *
  * Designed and built with all the love in the world by @hmfaysal
- * 
+ *
  * Customized by @edm00se.
  *
  */
+
+.form-embed,
+iframe.form-embed {
+  max-width: 100%;
+}
 
  .post-body .header-link {
   position: absolute;
@@ -25,18 +30,18 @@
 .post-body h6:hover .header-link {
   opacity: 1;
 }
- 
+
  .img-no-btm-margin {
  	margin-bottom: initial !important;
  }
-  
+
 .no-touch div.gist {
 	overflow-x: scroll !important;
 	transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -webkit-transition: 0.2s all ease;
 }
-  
+
 .no-touch div.gist:hover {
 	margin-left: -20%;
 	width: 150%;
@@ -57,7 +62,7 @@ iframe.twitter-tweet {
   margin-left: auto !important;
   margin-right: auto !important;
 }
- 
+
 /* ------------------------ */
 /* GENERAL TYPOGRAPHY RULES */
 /* ------------------------ */
@@ -140,7 +145,7 @@ a:hover {
 .lead {
   font-size: 21px;
   line-height: 2em;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 /* - Blockquote - */
 blockquote {
@@ -264,7 +269,7 @@ q {
 }
 @include hyphens(none);
 pre {
-  
+
 }@include text-shadow(none);
 /* - Font weight classes - */
 .black {
@@ -2559,7 +2564,7 @@ a#slide.slide{
     left:308px;
     pointer-events:none
     }
-	
+
 a#slide.slide{
     background-color: #d07922;
     }
@@ -2594,7 +2599,7 @@ body.slide{
 /*      Responsive      */
 
 @media screen and (max-width:1140px){
-    
+
     #header,
     #posts-container,
     .entry .text,
@@ -2603,7 +2608,7 @@ body.slide{
     .entry .details{
         width:700px
         }
-    
+
     }
 
 @media screen and (max-width:700px){
@@ -2628,9 +2633,9 @@ body.slide{
 }
 
 @media screen and (max-width:500px){
-    
+
     a#slide{
-        position:absolute    
+        position:absolute
         }
 }
 
