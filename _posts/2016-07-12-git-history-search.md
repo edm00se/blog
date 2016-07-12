@@ -10,6 +10,9 @@ comments: true
 share: true
 ---
 
+### First, A Shout-Out
+The recording of [the session called "Normalizing XPages Web Development"](http://iamiconus.org/iamiconus/iconus2016.nsf/session.xsp?action=openDocument&documentId=10DC98278072638C86257F77004D2BE7) that [Shean P. McManus](http://www.spmcmanus.net/) and I gave at the 2-day, virtual ICONUS (formerly IamLUG) event this year is now [available from "Archive and Replays"](http://iamiconus.org/IamICONUS/2016sessions.nsf/dx/normalizing-xpages-web-development.htm). If you missed it, I recommend checking it out, it's a great benefit of ICONUS and I hope that those who _did_ get a chance to attend enjoyed the subject material. We covered a lot of ground and were able to demonstrate what is, in my opinion, one of the great benefits of flexibility of the XPages runtime and Domino server. Thanks again to [Chris Miller](http://www.idonotes.com/) and everyone who made ICONUS a success.
+
 ### Intro
 Here's a quick tip from an example case I ran into at the day job relatively recently. I had a situation in which, due to one reason or another, a section of code had disappeared from an application. I happened to know exactly which design element (file) it disappeared from and, while I could have done so, I didn't feel like _only_ restoring the code (from an old, known working version), I also wanted to know what commit in my git repository showed its removal.
 
