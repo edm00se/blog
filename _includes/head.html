@@ -51,6 +51,7 @@
 
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/style.min.css" />
+{% if page.id %}<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/post-progress.min.css" />{% endif %}
 
 {% if page.mathjax %}
 <!--Load Mathjax-->
@@ -73,7 +74,7 @@
                    autoNumber: "AMS",
                 },
                 unicode: {
-                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                   fonts: "STIXGeneral,'Arial Unicode MS'"
                 }
             },
             showProcessingMessages: false

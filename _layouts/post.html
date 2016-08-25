@@ -10,6 +10,11 @@
 itemtype="http://schema.org/Blog">
     <div class="container">
         <div class="row">
+          <progress value="0" id="progressBar">
+            <div class="progress-container">
+              <span class="progress-bar"></span>
+            </div>
+            </progress>
             <article class="post col-md-10 col-md-offset-1 hentry">
 			{% if site.wpm %}
 				{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:site.wpm | ceil %}
