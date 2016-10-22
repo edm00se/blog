@@ -1,6 +1,5 @@
 ---
-layout: pageminimal
-title: Node + Express and More
+layout: page
 permalink: /node-express-app-fun/index.html
 series: node-express-iseries-nsf
 tags: [node, express, iseries, jdbc, jt400, notes, domino, nsf]
@@ -27,7 +26,7 @@ The posts in this {{ count }}-part series cover a couple varieties, concerns, an
 {% for post in site.posts reversed %}
 {% if post.series == page.series %}
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-    <li>Part {{ count }} - 
+    <li>Part {{ count }} -
     {% if page.url == post.url %}
         This Article
     {% else %}

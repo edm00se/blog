@@ -1,44 +1,33 @@
-title:            Dev|Blog
-description:      "A blog for my shared trials, tribulations, and triumphs in the world of IBM Domino/XPages and more."
-logo:             logo_finalWhite.svg
-disqus_shortname: em-devblog
-# Assign a default image for your site's header and footer
-default_bg:       aBridgeInTime.jpg
-search:           true
-share:            true
-# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
-readtime:         true
-wpm:        180
-# Turn on or off the fin animations in the header and footer
-triangleheader:   true
-animated_fins:    true
-# Specify the fin color in RGB value
-fin_color:        "255,255,255"
-# Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
-# whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:          https://edm00se.io
-baseurl:      https://edm00se.io
+# Welcome to Amplified for Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Owner/author information
-owner:
-  name:           Eric McCormick
-  avatar:         NewProfilePic.jpg
-  gravatar:       https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d
-  email:
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Eric McCormick is a full stack web developer who spends his days working on IBM Domino/XPages and has been reconciling his passion for NodeJS+Express and AngularJS into his day job and intuitive usability into his business applications; no small task.
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        edm00se
-  facebook:       eric.n.mccormick
-  github:         edm00se
-  stackexchange:  https://stackoverflow.com/users/1720082/eric-mccormick
-  linkedin:       https://www.linkedin.com/in/emccormick/
-  instagram:      edm00se
-  flickr:         edm00se
-  othersite:      https://edm00se.github.io/iot-pi/
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/u/0/+EricMcCormickThereCanBeOnlyOne/
+# Site settings
+title: Dev|Blog
+description: >
+  a place for development successes, mistakes, and more
+logo: "/assets/images/logo.png"
+baseurl: "" # the subpath of your site, e.g. /blog
+disqus_shortname: em-devblog
+url: "https://edm00se.io" # the base hostname & protocol for your site
+paginate:	5 # The number of posts to show per page on your homepage
+permalink:   /:categories/:title/
+
+name: 'Eric McCormick'
+bio: >
+  A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.
+author_image: "https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d"
+twitter_username: edm00se
+github_username:  edm00se
+stackoverflow:  https://stackoverflow.com/users/1720082/eric-mccormick
+linkedin:       https://www.linkedin.com/in/emccormick/
+instagram:      edm00se
+flickr:         edm00se
+# For Google Authorship https://plus.google.com/authorship
+google_plus:    https://plus.google.com/u/0/+EricMcCormickThereCanBeOnlyOne/
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-53507706-1
@@ -46,198 +35,15 @@ google_verify:      KrFPfZtEQFCrOg2OTSPZfK72gA7_aso_X1R2kVNtzaU
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        98426725A1ECABB0ECC93D5FB5CEBEB0
 
-# Links to include in footer navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-    icon: fa-home
-    external: false
-  - title: JSON with Java in XPages
-    url: /json-with-java-in-xpages
-    icon: fa-file-text-o
-    external: false
-  - title: Servlet Series
-    url: /servlet-series
-    icon: fa-rocket
-    external: false
-  - title: Task Runners with Domino Apps
-    url: /task-runners-with-domino-apps
-    icon: fa-terminal
-    external: false
-  - title: Node+Express App Fun
-    url: /node-express-app-fun
-    icon: fa-code
-    external: false
-  - title: Categories
-    url: /categories
-    icon: fa-list-ul
-    external: false
-  - title: Tags
-    url: /tags
-    icon: fa-tags
-    external: false
-  - title: License
-    url: /license.html
-    icon: fa-list-alt
-    external: false
-  - title: Atom Feed
-    url: /atom.xml
-    icon: fa-rss
-    external: false
-  - title: RSS Feed
-    url: /rss.xml
-    icon: fa-rss
-    external: false
-  - title: iot-pi μ|blog
-    url: https://edm00se.github.io/iot-pi/
-    icon: fa-fighter-jet
-    external: false
-  - title: GitHub User page
-    url: https://edm00se.github.io/
-    icon: fa-user
-    external: false
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Chicago
-future:      true
+# Build settings
+markdown: kramdown
 highlighter: rouge
-markdown:    kramdown
-paginate:    6
-paginate_path: "page:num"
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
 
 kramdown:
+  # parse_block_html: true
   auto_ids: true
   input: GFM
-  entity_output: as_char
-  footnote_nr: 1
   toc_levels: 1..6
-  enable_coderay: true
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-prose:
-  rooturl: '_posts'
-  siteurl: 'https://edm00se.io/'
-  relativeLinks: 'https://edm00se.io/links.jsonp'
-  media: 'images'
-  metadata:
-    _posts:
-      - name: "published"
-        field:
-          label: "Published"
-          element: "checkbox"
-          value: "true"
-      - name: "layout"
-        field:
-          element: "hidden"
-          label: "Layout"
-          value: "post"
-      - name: "type"
-        field:
-          element: "select"
-          label: "Select Post Type"
-          placeholder: "Choose your type"
-          options:
-            - name: "Standard"
-              value:
-            - name: "Quote"
-              value: quote
-            - name: "Status"
-              value: status
-            - name: "Photo"
-              value: photo
-            - name: "Video"
-              value: video
-      - name: "title"
-        field:
-          label: "Title"
-          element: "text"
-          value: "An Awesome Headline!"
-      - name: "description"
-        field:
-          element: "text"
-          label: "Description"
-          placeholder: "Enter Post Description"
-      - name: "headline"
-        field:
-          element: "text"
-          label: "beadline"
-          placeholder: "Enter Post Headline"
-      - name: "modified"
-        field:
-          element: "text"
-          label: "Has this page been modified?"
-          placeholder: "YYYY-MM-DD"
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Add categories"
-          placeholder: "Choose categories"
-          value: personal
-          options:
-            - name: "Personal"
-              value: personal
-            - name: "Web-Development"
-              value: webdevelopment
-            - name: "Interesting"
-              value: interesting
-            - name: "Status"
-              value: status
-            - name: "Quotes"
-              value: quotes
-          alterable: true
-      - name: "tags"
-        field:
-          element: "text"
-          label: "Tags"
-          placeholder: "Enter tags, separated by spaces"
-      - name: "imagefeature"
-        field:
-          element: "text"
-          label: "Featured Image"
-          placeholder: "somefile.jpg"
-      - name: "imagecredit"
-        field:
-          element: "text"
-          label: "Image Credit"
-          placeholder: "some guy"
-      - name: "imagecreditlink"
-        field:
-          element: "text"
-          label: "Credit link for the image"
-          placeholder: "http://somewebsite.com"
-      - name: "video"
-        field:
-          element: "text"
-          label: "Insert Youtube Link"
-          placeholder: "http://youtube.com/somevideo"
-      - name: "mathjax"
-        field:
-          element: "checkbox"
-          label: "MathJax"
-          value: false
-      - name: "featured"
-        field:
-          element: "checkbox"
-          label: "Featured?"
-          value: false
-      - name: "comments"
-        field:
-          element: "checkbox"
-          label: "Comments"
-          value: false
-
-include: [".htaccess"]
-exclude: ["arch", "documentation.md", "_drafts/depr", "_drafts/pending_thoughts", "_odin.yml", "_drafts/pending_thoughts", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "*.wip", "vendor"]
 
 gems:
   - github-pages
@@ -246,4 +52,3 @@ gems:
   - jekyll-mentions
   - jekyll-gist
   - jekyll-paginate
-  - rouge

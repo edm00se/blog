@@ -41,10 +41,10 @@ You'll need to right-click on your _Code/Java_ folder and select New, followed b
 
 <div class="row">
 	<div class="col-sm-6">
-		<a href="{{ site.url }}/images/post_images/servlet/createNewResource-PkgExplorer.png" data-toggle="tooltip" title="creating a folder/file resource in Package Explorer"><img src="{{ site.url }}/images/post_images/servlet/createNewResource-PkgExplorer.png" class="image-responsive" /></a>
+		<a href="{{ site.url }}/assets/images/post_images/servlet/createNewResource-PkgExplorer.png" data-toggle="tooltip" title="creating a folder/file resource in Package Explorer"><img src="{{ site.url }}/assets/images/post_images/servlet/createNewResource-PkgExplorer.png" class="image-responsive" /></a>
 	</div>
 	<div class="col-sm-6">
-		<a href="{{ site.url }}/images/post_images/servlet/createNewFolderFile-PkgExplorer.png"><img src="{{ site.url }}/images/post_images/servlet/createNewFolderFile-PkgExplorer.png" class="image-responsive" /></a>
+		<a href="{{ site.url }}/assets/images/post_images/servlet/createNewFolderFile-PkgExplorer.png"><img src="{{ site.url }}/assets/images/post_images/servlet/createNewFolderFile-PkgExplorer.png" class="image-responsive" /></a>
 	</div>
 </div>
 

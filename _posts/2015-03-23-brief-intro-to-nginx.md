@@ -11,9 +11,9 @@ share: true
 ---
 
 ### Intro
-This is a brief intro to nginx, the reverse proxying web server I've fallen in love with every time I've used it. I'm by far [not the first person to blog on the subject](//frostillic.us/blog/search?q=nginx), but this may be a good starting point for some people.
+This is a brief intro to nginx, the reverse proxying web server I've fallen in love with every time I've used it. I'm by far [not the first person to blog on the subject](https://frostillic.us/blog/search?q=nginx), but this may be a good starting point for some people.
 
-While setting myself up for editing the AngularJS version of my app for [my Java servlet series]({{ site.url/servlet-series/ }}), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
+While setting myself up for editing the AngularJS version of my app for [my Java servlet series]({{ site.url }}/servlet-series/), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
 
 <blockquote class="twitter-tweet" lang="en"><p>Wanted to use local web preview w/ <a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a> outside my vm, access denied. Now, my <a href="https://twitter.com/hashtag/nginx?src=hash">#nginx</a> reverse proxy has solved that problem in ~5 minutes.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/579458988883988480">March 22, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

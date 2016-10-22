@@ -44,4 +44,4 @@ One of the more popular web server technologies in recent history is Nginx, an o
 ### Summary
 All in all, I'm excited for a lot of other sessions that will be there and I hope we can keep driving forward on reconciling our Domino/XPages development practices with the greater, web development community. We _can_ achieve a balance. I hope to see you there!
 
-<a href="{{ site.url }}/images/post_images/deadpool.jpg" data-toggle="tooltip" title="Weeeeee!"><img src="{{ site.url }}/images/post_images/deadpool.jpg" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/deadpool.jpg" data-toggle="tooltip" title="Weeeeee!"><img src="{{ site.url }}/assets/images/post_images/deadpool.jpg" class="img-responsive center-block" /></a>

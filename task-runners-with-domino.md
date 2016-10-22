@@ -1,6 +1,5 @@
 ---
-layout: pageminimal
-title: Task Runners with Domino Applications
+layout: page
 permalink: /task-runners-with-domino-apps/index.html
 tags: [xpages, domino, grunt, gulp, git, scm, static, generator]
 description: "Posts about using task runners with Domino/XPages web applications."
@@ -30,7 +29,7 @@ The two most popular task runners (both JavaScript based) are <a href="http://gr
 {% for post in site.posts reversed %}
 {% if post.series == page.series %}
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-    <li>Part {{ count }} - 
+    <li>Part {{ count }} -
     {% if page.url == post.url %}
         This Article
     {% else %}

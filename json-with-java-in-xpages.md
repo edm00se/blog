@@ -1,6 +1,5 @@
 ---
-layout: pageminimal
-title: JSON with Java in XPages
+layout: page
 permalink: /json-with-java-in-xpages/index.html
 title: JSON with Java in XPages
 tags: [xpages, json, java]
@@ -25,14 +24,14 @@ description: "Posts about JSON generation and consumption in Java in IBM Domino/
   <li>
   <a href="https://edm00se.io/xpages/custom-JSON-with-Java-sized-XAgent">Completing the Circle: Custom JSON Data from Java
   	<span class="entry-date">
-  		<time datetime="{{ August 25, 2014 }}" itemprop="datePublished">August 25, 2014</time>
+  		<time datetime="August 25, 2014" itemprop="datePublished">August 25, 2014</time>
   	</span>
   </a>
   </li>
   <li>
 	<a href="https://edm00se.io/java/building-java-objects-from-json">Building Java Objects from JSON
       <span class="entry-date">
-        <time datetime="{{ January 23, 2015 }}" itemprop="datePublished">January 23, 2015</time>
+        <time datetime="January 23, 2015" itemprop="datePublished">January 23, 2015</time>
       </span>
   	</a>
   </li>

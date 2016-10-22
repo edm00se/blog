@@ -2,7 +2,7 @@ The code contained in [this blog](https://edm00se.io/) and [its GitHub Repositor
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Eric McCormick
+Copyright (c) 2016 Eric McCormick
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

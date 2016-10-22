@@ -31,7 +31,7 @@ A Beard, An App, A Blender: One Developer's Take on _Expanding How We Can_ Build
 
 If you've been wanting to dive in but have felt that there's a whole bag of snakes that need to be straightened out first, this post is for you.
 
-<a href="{{ site.url }}/images/post_images/rango.png" data-toggle="tooltip" data-placement="bottom" title="stay with me now!"><img src="{{ site.url }}/images/post_images/rango.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/rango.png" data-toggle="tooltip" data-placement="bottom" title="stay with me now!"><img src="{{ site.url }}/assets/images/post_images/rango.png" class="img-responsive center-block" /></a>
 
 ### Overview of Topics
 Many of the topics have been previously covered by myself and others, but this should serve as a good starting point for those looking for references and material. There are several elements involved, specifically:

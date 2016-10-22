@@ -75,18 +75,18 @@ Here come a few examples, in all the glory an animated GIF of a REST API client 
 ##### Getting Started
 You'll see that the default page at the port `json-server` is serving on, that there are a couple things, such as a hyperlink to the collections, overall "db", and link back to the readme on GitHub. In the console, we can see that we can even take a "snap shot" of the "db"; this will save the data at that point in time to a separate _.json_ file.
 
-<a href="{{ site.url }}/images/post_images/json-server/basicLoad.png" data-toggle="tooltip" title="the basic page with helper info"><img src="{{ site.url }}/images/post_images/json-server/basicLoad.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png" data-toggle="tooltip" title="the basic page with helper info"><img src="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png" class="img-responsive center-block" /></a>
 
 ##### GET Collection
 I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US) for Chrome, as I'm used to it. You may wish to check out [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), another Chrome app, or you can load from your JS console or, as [I'll show later, actual web content](#one-last-thing).
 
-<a href="{{ site.url }}/images/post_images/json-server/basicCollectionGet.gif" data-toggle="tooltip" title="GET collection"><img src="{{ site.url }}/images/post_images/json-server/basicCollectionGet.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif" data-toggle="tooltip" title="GET collection"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif" class="img-responsive center-block" /></a>
 
 ##### GET Record
-<a href="{{ site.url }}/images/post_images/json-server/basicCollectionGetRecord.gif" data-toggle="tooltip" title="GET 'document'"><img src="{{ site.url }}/images/post_images/json-server/basicCollectionGetRecord.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif" data-toggle="tooltip" title="GET 'document'"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif" class="img-responsive center-block" /></a>
 
 ##### PUT Record
-<a href="{{ site.url }}/images/post_images/json-server/basicCollectionPutRecord.gif" data-toggle="tooltip" title="PUT 'document' with partial data update"><img src="{{ site.url }}/images/post_images/json-server/basicCollectionPutRecord.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif" data-toggle="tooltip" title="PUT 'document' with partial data update"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif" class="img-responsive center-block" /></a>
 
 ad nauseum
 
@@ -107,11 +107,11 @@ This will make my NSF-relative calls to _/xsp/houses_ resolve to the _houses_ th
 
 `json-server --id unid --watch housesDB.json --routes routes.json`
 
-<a href="{{ site.url }}/images/post_images/json-server/servingStaticWebContent.gif" data-toggle="tooltip" title="serving static web content from 'public' folder"><img src="{{ site.url }}/images/post_images/json-server/servingStaticWebContent.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif" data-toggle="tooltip" title="serving static web content from 'public' folder"><img src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif" class="img-responsive center-block" /></a>
 
 ##### Summary
 I hope you can see the benefit of being able to work on your front-end independent of the server. With a little tweaking (I have some code in development that I would remove for production, checking to verify the formatting of my response in my `houseApp.js` to forcibly wrap my collection and document respectively), I'm now able to focus on all the ui-level application without needing to even touch my development server. To cross apply, I only have to paste into my _WebContent_ path, without worrying if I'll break anything on the server. All in all, it's another good tool for the toolbox.
 
 You can find these updates in my [App of Ice and Fire](https://github.com/edm00se/AnAppOfIceAndFire) repository on GitHub. Please feel free to check it out and play with it. Until next time.
 
-<a href="{{ site.url }}/images/post_images/brace_XPages_Bluemix.jpg" data-toggle="tooltip" title="brace yourselves, XPages on Bluemix is coming"><img src="{{ site.url }}/images/post_images/brace_XPages_Bluemix.jpg" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg" data-toggle="tooltip" title="brace yourselves, XPages on Bluemix is coming"><img src="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg" class="img-responsive center-block" /></a>
