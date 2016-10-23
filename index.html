@@ -4,14 +4,11 @@ show_in_nav: true
 ---
 
 <main class="content" role="main">
-
   <header class="blog-header">
       <h1 class="blog-title">{{ site.title }}</h1>
       <h2 class="blog-description">{{ site.description }}</h2>
   </header>
-
   {% include catchy_intro.html %}
-
   <div class="cf frame">
     {% for post in paginator.posts %}
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
@@ -40,7 +37,6 @@ show_in_nav: true
       </article>
     {% endfor %}
   </div>
-
   <nav class="pagination" role="navigation">
     {% if paginator.next_page %}
       <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">&larr; Older posts</a>
@@ -58,7 +54,6 @@ show_in_nav: true
       <a class="older-posts disabled">Newer posts &rarr;</a>
     {% endif %}
   </nav>
-
 </main>
 
 {% include footer.html %}
