@@ -4,6 +4,7 @@ permalink: /json-with-java-in-xpages/index.html
 title: JSON with Java in XPages
 tags: [xpages, json, java]
 description: "Posts about JSON generation and consumption in Java in IBM Domino/XPages."
+series: json-with-java-in-xpages
 ---
 
 <h2 id="seriesTitle" style="color: #c91b26">Series on JSON Data with Java in XPages</h2>

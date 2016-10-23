@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 tags: [Eric, McCormick, edm00se, author]
+show_in_nav: true
 ---
 
 <figure class="about-fig">

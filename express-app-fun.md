@@ -4,7 +4,6 @@ permalink: /node-express-app-fun/index.html
 series: node-express-iseries-nsf
 tags: [node, express, iseries, jdbc, jt400, notes, domino, nsf]
 description: "Posts about Node + Express being used to create RESTful APIs to nearly any data source, with specifics on IBM i (iSeries/AS400) via jt400 and NSF via domino-nsf (from npm)."
-
 ---
 
 <h2 id="seriesTitle" style="color: #c91b26">Series on Node + Express RESTful APIs to connect to a variety of data sources</h2>
