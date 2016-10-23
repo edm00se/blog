@@ -17,6 +17,25 @@ $grey-color:       #828282;
     }
 }
 
+.asciicast {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-read-time {
+  display: inline-block;
+
+  img {
+    display: inline-block;
+  }
+
+}
+
 i.fa.fa-rss {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAbFBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAt11ESAAAAI3RSTlMAAQIDBAwSFBogITEyP0dKUX+CkaWytMDK0dPV4OTm6Onr7+b0twgAAABgSURBVAgdBcEFAsIwAASwdNiwYsNlhfv/H0kAgM/ztO4AWpJfLUCZbYbkPAXQ3/KYwuu6n+iGnAs+yXelu6XC/JAs9fl1YJs2MWRNHatjdjY50TJa5GKWJ7VVZbwr7e0Pz+UHDMp2nMgAAAAASUVORK5CYII=');
   width: 12px;
@@ -123,6 +142,7 @@ amp-img.champion-logo,
 a.header-link {
   float: left;
   position: relative;
+  padding-top: 0.5rem;
 }
 
 .post-content .header-link {
@@ -283,6 +303,16 @@ body {
         }
       }
     }
+    /* customized */
+    .post-sub-title {
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      font-style: normal;
+      display: block;
+      font-size: 32px;
+      line-height: 1.15;
+      margin: 0 0;
+    }
     .post-excerpt {
       letter-spacing: -0.02em;
       font-weight: 300;
@@ -411,6 +441,11 @@ body {
     h3 {
       font-size: 36px;
     }
+    /*
+    h3:first-of-type {
+      margin-top: 20px;
+    }
+    */
     h2, h1 {
       letter-spacing: -0.02em;
       font-weight: 700;

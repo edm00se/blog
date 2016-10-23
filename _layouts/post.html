@@ -3,12 +3,23 @@ layout: default
 ---
 <main class="content" role="main">
   <article class="post">
-    <!--
     <div class="post-meta">
       <h1 class="post-title">{{ page.title }}</h1>
+      <h2 class="post-sub-title">{{ page.description }}</h2>
+      <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
+        {% if site.wpm %}
+      		{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:site.wpm | ceil %}
+              {% else %}
+      		{% assign readtime = page.content | strip_html | number_of_words | append: '.0' | divided_by:180 | ceil %}
+        {% endif %}
+        {% if site.readtime %}&nbsp;<span class="post-read-time"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAXVBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlBIYWHjAAAAHnRSTlMAAQIEBRESFxgZJyg3Ojs8PT95fn+Cg6Olpt7g4v22Nz8hAAAAeElEQVQIHQXBC2KCMAAFsLRrFbehzs9ECu/+xzSBelnG+porMI0kSdYjTHsevZTDM/uROjLjh7+s1Tl3tOA/syUdLTjkZaSgBSWrLcV3EpQM73Ra+0LP4pobwCMXdcsvMGdUpj23Xkq/Z5/gtCVJMiagXt/bWM4VH9b3CU6x8AI/AAAAAElFTkSuQmCC" alt="clock face">&nbsp;
+          {% if readtime > 1 and readtime < 1.5 %}~1 minute{% endif %}
+          {% if readtime > 1.5 %}~<span class="time">{{ readtime }}</span> minutes{% endif %}
+          {% if readtime < 1 %}Less than 1 minute to read{% endif %}
+        </span>{% endif %}
+      </p>
+      <hr />
     </div>
-    -->
-
     <section class="post-content">
       <a name="topofpage"></a>
       {{content}}
@@ -28,7 +39,6 @@ layout: default
           <div class="author-image"></div>
           <h4>{{ site.name }}</h4>
           <p class="bio">{{site.bio}}</p>
-
           <p>
             <span>
               {% if site.github_username %}
@@ -43,10 +53,8 @@ layout: default
             </span>
           </p>
           <hr>
-          <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
         </section>
       </div>
-
       <div class="isRight">
         <h5 class="index-headline featured"><span>Supported by</span></h5>
         <footer class="site-footer">
@@ -58,7 +66,7 @@ layout: default
         </footer>
       </div>
     </div>
-    {% if site.disqus_shortname %}{% include disqus_comments.html %}{% endif %}
+    {% if site.disqus_shortname != "" %}{% include disqus_comments.html %}{% endif %}
   </article>
 </main>
 <script async>
@@ -72,7 +80,7 @@ domReady(function() {
       a.setAttribute('href', '#');
       a.classList.add('header-link');
       var icn = document.createElement('img');
-      icn.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAABIFBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlDNEbhVAAAAX3RSTlMAAQIDBAUHCgsNDg8QExQVFxgZHB0gISIjJictLzI1Nzg5QEJESkxOUFFSX2RmZ2hsbW9zdHl7gIKIi46PkZKXmKCipqqtr7W6vMPFx8/R09fZ2t7g4uTp7e/x8/X3/cl6ovoAAAEFSURBVBgZbcEHO0JhAIbh9zSISJQ9CsnOzsiIjOzSJPX8/3+hU3R9J923bKGbz3zCrR5i2N779M8Sba9edYkCR66hIjy75RBowImkwSpkXTJdwLlswTqkZKqAWy1TDRiQoQJete3BvAwpuLYkhZO+DYjIMNyAK0klihUIyBQFUlKapgc5LQOn7iBN41Jocdqljjh/ChNPQHlMHWvYcgV+1UfVMZmp5ROe/gJQXr+DWkBOnhxQ9FkZqPrlsI0tKdcjlL0y5WAkXQpLnjfYlakGllr88CHTPeyoxYIvmWaBuGybcCuHAyAiaRWYkdMxMGetAFvqdkbbvv67xHaoXmIv39kF2X4AopZN1fDR6k8AAAAASUVORK5CYII=';
+      icn.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAABIFBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlDNEbhVAAAAX3RSTlMAAQIDBAUHCgsNDg8QExQVFxgZHB0gISIjJictLzI1Nzg5QEJESkxOUFFSX2RmZ2hsbW9zdHl7gIKIi46PkZKXmKCipqqtr7W6vMPFx8/R09fZ2t7g4uTp7e/x8/X3/cl6ovoAAAEFSURBVBgZbcEHO0JhAIbh9zSISJQ9CsnOzsiIjOzSJPX8/3+hU3R9J923bKGbz3zCrR5i2N779M8Sba9edYkCR66hIjy75RBowImkwSpkXTJdwLlswTqkZKqAWy1TDRiQoQJete3BvAwpuLYkhZO+DYjIMNyAK0klihUIyBQFUlKapgc5LQOn7iBN41Jocdqljjh/ChNPQHlMHWvYcgV+1UfVMZmp5ROe/gJQXr+DWkBOnhxQ9FkZqPrlsI0tKdcjlL0y5WAkXQpLnjfYlakGllr88CHTPeyoxYIvmWaBuGybcCuHAyAiaRWYkdMxMGetAFvqdkbbvv67xHaoXmIv39kF2X4AopZN1fDR6k8AAAAASUVORK5CYII='; // base64 encoded fa-link
       a.appendChild(icn);
       // var par = el.parentNode;
       // par.insertBefore(a, el);
