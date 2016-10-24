@@ -1,0 +1,62 @@
+---
+layout: page
+title: Search
+permalink: /search/
+show_in_nav: true
+---
+
+<!-- Html Elements for Search -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="enter query..." class="search search-field">
+  <ul id="results-container"></ul>
+</div>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{ site.url }}/assets/js/jekyll-search.min.js"></script>
+<script type="text/javascript">
+  if( !window.domReady ){
+    window.domReady = function(callback) {
+      document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+    };
+  }
+  function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  function triggerEvent(el, type){
+   if ('createEvent' in document) {
+        // modern browsers, IE9+
+        var e = document.createEvent('HTMLEvents');
+        e.initEvent(type, false, true);
+        el.dispatchEvent(e);
+    } else {
+        // IE 8
+        var e = document.createEventObject();
+        e.eventType = type;
+        el.fireEvent('on'+e.eventType, e);
+    }
+  }
+  window.domReady(function() {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ site.url }}/search.json',
+      searchResultTemplate: '<li class="result-entry"><a href="{url}">{title}</a><br />{descrip},<br /> in <a href="{{ site.url }}/categories/#{category}">{category}</a> on {shortdate}<br /><span class="post-tags">{tagAr}</span></li>'
+    });
+    var q = getParameterByName('query');
+    if( "" != q ){
+      window.setTimeout(function(){
+        var searchFld = document.getElementById("search-input");
+        searchFld.value = q;
+        triggerEvent(searchFld, 'keyup');
+      },250);
+    }
+  });
+</script>

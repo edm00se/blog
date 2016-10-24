@@ -17,6 +17,23 @@ $grey-color:       #828282;
     }
 }
 
+.bottom-teaser .errata {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #999;
+  padding-top: 0.5rem;
+  a {
+    color: #333;
+  }
+}
+
+.cat-header-label {
+  color: #d07922;
+}
+
 /* correcting for post image handling */
 img.emoji {
     display: inline;
@@ -57,6 +74,40 @@ img {
   }
 
 }
+
+/* search page styles */
+.search {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+.search .search-field {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  box-shadow: none;
+  width: 100%;
+  padding: 6px 37px 5px 12px;
+  color: black;
+}
+.search .search-field:focus {
+  border-color: white;
+  background: white;
+  box-shadow: 0 0 18px #e18728;
+}
+.post-tags {
+  display: inline-block;
+}
+.post-tags .tag {
+  display: inline-block;
+  background-color: #e6e6e6;
+  color: #333;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 15%;
+}
+/* end search page styles */
 
 i.fa.fa-rss {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAbFBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAt11ESAAAAI3RSTlMAAQIDBAwSFBogITEyP0dKUX+CkaWytMDK0dPV4OTm6Onr7+b0twgAAABgSURBVAgdBcEFAsIwAASwdNiwYsNlhfv/H0kAgM/ztO4AWpJfLUCZbYbkPAXQ3/KYwuu6n+iGnAs+yXelu6XC/JAs9fl1YJs2MWRNHatjdjY50TJa5GKWJ7VVZbwr7e0Pz+UHDMp2nMgAAAAASUVORK5CYII=');

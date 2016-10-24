@@ -10,6 +10,10 @@ comments: true
 share: true
 ---
 
+[Update]
+This pertains primarily to an older version of my blog. The section permalinks and contribution sections still apply, but there is no longer a search component accessible from other than the [Search page]({{ site.url }}/search/).
+[/Update]
+
 ### Intro
 In speaking with someone recently, it was brought up that there were features to this blog that were unknown. While I'm _hoping_ this isn't the case for any regular readers, I figured it would be worth highlighting some of the potentially lesser-known features here.
 
