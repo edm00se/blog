@@ -10,15 +10,18 @@ title: Dev|Blog
 description: >
   a place for development successes, mistakes, and more
 logo: "/assets/images/logo.png"
+name: 'Eric McCormick'
+bio: >
+  A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.
 baseurl: "" # the subpath of your site, e.g. /blog
 disqus_shortname: em-devblog
 url: "https://edm00se.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 permalink:   /:categories/:title/
-
-name: 'Eric McCormick'
-bio: >
-  A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.
+# Read Time is a calculator to provide post read-time based on word count. TODO: skips gist content?
+readtime: true
+wpm: 180
+search: true
 author_image: "https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d"
 twitter_username: edm00se
 github_username:  edm00se

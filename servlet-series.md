@@ -5,7 +5,6 @@ title: A Saga of Servlets
 series: servlet-series
 tags: [xpages, json, java, servlet]
 description: "Posts about Java servlet creation and use with IBM Domino/XPages."
-
 ---
 
 <h2 id="seriesTitle" style="color: #c91b26">Series on Java servlets in Domino/XPages applications</h2>

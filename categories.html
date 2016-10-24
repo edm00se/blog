@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Category Index
-permalink: /categories/index.html
+permalink: /categories/
 tags: [Categories]
 description: "An archive of posts sorted by categories."
+show_in_nav: true
 ---
 
 <ul class="tag-box inline">
@@ -21,7 +22,7 @@ description: "An archive of posts sorted by categories."
 </ul>
 
 {% for tag in site.categories %}
-  <h2 id="{{ tag[0] }}" style="color: #c91b26">{{ tag[0] | capitalize }}</h2>
+  <h2 id="{{ tag[0] }}" class="cat-header-label">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
     {% assign pages_list = tag[1] %}
     {% assign sorted = (pages_list | sort: 'date') | reverse %}
