@@ -65,12 +65,12 @@ Note: most of these "fancy editors" make an effort at guessing the correct langu
 #### Before Language Syntax Highlighting
 I tried to blur the names to protect any innocent servers.
 
-<a href="{{ site.url }}/images/post_images/nsd_beforeHighlighting.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a giant block of text"><img src="{{ site.url }}/images/post_images/nsd_beforeHighlighting.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png" class="img-responsive center-block" /></a>
 
 #### After Language Syntax Highlighting
-<a href="{{ site.url }}/images/post_images/nsd_afterHighlighting1.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/images/post_images/nsd_afterHighlighting1.png" class="img-responsive center-block" /></a><br />
+<a href="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png" class="img-responsive center-block" /></a><br />
 
-<a href="{{ site.url }}/images/post_images/nsd_afterHighlighting2.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/images/post_images/nsd_afterHighlighting2.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png" class="img-responsive center-block" /></a>
 
 ### Summary
 All in all, I think I achieved my goal in that use case; to better be able to read my log files. I'll be continuing my trend of getting more used to Atom, although that become pretty familiar after just over a week of hard use. I think for any major MS related work, I'll probably switch over to VS Code for a while, just to give it a fair go as well. In the end, a tool is a tool, especially if you've suffered in the past. Eclipse is often too "heavy" for any front-end or Node work I do, so having something more flexible, immediate, and integrated to that side of things is great. :beers:

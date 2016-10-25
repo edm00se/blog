@@ -31,7 +31,7 @@ Last time we covered what task runners are and why we should want to use them. T
 The two most common and well known task runners (though there are [others, of course](http://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
 
 #### A Word of Warning
-Many projects take the opinion that source (non optimized) files should be in a combination of `vendor/` (or `lib/` as I used) and `src/` (or `source/`) paths. This has a general benefit of making it easier to keep track of what resources are from where, and that any built (optimized) files would reside in a potential `dist/` path (or equivalent), for consistency. This isn't always the case, especially with the default location of CSS and JavaScript files in an NSF (`Resources/StyleSheets/` for CSS, `Code/ScriptLibraries` for JavaScript (client-side having .js extensions, vs SSJS having .jss), and images in `Resources/Images/`). It is my recommendation that if you keep your source files in these default locations, to have your `build/` or `dist/` path be in the `WebContent/` path for ease of separation.
+Many projects take the opinion that source (non optimized) files should be in a combination of `vendor/` (or `lib/` as I used) and `src/` (or `source/`) paths. This has a general benefit of making it easier to keep track of what resources are from where, and that any built (optimized) files would reside in a potential `dist/` path (or equivalent), for consistency. This isn't always the case, especially with the default location of CSS and JavaScript files in an NSF (`Resources/StyleSheets/` for CSS, `Code/ScriptLibraries` for JavaScript (client-side having .js extensions, vs SSJS having .jss), and images in `Resources/assets/images/`). It is my recommendation that if you keep your source files in these default locations, to have your `build/` or `dist/` path be in the `WebContent/` path for ease of separation.
 
 The code base from my "follow along at home" git repository keeps all my source files in `WebContent/` in subdirectories of `css/` and `js/` with my 3rd party libraries in `vendor/`, so I'll compile my source files (only) into a `dist/` path at the root of `WebContent/`.
 
@@ -76,7 +76,7 @@ It's easier to keep your static web assets in `WebContent/` in corresponding pat
 {:.table .table-bordered}
 Resource    	|	Path
 ------ | -----------
-Images			|	`NSF/Resources/Images/`
+Images			|	`NSF/Resources/assets/images/`
 Style Sheets	|	`NSF/Resources/StyleSheets/`
 JavaScript 		|	`NSF/Code/ScriptLibraries/`
 
@@ -188,7 +188,7 @@ watch: {
 
 Here's what [the resulting expanded Gruntfile.js ](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/7b294ea62c84e0e921d32857b857b633ab6ac26c/basicGruntfile_expandedWithJsHintAndWatch.js) does for us:
 
-<a href="{{ site.url }}/images/post_images/task-runners/watchAndJsHint.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves"><img src="{{ site.url }}/images/post_images/task-runners/watchAndJsHint.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves"><img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif" class="img-responsive center-block" /></a>
 
 ##### Run a Server Task and Watch for Changes
 A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. Their docs usually show how to use a generic server task, but my preference is to replace that with the `json-server` instance we set up previously.
@@ -241,7 +241,7 @@ What I ran into was that either the `json-server` instance wouldn't start correc
 
 I initially intended to walk through every bit of my configuration, but instead I'll leave you with a (very brief) animated gif and [a link to my full `Gruntfile.js`](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/89dfc045561d8936b30beaf8b4137ebc54e5a466/Gruntfile.js). Here it is all starting to come together:
 
-<a href="{{ site.url }}/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves while reloading the browser on save events"><img src="{{ site.url }}/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves while reloading the browser on save events"><img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" class="img-responsive center-block" /></a>
 
 ### In Summary
 Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, :beers:!

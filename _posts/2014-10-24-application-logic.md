@@ -37,4 +37,4 @@ Some of my in-progress efforts will help to quantify this identification of an _
 
 For more on application structuring, I recommend [the recording of Jesse's MWLUG 2014 session on the subject](//www.youtube.com/watch?v=KJvydKVsqXk); he also writes on his blog about the intricacies of [how to use his Frostillic.us framework](//frostillic.us/blog/posts/D815DC7ED059395885257D6B00001006). This is also (I hope) the last time I need to cite Jesse's efforts and can begin to cite my own efforts as I progress in my examples.
 
-<p class="text-center"><a href="{{ site.url }}/images/post_images/app_logic_nightmares.jpg" data-toggle="tooltip" title="keep sane and structure your code!"><img src="{{ site.url }}/images/post_images/app_logic_nightmares.jpg" alt="keep sane and structure your code!" /></a></p>
+<p class="text-center"><a href="{{ site.url }}/assets/images/post_images/app_logic_nightmares.jpg" data-toggle="tooltip" title="keep sane and structure your code!"><img src="{{ site.url }}/assets/images/post_images/app_logic_nightmares.jpg" alt="keep sane and structure your code!" /></a></p>

@@ -77,7 +77,7 @@ Here's an example of my 'jshint' task running in both Grunt and gulp. As you can
 
 Note: I took the default formatting for jshint in both Grunt and gulp, which is why they look so different. I can template the output differently, but didn't for brevity.
 
-<a href="{{ site.url }}/images/post_images/task-runners/jsHintGruntVsGulp.gif" data-toggle="tooltip" title="jshint in both Grunt and gulp"><img src="{{ site.url }}/images/post_images/task-runners/jsHintGruntVsGulp.gif" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif" data-toggle="tooltip" title="jshint in both Grunt and gulp"><img src="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif" class="img-responsive center-block" /></a>
 
 ### Direction
 Where this is all headed is something I'll get into soon. To round out the picture, I want to:

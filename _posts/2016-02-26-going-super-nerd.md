@@ -25,7 +25,7 @@ Ultimately, my task was to:
 
 * scan my existing files for occurrences (such as `:‌beers‌:`, which happens a surprising amount)
 * register what needed to be replaced
-* replace with a corresponding HTML image tag (or the md image markup, like so `<img src="https://path/to/beers.png">`)
+* replace with a corresponding HTML image tag (or the md image markup, like so `<img src="&zwj;h&zwj;t&zwj;t&zwj;p&zwj;s&zwj;:&zwj;/&zwj;/&zwj;path/to/&zwj;beers&zwj;.&zwj;p&zwj;n&zwj;g&zwj;">`)
 
 ### Something Neat
 The side project I'm working on is collecting my better blog posts into an eBook format. This is mostly to be able to say I've done so, and when that finally hits, it'll be freely available in all major eBook formats. If you keep referencing my blog, that's the primary source, so no worries there.
@@ -76,7 +76,7 @@ As you may have caught on from my blog series, I'm a big fan of task runners. [J
 
 As for how to hook this into my Jenkins process, I ultimately am running a shell invocation for my "build" process. I could have multiple, but for this task, it's relatively uncomplicated, so it's just one. There are those in the camp that all build tasks should be contained in individual shell scripts, so that all the Jenkins configuration does is invoke the shell script, which has the advantage that it can be maintained independent of Jenkins, but I find it easy enough to log into my Jenkins instance to do so; this is one of those things that everyone will have a preference for, so go with what works for you.
 
-To add it into my build task, after calling my `npm install` (and `gitbook install`) but before my building of my eBook files (`a`), I 
+To add it into my build task, after calling my `npm install` (and `gitbook install`) but before my building of my eBook files (`a`), I
 
 ### One Step Further
 Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](http://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners](http://localhost:3000/task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and...  you get the picture, just check the readme's badges at the top.

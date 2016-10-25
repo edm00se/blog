@@ -89,7 +89,7 @@ An object model, for my purposes, is a bean. It provides the definitions for wha
 
 If you're ever looking for help in generating a POJO from JSON, I recommend checking out [jsonschema2pojo.org](//jsonschema2pojo.org). As I'm an avid user of Gson and Apache Commons, the options I select are JSON (not JSONSchema), Gson, Use double numbers, Use Commons-Lang3, and Include _toString_; like this:
 
-<a href="{{ site.url }}/images/post_images/JsonSchema2Pojo_settingsExample.png" data-toggle="tooltip" title="JsonSchema2Pojo.org example settings"><img src="{{ site.url }}/images/post_images/JsonSchema2Pojo_settingsExample.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/JsonSchema2Pojo_settingsExample.png" data-toggle="tooltip" title="JsonSchema2Pojo.org example settings"><img src="{{ site.url }}/assets/images/post_images/JsonSchema2Pojo_settingsExample.png" class="img-responsive center-block" /></a>
 
 As I mentioned in my caveat above, as my _HouseModel_ extends _AbstractSmartDocumentModel_, I don't have the usual get/set _Property_ methods, but rather getValue/setValue; since this is the case, reflecting my received _application/json_ content from the _HttpRequest_ directly into my _HouseModel_ for a new instance, meaning that I have to do some processing of that data to fill a new instance of a _HouseModel_. Since I know the data format I'll be expecting, I'm going to read everything into a _HashMap&lt;String, Object&gt;_, then populate my _HouseModel_ from that. I could probably write my own _GsonBuilder_ to account for this difference, but I'm not going that far into things.
 

@@ -16,7 +16,7 @@ Impatient and want to see the code? Jump down to [my Java class](#handling-the-d
 ### What and Why?
 Generating custom JSON data is, unless you're on a verison of Domino server previous to 8.5.3 UP1, _virtually_ unnecessary. Everything you see below can be fully replicated via the Domino Data/Access Services. The reason for that is the fact that I made use of a simple NotesView iteration pattern to generate and return the application/json data. The missing piece, the _whole reason why_, is on _your_ **application requirements**. When you need JSON formatted data in a custom format due to formatting preferences or application logic needs, and it can't just be in a View, that's when this comes into play. So if you start doing what I've done, ask yourself first, can it be just in a View?
 
-<a href="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png" data-toggle="tooltip" title="if you can, use DAS"><img src="{{ site.url }}/images/post_images/GoTchars_DataServiceResponse.png"></a>
+<a href="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png" data-toggle="tooltip" title="if you can, use DAS"><img src="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png"></a>
 
 If that's the case, make sure you've turned on Domino Data Services for your NSF and the View you need. If your use case is more specific, that's what follows.
 
@@ -45,11 +45,11 @@ Creating a JsonObject with with the Google GSON library can be done a couple way
 
 The result gives us exactly what we're looking for.
 
-<a href="{{ site.url }}/images/post_images/GoTchars_CustJavaJSONprovider.png" data-toggle="tooltip" title="if you try sometimes, you get what you need"><img src="{{ site.url }}/images/post_images/GoTchars_CustJavaJSONprovider.png"></a>
+<a href="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png" data-toggle="tooltip" title="if you try sometimes, you get what you need"><img src="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png"></a>
 
 ### Pro Tip: Chrome DevTools
 With the right tools, things get easier. Chrome's DevTools give a nice Preview tab to individual network requests. When it comes to json data, it lets us drill down nicely or switch over and view the raw response. Like this:
-<a href="{{ site.url }}/images/post_images/GoTchars_ChromePreview.png" data-toggle="tooltip" title="maybe we can have nice things"><img src="{{ site.url }}/images/post_images/GoTchars_ChromePreview.png"></a>
+<a href="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png" data-toggle="tooltip" title="maybe we can have nice things"><img src="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png"></a>
 
 New to Chrome DevTools? Check out [this free primer course](http://discover-devtools.codeschool.com/) from codeschool.com.
 

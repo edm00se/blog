@@ -1,12 +1,10 @@
 ---
-layout: pageminimal
-title: JSON with Java in XPages
+layout: page
 permalink: /servlet-series/index.html
 title: A Saga of Servlets
 series: servlet-series
 tags: [xpages, json, java, servlet]
 description: "Posts about Java servlet creation and use with IBM Domino/XPages."
-
 ---
 
 <h2 id="seriesTitle" style="color: #c91b26">Series on Java servlets in Domino/XPages applications</h2>
@@ -28,7 +26,7 @@ The posts in this {{ count }}-part series cover the varieties, concerns, and imp
 {% for post in site.posts reversed %}
 {% if post.series == page.series %}
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
-    <li>Part {{ count }} - 
+    <li>Part {{ count }} -
     {% if page.url == post.url %}
         This Article
     {% else %}

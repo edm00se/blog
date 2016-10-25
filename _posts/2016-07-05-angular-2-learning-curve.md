@@ -36,10 +36,10 @@ Take a simple "hello world" example, all we need, aside from including the `scri
 This achieved the following:
 - instantiated (bootstrapped) the application, by binding it to a given element
 - bound a(n interactive, input element with a) data property within the application's `scope` to a key of "name"
-- bound the output of the key to instances of its key name (denoted via `{{ }}`)
+- bound the output of the key to instances of its key name (denoted via `&zwnj;{&zwnj;{&zwnj; &zwnj;}&zwnj;}&zwnj;`)
 - two-way data binding established, so that any update of the value for the "name" property would propagate to any other such instance in the DOM
 
-Out of the box, this comes with two-way data binding (one-way is available via the notation `{{::name}}`); immediately, the utility of Angular is obvious and powerful.
+Out of the box, this comes with two-way data binding (one-way is available via the notation `&zwnj;{&zwnj;{&zwnj;:&zwnj;:&zwnj;name&zwnj;}&zwnj;}&zwnj;`); immediately, the utility of Angular is obvious and powerful.
 
 We also had immediate access to many things like some really powerful filters and directives, many of the common ones were [already available for us](https://jsfiddle.net/edm00se/L3tykzrt/):
 

@@ -36,7 +36,7 @@ As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ##### The Screen Shot
-<a href="{{ site.url }}/images/post_images/XPages_runtime.png" data-toggle="tooltip" data-placement="left" title="the XPages runtime and its components from JSF and additions"><img src="{{ site.url }}/images/post_images/XPages_runtime.png" class="img-responsive center-block" /></a>
+<a href="{{ site.url }}/assets/images/post_images/XPages_runtime.png" data-toggle="tooltip" data-placement="left" title="the XPages runtime and its components from JSF and additions"><img src="{{ site.url }}/assets/images/post_images/XPages_runtime.png" class="img-responsive center-block" /></a>
 [/Update]
 
 #### My Beef With Transporting Markup
