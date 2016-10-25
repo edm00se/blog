@@ -7,7 +7,7 @@ show_in_nav: true
 
 <!-- Html Elements for Search -->
 <div id="search-container">
-  <input type="text" id="search-input" placeholder="enter query..." class="search search-field">
+  <input type="text" id="search-input" placeholder="enter query..." class="search search-field" autofocus="autofocus">
   <ul id="results-container"></ul>
 </div>
 
@@ -51,12 +51,14 @@ show_in_nav: true
       searchResultTemplate: '<li class="result-entry"><a href="{url}">{title}</a><br />{descrip},<br /> in <a href="{{ site.url }}/categories/#{category}">{category}</a> on {shortdate}<br /><span class="post-tags">{tagAr}</span></li>'
     });
     var q = getParameterByName('query');
+    var searchFld = document.getElementById("search-input");
     if( "" != q ){
       window.setTimeout(function(){
-        var searchFld = document.getElementById("search-input");
         searchFld.value = q;
         triggerEvent(searchFld, 'keyup');
       },250);
+    } else {
+      searchFld.focus();
     }
   });
 </script>

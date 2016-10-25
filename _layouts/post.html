@@ -45,18 +45,16 @@ layout: default
                 {% include icon-github.html username=site.github_username %}
               {% endif %}
             </span>
-
             <span>
               {% if site.twitter_username %}
                 {% include icon-twitter.html username=site.twitter_username %}
               {% endif %}
             </span>
           </p>
-          <hr>
         </section>
       </div>
       <div class="isRight">
-        <h5 class="index-headline featured"><span</span></h5>
+        <h5 class="index-headline featured"><span>More</span></h5>
         <footer class="site-footer">
           <section class="poweredby">Published with <a href="https://pages.github.com"> GitHub Pages</a> and <a href="https://github.com/ageitgey/amplify">Amplify</a></section>
           <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe to my feed.</span></a>
@@ -85,7 +83,7 @@ window.domReady(function() {
   document.querySelectorAll('h2, h3, h4, h5, h6').forEach(function(el, i, ar){
     if( !!el.id ){
       var a = document.createElement('a');
-      a.setAttribute('href', '#');
+      a.setAttribute('href', '#'+el.id);
       a.classList.add('header-link');
       var icn = document.createElement('img');
       icn.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAABIFBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlDNEbhVAAAAX3RSTlMAAQIDBAUHCgsNDg8QExQVFxgZHB0gISIjJictLzI1Nzg5QEJESkxOUFFSX2RmZ2hsbW9zdHl7gIKIi46PkZKXmKCipqqtr7W6vMPFx8/R09fZ2t7g4uTp7e/x8/X3/cl6ovoAAAEFSURBVBgZbcEHO0JhAIbh9zSISJQ9CsnOzsiIjOzSJPX8/3+hU3R9J923bKGbz3zCrR5i2N779M8Sba9edYkCR66hIjy75RBowImkwSpkXTJdwLlswTqkZKqAWy1TDRiQoQJete3BvAwpuLYkhZO+DYjIMNyAK0klihUIyBQFUlKapgc5LQOn7iBN41Jocdqljjh/ChNPQHlMHWvYcgV+1UfVMZmp5ROe/gJQXr+DWkBOnhxQ9FkZqPrlsI0tKdcjlL0y5WAkXQpLnjfYlakGllr88CHTPeyoxYIvmWaBuGybcCuHAyAiaRWYkdMxMGetAFvqdkbbvv67xHaoXmIv39kF2X4AopZN1fDR6k8AAAAASUVORK5CYII='; // base64 encoded fa-link
