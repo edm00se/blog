@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html ⚡ lang="en">
+<!doctype html>
+<html amp>
   {% include head.html %}
   <body>
     {% include header.html %}
@@ -7,20 +7,21 @@
     {{ content }}
     {% if site.google_analytics %}
       <!-- Asynchronous Google Analytics snippet -->
-      <script>
-        var _gaq = _gaq || [];
-        var pluginUrl =
-       '//www.googleanalytics.com/plugins/ga/inpage_linkid.js';
-        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-        _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      </script>
+      <amp-analytics type="googleanalytics" id="analytics1">
+        <script type="application/json">
+        {
+          "vars": {
+            "account": "{{ site.google_analytics }}"
+          },
+          "triggers": {
+            "trackPageview": {
+              "on": "visible",
+              "request": "pageview"
+            }
+          }
+        }
+        </script>
+      </amp-analytics>
     {% endif %}
   </body>
 </html>

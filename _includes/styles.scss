@@ -51,8 +51,8 @@ img.emoji {
 .bar {
   width: 0;
   height: 100%;
-  max-height: 4px !important;
-  transition: height .3s;
+  max-height: 4px;
+  /* transition: height .3s; */
   background: #d07922;
 }
 
@@ -70,8 +70,9 @@ img {
 .post-read-time {
   display: inline-block;
 
-  img {
+  amp-img {
     display: inline-block;
+    background-color: initial;
   }
 
 }
@@ -119,10 +120,10 @@ i.fa.fa-rss {
 
 .tag-box {
     padding: 4px 0;
-    margin: 0;
-    overflow: hidden;
+    /* margin: 0; */
+    /* overflow: hidden; */
     list-style: none;
-    *zoom: 1;
+    zoom: 1;
 }
 
 .tag-box:after,.tag-box:before {
@@ -197,7 +198,7 @@ amp-img.champion-logo,
 /* - Post Avatar - */
 .post-avatar {
   margin: 0 auto 12px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   margin: 1em auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,7 +211,7 @@ amp-img.champion-logo,
 }
 
 .img-circle {
-  border-radius: 50% !important;
+  border-radius: 50%;
 }
 
 a.header-link {
