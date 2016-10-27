@@ -10,17 +10,7 @@ comments: true
 share: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 Recently, I had a couple of experiences stick out in my mind that made me think I should blog about some "fancy editors". I've referenced them in a couple of my sessions, used SublimeText heavily in the past, and I've always been one willing to try out new things. The fact of the matter is, especially when a thing costs nothing to use, you may as well try and broaden your tool set.
 
@@ -65,12 +55,30 @@ Note: most of these "fancy editors" make an effort at guessing the correct langu
 #### Before Language Syntax Highlighting
 I tried to blur the names to protect any innocent servers.
 
-<a href="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png"
+  alt="oh look, a giant block of text"
+  width="1500" height="1039"
+  layout="responsive"></amp-img>
+ <figcaption>oh look, a giant block of text</figcaption>
+</figure>
 
 #### After Language Syntax Highlighting
-<a href="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png" class="img-responsive center-block" /></a><br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png"
+  alt="oh look, a slightly more readable giant block of text"
+  width="1500" height="1041"
+  layout="responsive"></amp-img>
+ <figcaption>oh look, a slightly more readable giant block of text</figcaption>
+</figure>
 
-<a href="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png" data-toggle="tooltip" data-placement="bottom" title="oh look, a slightly more readable giant block of text"><img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png"
+  alt="slightly more readable giant block of text"
+  width="1261" height="1044"
+  layout="responsive"></amp-img>
+ <figcaption>slightly more readable giant block of text</figcaption>
+</figure>
 
 ### Summary
 All in all, I think I achieved my goal in that use case; to better be able to read my log files. I'll be continuing my trend of getting more used to Atom, although that become pretty familiar after just over a week of hard use. I think for any major MS related work, I'll probably switch over to VS Code for a while, just to give it a fair go as well. In the end, a tool is a tool, especially if you've suffered in the past. Eclipse is often too "heavy" for any front-end or Node work I do, so having something more flexible, immediate, and integrated to that side of things is great. :beers:

@@ -12,7 +12,6 @@ share: true
 ---
 
 {% include series.html %}
-
 ### The Road Ahead
 This past week saw the completion of a series born of a couple <span data-toggle="tooltip" title="including at my Chalk Talk!">discussions at IBM ConnectED</span> at the end of January, combined with my musings on application structure and realizations from having been working on a couple large XPages applications since <span data-toggle="tooltip" title="or the platform's adoption of me?">my first adoption of the platform</span> over three and a half years ago.
 

@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 Last time, we covered how to install, configure, and use Grunt to automate some common web optimization tasks to aid our development workflow. There was a lot to cover and I'm about to segue to a different tool (which performs the same function), which has a couple specific gains beyond some other niceties; I'll get to those in a bit. For now, hang on and enjoy the ride.
 

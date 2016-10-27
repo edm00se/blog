@@ -10,17 +10,7 @@ comments: true
 share: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Where It Began
 
 Recently, I saw yet another in a progression of people publicly denouncing the virtues of [Bower](http://bower.io/). This time, it came in the form of a tweet from [Kent C. Dodds](https://medium.com/@kentcdodds), who is fairly prominent JS developer, who I follow on [Twitter](https://twitter.com/kentcdodds) and [GitHub](https://github.com/kentcdodds), after stumbling across him on some [egghead.io](https://egghead.io/) videos. He's usually at the front line of the web development side of things, so he's got a few [interesting project](https://github.com/kentcdodds/dt-script-loader)s and usually is pretty insightful into the direction of where things are going. Some lightweight stalking (viewing his SO profile) says that he's a "full stack JavaScript engineer", which I believe provides some context to Mr. Dodds's perspective.

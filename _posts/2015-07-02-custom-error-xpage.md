@@ -25,7 +25,7 @@ That last bit is difficult as a partial refresh invokes a dojo xhr POST against 
 * XPage runtime error page
 * custom error XPage
 
-If it returns either of the second two options, it injects the contents via effectively an innerHTML injection, which [according to the W3C](//www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) [should not execute included JavaScript](//developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#Security_considerations). This is to protect the user, as it _should_ eliminate some script based attacks via injects. In any case, we're getting around this by using _onload_ as an attribute on our _&lt;img&gt;_ tag. This fires the JS we jam in there, which will append the same linked JS file for Google Code Prettify to the _&lt;head&gt;_ tag, which will then execute.
+If it returns either of the second two options, it injects the contents via effectively an innerHTML injection, which [according to the W3C](//www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0) [should not execute included JavaScript](//developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#Security_considerations). This is to protect the user, as it `should` eliminate some script based attacks via injects. In any case, we're getting around this by using `onload` as an attribute on our `img` tag. This fires the JS we jam in there, which will append the same linked JS file for Google Code Prettify to the `head` tag, which will then execute.
 
 ##### We Might As Well Make It Look Good
 Why are we doing this? Well, if you're going to have an error page show off your code, you might as well have it look good.
@@ -35,7 +35,7 @@ Check this baby out, a couple notes on implementation below.
 
 {% gist 684539960bc23e7b447b Error.xsp.xml %}<br />
 
-As you can see, there's now an _xp:text_ tag (one of the only two, the other being _xp:panel_) at the bottom, just after the normal _&lt;script&gt;_ tag, that lets you set and overwrite the _tagName_, to become a an _&lt;img&gt;_ tag, complete with the _onload_ event to add the _&lt;script&gt;_ tag to the _&lt;head&gt;_. This only renders if it's detected as being in a partial refresh, making a full refresh behave normally. An elegantly simple solution to a surprisingly complex situation.
+As you can see, there's now an `xp:text` tag (one of the only two, the other being `xp:panel`) at the bottom, just after the normal `script` tag, that lets you set and overwrite the `tagName`, to become a an `img` tag, complete with the `onload` event to add the `script` tag to the `head`. This only renders if it's detected as being in a partial refresh, making a full refresh behave normally. An elegantly simple solution to a surprisingly complex situation.
 
 ### Next Time
 I have more to share, but I can guarantee the pace over the next few weeks won't be anything like this month. In fact, I have some prep to do for <span data-toggle="tooltip" title="MWLUG 2015!">a certain shindig in Atlanta in August</span>. I hope to see you there!

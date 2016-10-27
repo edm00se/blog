@@ -40,7 +40,7 @@ The XPages runtime is considered "experimental", it's not 'alpha' but it's not '
 <figure>
   <amp-img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png"
   alt="you're my boy Blue!"
-  height="632" width="1280"
+  width="1280" height="632"
   layout="responsive"></amp-img>
  <figcaption>you're my boy Blue!</figcaption>
 </figure>

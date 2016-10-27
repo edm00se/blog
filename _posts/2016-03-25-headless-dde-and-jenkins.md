@@ -13,9 +13,7 @@ toc: true
 ---
 
 {% include series.html %}
-
 {% include toc.html %}
-
 ### Intro
 [Last time]({{ site.url }}/xpages/xsltproc-and-headless-dde/) I described a major building block which has made my efforts to have a build automation machine (in the process of being turned into a vm) for  my largest application. This includes a number of advantages, from being able to produce a copy of the application design at a given commit/tag/version from its git repository on demand or on schedule. It also means that the many possibilities when it comes to being able to hook in the creation of a current javadoc, unit testing, and more. The sky is the limit and I'm setting down some of what I do with my current headless dde build task from my Jenkins CI instance.
 

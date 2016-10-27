@@ -12,7 +12,6 @@ share: true
 ---
 
 {% include series.html %}
-
 ### For Starters
 ¡Feliz Cinco de Mayo!
 
@@ -29,7 +28,7 @@ The intention of this post to tackle the concept of what an _XAgent_ is (I'll be
 My intentions throughout this series have included to avoid any specific frameworks for building out an _HttpServlet_ and/or RESTful API, hence the pure Java implementation, NSF-level implementation (making it easily accessible before getting into OSGi *HttpServlet*s), and not being so keen on _GSON_ as to put off people who can accomplish the same thing in the IBM commons library. That being said, the intention of _this post_ is to bring us back to some common ground with other Java EE developers in how we perform some tasks; so if you're interested in such things (as I am!), please read [Jesse Gallagher's post on using JAX-RS](//frostillic.us/blog/posts/87267DB72A55133F85257E380073495F) or Toby Samples' blog, as he's kicking off a series on [using JAX-RS with Domino in an OSGi plugin](//tobysamples.wordpress.com/2015/04/28/jax-rs-or-the-way-to-do-rest-in-domino-part-1/).
 
 ### XAgents
-Ultimately, the purpose is to provide a data response after performing some computation, over HTTP (effectively the same steps in an _HttpServlet_); whether that's a binary file like <span data-toggle="tooltip" title="live generated">a PDF</span> or <span data-toggle="tooltip" title="like application/json">web-consuable data response</span>. [*XAgent*](//www.wissel.net/blog/d6plinks/shwl-7mgfbn)s provide an _XPages_ developer an easy way of creating an endpoint, the _XPage_ name, with which we can easily hook into the data response by setting it non-rendered and [overriding the _HttpServletResponse_](//www-10.lotus.com/ldd/ddwiki.nsf/dx/xpages-jsf-context-objects.htm) (and unless it's a response we don't need to persist state with, [setting the _xp:view_ attribute _viewState_ to "nostate"](//tobysamples.wordpress.com/2014/12/11/no-state-no-problem/)). 
+Ultimately, the purpose is to provide a data response after performing some computation, over HTTP (effectively the same steps in an _HttpServlet_); whether that's a binary file like <span data-toggle="tooltip" title="live generated">a PDF</span> or <span data-toggle="tooltip" title="like application/json">web-consuable data response</span>. [*XAgent*](//www.wissel.net/blog/d6plinks/shwl-7mgfbn)s provide an _XPages_ developer an easy way of creating an endpoint, the _XPage_ name, with which we can easily hook into the data response by setting it non-rendered and [overriding the _HttpServletResponse_](//www-10.lotus.com/ldd/ddwiki.nsf/dx/xpages-jsf-context-objects.htm) (and unless it's a response we don't need to persist state with, [setting the _xp:view_ attribute _viewState_ to "nostate"](//tobysamples.wordpress.com/2014/12/11/no-state-no-problem/)).
 
 _XAgents_ are relatively easy to create, especially for a less experienced _XPages_ developer. My experiences in life have taught me that "easier" doesn't always translate to "better", but an _XAgent_ is handy, conveninent, and easy to get started with.
 
@@ -38,7 +37,7 @@ I wish I had the time to invest in some benchmark comparisons. This may be somet
 
 In lieu of some recorded tests to back this up, I'm going to link you to [a blog post by Karsten Lehmann talking about XAgent bottlenecks](//www.mindoo.com/web/blog.nsf/dx/17.07.2011101855KLEBRW.htm?opendocument&comments#anc1) and an excerpt here that should sum things up nicely.
 
-> The consequence is that you should think twice about your XPages application architecture, if you have many concurrent HTTP requests or if some of them take a lot of time to be processed. An XAgent may be the easiest solution to deploy, but may not produce the best user experience in all cases. 
+> The consequence is that you should think twice about your XPages application architecture, if you have many concurrent HTTP requests or if some of them take a lot of time to be processed. An XAgent may be the easiest solution to deploy, but may not produce the best user experience in all cases.
 
 <span data-toggle="tooltip" title="no seriously, I'll come back to it!">[Insert Data to Back Up Reasoning Here]</span>
 

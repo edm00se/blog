@@ -12,22 +12,10 @@ share: true
 ---
 
 {% include series.html %}
-
 ### A Quick Review
 I had some trepidation about this post; it revolves around the fact that I'm "completing" my blog series with multiple giant topics, on top of the one primary one I've focused on for the majority of this blog series. So, before we get started, I'm going to summarize a couple things. But first, a ToC:
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-<br />
-
+{% include toc.html %}
 ##### Servlets
 I've referred to this series as [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets). While most Java servlets are intended for use over HTTP (at least from a JEE, web container standpoint), this is not exclusive; I've used HTTPServlet as analagous to Servlet (for better or for worse).
 
@@ -113,15 +101,30 @@ Here are a couple examples I had prepared for that slide deck:
 
 Bi-directional data binding:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/edm00se/0a0vga0k/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/0a0vga0k/embedded/result,html/">
+</amp-iframe>
 
 Dynamic templates:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/edm00se/qf5trmkn/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/qf5trmkn/embedded/result,html/">
+</amp-iframe>
 
 Filters (out of the box!):
 
-<iframe width="100%" height="300" src="//jsfiddle.net/edm00se/L3tykzrt/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/L3tykzrt/embedded/result,html/">
+</amp-iframe>
 
 
 To add some fuel to the fire, here is a link to the [Google Trends for Angular, Backbone, and Ember](//www.google.com/trends/explore?hl=en-US#q=ember.js,+angularjs,+backbone.js&cmpt=q). As an side, check out [other combinations of search terms](//www.google.com/trends/explore?hl=en-US#q=xpages,+coldfusion&cmpt=q), it can be interesting to play with; it only yields results as scraped from Google search, so it's no absolute indicator, but interesting as it is.

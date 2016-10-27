@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 This is currently expected to be [a three-part series]({{ site.url }}/node-express-app-fun/). It will seem like a bit of a departure from my usual Domino and XPages grounded topics, but it will come full circle by the end of the series; trust me. This first post will be the ground work to a fully functional Node+Express app that will be the foundation for two different flavors that I'll get into over the following couple of posts.
 

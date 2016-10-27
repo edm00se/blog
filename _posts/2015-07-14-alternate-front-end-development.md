@@ -13,17 +13,7 @@ share: true
 This topic is so awesome I turned it into [a video for Notes in 9, check it out]({{ site.url }}/self-promotion/ni9-alt-front-end-dev).
 [/Update]
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this!">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 It's no secret I'm a strong advocate for segregated application design practices. In my quest to "make everything work the way I want it", I've chosen a front-end framework that my ui-level application is written in, structured my primary application layer into RESTful Java *HTTPServlet*s (*DesignerFacesServlet*s, specifically), and life is generally good. My endeavors in this area are for a few, specific reasons, namely:
 

@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 Last time we covered what task runners are and why we should want to use them. Today I'm going to cover some of the foundational elements of using [Grunt](http://gruntjs.com/).
 

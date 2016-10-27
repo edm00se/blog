@@ -31,7 +31,12 @@ Angular (1.x) was incredibly easy to get started with. I don't know if we were s
 
 Take a simple "hello world" example, all we need, aside from including the `script` tag for `angular.js` in our HTML file, all we needed to do was to write out [something like this](https://jsfiddle.net/edm00se/0a0vga0k/):
 
-<script async src="https://jsfiddle.net/edm00se/0a0vga0k/embed/html,result/"></script><br />
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/0a0vga0k/embed/result,html/">
+</amp-iframe>
 
 This achieved the following:
 - instantiated (bootstrapped) the application, by binding it to a given element
@@ -43,11 +48,21 @@ Out of the box, this comes with two-way data binding (one-way is available via t
 
 We also had immediate access to many things like some really powerful filters and directives, many of the common ones were [already available for us](https://jsfiddle.net/edm00se/L3tykzrt/):
 
-<script async src="https://jsfiddle.net/edm00se/L3tykzrt/embed/html,result/"></script><br />
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/L3tykzrt/embed/result,html/">
+</amp-iframe>
 
 We even had the ability to [make use of templates](https://jsfiddle.net/edm00se/qf5trmkn/), either by HTML partials (actual `.html` files) or declaratively, as scripted components (often rather directive looking).
 
-<script async src="https://jsfiddle.net/edm00se/qf5trmkn/embed/html,result/"></script><br />
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/qf5trmkn/embed/result,html/">
+</amp-iframe>
 
 The code samples above are all still fully capable in Angular 2 and I would argue that Angular 2 can do much more than Angular 1.x, but there's a touch more to it. I still think it's fully worth learning Angular 2 and, if you _don't_ know Angular 1.x, my recommendation is to skip it and jump to 2.
 

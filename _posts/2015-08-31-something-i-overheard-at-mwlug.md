@@ -35,7 +35,13 @@ As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than
 {% include tweet.html id="638678645595336704" %}
 
 ##### The Screen Shot
-<a href="{{ site.url }}/assets/images/post_images/XPages_runtime.png" data-toggle="tooltip" data-placement="left" title="the XPages runtime and its components from JSF and additions"><img src="{{ site.url }}/assets/images/post_images/XPages_runtime.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/XPages_runtime.png"
+  alt="the XPages runtime and its components from JSF and additions"
+  layout="fixed"
+  width="860" height="644"></amp-img>
+ <figcaption>the XPages runtime and its components from JSF and additions</figcaption>
+</figure>
 [/Update]
 
 #### My Beef With Transporting Markup

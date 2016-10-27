@@ -12,21 +12,10 @@ share: true
 ---
 
 {% include series.html %}
-
 ### Ever Onward
 For as much theory and verbiage as yesterday's post was, today's will be primarily code-driven; something I hope you're ready for. I'll run through this all and hopefully I can illustrate succinctly as we go.
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-<br />
+{% include toc.html %}
 <!--
 ### Let's Do It!
 -app as SPA (why an SPA?)

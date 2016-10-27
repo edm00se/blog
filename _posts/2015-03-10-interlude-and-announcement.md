@@ -12,7 +12,6 @@ share: true
 ---
 
 {% include series.html %}
-
 ### An Interlude for Servlets
 My [series on servlets]( {{ site.url }}/servlet-series ) is in a temporary interlude. Don't worry, I've been working on it, the only problem is the issue I ran into. I was forced to re-evaluate some of the assumptions I had made previously and, to be quite honest, I'm glad I ran into that issue now, as opposed to <span data-toggle="tooltip" title="when I would feel more like a monkey that bangs on a keyboard all day">much later</span>. Suffice it to say, there is much more to come and I am excited to bring my next post, but I <span data-toggle="tooltip" title="woops">won't publish it [<s>again</s>](//twitter.com/edm00se/status/571629407695069184)</span> until it's ready.
 

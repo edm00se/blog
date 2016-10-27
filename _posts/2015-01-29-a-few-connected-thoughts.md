@@ -64,7 +64,14 @@ As you can tell from above, I'm very excited about these topics. You can also te
 
 Being a developer often includes a bit of a rebellious nature. So while we had a great Chalk Talk (full of some lead-in by myself on each of the three main topics) with excellent and on-point discussion from virtually the entire room, I still felt the need to <s>show off</s> present in a fashion that _could_ have been akin to a full session... and provide my attendees with many links and resouces relating directly to what I was talking about. Let's face it, you can't just drop a bunch of opinionated interpretations on M-V-C, UI, and client frameworks on people without having something to back yourself up. As such, for those attending, I included a friendly QR code (and [bit.ly link](//bit.ly/BlueChalkySoup)) via which they could connect to and view my "slides" (non-primary AV, _supporting material only_) and have their mobile (or laptop) browsers updated to the one I was on, via a web socket from a Node.js instance running in Bluemix.
 
-<a href="//bit.ly/BlueChalkySoup" data-toggle="tooltip" title="Chalk Talk Soup: hosted on Bluemix"><img class="img-responsive center-block" src="{{ site.url }}/assets/images/post_images/BlueChalkySoup.png" /></a>
+
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/BlueChalkySoup.png"
+  alt="Chalk Talk Soup: hosted on Bluemix"
+  layout="fixed"
+  width="256" height="320"></amp-img>
+ <figcaption><a href="https://bit.ly/BlueChalkySoup">Chalk Talk Soup: hosted on Bluemix</a></figcaption>
+</figure>
 
 I felt this was good enough to alter my session to Chalk Talk standards, not use room AV (a requirement reiterated by IBM before ConnectED), and still provide a greater amount of resources to the Chalk Talk. In other words, I don't like being told I _can't_ do something :-D.
 

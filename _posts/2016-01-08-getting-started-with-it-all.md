@@ -10,17 +10,7 @@ comments: true
 share: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 I was recently contacted to help clarify a couple of parts involved with getting set up similarly to what I've been moving towards and blogging about, both as far as project folder structure and as far as IDE setup. The developer was looking to get started with an app using a different client-side framework from what I usually work with, but that's far from a problem, since they're both part of the client-side puzzle and fit in as client-side assets. In any case, after keeping some notes from our conversation (and helping another developer find their way to [the XPages Slack chat](https://xpages-slack.herokuapp.com)), I'm using the excuse to further document the "getting set up" process for anyone else looking to do so.
 
@@ -31,7 +21,13 @@ A Beard, An App, A Blender: One Developer's Take on _Expanding How We Can_ Build
 
 If you've been wanting to dive in but have felt that there's a whole bag of snakes that need to be straightened out first, this post is for you.
 
-<a href="{{ site.url }}/assets/images/post_images/rango.png" data-toggle="tooltip" data-placement="bottom" title="stay with me now!"><img src="{{ site.url }}/assets/images/post_images/rango.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/rango.png"
+  alt="stay with me now!"
+  width="233" height="291"
+  layout="fixed"></amp-img>
+ <figcaption>stay with me now!</figcaption>
+</figure>
 
 ### Overview of Topics
 Many of the topics have been previously covered by myself and others, but this should serve as a good starting point for those looking for references and material. There are several elements involved, specifically:

@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 Last time, we covered how to install, configure, and use gulp to automate some useful tasks and how gulp is differentiated from Grunt. Some of those differences were specific to "piping" task actions through each other, is a bit more succinct, embraces streams which let the async capabilities take off, and the available plugins make the `json-server` back-end mock (or reverse proxy to Domino Designer local web preview or development server) easy to invoke for continuous use while in ongoing development, or for one-off build commands (`gulp` vs `gulp build`, or other individual tasks).
 

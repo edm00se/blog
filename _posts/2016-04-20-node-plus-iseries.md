@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 I'm back, this time with a spin on the base application I established in the last post. This flavor of things will utilize JDBC to connect to a DB2 table on an IBM i. This should work with anything the `jt400.jar` can connect to, and should you swap out the `lib/jt400.jar` for any other JDBC jar ([PostgreSQL](https://jdbc.postgresql.org/download.html), [Oracle](http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html), [MySQL](https://dev.mysql.com/downloads/connector/j/5.0.html), etc.), the only changes you would need to make are to ensure your SQL queries/statements are valid for the data source.
 

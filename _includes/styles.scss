@@ -5,22 +5,32 @@ $grey-color:       #828282;
 
 .icon {
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: $grey-color;
     }
+  }
 }
 
 .seriesNote,
 .seriesNote * {
-  font-size: 11pt;
+  font-size: initial;
 	font-weight: normal;
+}
+
+.post .post-content .seriesNote li {
+  font-weight: normal;
+  font-size: medium;
+}
+
+.post .post-content .seriesNote a {
+  font-weight: normal;
+  font-size: large;
 }
 
 .bottom-teaser .errata {
@@ -71,7 +81,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
 }
 
 .post-read-time {
@@ -169,9 +178,11 @@ i.fa.fa-rss {
   border: inherit;
 }
 
+/*
 amp-img {
   background-color: grey;
 }
+*/
 
 .logo amp-img,
 amp-img.champion-logo,
@@ -579,12 +590,14 @@ body {
       color: #333333;
       text-decoration: underline;
     }
-    amp-img, amp-youtube {
+    amp-img, amp-youtube, amp-twitter {
       margin-top: 30px;
+
     }
     figure {
       margin: 0;
       padding: 0 0 30px;
+      text-align: center;
     }
     figcaption {
       font-weight: 400;

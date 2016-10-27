@@ -16,7 +16,7 @@
 	{% for post in site.posts reversed %}
 	{% if post.series == page.series %}
 		{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-		<li>{% if page.url == post.url %}This Post: {% endif %}Part {{ count }} -
+		<li>{% if page.url == post.url %}<em>This Post: </em>{% endif %}Part {{ count }} -
     <a href="{{post.url}}">{{post.title}}
       <span class="entry-date">
         <time datetime="{{ post.date | date_to_string }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>

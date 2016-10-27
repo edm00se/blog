@@ -13,9 +13,7 @@ toc: true
 ---
 
 {% include series.html %}
-
 {% include toc.html %}
-
 ### Intro
 The [DORA project](https://github.com/camac/dora) (Domino On-disk Repository Assistant) from Cameron Gregor has gone through a couple incarnations, originally as DORA, then again as a plugin to Domino Designer (DDE), called [Swiper](https://openntf.org/main.nsf/project.xsp?r=project/Swiper). These are both great projects, benefitting the community in that our (git for dora) scm repositories (for swiper) are much tidier and there are less issues with the overhead of the metadata/etc. files (particularly with swiper).
 

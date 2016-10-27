@@ -21,6 +21,7 @@ For the record, I _thought_ I had submitted for a regular session. I've no idea 
 <figure>
   <amp-img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg"
   alt="where are my chimichangas?!"
+  layout="responsive"
   height="400" width="800"></amp-img>
  <figcaption>where are my chimichangas?!</figcaption>
 </figure>

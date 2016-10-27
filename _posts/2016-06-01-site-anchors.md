@@ -10,17 +10,7 @@ comments: true
 share: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 Site anchors, also known as anchor links, are a way to "deep link" your site with consistently navigable content. Such an approach often makes use of the ability for a browser to load/jump/scroll-to a named element (such as a heading or `div`) by its _id_ attribute. In fact, since this is normal browser behavior, if you were to use your browser's dev tools to find an _id_ of a given `div` or other tag, you could pass along a link to another person, highlighting the section of interest. This is something I tend to do a surprising amount of time, especially as I tend to send links to co-workers, in an effort to highlight specific sections of content; big surprise there.
 
@@ -66,9 +56,12 @@ Repeating an _id_ attribute is pretty terrible practice, so below when I describ
 
 This embedded example has multiple sets of five `h3` tags, each with corresponding `a` (anchor) tags pointing at their _id_ via the hash (`href="#<id>"`) method. If you scroll down to the second or third block and click a link, you'll note that the window (in the `iframe`) takes you to the first element with that _id_.
 
-<div class="embed-responsive embed-responsive-16by9">
-  <script async src="https://jsfiddle.net/edm00se/q5gffnmt/2/embed/result,html/"></script>
-</div><br />
+<amp-iframe width="700" height="300"
+  sandbox="allow-scripts allow-same-origin"
+  layout="responsive"
+  frameborder="0"
+  src="https://jsfiddle.net/edm00se/q5gffnmt/2/embed/result,html/">
+</amp-iframe>
 
 If you anticipate certain known points, you can do a couple of things, most of which amounts to either:
 

@@ -12,7 +12,6 @@ share: true
 ---
 
 {% include series.html %}
-
 #### Preface
 This post is essentially the first two parts of the several I've already identified I'll be blogging about. I kept waffling between wanting the first three in one post, which would have been huge, and just one, which would have been short. Here's what I came up with. You can also keep track of this and the other parts of the series on the [servlet series]({{ site.url}}/servlet-series/) page.
 
@@ -31,7 +30,7 @@ One of the minor themes at ConnectED for those of us in the developer crowd was 
 ### Flavors of Servlets
 So far as I can tell, there are essentially three ways of creating a servlet on a Domino server. I should mention that I'm focusing on application servlets, with no server-level deployment. The flavors are boiled down to (vanilla) _HttpServlet_, _DesignerFacesServlet_, and an abstracted servlet, which uses a wrapper to handle some of the frequent tedium (why we abstract any code). I'll try to identify why you might use each, with a brief description.
 
-Note: I'm not covering implementation in this post, that will be covered in the next post. Each of the "flavors" outlined below share two steps in the implementation, so I'm attempting to differentiate each now, before cramming them all into an application together. 
+Note: I'm not covering implementation in this post, that will be covered in the next post. Each of the "flavors" outlined below share two steps in the implementation, so I'm attempting to differentiate each now, before cramming them all into an application together.
 
 #### HttpServlet
 Probably the easiest to implement, to write the servlet, one must write a class which extends <span data-toggle="tooltip" title="javax.servlet.http.HttpServlet">_HttpServlet_</span>. This class can contain override methods for init and destroy and exposes the methods (VERBs such as GET, POST, PUT, and DELETE) available via _do*_ methods (_doGet_, _doPost_, _doPut_, and _doDelete_). A servlet needs to provide its response in either a response writer or output stream. Have a look, this is a fully functioning, albeit simple, servlet.

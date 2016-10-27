@@ -36,9 +36,21 @@ XPages makes use of XHRs with every partialRefresh event, usually in the form of
 
 Here's an example, taken from the always excellent OpenNTF.org site. Inside a project page, there are the tabs for the content pane. Selecting a tab fires a <a href="http://dojotoolkit.org/reference-guide/1.6/dojo/xhrPost.html">dojo XHR POST</a> to the server, which then loads the content for the element to be changed, and the client-side XSP object loads it into the DOM (at the ID specified). XPages does this with HTML generated from the server session Domino has established for the user's interaction. You can view these interactions from most web browsers, just open up the developer tools for your browser (shown is Chrome's DevTools) and look for network events.
 
-<a href="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost.png" data-toggle="tooltip" title="sample XPages partialRefresh call"><img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost.png" class="img-responsive" alt="sample XPages partialRefresh call" /></a>
-<br />
-<a href="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost_results.png" data-toggle="tooltip" title="sample XPages partialRefresh call response"><img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost_results.png" class="img-responsive" alt="sample XPages partialRefresh call response" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost.png"
+  alt="sample XPages partialRefresh call"
+  layout="responsive"
+  width="1019" height="792"></amp-img>
+ <figcaption>sample XPages partialRefresh call</figcaption>
+</figure>
+
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost_results.png"
+  alt="sample XPages partialRefresh call response"
+  layout="responsive"
+  width="1010" height="781"></amp-img>
+ <figcaption>sample XPages partialRefresh call response</figcaption>
+</figure>
 
 ##### Why XHRs?
 These XMLHttpRequests occur a lot, especially in _partialRefresh_ (refreshMode="partial") heavy applications. This increases the reliance on the managed state aspect of your XPage'd application and your user's in-memory session (on the server). This makes XPages quite state-ful, IMO. It's also easy, especially in complex, _partialRefresh_ heavy applications, to overdo what your _partialRefresh_ requires. Many in the community talk about the performance hit of _partialRefresh_ es that don't use _partial execution_ (execMode="partial", which only evaluates what resides inside the _execId_, for the server's computation). To help automatically remove some of this bloat, <a href="http://hasselba.ch/blog/?p=1383">Sven Hasselbach shared a client-side JavaScript snippet</a> which assists in the reduction of the traffic. To me, this is great (good developers are lazy, right?), but still doesn't quite get us to the fundamental issues that many novices make in XPages development.
@@ -50,7 +62,7 @@ Yes, you read that correctly. Ideally, your XPage'd content should be strictly p
 So, be it an XPages "client" / _purely_ presentation layer approach or <a href="http://xomino.com/2014/09/02/mwlug-2014-slide-deck-write-once-run-anywhere-angular-js-in-xpages/">a(n arguably) more modern approach</a>, we _need_ to separate our application logic from our presentation layer. The bottom line is to write applications which are not state-ful, _except in the presentation layer_. In other words, <a href="http://www.linkedin.com/groups/What-are-top-XPages-performance-3707727.S.230901244#commentID_130816718">"I stand with Jesse"</a>.
 
 ##### What to Focus On
-* (Controller) controller classes, which handle how our application works (work flow, sending notifications, etc.) 
+* (Controller) controller classes, which handle how our application works (work flow, sending notifications, etc.)
 * (Model) model classes, which handle how we interact with our data store (Domino document, etc.)
 * (View) rendering classes, which handle how to present to the page (a dirty approach would merge this with the model classes)
 

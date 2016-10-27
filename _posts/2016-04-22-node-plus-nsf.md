@@ -12,18 +12,7 @@ share: true
 ---
 
 {% include series.html %}
-
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 I'm back, with the third in my 3-part series on connecting to "almost anything". First, we created a base application, from which nearly any db connection could be made and `routes` established to be handled with their dependent db operations managed through the `util` module, to consolidate the db interaction functions. This time, we'll be interacting with a Notes/Domino NSF, via the [domino-nsf](https://www.npmjs.com/package/domino-nsf) packge (on npm) by [Nils Tarjei Hjelme](https://medium.com/@nthjelme).
 

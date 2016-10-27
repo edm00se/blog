@@ -38,4 +38,10 @@ The next time you see my app, it will be running on Bluemix (and likely will inv
 
 All in all, it's shaping up to be a good continuation of what I've already been working on. I hope you continue to find it useful, as I do. Until then, keep on Pratt keeping.
 
-<a href="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png" data-toggle="tooltip" title="wait, I can't cross over Jurassic World and A Song of Ice and Fire geekdoms... can I?"><img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png"
+  alt="wait, I can't cross over Jurassic World and A Song of Ice and Fire geekdoms... can I?"
+  layout="fixed"
+  width="1280" height="632"></amp-img>
+ <figcaption>wait, I can't cross over Jurassic World and A Song of Ice and Fire geekdoms... can I?</figcaption>
+</figure>

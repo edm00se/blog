@@ -16,7 +16,13 @@ Impatient and want to see the code? Jump down to [my Java class](#handling-the-d
 ### What and Why?
 Generating custom JSON data is, unless you're on a verison of Domino server previous to 8.5.3 UP1, _virtually_ unnecessary. Everything you see below can be fully replicated via the Domino Data/Access Services. The reason for that is the fact that I made use of a simple NotesView iteration pattern to generate and return the application/json data. The missing piece, the _whole reason why_, is on _your_ **application requirements**. When you need JSON formatted data in a custom format due to formatting preferences or application logic needs, and it can't just be in a View, that's when this comes into play. So if you start doing what I've done, ask yourself first, can it be just in a View?
 
-<a href="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png" data-toggle="tooltip" title="if you can, use DAS"><img src="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png"></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png"
+  alt="if you can, use DAS"
+  layout="responsive"
+  height="214" width="241"></amp-img>
+ <figcaption><em>if you can</em>, use DAS; just don't expose full CRUD to a public facing app!</figcaption>
+</figure>
 
 If that's the case, make sure you've turned on Domino Data Services for your NSF and the View you need. If your use case is more specific, that's what follows.
 
@@ -45,11 +51,24 @@ Creating a JsonObject with with the Google GSON library can be done a couple way
 
 The result gives us exactly what we're looking for.
 
-<a href="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png" data-toggle="tooltip" title="if you try sometimes, you get what you need"><img src="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png"></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png"
+  alt="if you try sometimes, you get what you need"
+  layout="responsive"
+  height="528" width="1402"></amp-img>
+ <figcaption>if you try sometimes, you get what you need</figcaption>
+</figure>
 
 ### Pro Tip: Chrome DevTools
 With the right tools, things get easier. Chrome's DevTools give a nice Preview tab to individual network requests. When it comes to json data, it lets us drill down nicely or switch over and view the raw response. Like this:
-<a href="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png" data-toggle="tooltip" title="maybe we can have nice things"><img src="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png"></a>
+
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png"
+  alt="maybe we can have nice things"
+  layout="responsive"
+  height="280" width="1208"></amp-img>
+ <figcaption>maybe we can have nice things</figcaption>
+</figure>
 
 New to Chrome DevTools? Check out [this free primer course](http://discover-devtools.codeschool.com/) from codeschool.com.
 
@@ -60,7 +79,7 @@ In client-side JavaScript, you can programmatically determine whether to take on
 
 
 ### Handling the Data
-[Update:] [As pointed out by Paul T. Calhoun](http://twitter.com/ptcalhoun/status/503993722556940288), a package available, if you're not looking to add the Google GSON jar, or any external library, you can implement [com.ibm.commons.util.io.json](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/package-summary.html). The largest difference I saw was the syntax. I'm sure someone more learned could tell me about the mechanics of the two packages. To view my Class with the IBM com.ibm.commons.util.io.json library implementation, check out [this gist here](http://gist.github.com/edm00se/e5626f63ef7573fd2f3e).
+[Update:] [As pointed out by Paul T. Calhoun](http://twitter.com/ptcalhoun/status/503993722556940288), a package available, if you're not looking to add the Google GSON jar, or any external library, you can implement [com.ibm.commons.util.io.json](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/package-summary.html). The largest difference I saw was the syntax. I'm sure someone more learned could tell me about the mechanics of the two packages. To view my Class with the IBM `com.ibm.commons.util.io.json` library implementation, check out [this gist here](http://gist.github.com/edm00se/e5626f63ef7573fd2f3e).
 
 Here's my method, complete with slightly rambling, but hopefully insightful to a newbie, comments.
 {% gist ce4206cf3daff409b8f3 DataProvider.java %}
