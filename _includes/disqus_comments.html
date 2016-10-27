@@ -1,3 +1,4 @@
+<!--
 <div id="disqus_thread"></div>
 <script>
 window.addEventListener('message', receiveMessage, false);
@@ -39,6 +40,7 @@ function receiveMessage(event)
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
 <!--
 <amp-iframe width=600 height=140
   layout="responsive"
@@ -48,3 +50,10 @@ function receiveMessage(event)
   <div overflow tabindex=0 role=button aria-label="Read more">Read more!</div>
 </amp-iframe>
 -->
+<amp-iframe
+  src="https://disqus.com/embed/comments/?base=default&version=d074862f091cd9585b295f3979a4eb15&f=sebastianbenz&t_u={{ page.id | prepend: site.url | url_encode }}&t_d={{ page.id | url_encode }}&t_t={{ page.id | url_encode }}&s_o=default"
+  sandbox="allow-Same-origin allow-forms allow-modals allow-scripts allow-popups"
+  layout="responsive"
+  frameborder="0"
+  width="600" height="500">
+</amp-iframe>
