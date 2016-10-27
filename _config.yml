@@ -15,6 +15,7 @@ bio: >
   A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.
 baseurl: "" # the subpath of your site, e.g. /blog
 disqus_shortname: em-devblog
+disqus_iframe_url: "https://ericmccormick.io/disqus_comments.html"
 url: "https://edm00se.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 permalink:   /:categories/:title/
