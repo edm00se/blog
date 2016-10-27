@@ -25,9 +25,12 @@ In one of the more counterintuitive things I've run into since starting Domino/X
 ### Marrying the ServletFactory to the Application
 
 #### Marriage, The Short, Short Version
-<div class="embed-responsive embed-responsive-16by9 center-block">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5X4HYA-lB-U" frameborder="0" allowfullscreen></iframe>
-</div><br />
+<div class="center">
+	<amp-youtube
+    data-videoid="5X4HYA-lB-U"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
+</div>
 
 Your _ServletFactory_ needs one last step to be registered as usable by your application. Here's the short, short version.
 

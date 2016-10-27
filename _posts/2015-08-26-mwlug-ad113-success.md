@@ -10,7 +10,13 @@ comments: true
 share: true
 ---
 
-<a href="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg" data-toggle="tooltip" data-placement="left" title="against two other app dev sessions and free beer?!"><img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg"
+  alt="against two other app dev sessions and free beer?!"
+  height="324" width="575"
+  layout="responsive"></amp-img>
+ <figcaption>against two other app dev sessions and free beer?!</figcaption>
+</figure>
 
 ### MWLUG 2015
 MWLUG has been going great, as expected. The worst thing I've been fighting is the overlap of some really good sessions. In fact, mine went up against two other app dev sessions and one entitled "free beer". It would seem I need to do a better job of <span data-toggle="tooltip" title="it's because I poked fun at dojo, isn't it?">bribing and/or coercing [@RichardMoy](//twitter.com/richardmoy)</span>.
@@ -26,7 +32,7 @@ My session fits into the bigger picture, as I see it. With a front- and back-end
 
 * [Nginx](http://nginx.org/)
   * reverse proxy and web server
-  * free 
+  * free
 * [PageSpeed](https://developers.google.com/speed/pagespeed/module/)
   * ngx_pagespeed, the module for Nginx
   * there's also an Apache module

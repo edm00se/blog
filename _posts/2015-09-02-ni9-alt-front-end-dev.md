@@ -18,8 +18,11 @@ This episode also highlights my ability to mis-speak. I've been working on Notes
 ### The Video
 Found [on Notes in 9](//www.notesin9.com/2015/09/01/notesin9-180-alternative-frontend-development-for-xpages/) or [on YouTube](//www.youtube.com/watch?v=_lHGZiD-aE0) (including here).
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/_lHGZiD-aE0" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="_lHGZiD-aE0"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>
 
 ### The Premise

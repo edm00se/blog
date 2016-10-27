@@ -143,9 +143,19 @@ For now, I'm rocking the 1.x line, specifically staying in 1.3.x for my current 
 
 So, all those naysayers, I say pick a framework. I'm going with AngularJS and it's been <span data-toggle="tooltip" title="do other people use this phrase? anyone?">pretty pimp</span> so far.
 
-<a href="//www.bennadel.com/blog/2439-my-experience-with-angularjs-the-super-heroic-javascript-mvw-framework.htm" data-toggle="tooltip" title="my feelings about AngularJS over time"><img src="//www.bennadel.com/resources/uploads/2013/feelings_about_angularjs_over_time.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="https://www.bennadel.com/resources/uploads/2013/feelings_about_angularjs_over_time.png"
+  alt="my feelings about AngularJS over time" height="563" width="545"></amp-img>
+ <figcaption>my feelings about AngularJS over time</figcaption>
+</figure>
 
 ### Tomorrow
 [Come back tomorrow for the conclusion of this epic journey]({{ site.url }}/xpages-servlets/building-a-front-end-pt2-an-app-with-angular).
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/1P3P2L0Q25Y?start=28" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="1P3P2L0Q25Y"
+    data-param-start="28"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
+</div>

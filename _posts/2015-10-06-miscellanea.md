@@ -35,8 +35,7 @@ Something I talked about at my MWLUG session, [LetsEncrypt.org issued its first 
 ##### Universal Two-Factor Authentication
 GitHub now supports U2FA in the form of a nifty USB dongle that provides protection against everything up to man-in-the-middle attacks. I won't claim any security measure is 100% fool proof, but this is pretty awesome. For those who use GitHub a lot, it may be worth looking into.
 
-<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">GitHub supports Universal 2nd Factor authentication: <a href="https://t.co/laCO8age35">https://t.co/laCO8age35</a></p>&mdash; GitHub (@github) <a href="https://twitter.com/github/status/649638137895870464">October 1, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="649638137895870464" %}
 <br />
 
 ##### Hacktoberfest

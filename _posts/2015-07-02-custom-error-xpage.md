@@ -14,8 +14,7 @@ share: true
 ### Intro
 Here's an interesting thing. The best part is that I can't attribute myself with credit for the majority of the body of work involved. In fact, I had some help from an [eagle-eyed Marky Roden](//stackoverflow.com/a/30925635/1720082) who spotted a contributing issue, and an astounding three answers from Sven Hasselbach on [a StackOverflow question on a key component subject](//stackoverflow.com/questions/30925066/custom-error-xpage-ability-for-browser-to-load-and-execute-js-script-link-or-bl/).
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">SO question on executing CSJS in a custom error XPage.&#10;&#10;<a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a>&#10;&#10;<a href="http://t.co/kRvedc5BGq">http://t.co/kRvedc5BGq</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/611629455069425664">June 18, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="611629455069425664" %}
 
 ### Custom Error XPage
 With that help I was able to finish putting together a modified custom error XPage, based on [the XSnippet by Tony McGuckin](//openntf.org/XSnippets.nsf/snippet.xsp?id=custom-error-page-cw-cause-and-stacktrace-information); this version includes some place holders for custom theming (e.g.- logo, styling) and most importantly, includes code syntax highlighting! I was able to add [Google Code Prettify](//github.com/google/code-prettify) and get it to work when XPages throws a runtime error both from a full refresh event (that was the easy part), but also with a partial refresh.

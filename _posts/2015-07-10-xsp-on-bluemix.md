@@ -10,7 +10,13 @@ comments: true
 share: true
 ---
 
-<a href="{{ site.url }}/assets/images/post_images/lookSirDroids.jpg" data-toggle="tooltip" title="the droids I've been looking for"><img src="{{ site.url }}/assets/images/post_images/lookSirDroids.jpg" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/lookSirDroids.jpg"
+  alt="the droids I've been looking for"
+  height="240" width="320"
+  layout="responsive"></amp-img>
+ <figcaption>the droids I've been looking for</figcaption>
+</figure>
 
 ### Intro
 It's here! Ten days into the first month of the 2nd half of 2015, IBM's XPages runtime (and XPages NoSQL DB service) are live in 'beta'/experimental. Does that mean it will change? Absolutely. I also, absolutely, believe that's a good thing, as how the runtime grows and adapts to meet the needs of its user/developer base will only help strengthen it, with the right amount of user/developer feedback. So, I find myself with nearly no free time wondering how soon I can start creating an interesting app for deployment to Bluemix.
@@ -27,18 +33,22 @@ Version 901v00_13.20150611-0803 was released today, the 10th of July, 2015. This
 ### What's to Come?
 Plenty more, it would seem. This is just the initial launch and brings in line some of the best of what's to offer from IBM's existing, enterprise application and collaboration offerings with their flagship cloud solutions. Needless to say, I'm excited. This brings in only more excellent possibilities and opens the door for many things to come.
 
-<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="und" dir="ltr"><a href="https://twitter.com/TweeterDonnelly">@TweeterDonnelly</a> <a href="http://t.co/zJGdJvAeLB">pic.twitter.com/zJGdJvAeLB</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/619506133452103680">July 10, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="619506133452103680" %}
 
 The XPages runtime is considered "experimental", it's not 'alpha' but it's not 'beta'. I still managed to throw together some Pratt Keeping for Bluemix though.
 
-<a href="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png" data-toggle="tooltip" title="you're my boy Blue!"><img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png"
+  alt="you're my boy Blue!"
+  height="632" width="1280"
+  layout="responsive"></amp-img>
+ <figcaption>you're my boy Blue!</figcaption>
+</figure>
 
 ### A Quick Plug
-For those with an interest in XPages use on Bluemix, I recommend attending the webinar, "An introduction to creating Domino Applications in the Bluemix Environment" on 
+For those with an interest in XPages use on Bluemix, I recommend attending the webinar, "An introduction to creating Domino Applications in the Bluemix Environment" on
 
-<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Webinar: An introduction to creating Domino applications in the Bluemix environment – July 23rd&#10;&#10;<a href="http://t.co/Pr6405na3y">http://t.co/Pr6405na3y</a>&#10;&#10;<a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a> <a href="https://twitter.com/hashtag/Bluemix?src=hash">#Bluemix</a></p>&mdash; Mark Roden (@MarkyRoden) <a href="https://twitter.com/MarkyRoden/status/618965778013011968">July 9, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="618965778013011968" %}
 
 ### Links
 

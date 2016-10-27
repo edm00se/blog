@@ -32,19 +32,36 @@ Without the need for an in-memory session on the server, we no longer require a 
 
 Let's compare a simple thing in XPages. Using the stock xp:viewPanel, xp:pager, with the _partialRefresh_ option, this is a fairly normal way for an XPage developer to put a View into an XPage. This is also my hallmark argument against this variety of implementation, for such a simple task. Here's what happens when I hit "Next" in the pager:
 
-<a href="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_ViewAndPager.png" data-toggle="tooltip" title="a stock partial refresh from a view pager"><img src="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_ViewAndPager.png" alt="a stock partial refresh from a view pager" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_ViewAndPager.png"
+  alt="stock partial refresh from view pager" height="400" width="800"></amp-img>
+ <figcaption>a stock partial refresh from a view pager</figcaption>
+</figure>
 
 When we execute these AJAX calls, it takes time and processing effort (both for the server and the client/browser). Here's what I mean:
 
-<a href="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_timeAndMoney.png" data-toggle="tooltip" title="a stock partial refresh from a view pager network transfer time"><img src="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_timeAndMoney.png" alt="a stock partial refresh from a view pager network transfer time" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/aPartialRefreshCall_timeAndMoney.png"
+  alt="a stock partial refresh from a view pager network transfer time"
+  height="400" width="800"></amp-img>
+ <figcaption>paging with Angular</figcaption>
+</figure>
 
 The above doesn't show a whole lot of time elapsing, only about 38ms. It also shows a hover state being fetched; I didn't even plan on that (and is an argument against Dojo, IMO; I mean, lazy loading images for button styles?!?). I can also tell you that that server is having a good day and isn't refreshing anything more than the _xp:viewPanel_ for this page (so less intense computations). The application above has been re-developed, as a case study (with which I've been able to sell to my management and direct my development efforts accordingly), into a Bootstrap 3 with AngularJS application. Here's what happens when I perform the same paging task in the Angular version of this app. Apologies for the reduction in quality with the gif and redaction of company-specific information.
 
-<a href="{{ site.url }}/assets/images/post_images/angular_ngrepeat_noNetworkCalls_scrubbed.gif" data-toggle="tooltip" title="paging with Angular"><img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_noNetworkCalls_scrubbed.gif" alt="paging with Angular" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_noNetworkCalls_scrubbed.gif"
+  alt="paging with Angular" height="400" width="800"></amp-img>
+ <figcaption>paging with Angular</figcaption>
+</figure>
 
 No network requests during paging, it's that cool. What's happening? It's behaving as a modern web application; a single page app, in fact, but I'll get to some of those specifics in a moment. Here's the same page again, with live full-text searching, across all fields (keys, as in JSON key: value pair, you can also filter by key) in the data array.
 
-<a href="{{ site.url }}/assets/images/post_images/angular_ngrepeat_liveSearch_scrubbed.gif" data-toggle="tooltip" title="searching a data array in Angular"><img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_liveSearch_scrubbed.gif" alt="searching a data array in Angular" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_liveSearch_scrubbed.gif"
+  alt="searching a data array in Angular" height="400" width="800"></amp-img>
+ <figcaption>searching a data array in Angular</figcaption>
+</figure>
 
 So why is REST lean? REST means a less cluttered network request, performed less frequently. This also comes down to your implementation of it, which is why I'm showing off Angular, which plays to a RESTful API's strengths. The idea is to invoke _just what you need_ from the server, at the state of what you're looking for, <a href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS style</a>. You still have to load a page with a JavaScript library to know what to invoke, but you should reduce as much as possible afterwards.
 
@@ -57,6 +74,10 @@ This is the biggest downside of the Domino Data Service in my opinion. The Domin
 ### Summarizing
 As you can see, M-V-C is a thing. It's great idea for your server-side application logic and there are a great many awesome M-V-C client-side frameworks (like Angular) that can help you expedite your front-end logic. So please, let's build better apps. REST can get us there with lighter weight network requests and in-browser processing of data and application logic. We can reduce our network calls, sizes of data transferred, and made our performance response time nearly negligible (limited only to the time it takes the client-side JS code to perform the rebuild of the HTML and the initial page load).
 
-<a href="{{ site.url }}/assets/images/post_images/keanu_front-back-segregation.jpg" data-toggle="tooltip" title="make a better Domino app!"><img src="{{ site.url }}/assets/images/post_images/keanu_front-back-segregation.jpg" alt="make a better Domino app!" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/keanu_front-back-segregation.jpg"
+  alt="Keanu reaction" height="400" width="800"></amp-img>
+ <figcaption>make a better Domino app!</figcaption>
+</figure>
 
 No silly Keanu, it just might keep us sane.

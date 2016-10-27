@@ -14,7 +14,7 @@ share: true
 All applications require a certain logic. Even the most simple application, which is ultimately access to a data store, must have some definition of how it performs when certain events happen (what to do on a save event, what to validate and how). So, ultimately, the relevant question is to the effect of "where does my application reside?" Developing Domino/XPages applications, it manifests primarily in how you handle your server logic, interface logic, and the display layer of XPages and Custom Controls. I know it's an intuitive concept, but they don't all have to be mixed into one blended mess.
 
 ### The Spaghetti Code<sup>&#8482;</sup> Situation
-If you're suffering the effects of having to support applications which implement less-than-awesome "code patterns", then you'll be well aware of the fact that the applications logic, if handled poorly, gets strewn about through all the various and potential bindings for your controls. Should it be defined in-line with every control what specific (non-default) formatting of date you want across 
+If you're suffering the effects of having to support applications which implement less-than-awesome "code patterns", then you'll be well aware of the fact that the applications logic, if handled poorly, gets strewn about through all the various and potential bindings for your controls. Should it be defined in-line with every control what specific (non-default) formatting of date you want across
 
 So, your application logic is already residing, in part, in the client-side; assuming that you do any client-side executions. If your application is truly a collection of web forms with the only events being navigation, open, and save events, then you probably don't need this approach. If you do anything more while the browser has a page loaded, then you'll want to adopt a more unified approach, at least for larger applications.
 
@@ -37,4 +37,9 @@ Some of my in-progress efforts will help to quantify this identification of an _
 
 For more on application structuring, I recommend [the recording of Jesse's MWLUG 2014 session on the subject](//www.youtube.com/watch?v=KJvydKVsqXk); he also writes on his blog about the intricacies of [how to use his Frostillic.us framework](//frostillic.us/blog/posts/D815DC7ED059395885257D6B00001006). This is also (I hope) the last time I need to cite Jesse's efforts and can begin to cite my own efforts as I progress in my examples.
 
-<p class="text-center"><a href="{{ site.url }}/assets/images/post_images/app_logic_nightmares.jpg" data-toggle="tooltip" title="keep sane and structure your code!"><img src="{{ site.url }}/assets/images/post_images/app_logic_nightmares.jpg" alt="keep sane and structure your code!" /></a></p>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/app_logic_nightmares.jpg"
+  alt="keep sane and structure your code!"
+  height="400" width="800"></amp-img>
+ <figcaption>keep sane and structure your code!</figcaption>
+</figure>

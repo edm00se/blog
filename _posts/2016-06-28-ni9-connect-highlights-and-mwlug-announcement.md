@@ -16,8 +16,11 @@ I'm on Notes in 9 again. This time, I'm back with a video highlighting my sessio
 ### The Video
 Head over to [Notes in 9.com](http://www.notesin9.com/2016/06/28/notesin9-191-a-beard-an-app-and-a-blender/) to check it out, or watch it embedded here or on YouTube.
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/C2oG-PYWxA0" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="C2oG-PYWxA0"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>
 
 ### Summary

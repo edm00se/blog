@@ -105,11 +105,11 @@ Now, inside our module export function, we invoke `initConfig` on the grunt hand
 //...
 grunt.initConfig({
 	// configure the object passed back with task definitions
-	
+
 	taskName: {
 		// config object for the task
 	}
-	
+
 });
 //...
 ```
@@ -188,7 +188,13 @@ watch: {
 
 Here's what [the resulting expanded Gruntfile.js ](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/7b294ea62c84e0e921d32857b857b633ab6ac26c/basicGruntfile_expandedWithJsHintAndWatch.js) does for us:
 
-<a href="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves"><img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif"
+  alt="jshint throwing warnings and watching file saves"
+  height="743" width="574"
+  layout="fixed"></amp-img>
+ <figcaption>jshint throwing warnings and watching file saves</figcaption>
+</figure>
 
 ##### Run a Server Task and Watch for Changes
 A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. Their docs usually show how to use a generic server task, but my preference is to replace that with the `json-server` instance we set up previously.
@@ -241,10 +247,16 @@ What I ran into was that either the `json-server` instance wouldn't start correc
 
 I initially intended to walk through every bit of my configuration, but instead I'll leave you with a (very brief) animated gif and [a link to my full `Gruntfile.js`](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/89dfc045561d8936b30beaf8b4137ebc54e5a466/Gruntfile.js). Here it is all starting to come together:
 
-<a href="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" data-toggle="tooltip" title="jshint throwing warnings and watching file saves while reloading the browser on save events"><img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif"
+  alt="jshint throwing warnings and watching file saves while reloading the browser on save events"
+  height="811" width="1329"
+  layout="fixed"></amp-img>
+ <figcaption>jshint throwing warnings and watching file saves</figcaption>
+</figure>
 
 ### In Summary
 Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, :beers:!
 
-### To Be Continued... 
+### To Be Continued...
 ...in part 3, with gulp!

@@ -24,6 +24,11 @@ My trusty coffee mug, which has been with me since prior to graduating universit
 ### Accepting Submissions
 I am accepting suggestions/submissions. If you're having trouble with the embedded Google Form, [here's the link directly](http://goo.gl/forms/Hn9IiIYqb22eREAb2).
 
-<div class="text-center">
-<iframe class="form-embed" src="https://docs.google.com/forms/d/18gjdmG_-X5c5YKqT95trQvhAApJqQ7ZAI5_-EjFse4M/viewform?embedded=true" width="760" height="840" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-</div>
+<amp-iframe
+	width="760"
+  height="840"
+  layout="responsive"
+  sandbox="allow-scripts allow-same-origin allow-popups"
+  frameborder="0"
+  src="https://docs.google.com/forms/d/18gjdmG_-X5c5YKqT95trQvhAApJqQ7ZAI5_-EjFse4M/viewform?embedded=true">
+</amp-iframe>

@@ -18,7 +18,12 @@ My session abstract, [from when I first submitted it]({{ site.url }}/self-promot
 
 For the record, I _thought_ I had submitted for a regular session. I've no idea if I was converted into a _Chalk Talk_ due to &lt;reasons&gt; or if there was a snaffu somewhere along the way. I do know that my confirmation email of abstract submission included nothing about a session type or Chalk Talks. In the end, one way or another, I have to play the cards in my hand. I can't guarantee I'll be happy it turned out this way and I'm fairly certain I'll still have a good time and get to talk with some excellent people about some very relevant topics to development.
 
-<a href="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg" data-toggle="tooltip" title="where are my chimichangas?!"><img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg"
+  alt="where are my chimichangas?!"
+  height="400" width="800"></amp-img>
+ <figcaption>where are my chimichangas?!</figcaption>
+</figure>
 
 ##### What Is A Chalk Talk?
 According to the instructions I received,
@@ -47,5 +52,3 @@ So here are my current aims:
 * provide my demo application via GitHub, for others to play with and learn from (this is the same, thankfully)
 
 So that's what I'm thinking. My only fear is that my once sweeping epic of a session is now significantly subdued, in my mind. Only time will tell.
-
-

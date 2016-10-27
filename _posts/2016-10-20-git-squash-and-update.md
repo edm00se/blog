@@ -25,7 +25,13 @@ It's been a little while since I blogged last. This has been due to a combinatio
 #### On the XPages Platform
 There's one more thing involved, which is a tougher topic. Since MWLUG, there was a bit of a shift from the previous head scratching and beard stroking (for those of us so endowed) regarding the future of platform development of Domino.
 
-<a href="{{ site.url }}/assets/images/post_images/BeardStroke.jpg" data-toggle="tooltip" title="a beard grants pondering skills, +10"><img src="{{ site.url }}/assets/images/post_images/BeardStroke.jpg" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/BeardStroke.jpg"
+  alt="a beard grants pondering skills, +10"
+  height="480" width="480"
+  layout="responsive"></amp-img>
+ <figcaption>a beard grants pondering skills, +10</figcaption>
+</figure>
 
 For the majority of my history on this blog, I've taken an approach to creating and using a "thick" app in the client-side, with a focus on driving the backing data service via RESTful APIs. This is generally how much of the rest of the industry seems to be progressing, insofar as web applications. I've been pretty happy that the more modern tooling which optimizes content so far as to minimize the foot print of the built assets that go into an NSF's `WebContent` path, and it certainly helps avoid the constraint of the limitation of design elements in an NSF, but while this eases one side of an application, [there has been a disturbing amount of quiet](https://blog.darrenduke.net/Darren/DDBZ.nsf/dx/there-is-no-9.0.2.-dead.-canceled.-killed.-.htm) for some time, to the point that many have even been quite skittish or outright fearful of the future direction of the Domino and XPages platform. Thankfully, there has finally been a break in the "radio silence" from IBM on the future of the development of the Domino/XPages platform. This isn't to say [the world is perfect](http://www.notesin9.com/2016/09/13/no-more/), but I'm trying to keep focused on the positives.
 
@@ -48,8 +54,17 @@ Once you have identified the number of commits back to 'squash', then you can ru
 
 If the asciicast gives you trouble (possibly on mobile), just [take this link](https://asciinema.org/a/89834).
 
-<div class="text-center">
-  <script type="text/javascript" src="https://asciinema.org/a/89834.js" id="asciicast-89834" async></script>
+<div class="center">
+  <div class="center">
+    <amp-iframe
+      height="420"
+      width="518"
+      sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      allowfullscreen
+      frameborder="0"
+      src="https://asciinema.org/api/asciicasts/89834?">
+    </amp-iframe>
+  </div>
 </div>
 
 ### IBM Champion Nominations

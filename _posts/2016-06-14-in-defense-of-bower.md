@@ -26,12 +26,11 @@ share: true
 Recently, I saw yet another in a progression of people publicly denouncing the virtues of [Bower](http://bower.io/). This time, it came in the form of a tweet from [Kent C. Dodds](https://medium.com/@kentcdodds), who is fairly prominent JS developer, who I follow on [Twitter](https://twitter.com/kentcdodds) and [GitHub](https://github.com/kentcdodds), after stumbling across him on some [egghead.io](https://egghead.io/) videos. He's usually at the front line of the web development side of things, so he's got a few [interesting project](https://github.com/kentcdodds/dt-script-loader)s and usually is pretty insightful into the direction of where things are going. Some lightweight stalking (viewing his SO profile) says that he's a "full stack JavaScript engineer", which I believe provides some context to Mr. Dodds's perspective.
 
 #### The Tweet
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">😭 please people, stop recommending/using bower. There is nothing useful that bower can do that npm can&#39;t. <a href="https://t.co/eTdrBbcLJt">pic.twitter.com/eTdrBbcLJt</a></p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/739938603187343360">June 6, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="739938603187343360" %}
 
 I took the tweet with a grain of salt and even refrained from tweeting some snark back (see that Internet? self-restraint _is_ a thing); although that didn't keep me from musing on comparing tools in my own tweet later on. That's not to say that he doesn't have a point, but Twitter's 140 character limit is a pretty lightweight medium for what is, IMO, a pretty complex comparison.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I feel like the “tool X is superior to tool Y” argument is overdone. Let’s move on before the hipsters claim to have been into Y first.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/739979758411386880">June 7, 2016</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="739979758411386880" %}
 
 Mr. Dodds is a rather talented developer whose projects and ongoing efforts are noteworthy, I just felt he _may have skipped over a something in the name of progress_. What I felt was missing was all the _good_ things about bower. This post explores the relevance of bower, the complexities involve in comparing bower and npm for front-end dependencies, and will not further mention Mr. Dodds after this paragraph; although I will plug his (updated) [slide deck on ES6 modules](http://slides.com/kentcdodds/es6-modules), which came up recently.
 

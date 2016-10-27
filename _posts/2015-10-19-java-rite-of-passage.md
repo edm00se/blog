@@ -21,7 +21,11 @@ What wound up tripping me up was that I was attempting to access my data NSF in 
 #### Static vs Instance Methods
 When using a static method, it is attached to the Class it is defined in, not any given instance. For convenience sake, this can be handy as you can invoke it directly by `MyClass.getSomethingStatically()` as opposed to access/create an instance of the Class in order to get the properties, a la `MyClass a = new MyClass(); a.getSomeInstanceProperty();`. Eclipse based editors make it really easy to add the _static_ modifier/key word to a method that you've typed in as if it were static.
 
-<a href="{{ site.url }}/assets/images/post_images/easyToMakeStatic.png" data-toggle="tooltip" title="why do you make it so easy!?"><img src="{{ site.url }}/assets/images/post_images/easyToMakeStatic.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/easyToMakeStatic.png"
+  alt="why do you make it so easy!?" height="116" width="586"></amp-img>
+ <figcaption>why do you make it so easy!?</figcaption>
+</figure>
 
 Per the [Understanding Class Members tutorial from the Oracle Java SE docs](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html),
 
@@ -36,8 +40,11 @@ In short, the completed method I use to pass all my _getDataNSF_ calls through i
 For a full view of my [bean](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/config/AppUtil.java#L61-L81) or [intermediary method](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/app/Utils.java#L489-L499), <span data-toggle="tooltip" title="there's something exciting">go check out my last paragraph</span>.
 
 #### Long Story Short...
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/qr2tmQIbdH8" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="qr2tmQIbdH8"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>
 
 #### Promise of :beers:
@@ -50,4 +57,9 @@ App Running on Bluemix: [iceandfire.mybluemix.net](http://iceandfire.mybluemix.n
 
 App (and data ODP) repository:
 
-<iframe src="https://ghbtns.com/github-btn.html?user=edm00se&repo=Ice-And-Fire-On-Bluemix&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<amp-iframe width=160 height=30
+    sandbox="allow-scripts allow-same-origin"
+    layout="responsive"
+    frameborder="0"
+    src="https://ghbtns.com/github-btn.html?user=edm00se&repo=Ice-And-Fire-On-Bluemix&type=star&count=true&size=large">
+</amp-iframe>

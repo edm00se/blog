@@ -73,11 +73,17 @@ Here's the expanded example, with the same 'jshint', 'watch', and 'browser-reloa
 {% gist 43fcb3fcac536267440d gulpfileWithExpandedExample.js %}
 
 #### Comparing Gulp and Grunt
-Here's an example of my 'jshint' task running in both Grunt and gulp. As you can see, there's not a lot of difference at this granular level. I believe this is a credit to both implementations. 
+Here's an example of my 'jshint' task running in both Grunt and gulp. As you can see, there's not a lot of difference at this granular level. I believe this is a credit to both implementations.
 
 Note: I took the default formatting for jshint in both Grunt and gulp, which is why they look so different. I can template the output differently, but didn't for brevity.
 
-<a href="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif" data-toggle="tooltip" title="jshint in both Grunt and gulp"><img src="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif"
+  alt="jshint in both Grunt and gulp"
+  height="363" width="566"
+  layout="responsive"></amp-img>
+ <figcaption>jshint in both Grunt and gulp</figcaption>
+</figure>
 
 ### Direction
 Where this is all headed is something I'll get into soon. To round out the picture, I want to:

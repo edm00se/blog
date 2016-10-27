@@ -22,7 +22,13 @@ Git is powerful, you can find commits that change the occurrences of a given str
 ### Searching With Git
 We're basically using the [`git log`](https://git-scm.com/docs/git-log) command with just a little complexity, I promise it's not too scary. If you're still feeling put off, here's a Link Octocat to help you on your way.
 
-<a data-toggle="tooltip" title="it's dangerous to go alone, take this" href="{{ site.url }}/assets/images/post_images/linktocat.jpg"><img src="{{ site.url }}/assets/images/post_images/linktocat.jpg" class="img-responsive center-block"></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/linktocat.jpg"
+  alt="it's dangerous to go alone, take this"
+  height="240" width="240"
+  layout="responsive"></amp-img>
+ <figcaption>it's dangerous to go alone, take this</figcaption>
+</figure>
 
 #### The Command
 > `git log -S 'mysteryString' -- file.ext`

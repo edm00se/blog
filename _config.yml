@@ -22,6 +22,8 @@ permalink:   /:categories/:title/
 readtime: true
 wpm: 180
 search: true
+progressbar: false # great effect, pretty minimal, relies on a script that failes AMP validation
+anchors: false # another great effect, minimal, also uses script that fails AMP validation
 author_image: "https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d"
 twitter_username: edm00se
 github_username:  edm00se

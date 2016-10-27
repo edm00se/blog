@@ -16,6 +16,9 @@ My daughter apparently wanted to contribute towards the end of this, she grew ti
 
 #### The Video
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/6TtyHbb_inQ?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="6TtyHbb_inQ"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>

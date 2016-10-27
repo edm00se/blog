@@ -29,7 +29,13 @@ Also, I've gotten my email from IBM confirming the selection of my application d
 ### Intro
 Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime with which I spend most of my day job working.
 
-<a href="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/scottySays.jpg" data-toggle="tooltip" title="do as Scotty says, he's a miracle worker"><img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/scottySays.jpg" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/scottySays.jpg"
+  alt="do as Scotty says, he's a miracle worker"
+  height="240" width="320"
+  layout="responsive"></amp-img>
+ <figcaption>do as Scotty says, he's a miracle worker</figcaption>
+</figure>
 
 If there's an over-arching theme here that ties back to my usual topics of development, both with or without XPages, it's that pre-processing and generating optimized static (non-runtime generated) assets has great value and can provide a considerable boost to site performance. I've talked about using PageSpeed, Nginx as a reverse proxy, and static asset concatenation and minification before in my MWLUG session and for those that missed it, it will be covered in my up-coming Notes in 9 highlighting that session's material.
 
@@ -47,7 +53,13 @@ The generation also can/does (depending on your static site generator or pre-pro
 
 Used with a static site generator, Markdown files often have what's called "front matter" which helps to describe the file and provide properties in a consistent format. Here's an example of the front matter for this post for use with my Jekyll / GitHub Pages instance.
 
-<a href="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/postFrontMatter.png" data-toggle="tooltip" title="front matter with this Markdown"><img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/postFrontMatter.png" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/postFrontMatter.png"
+  alt="front matter with this Markdown"
+  height="328" width="737"
+  layout="responsive"></amp-img>
+ <figcaption>front matter with this Markdown</figcaption>
+</figure>
 
 #### Jekyll
 [Jekyll](https://jekyllrb.com/) is a "...simple, blog-aware, static site generator..." written in [Ruby](https://www.ruby-lang.org/). I had a couple of bad run ins with Ruby a while back, so I'm not always a huge fan, but so long as your dependencies are taken care of, it can be quite powerful. So powerful that GitHub provides a version of Jekyll site processing for free, along with the server handling and disk space for all open source repositories.
@@ -74,7 +86,7 @@ As I mentioned, GitHub Pages can hold a non-Jekyll based site, making it more ap
 #### Hugo
 [Hugo](https://gohugo.io/) is a static site generator written in [GoLang](https://golang.org/). It's achieves the same purpose of generating a site according to a given format and even generates the HTML from Markdown. What sets it apart, aside from the implmementation and language, is that in my opinion, the structure is far more easy to follow.
 
-Instead of creating a `Gemfile`, managing a `_config.yml`, and dealing with what can be a foreign file structure and form of maintenance, Hugo endeavored to make the file structure and extensibility (e.g.- via a theme) much more simplistic and easy to follow for those new to it, and the commands involved considerably easier. Hugo installs pretty normally from their release, but on Mac it's most easily installed via [homebrew](http://brew.sh/) with `brew install hugo`. 
+Instead of creating a `Gemfile`, managing a `_config.yml`, and dealing with what can be a foreign file structure and form of maintenance, Hugo endeavored to make the file structure and extensibility (e.g.- via a theme) much more simplistic and easy to follow for those new to it, and the commands involved considerably easier. Hugo installs pretty normally from their release, but on Mac it's most easily installed via [homebrew](http://brew.sh/) with `brew install hugo`.
 
 #### Others
 There are others out there. If you're curious and want to take a look, [staticgen.com](https://www.staticgen.com/) attempts to keep track of them all. The ones I've used and found to be of note are the ones I talked about above, with the exception of GitBook, which Jesse Gallagher turned me on to; he uses it as a nice way to consistently generate documentation, whereas I'm using it for a yet-to-be-announced personal project (because I don't keep busy enough as it is :wink:).

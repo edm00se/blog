@@ -56,7 +56,7 @@ The collection will iterate records and return the JSON array of objects represe
 Below, when I handle the reflection of JSON to a Java Object (in conjunction with the ), I will show how to use both. Here's the providing of a collection, pulling entry information from a _ViewNavigator_ into the Java object that will become the JSON string. I'm going to use a _HashMap_ as my base object, with an _ArrayList_ which will hold the individual data entries. <!-- As I like to do, I'm going to wrap some basic request info up front and, provided it successfully gets to the end of the request, provide an _error_ property as a boolean. -->
 
 
-While it's certainly a lot of lines, I believe it to be fairly straight forward. In the _HouseCollection_ class, there are defined three methods; _doGet_, _doPost_, and _handleUnexpectedVerb_. These are invoked by the main _HouseServlet_ class, which calls the appropriate Collection or Record method, based on the full request path info and request method. I've included both the _com.google.Gson_ and _com.ibm.commons.util.io.json_ method, the latter is just commented out. 
+While it's certainly a lot of lines, I believe it to be fairly straight forward. In the _HouseCollection_ class, there are defined three methods; _doGet_, _doPost_, and _handleUnexpectedVerb_. These are invoked by the main _HouseServlet_ class, which calls the appropriate Collection or Record method, based on the full request path info and request method. I've included both the _com.google.Gson_ and _com.ibm.commons.util.io.json_ method, the latter is just commented out.
 
 {% gist bb0b10e70c875958cb28 HouseCollection.java %}<br />
 
@@ -193,9 +193,12 @@ HTTPEnableMethods=PUT,DELETE
 
 I initiallly didn't see it work, as I added it to the end of my file. Once I placed that directly under where I define my local web preview port (further up the file), it started to work without issue. Must be the ghosts in the machine.
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hw0xVKoWW7o" frameborder="0" allowfullscreen></iframe>
-</div><br />
+<div class="center">
+	<amp-youtube
+    data-videoid="Hw0xVKoWW7o"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
+</div>
 
 ### Summary
 I've covered a whole heck of a lot in this post. We split our servlet to handle collection operations (getting the collection and creating a new entry) and the record operations (getting the full content of a single record, updating a record in part or in whole, and deleting records) and worked with a consistent interface via a near-POJO data object, which acts the same as the managed bean use in my code base (see the GH repo, link below).

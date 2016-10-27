@@ -32,6 +32,9 @@ Lastly, on a more personal note, my efforts on expanding build automation at my 
 
 Stay tuned for these and other exciting topics!
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/HI6984KMSPw" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="HI6984KMSPw"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>

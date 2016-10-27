@@ -15,8 +15,8 @@ This is a brief intro to nginx, the reverse proxying web server I've fallen in l
 
 While setting myself up for editing the AngularJS version of my app for [my Java servlet series]({{ site.url }}/servlet-series/), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
 
-<blockquote class="twitter-tweet" lang="en"><p>Wanted to use local web preview w/ <a href="https://twitter.com/hashtag/XPages?src=hash">#XPages</a> outside my vm, access denied. Now, my <a href="https://twitter.com/hashtag/nginx?src=hash">#nginx</a> reverse proxy has solved that problem in ~5 minutes.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/579458988883988480">March 22, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="579458988883988480" %}
+
 
 ### Nginx: the 'What' and 'Why'
 Nginx (pronoucned "engine X") is an open source HTTP [reverse proxy](//en.wikipedia.org/wiki/Reverse_proxy) web server. It also does normal file serving, etc., but its primary goal is to be a reverse proxy. This has many benefits and comes up very commonly as being a front-end server for [Node.js](//nodejs.org/) applications; so serve the static content, offload cached response handling to something other than a Node.js REST API (e.g.- if the content doesn't change, don't re-build it), and other front-end things like minification or gzipping responses or more complex tasks like load balancing. These all have very obvious advantages, I'll just fill you in on the few I've used for this situation.
@@ -53,8 +53,7 @@ The config file contains a _server_ block, inside which is a _location /_ block.
 ### My Speed Claim
 I tweeted a pretty strong sounding result. In fact, I believe that my DDE local web preview being freshly restarted was part of the ridiculously long response for my data set, but there was still a significant improvement of around 400-500ms (down from just over a full second to just over half of one); which shows the improvements gained from *gzip*ing the static elements.
 
-<blockquote class="twitter-tweet" lang="en"><p>Enabling gzip, minification, and caching for static assets in <a href="https://twitter.com/hashtag/nginx?src=hash">#nginx</a> and watching my load time drop from 2.5s to 550ms makes me a happy guy.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/579719285012094976">March 22, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="579719285012094976" %}
 
 ### Summary
 You don't always need a reverse proxying server in front of your application server, but what it can add to your immediately accessible capabilities, and the segregation between admin-y tedium and application development, is pretty awesome.

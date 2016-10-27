@@ -32,6 +32,9 @@ So no, I didn't cover everything explicitly, but to read up on how and why my An
 ### Let's Take a Walk
 You never know what you'll find when you step out of your usual norms. Without stressing ourselves out of our comfort zones, we don't always find what we're capable of. I'm still a developer learning many things, I'm just lucky to count myself in the company of those who have a similar thirst for knowledge and willingness to share their triumphs and tribulations.
 
-<br />
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/dE-vX9eU7hw" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="dE-vX9eU7hw"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
+</div>

@@ -12,7 +12,12 @@ share: true
 
 ### Vote for IBM ConnectED 2015 Sessions
 Also known as <a href="//www.socialbizug.org/blogs/We87208a0e2cc_4798_ac0e_537d0ced54e2/entry/from_soup_to_sandwich_making_mvc_java_classes_and_front_end_development_work_for_you?lang=en_us">**Please Vote For Me!**</a>
-<a href="{{ site.url }}/assets/images/post_images/deadpool.jpg" data-toggle="tooltip" title="Meeeeee!"><img src="{{ site.url }}/assets/images/post_images/deadpool.jpg" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/deadpool.jpg"
+  alt="Meeeeee!"
+  height="400" width="800"></amp-img>
+ <figcaption>Meeeeee!</figcaption>
+</figure>
 
 ### I Want It All
 It'll all be there. Me, some awesome development stuff, geeky references, and a round house <s>kick</s> demonstration of using:
@@ -48,7 +53,7 @@ Covering the (best) practices of MVC Java patterns, with Domino, while utilizing
 * show how to use with XPages (intro level)
 * highlight the framework's abilities and strengths (dynamically updating charting)
 
-##### Conclusion	
+##### Conclusion
 * brings together several concepts into one harmonious application
 * application uses the best of each part to the advantage of the whole, demonstrating flexibility of Domino/XPages latform
 * amount of developer control is high, making for easy adoption
@@ -57,4 +62,3 @@ Covering the (best) practices of MVC Java patterns, with Domino, while utilizing
 	* Marketing to control Bootstrap3 theming via CSS
 	* Domino / Java developer to control Controller classes and application logic
 	* or you can go insane and do it all
-

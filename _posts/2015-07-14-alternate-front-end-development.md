@@ -9,7 +9,6 @@ modified: 2015-07-14
 comments: true
 share: true
 ---
-
 [Update]
 This topic is so awesome I turned it into [a video for Notes in 9, check it out]({{ site.url }}/self-promotion/ni9-alt-front-end-dev).
 [/Update]
@@ -24,7 +23,6 @@ This topic is so awesome I turned it into [a video for Notes in 9, check it out]
 {:toc}
 </div>
 </section>
-<br />
 
 ### Intro
 It's no secret I'm a strong advocate for segregated application design practices. In my quest to "make everything work the way I want it", I've chosen a front-end framework that my ui-level application is written in, structured my primary application layer into RESTful Java *HTTPServlet*s (*DesignerFacesServlet*s, specifically), and life is generally good. My endeavors in this area are for a few, specific reasons, namely:
@@ -75,18 +73,42 @@ Here come a few examples, in all the glory an animated GIF of a REST API client 
 ##### Getting Started
 You'll see that the default page at the port `json-server` is serving on, that there are a couple things, such as a hyperlink to the collections, overall "db", and link back to the readme on GitHub. In the console, we can see that we can even take a "snap shot" of the "db"; this will save the data at that point in time to a separate _.json_ file.
 
-<a href="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png" data-toggle="tooltip" title="the basic page with helper info"><img src="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png"
+  alt="the basic page with helper info"
+  height="737" width="1140"
+  layout="responsive"></amp-img>
+ <figcaption>the basic page with helper info</figcaption>
+</figure>
 
 ##### GET Collection
 I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US) for Chrome, as I'm used to it. You may wish to check out [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), another Chrome app, or you can load from your JS console or, as [I'll show later, actual web content](#one-last-thing).
 
-<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif" data-toggle="tooltip" title="GET collection"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif"
+  alt="GET collection"
+  height="851" width="1596"
+  layout="responsive"></amp-img>
+ <figcaption>GET collection</figcaption>
+</figure>
 
 ##### GET Record
-<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif" data-toggle="tooltip" title="GET 'document'"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif"
+  alt="GET 'document'"
+  height="851" width="1596"
+  layout="responsive"></amp-img>
+ <figcaption>GET 'document'</figcaption>
+</figure>
 
 ##### PUT Record
-<a href="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif" data-toggle="tooltip" title="PUT 'document' with partial data update"><img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif"
+  alt="PUT 'document' with partial data update"
+  height="851" width="1596"
+  layout="responsive"></amp-img>
+ <figcaption>PUT 'document' with partial data update</figcaption>
+</figure>
 
 ad nauseum
 
@@ -98,20 +120,34 @@ I'm going to demonstrate this last bit with [my 'App of Ice and Fire' app](https
 
 With that in place, the only thing standing between myself and a working, non-Domino server, local copy of my static assets is to map the following into a `routes.json` file and add the parameter when I call `json-server`, like so:
 
-`{
+```json
+{
   "/xsp/houses": "/houses",
   "/xpp/houses/:id": "/houses/:id"
-}`
+}
+```
 
 This will make my NSF-relative calls to _/xsp/houses_ resolve to the _houses_ that `json-server` is providing. Check it out. Our final command to start things up is:
 
 `json-server --id unid --watch housesDB.json --routes routes.json`
 
-<a href="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif" data-toggle="tooltip" title="serving static web content from 'public' folder"><img src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif" class="img-responsive center-block" /></a>
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif"
+  alt="serving static web content from 'public' folder"
+  height="825" width="1256"
+  layout="responsive"></amp-img>
+ <figcaption>serving static web content from 'public' folder</figcaption>
+</figure>
 
 ##### Summary
 I hope you can see the benefit of being able to work on your front-end independent of the server. With a little tweaking (I have some code in development that I would remove for production, checking to verify the formatting of my response in my `houseApp.js` to forcibly wrap my collection and document respectively), I'm now able to focus on all the ui-level application without needing to even touch my development server. To cross apply, I only have to paste into my _WebContent_ path, without worrying if I'll break anything on the server. All in all, it's another good tool for the toolbox.
 
 You can find these updates in my [App of Ice and Fire](https://github.com/edm00se/AnAppOfIceAndFire) repository on GitHub. Please feel free to check it out and play with it. Until next time.
 
-<a href="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg" data-toggle="tooltip" title="brace yourselves, XPages on Bluemix is coming"><img src="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg"
+  alt="brace yourselves, XPages on Bluemix is coming"
+  height="500" width="332"
+  layout="fixed"></amp-img>
+ <figcaption>brace yourselves, XPages on Bluemix is coming</figcaption>
+</figure>

@@ -11,13 +11,12 @@ share: true
 ---
 
 ### Shout Out
-The TLCC + Teamstudio webinar today is "Getting Started with the OpenNTF Domino API", presented by Paul Withers and Jesse Gallagher. I've been listening/watching while working and if you're looking to ease your pain with some of the idiosynchrises in XPages, you'll want to check out the webinar (a recording of the webinar should pop up before long, I'll link to it here) and give the [OpenNTF Domino API](https://openntf.org/main.nsf/project.xsp?r=project/OpenNTF%20Domino%20API) a go. 
+The TLCC + Teamstudio webinar today is "Getting Started with the OpenNTF Domino API", presented by Paul Withers and Jesse Gallagher. I've been listening/watching while working and if you're looking to ease your pain with some of the idiosynchrises in XPages, you'll want to check out the webinar (a recording of the webinar should pop up before long, I'll link to it here) and give the [OpenNTF Domino API](https://openntf.org/main.nsf/project.xsp?r=project/OpenNTF%20Domino%20API) a go.
 
-<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">&quot;The best code is the code you don&#39;t have to write.&quot;<br><br>~<a href="https://twitter.com/Gidgerby">@Gidgerby</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/719903028661338113">April 12, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="719903028661338113" %}
 
 ### Intro
-Last week, I put out a few toughts out in regards to source control management (scm) and even included a single question survey. 
+Last week, I put out a few toughts out in regards to source control management (scm) and even included a single question survey.
 
 ### Results
 Here is the main donut chart, which is the same from my [previous post]({{ site.url }}/scm/source-control-survey/), which have been live updating, as they're published from right in Google Docs in the [response spreadsheet](https://docs.google.com/spreadsheets/d/1AW-db53FKmx_ppiXGpByjNxNVf99SjP3dlx7vnKqh_E/edit?usp=sharing) I set up.

@@ -16,8 +16,11 @@ I'm on Notes in 9 again. This time, I'm back with a highlights tour of my MWLUG 
 ### The Video
 Head over to [Notes in 9.com](http://www.notesin9.com/2015/12/03/notesin9-187-highlights-from-mwlug-nginx-and-pagespeed/) to check it out, or watch it embedded here or on YouTube. Also, I "broke" Notes in 9! I have the first episode in the category of ["Other Tech"](http://www.notesin9.com/category/other-tech/), which is, in my opinion, awesome.
 
-<div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/1DIGn0kZmR4" frameborder="0" allowfullscreen></iframe>
+<div class="center">
+	<amp-youtube
+    data-videoid="1DIGn0kZmR4"
+    layout="responsive"
+    width="560" height="315"></amp-youtube>
 </div>
 
 ### Slides and Sample Config Source

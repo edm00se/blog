@@ -15,8 +15,7 @@ Here's something that I cooked up a little while back, then found a further use 
 
 Building on what I've been talking about recently, between a greater understanding of front-end development tooling and practices along with a skill set that reaches outside our day-to-day work, here's an interesting thing I did recently to solve a unique problem.
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I just wrote something so nerdy yet so awesome, I&#39;m having trouble containing my excitement.</p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/664661632337997824">November 12, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="664661632337997824" %}
 
 ### Ultra Nerdy
 How nerdy was it? We'll get to that by the end and I'll let you be the judge. The problem I was faced with was that I was working on reconciling some content for a side project, which is in [markdown](https://help.github.com/articles/markdown-basics/) (md). The content I needed to update was a number of emojis which had been rendered via a plugin, which would recognize the short name inside of a colons. For example `:​smile​:` which becomes :smile:, as you can see in [this blog post's source](https://github.com/edm00se/DevBlog/edit/master/_posts/2016-02-26-going-super-nerd.md#ultra-nerdy) vs the rendered content here. The plugin isn't available for the destination, but like all Markdown, will render in HTML. While I may be packaging what I've done up for a plugin for that environment _now_, the same functionality wasn't there when I started, so I had to DIY.

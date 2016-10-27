@@ -14,7 +14,13 @@ share: true
 
 ### MWLUG is Nearly Here
 
-<a href="http://i.giphy.com/mPOGx4hJtOWSA.gif" data-toggle="tooltip" title="call me excited"><img src="http://i.giphy.com/mPOGx4hJtOWSA.gif" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="http://i.giphy.com/mPOGx4hJtOWSA.gif"
+  alt="call me excited"
+  height="269" width="500"
+  layout="responsive"></amp-img>
+ <figcaption>call me excited</figcaption>
+</figure>
 
 MWLUG is nearly here and I'm pretty happy about that. Last year's was a good experience and part of why I'm so excited to be going back. If you haven't been and are debating going, you may wish to check out [my thoughts on last year's MWLUG]({{ site.url }}/xpages/community-code-and-evolution/); the short version is technical sessions, community, and :beer:. If that doesn't sell you on going, then I'm not sure what will. Seriously, it was a good time and I'm looking forward to it.
 
@@ -44,4 +50,10 @@ One of the more popular web server technologies in recent history is Nginx, an o
 ### Summary
 All in all, I'm excited for a lot of other sessions that will be there and I hope we can keep driving forward on reconciling our Domino/XPages development practices with the greater, web development community. We _can_ achieve a balance. I hope to see you there!
 
-<a href="{{ site.url }}/assets/images/post_images/deadpool.jpg" data-toggle="tooltip" title="Weeeeee!"><img src="{{ site.url }}/assets/images/post_images/deadpool.jpg" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/deadpool.jpg"
+  alt="Weeeeee!"
+  height="373" width="575"
+  layout="responsive"></amp-img>
+ <figcaption>Weeeeee!</figcaption>
+</figure>

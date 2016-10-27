@@ -30,8 +30,7 @@ toc: true
 ### Intro
 I hope everyone in my region of the globe had a great Turkey Day. Yes, it's officially called Thanksgiving, but I'm usually thankful for my opportunity to charcoal grill a turkey which usually comes about once a year, so that's what I often lead with. If you have never had properly grilled turkey, I can honestly say you're missing out in life. For now though, I'll just wish everyone a great December and leave you with this (yes, it was as good as it looks, in spite of some crummy weather).
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">My turkey is done. <a href="https://t.co/3xChcBUZre">https://t.co/3xChcBUZre</a> <a href="https://t.co/t9SIT9mINp">pic.twitter.com/t9SIT9mINp</a></p>&mdash; Eric McCormick (@edm00se) <a href="https://twitter.com/edm00se/status/669973030035169280">November 26, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html id="669973030035169280" %}
 
 This series has been cooking longer than my turkey (about two weeks longer). It covers ground on a fair number of topics so please bear with me as we get started. I hope you'll find _something_ involved that makes you exclaim something to the effect of "that's really useful! How did I not know about this?! Thank you Eric, your talents and beard are so impressive!" Intrigued? I hope so.
 

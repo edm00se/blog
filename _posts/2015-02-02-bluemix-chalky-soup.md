@@ -27,8 +27,10 @@ The available run times are pretty comparable to the competitors, with notable e
 
 This tweet, take live from IBM ConnectED's Domino Applications on Bluemix session, shows how the runtime fits into the architecture of the application.
 
-<blockquote class="twitter-tweet" lang="en"><p><a href="//t.co/8g5RDwyzSu">pic.twitter.com/8g5RDwyzSu</a></p>&mdash; Mark Roden (@MarkyRoden) <a href="//twitter.com/MarkyRoden/status/559799570775830529">January 26, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<amp-twitter width="390" height="50"
+    layout="responsive"
+    data-tweetid="559799570775830529">
+</amp-twitter>
 
 For a more thorough look at run times and services offered by a variety of providers, by all means check out something like [paasify.it](//www.paasify.it), which gives a good look at the run time environments and services offered by each PaaS they list. Be forewarned, I felt that the Bluemix information was either a little outdated or that it just didn't map well to the model of information listed (each PaaS has different units of measure, like gears, workers, or RAM and instances, as Bluemix uses). If any IBMer stumbles across this, paasif.it says they welcome [pull requests on their GitHub repo](//github.com/stefan-kolb/paas-profiles/tree/master/profiles) to the pertaining <PaaSname>.json file under /profiles; in the case of a need to update information.
 
