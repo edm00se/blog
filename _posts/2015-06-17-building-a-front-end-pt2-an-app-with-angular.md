@@ -75,7 +75,7 @@ Everyone tends to like directives in AngularJS (I do too), but one of my favorit
 ### Bring It Home
 That's basically it. I find that once you isolate what elements of work you have, the pieces don't have to be ugly or scary. In fact, the craziest part of my whole app was defining my clear/cancel and save functions in my House Record Controller, and that was fairly easy.
 
-You can clone my Git repository and play around with it yourself, if you like. <span data-toggle="tooltip" title="why wouldn't I recommend that?">I recommend following the build instructions in the ReadMe included there</span>. Until next time, :beer:.
+You can clone my Git repository and play around with it yourself, if you like. <span data-toggle="tooltip" title="why wouldn't I recommend that?">I recommend following the build instructions in the ReadMe included there</span>. Until next time, 🍺.
 
 <iframe src="https://ghbtns.com/github-btn.html?user=edm00se&repo=AnAppOfIceAndFire&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 

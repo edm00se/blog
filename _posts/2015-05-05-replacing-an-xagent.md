@@ -15,7 +15,7 @@ share: true
 ### For Starters
 ¡Feliz Cinco de Mayo!
 
-:sunny: :tropical_drink: :confetti_ball: :beers: :tada:
+☀️ 🍹 🎊 🍻 🎉
 
 It's been a little longer to get to this installment of my [Saga of Servlets series](//localhost:4000/servlet-series), but I guess that happens when things like the day job pick up with trouble shooting server issues and family life all seem to get in the way.
 
@@ -42,7 +42,7 @@ In lieu of some recorded tests to back this up, I'm going to link you to [a blog
 <span data-toggle="tooltip" title="no seriously, I'll come back to it!">[Insert Data to Back Up Reasoning Here]</span>
 
 ### When to Keep Using an XAgent
-The caveat to using an _HttpServlet_ is the need for reliable _sessionAsSigner_ access. While I believe this is feasible at a conceptual level (especially inside an NSF), it would be lacking in the context of an OSGi plugin, as there would be no actual design element. I've tried to read up on and ask around on this subject, but the most I've found is [an old question on OpenNTF](//www.openntf.org/main.nsf/project.xsp?r=project/XPages%20Extension%20Library/discussions/138D40A90CF008BD862579A50040ABFA) and some confusing talk from Jesse Gallagher about ClassLoaders and the underlying Domino C API. Talking with Jesse about these things make it sound like a really good idea for me to take his word on it :wink:.
+The caveat to using an _HttpServlet_ is the need for reliable _sessionAsSigner_ access. While I believe this is feasible at a conceptual level (especially inside an NSF), it would be lacking in the context of an OSGi plugin, as there would be no actual design element. I've tried to read up on and ask around on this subject, but the most I've found is [an old question on OpenNTF](//www.openntf.org/main.nsf/project.xsp?r=project/XPages%20Extension%20Library/discussions/138D40A90CF008BD862579A50040ABFA) and some confusing talk from Jesse Gallagher about ClassLoaders and the underlying Domino C API. Talking with Jesse about these things make it sound like a really good idea for me to take his word on it 😉.
 
 When you do have to use an _XAgent_, I recommend having a single line of invocation in your before/after ...RenderResponse. This should invoke the fully qualified package.class.Method with a parameter being passed as a handle to _sessionAsSigner_. This keeps things clean and simple, and your class will be easily maintained in a consistent fashion to any _HttpServlet_ you create. For example:
 

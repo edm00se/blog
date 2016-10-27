@@ -207,7 +207,7 @@ I'm also rather impressed with the level of documentation for browser-sync's plu
 * has a well polished UI for managing the instance and connected devices
 * even has remote JS console debugging capabilities (awesome!), and yes, that works on things like Apple iDevices
 
-Side note: for a stand-alone demo, install it via `npm install -g browser-sync` and then start up your proxy to a live and accessible site. It can be internal to your firewall or local to your host OS, provided all devices attempting to connect have visibility), then use the specified port to connect a device and the second specified port to connect to the management UI (they auto assign ports in the event 3000 or 3001 are taken. Example stand-alone command: `browser-sync start --proxy stackoverflow.com` (something like google.com performs redirects to prevent reverse proxying their site directly). Trust me, you'll like this if you haven't seen it yet :grinning:.
+Side note: for a stand-alone demo, install it via `npm install -g browser-sync` and then start up your proxy to a live and accessible site. It can be internal to your firewall or local to your host OS, provided all devices attempting to connect have visibility), then use the specified port to connect a device and the second specified port to connect to the management UI (they auto assign ports in the event 3000 or 3001 are taken. Example stand-alone command: `browser-sync start --proxy stackoverflow.com` (something like google.com performs redirects to prevent reverse proxying their site directly). Trust me, you'll like this if you haven't seen it yet 😃.
 
 The browser-sync Grunt plugin lets us either run with a generic static file server or proxy a different one. Since my end result is to load `json-server`, I'll be taking the door leading to my proxied server. Here's the task configuration I have for the above:
 
@@ -245,7 +245,7 @@ I initially intended to walk through every bit of my configuration, but instead 
 </figure>
 
 ### In Summary
-Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, :beers:!
+Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, 🍻!
 
 ### To Be Continued...
 ...in part 3, with gulp!

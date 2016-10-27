@@ -22,7 +22,7 @@ share: true
  <figcaption>call me excited</figcaption>
 </figure>
 
-MWLUG is nearly here and I'm pretty happy about that. Last year's was a good experience and part of why I'm so excited to be going back. If you haven't been and are debating going, you may wish to check out [my thoughts on last year's MWLUG]({{ site.url }}/xpages/community-code-and-evolution/); the short version is technical sessions, community, and :beer:. If that doesn't sell you on going, then I'm not sure what will. Seriously, it was a good time and I'm looking forward to it.
+MWLUG is nearly here and I'm pretty happy about that. Last year's was a good experience and part of why I'm so excited to be going back. If you haven't been and are debating going, you may wish to check out [my thoughts on last year's MWLUG]({{ site.url }}/xpages/community-code-and-evolution/); the short version is technical sessions, community, and 🍺. If that doesn't sell you on going, then I'm not sure what will. Seriously, it was a good time and I'm looking forward to it.
 
 ### My Session
 After a <s>session</s> chalk talk in January, I guess I've got the speaking bug. I feel like I have a lot to share, some of which is better done in-person. This time around, I'll be presenting on why the segregated front-/back-end application development pattern is a performance enhancing boon. I [may have talked about some of this before](//edm00se.io/xpages/application-logic/), but these blog posts, [HTTPServlet series]({{ site.url }}/servlet-series/), and <span data-toggle="tooltip" title="one more is on its way!">Notes in 9 videos</span> have all been building on top of each other.

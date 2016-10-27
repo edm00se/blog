@@ -48,4 +48,4 @@ Participate! In my [latest post on the micro blog](https://edm00se.github.io/iot
 
 ### Summary
 
-All in all, it's the start of something new that I'll keep working on the side. I think it's an interesting project with a fair amount of promise to keep myself striving to learn, adapt, and develop better applications over time. Please feel free to participate in [the exploratory questions on the GitHub repo's issue tracker](https://github.com/edm00se/iot-pi/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aquestion+). :beers:
+All in all, it's the start of something new that I'll keep working on the side. I think it's an interesting project with a fair amount of promise to keep myself striving to learn, adapt, and develop better applications over time. Please feel free to participate in [the exploratory questions on the GitHub repo's issue tracker](https://github.com/edm00se/iot-pi/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aquestion+). 🍻

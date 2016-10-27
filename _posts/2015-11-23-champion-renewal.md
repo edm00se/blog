@@ -39,4 +39,4 @@ The [XPages Slack chat](https://xpages.slack.com), courtesy of David Leedy and J
 Of additional note, it's best to enter your real name into your account profile. So far, I'm a huge fan of the XPages Slack chat and I look forward to what everyone can help each other out with.
 
 ### Stay Tuned
-There are many good things to come, especially as I have two blog series I'm currently working on finalizing and [an IBM Connect session](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=BP-1380) that builds on some of those principles. Here's to a great 2016! :beers: :tada:
+There are many good things to come, especially as I have two blog series I'm currently working on finalizing and [an IBM Connect session](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=BP-1380) that builds on some of those principles. Here's to a great 2016! 🍻 🎉

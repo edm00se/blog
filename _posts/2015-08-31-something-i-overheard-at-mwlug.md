@@ -11,7 +11,7 @@ share: true
 ---
 
 #### Intro
-This is a quick post, covering something I overheard while at MWLUG and comes back to some application architectural principles which I have a bit of a passion for. Read on at your own peril :wink:
+This is a quick post, covering something I overheard while at MWLUG and comes back to some application architectural principles which I have a bit of a passion for. Read on at your own peril 😉
 
 [Update]
 I added a bit from a tweet by Tony McGuckin about the XPages runtime's components.

@@ -42,7 +42,7 @@ Hopefully this seems familiar, even if it's a new format. As you can see, I've o
 An _HttpServlet_ is exactly what it claims, but probably isn't the best option for those who want to make use of much of the application, session, or anything which depends on FacesContext.
 
 #### DesignerFacesServlet
-So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there :wink:. Some of the benefits include access to *Scope'd variables and any managed beans.
+So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there 😉. Some of the benefits include access to *Scope'd variables and any managed beans.
 
 {% gist fd47302a1918c93a262f com.hello.servlets.ExampleDesignerFacesServlet.java %}<br />
 

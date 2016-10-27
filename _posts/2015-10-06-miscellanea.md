@@ -53,4 +53,4 @@ The bottom line is, lots of open source projects are limited in staff or dedicat
 #### A Saga of Bluemix
 My demo app is nearly ready for Bluemix, with one snag being that I can't seem to get the data NSF to respond correctly via my implementation in Java; sort of a critical point. I've got [a thread open on developerWorks answers](https://developer.ibm.com/answers/questions/231062/xsp-on-bluemix-accessing-data-nsf-yields-notesexce.html) and I'm sure it'll get resolved before too long. Until then, it's just frustrating as I'm getting some weird "database object is already open as "&lt;serverName/Bluemix!!userName\path\data.nsf&gt;. If anyone has some insight into this, I'd appreciate a comment or answer [on dW](https://developer.ibm.com/answers/questions/231062/xsp-on-bluemix-accessing-data-nsf-yields-notesexce.html). With a successful solution, you can bet I'm willing to provide a beverage of your choice at our next meeting.
 
-Until next time, cheers. :beers:
+Until next time, cheers. 🍻

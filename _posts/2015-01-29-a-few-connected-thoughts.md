@@ -56,7 +56,7 @@ Recently brought into the Extension Library (Nov. 2014), Bootstrap (and it's rid
 As you can see, there are many sessions which have great appeal to developers and play to the relevent and dev community trending themes I mentioned above. There were two time blocks in which I didn't find much of interest/relevence to myself, for where my development skill level is. That being said, I was very glad to find myself in some great sessions and discussions with both non-IBM developers and IBMers. I can see why people like LotusSphere.
 
 ### Community
-As with my previous experiences with Lotus/Domino/XPages conferences, the development community strikes me as strong and closely knit. This is evidenced by the passion, effort, level of sharing, and consumption of :beers: beer that was ascribed to by all in attendance (IBMers, Business Partners, and Customers). I wouldn't have it any other way and I look forward to our next meeting, as ConnectED/LotusSphere or somewhere or something else.
+As with my previous experiences with Lotus/Domino/XPages conferences, the development community strikes me as strong and closely knit. This is evidenced by the passion, effort, level of sharing, and consumption of 🍻 beer that was ascribed to by all in attendance (IBMers, Business Partners, and Customers). I wouldn't have it any other way and I look forward to our next meeting, as ConnectED/LotusSphere or somewhere or something else.
 
 
 ### Aside: My Chalk Talk

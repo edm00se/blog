@@ -49,4 +49,4 @@ Speaking of my blog, I am migrating to a new domain name. Don't worry, all your 
 ### A Second Announcement
 Recording has begun! I'm hoping that my efforts will be fruitful to people in the <s>years?</s> months to come, but I also know that many people learn better by seeing instead of reading. My blog can get a bit wordy at times, something I try to keep at bay, but in preparation for the end stages of my servlet series, I have recorded the first few pieces of the companion Notes in 9 episode to-be. It was suggested by some previously and is something I plan on delivering in conjunction with the end of my series.
 
-Until next time, <span data-toggle="tooltip" title="cheers!">:beers:</span>.
+Until next time, <span data-toggle="tooltip" title="cheers!">🍻</span>.

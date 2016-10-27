@@ -14,7 +14,7 @@ share: true
 ### Before We Get Started
 I'm currently following along with [Jesse Gallagher](https://frostillic.us/)'s "That Java Thing" series, as I'm hoping it demystifies the process of creating an OSGi plug-in for me, and I highly recommend any XPages developer out there follow along as well. Jesse is approaching things from a pretty good stand point and I'm sure it'll be worth the ride.
 
-Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016 :tada:! I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
+Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016 🎉! I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
 
 ### Intro
 Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime with which I spend most of my day job working.
@@ -79,7 +79,7 @@ As I mentioned, GitHub Pages can hold a non-Jekyll based site, making it more ap
 Instead of creating a `Gemfile`, managing a `_config.yml`, and dealing with what can be a foreign file structure and form of maintenance, Hugo endeavored to make the file structure and extensibility (e.g.- via a theme) much more simplistic and easy to follow for those new to it, and the commands involved considerably easier. Hugo installs pretty normally from their release, but on Mac it's most easily installed via [homebrew](http://brew.sh/) with `brew install hugo`.
 
 #### Others
-There are others out there. If you're curious and want to take a look, [staticgen.com](https://www.staticgen.com/) attempts to keep track of them all. The ones I've used and found to be of note are the ones I talked about above, with the exception of GitBook, which Jesse Gallagher turned me on to; he uses it as a nice way to consistently generate documentation, whereas I'm using it for a yet-to-be-announced personal project (because I don't keep busy enough as it is :wink:).
+There are others out there. If you're curious and want to take a look, [staticgen.com](https://www.staticgen.com/) attempts to keep track of them all. The ones I've used and found to be of note are the ones I talked about above, with the exception of GitBook, which Jesse Gallagher turned me on to; he uses it as a nice way to consistently generate documentation, whereas I'm using it for a yet-to-be-announced personal project (because I don't keep busy enough as it is 😉).
 
 ### Getting Started With Your Own
 With any luck, some of you may be inspired to start up your own blog on GitHub Pages. If you're looking to do so, or <span data-toggle="tooltip" title="it's okay David, you can try it, it'll only take a few minutes">just dabble</span>, I recommend checking out the following:
@@ -97,4 +97,4 @@ I recently converted a friend's site I helped set up and maintain (not Dave Leed
 This is also the giant crux of why, when Dave Leedy encourages others to share their content in a blog, there's really no excuse. It was his request that those with something to share ought to do so that prompted me a little over a year ago to start my blog and I like to think that's been successful. So, in the spirit of open source and community, please share with the community that has in all likelihood helped you to become a better developer. It has aided me more times than I can count.
 
 #### An Offer
-If you're looking to get set up with a blog on GitHub Pages and need to wrap your head around something I didn't touch on here (custom domain names, etc.), let me know on Twitter or here. There is plenty of material I didn't cover and sometimes a friendly shout out can save some hassle. What I ask in return is community involvement; but hey, if you're starting a blog, you're on the right track! Cheers :beers:.
+If you're looking to get set up with a blog on GitHub Pages and need to wrap your head around something I didn't touch on here (custom domain names, etc.), let me know on Twitter or here. There is plenty of material I didn't cover and sometimes a friendly shout out can save some hassle. What I ask in return is community involvement; but hey, if you're starting a blog, you're on the right track! Cheers 🍻.

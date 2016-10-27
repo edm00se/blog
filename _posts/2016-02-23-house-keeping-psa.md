@@ -54,7 +54,7 @@ If you're familiar with GitHub's section (header) links that appear on hover, yo
 </figure>
 
 #### Contribution
-I've updated my contribution document and [added templates for any Issues or Pull Requests](https://github.com/edm00se/DevBlog/commit/3e370c64dc7856e852360522f457765e555e701c), now that [templates are offered for GitHub Issues and Pull Requests](https://github.com/blog/2111-issue-and-pull-request-templates). Basically, if you find a typo, you can submit a Pull Request (or just alert me as usual) :wink:.
+I've updated my contribution document and [added templates for any Issues or Pull Requests](https://github.com/edm00se/DevBlog/commit/3e370c64dc7856e852360522f457765e555e701c), now that [templates are offered for GitHub Issues and Pull Requests](https://github.com/blog/2111-issue-and-pull-request-templates). Basically, if you find a typo, you can submit a Pull Request (or just alert me as usual) 😉.
 
 <figure>
   <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/findSomething.png"

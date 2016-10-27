@@ -23,7 +23,7 @@ Git is powerful, you can find commits that change the occurrences of a given str
 We're basically using the [`git log`](https://git-scm.com/docs/git-log) command with just a little complexity, I promise it's not too scary. If you're still feeling put off, here's a Link Octocat to help you on your way.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/linktocat.jpg"
+  <amp-img src="{{ site.url }}/assets/images/post_images/linktocat.svg"
   alt="it's dangerous to go alone, take this"
   height="240" width="240"
   layout="responsive"></amp-img>
@@ -52,4 +52,4 @@ In my Windows vm, the Git BASH shell environment contained git command completio
 If you're unsure what I mean by "Git BASH" and find yourself working in [SourceTree](https://www.sourcetreeapp.com/) on Windows, try clicking on the button in the upper bar on the far right, that says "Terminal". That "Terminal" button will, on Windows, launch the "Git BASH" shell, which is a [cygwin](https://www.cygwin.com/) derived environment that lets you interact with a more *nix-like CLI.
 
 ### Summary
-All in all, having a solid basic understanding of a common tool set can help with some of the more "arcane" situations and CLI-fu, as chances are that if you find yourself in need, someone else has probably run into it. I had run into a simplified version of this search (without the file specificity) and was able to get what I needed pretty quickly. Here's hoping you're a bit more prepared. :beers:
+All in all, having a solid basic understanding of a common tool set can help with some of the more "arcane" situations and CLI-fu, as chances are that if you find yourself in need, someone else has probably run into it. I had run into a simplified version of this search (without the file specificity) and was able to get what I needed pretty quickly. Here's hoping you're a bit more prepared. 🍻

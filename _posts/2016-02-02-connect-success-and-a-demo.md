@@ -29,4 +29,4 @@ Thank you to everyone that came to my session; we had a decent turn out. The pro
 </div>
 
 ### Summary
-I expect that I'll be compiling a more complete video for submission for Notes in 9 in the near future; stay tuned for that. Until next time, have a great remainder of IBM Connect 2016, :beers:!
+I expect that I'll be compiling a more complete video for submission for Notes in 9 in the near future; stay tuned for that. Until next time, have a great remainder of IBM Connect 2016, 🍻!

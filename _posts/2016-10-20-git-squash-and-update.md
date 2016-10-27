@@ -52,7 +52,7 @@ Once you have identified the number of commits back to 'squash', then you can ru
 
 #### Asciicast
 
-If the asciicast gives you trouble (possibly on mobile), just [take this link](https://asciinema.org/a/89834).
+If the asciicast gives you trouble (possibly on mobile), just [take this link](https://asciinema.org/a/89834?autoplay=1).
 
 <div class="center">
   <div class="center">
@@ -75,9 +75,9 @@ If you feel you know someone who deserves to be nominated, especially if someone
 [Nomination form link!](https://www.ibm.com/developerworks/community/profiles/dw/anonymous.jsp?id=2016)
 
 ### Hacktoberfest
-In case you missed it, [Hacktoberfest 2016](https://hacktoberfest.digitalocean.com/) is under way! If you haven't already, all you need is 4 Pull Requests on GitHub to get there. If you're looking to contribute on a project, you may know of one that is more than willing to take on some PRs. :wink:
+In case you missed it, [Hacktoberfest 2016](https://hacktoberfest.digitalocean.com/) is under way! If you haven't already, all you need is 4 Pull Requests on GitHub to get there. If you're looking to contribute on a project, you may know of one that is more than willing to take on some PRs. 😉
 
 Seriously, if you're interested in and are looking to contribute to my [XPages compatible Yeoman generator, "generator-xsp"](http://npm.im/generator-xsp), I am more than happy to bring others in to contribute. I have some [general guidelines](https://github.com/edm00se/generator-xsp#want-more) and [a few ideas](https://github.com/edm00se/generator-xsp/projects/1) for a couple additional features.
 
 ### Summary
-As always, thanks for reading. :beers:
+As always, thanks for reading. 🍻
