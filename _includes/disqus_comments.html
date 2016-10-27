@@ -1,3 +1,4 @@
+<!--
 <div id="disqus_thread"></div>
 <script>
 window.addEventListener('message', receiveMessage, false);
@@ -39,6 +40,7 @@ function receiveMessage(event)
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
 <!--
 <amp-iframe width=600 height=140
   layout="responsive"
@@ -57,3 +59,11 @@ function receiveMessage(event)
   width="600" height="500">
 </amp-iframe>
 -->
+<amp-iframe width=600 height=140
+  layout="responsive"
+  sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
+  resizable
+  frameborder="0"
+  src="{{ site.disqus_iframe_url }}?shortname={{ site.disqus_shortname }}&url={{ page.id | prepend: site.url | url_encode }}">
+  <div overflow tabindex=0 role=button aria-label="Disqus Comments">Disqus Comments</div>
+</amp-iframe>
