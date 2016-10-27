@@ -46,7 +46,7 @@ Some specific tools I used and demonstrated were:
 
 Many scaffolding tools make use of [npm scripts](https://css-tricks.com/why-npm-scripts/) for [build pipelines](http://blog.modulus.io/using-npm-scripts-to-build-asset-pipeline) and they're handy to learn regardless.
 
-As for [`generator-xsp`](https://github.com/edm00se/generator-xsp#readme), it's in its early stages, but it's a [yeoman]() generator which scaffolds a base Domino/XPages compatible On Disk Project, for easy application scaffolding. It's in its early stages, but I have a basic [road map](https://github.com/edm00se/generator-xsp#road-map) established, PRs are welcome. Once configured and set, all that's needed is for the ODP to be imported into Domino Designer (DDE) for the back-end work and previewing the front-end against a "live" back-end. As demonstrated in the demo, I showed how a built front-end app could mock the back-end for editing and previewing outside of DDE, with an optimized (distributable) version built into the ODP's `WebContent` path for highly performant and modern web application use.
+As for [`generator-xsp`](https://github.com/edm00se/generator-xsp#readme), it's in its early stages, but it's a [yeoman generator](http://yeoman.io/generators/ which scaffolds a base Domino/XPages compatible On Disk Project, for easy application scaffolding. It's in its early stages, but I have a basic [road map](https://github.com/edm00se/generator-xsp#road-map) established, PRs are welcome. Once configured and set, all that's needed is for the ODP to be imported into Domino Designer (DDE) for the back-end work and previewing the front-end against a "live" back-end. As demonstrated in the demo, I showed how a built front-end app could mock the back-end for editing and previewing outside of DDE, with an optimized (distributable) version built into the ODP's `WebContent` path for highly performant and modern web application use.
 
 #### Process
 All in all, the ultimate goal of my session was to demonstrate more of the higher process of development workflow automation. If a job is repeatable and/or configurable, why not automate it? There's a great [argument for automation](https://medium.com/@kentcdodds/an-argument-for-automation-fce8394c14e2), which hinges on the concept of automation not just as a convenience, but as a configurable standard. We can all use a bit more automation in CI/CD concerns, building performant versions of our web apps, testing, documentation, and even project scaffolding.
@@ -54,7 +54,7 @@ All in all, the ultimate goal of my session was to demonstrate more of the highe
 <figure>
   <amp-img src="{{ site.url }}/assets/images/post_images/AutomateTheStuffing.png"
   alt="Mark Whatney - automate the stuffing out of this"
-  width="1200" height="1200"
+  width="736" height="395"
   layout="responsive"></amp-img>
  <figcaption>We should all be a bit more like Mark Whatney.</figcaption>
 </figure>
