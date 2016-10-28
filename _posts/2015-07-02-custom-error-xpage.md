@@ -154,4 +154,4 @@ refreshId?true:false;}]]>
 As you can see, there's now an `xp:text` tag (one of the only two, the other being `xp:panel`) at the bottom, just after the normal `script` tag, that lets you set and overwrite the `tagName`, to become a an `img` tag, complete with the `onload` event to add the `script` tag to the `head`. This only renders if it's detected as being in a partial refresh, making a full refresh behave normally. An elegantly simple solution to a surprisingly complex situation.
 
 ### Next Time
-I have more to share, but I can guarantee the pace over the next few weeks won't be anything like this month. In fact, I have some prep to do for <span data-toggle="tooltip" title="MWLUG 2015!">a certain shindig in Atlanta in August</span>. I hope to see you there!
+I have more to share, but I can guarantee the pace over the next few weeks won't be anything like this month. In fact, I have some prep to do for a certain shindig in Atlanta in August (MWLUG 2015!). I hope to see you there!

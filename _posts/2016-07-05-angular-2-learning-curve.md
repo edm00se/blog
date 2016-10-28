@@ -31,7 +31,7 @@ Take a simple "hello world" example, all we need, aside from including the `scri
 This achieved the following:
 - instantiated (bootstrapped) the application, by binding it to a given element
 - bound a(n interactive, input element with a) data property within the application's `scope` to a key of "name"
-- bound the output of the key to instances of its key name (denoted via &lbrace;&lbrace; &rbrace;&rbrace;)
+- bound the output of the key to instances of its key name (denoted via &#123;&#123; &#125;&#125;)
 - two-way data binding established, so that any update of the value for the "name" property would propagate to any other such instance in the DOM
 
 Out of the box, this comes with two-way data binding (one-way is available via the notation `{`&zwnj;`{::name}}`); immediately, the utility of Angular is obvious and powerful.

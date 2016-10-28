@@ -47,7 +47,7 @@ Please note, I'm not much in favor of repeating myself or others' works. While I
 * (optional) a SonarQube (server) environment set up, scanner installed and config'd correctly for shell use w/ Jenkins
 * (optional) recommended: Color ANSI plugin (to make better console output for Jenkins)
 
-<span data-toggle="tooltip" title="yes, I'm full of snarcasm">Go ahead, I'll wait while you set it all up.</span>
+Go ahead, I'll wait while you set it all up (yes, I'm full of snarcasm).
 
 ### Steps In A Headless Designer Task
 The below are different "build" scripts (some as BASH-like/compatible, one in particular is PowerShell, with the Jenkins PowerShell plugin). Together, they make up a larger "Jenkins task", which I started as a "Freestyle project" and set up the git repository association for. In theory, I could drive every release to the master branch into a build, but currently, I've added a build parameter, so that I am prompted for either a git commit or tag (in my case, version numbers) of which to build. Otherwise, things like setting up email notifications, etc. are all up to you.

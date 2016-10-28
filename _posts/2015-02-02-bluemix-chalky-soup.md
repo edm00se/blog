@@ -45,7 +45,13 @@ Bluemix's runtime offerings are fairly robust, with room for more and custom bui
 #### Bluemix Dashboard
 I was happy to see a number of things in my Bluemix account's dashboard. Specifically, when working with heroku and OpenShift, I found their terminologies of "gears" and "workers" more confusing than not. A developer can look up the definition and equate it to something in their head, but with Bluemix, you look at your dashboard and you can see how much RAM each instance uses and how many instances you will allow it to scale to, out of your max allotment. These are terms that those who don't understand the cloud can grasp, and makes it easier on my part as a developer to sell my management to the platform. Chalk that one up in the success column.
 
-<a href="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DashboardView.png" data-toggle="tooltip" title="a view of the Bluemix dashboard"><img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DashboardView.png" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DashboardView.png"
+  alt="a view of the Bluemix dashboard"
+  height="1150" width="512"
+  layout="responsive"></amp-img>
+ <figcaption>a view of the Bluemix dashboard</figcaption>
+</figure>
 
 #### Bluemix Use of Cloud Foundry CLI
 Both of the other two PaaS services I've tried and used include a command line tool for managing your cloud deployment and deployed app management; in addition to the web interfaces they provide with some of these tools. The power given by Bluemix's use of the Cloud Foundry CLI tool is impressively easy to use by any developer. With heroku, there's the heroku toolbelt, and with OpenShift, there's the rhc tool. As a comparison, it's probably on-par for ease of use, but maybe it's my being more accustomed to these PaaS CLI tools, but I found my use of the CF CLI was a very quick learning curve, with minimal fuss. Once more, success in meeting in the industry standard on CLI tools.
@@ -104,7 +110,13 @@ So I think there's an excellent argument to be made that Bluemix is a significan
 
 My initial trial account, which is tied to my IBM ID, has a 30-day window in which I have access to up to 4 application instances and 2GB of RAM. This is pretty darned powerful, more than I needed to setup and sell myself on the platform. But I'm playing the long game with my development management team, who having been RPG developers with less knowledge of how web applicaitons work, make for some intersting conversations on occassion. In order to sell the platform to them, I need to be able to do what I'm doing now, as I'm half-way into my 30-day trial, at some point when they're ready for the conversation (and I've got them prepared to accept "the cloud" as a solution); probably within a year or so. I _could_ roll a different ID, but this is my IBM ID, it's me, and that would be silly. I've heard that applications will have a free tier, but once the free resources are consumed in a month, something will happen I don't want; I'll be charged. This is unique to Bluemix, that when my 30-day free trial comes to an end, the account becomes freemium, with my credit card needing to be on file.
 
-<a href="{{ site.url }}/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png" data-toggle="tooltip" title="confirming my free account apparently means putting my credit card on file"><img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png" class="img-responsive center-block" /></a>
+<figure class="center">
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png"
+  alt="confirming my free account apparently means putting my credit card on file"
+  height="896" width="575"
+  layout="responsive"></amp-img>
+ <figcaption>confirming my free account apparently means putting my credit card on file</figcaption>
+</figure>
 
 Why can't we just have a free account that doesn't incur charges? There must be some other way in between; the other guys are doing it. In fact, the way heroku tends to work is, if your account is of the free/developer flavor, they'll shut down your running instances after a period of inactivity. This incurs a bit more instantiation (and wait time) by the first user of that application after it was inactive, but still provides for a purely free mechanism. The organization (hierarchy inside of Bluemix requires an org) of "Eric McCormick" shouldn't need to pay for that hair brained developer Eric McCormick's wild online blogging success, should a test/demo app URL ever leak (case in point, even if I had to cheese it up there). This is where IBM comes just short of what I would like.
 

@@ -15,7 +15,7 @@ share: true
 ### A Fast-Paced, Round-House <s>Kick</s> Tour of Data Interactions
 [As promised at the end of the last post (in this series)]({{ site.url }}/xpages-servlets/servlet-handling-requests/), this post will walk through the entire life cycle of data reception and response handling. This is where my [ConnectED demo app-that-never-was]({{ site.url }}/self-promotion/a-chalk-talk-talk/) comes in, we're going to build part of it. We're going to create an endpoint which governs the provision of a collection of the houses of note in our fictitious land of Os (it's out west). I'll be providing the `com.westeros.servlets.HouseServlet` class, which is an `AbstractXSPServlet` ([previously demonstrated]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets)), to my `ServletFactory`.
 
-Note: I'll be sticking to the same, vanilla Java approach I've used previously in [this series]({{ site.url }}/servlet-series). I'll outright say it though, it'd be great to see how some of the processes involved in the setup can be automated and made easier, be it by `@` annotation or via other frameworks. I fully invite those more experienced in these methods to show <span data-toggle="tooltip" title="me!">us</span> the way.
+Note: I'll be sticking to the same, vanilla Java approach I've used previously in [this series]({{ site.url }}/servlet-series). I'll outright say it though, it'd be great to see how some of the processes involved in the setup can be automated and made easier, be it by `@` annotation or via other frameworks. I fully invite those more experienced in these methods to show us the way.
 
 {% include toc.html %}
 ### The Endpoint
@@ -559,4 +559,4 @@ I've covered a whole heck of a lot in this post. We split our servlet to handle 
 
 I also know there are people out there thinking, "but there's this better way to do this part!" Great! Please show us and/or me how. I also welcome all constructive comments below.
 
-To see my application code to this point, by all means check out [my GitHub repository](//github.com/edm00se/AnAppOfIceAndFire) for it. Follow the ReadMe.md instructions to get started. This repository will update once I've completed the next two posts. I still want to cover how to convert XAgent logic to a servlet and creating a basic front-end interface to this servlet with <span data-toggle="tooltip" title="my MV* framework of choice">AngularJS</span>. So please stay tuned to this series, as there's more to come!
+To see my application code to this point, by all means check out [my GitHub repository](//github.com/edm00se/AnAppOfIceAndFire) for it. Follow the ReadMe.md instructions to get started. This repository will update once I've completed the next two posts. I still want to cover how to convert XAgent logic to a servlet and creating a basic front-end interface to this servlet with AngularJS. So please stay tuned to this series, as there's more to come!

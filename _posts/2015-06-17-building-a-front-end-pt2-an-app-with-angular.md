@@ -479,7 +479,7 @@ Everyone tends to like directives in AngularJS (I do too), but one of my favorit
 ```
 
 ##### 5 - Directives
-[Directives](//docs.angularjs.org/guide/directive) are the higher level "do something" definitions. Most of the AngularJS attributes or tags you write into HTML are directives. As with Filters, you can write your own Directives all you like, but some of the most useful ones come <span data-toggle="tooltip" title="out-of-the-box">OoB</span>.
+[Directives](//docs.angularjs.org/guide/directive) are the higher level "do something" definitions. Most of the AngularJS attributes or tags you write into HTML are directives. As with Filters, you can write your own Directives all you like, but some of the most useful ones come OoB ("out of the box").
 
 ```javascript
 //...config,factories,controllers,filters

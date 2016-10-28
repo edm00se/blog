@@ -11,22 +11,22 @@ share: true
 ---
 
 [Edit]
-[In the comments, Sven Petri pointed out]({{ site.url }}/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the java.policy file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local _/jvm/lib/ext/_ path.
+[In the comments, Sven Petri pointed out]({{ site.url }}/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the java.policy file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local `/jvm/lib/ext/` path.
 [/Edit]
 
 ### Preface
-Either I just didn't know that this was a viable option or we've all been living in the dark for too long. My suspicion is the former, but what follows is a quick run down of my preferred approach for using the _com.google.gson_ library (or any JAR), server-wide (without OSGi deployment). TLDR; drop it in &lt;install&gt;/jvm/lib/ext/ and restart your Domino server (don't forget to do it with your local/dev environment as well).
+Either I just didn't know that this was a viable option or we've all been living in the dark for too long. My suspicion is the former, but what follows is a quick run down of my preferred approach for using the `com.google.gson` library (or any JAR), server-wide (without OSGi deployment). TLDR; drop it in `<install>/jvm/lib/ext/` and restart your Domino server (don't forget to do it with your local/dev environment as well).
 
 ### What?
-While preparing for my <span data-toggle-tooltip title="I swear it's coming!">impending blog series on servlets</span>, I've been hammering out a couple of details regarding external dependencies (aka- JAR files). The short story is that I assumed things had to be a certain way (including the java.policy edit for granting all permissions), but that wasn't the case. If you want to read the full circle of comments, [go check them out](//disqus.com/home/discussion/em-devblog/building_java_objects_from_json_93/#comment-1813504147).
+While preparing for my impending blog series on servlets, I've been hammering out a couple of details regarding external dependencies (aka- JAR files). The short story is that I assumed things had to be a certain way (including the java.policy edit for granting all permissions), but that wasn't the case. If you want to read the full circle of comments, [go check them out](//disqus.com/home/discussion/em-devblog/building_java_objects_from_json_93/#comment-1813504147).
 
 ### Why?
-It seems that setting up what I regard as server elements, even these add-on ones, is something I don't do every day. Any developer can see quickly that re-importing the same JAR file you use across your application instances can become quite tedious, quickly. But it would seem that there is a better way of doing things than just importing your JAR to each NSF and needing to add a line on the server (in &lt;install&gt;/jvm/lib/security/java.policy) of
+It seems that setting up what I regard as server elements, even these add-on ones, is something I don't do every day. Any developer can see quickly that re-importing the same JAR file you use across your application instances can become quite tedious, quickly. But it would seem that there is a better way of doing things than just importing your JAR to each NSF and needing to add a line on the server (in `<install>/jvm/lib/security/java.policy`) of
 ```
 grant { permission java.security.AllPermission; }
 ```
 
-To rule out what I have going in my primarily development environment (something that doesn't come up for me as a staff employee of an IBM customer, as my environment doesn't change, unless I add a picture of my kid to my desk), I created a fresh install of Notes/Domino Designer. I took a look at the &lt;install&gt;/jvm/lib/security/java.policy file and noticed something that works to our advantage as developers.
+To rule out what I have going in my primarily development environment (something that doesn't come up for me as a staff employee of an IBM customer, as my environment doesn't change, unless I add a picture of my kid to my desk), I created a fresh install of Notes/Domino Designer. I took a look at the `<install>/jvm/lib/security/java.policy` file and noticed something that works to our advantage as developers.
 
 <figure>
   <amp-img src="{{ site.url }}/assets/images/post_images/JARs/StockJvmPropertiesJvmLibExt.png"

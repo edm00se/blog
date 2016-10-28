@@ -19,7 +19,7 @@ share: true
 </figure>
 
 ### MWLUG 2015
-MWLUG has been going great, as expected. The worst thing I've been fighting is the overlap of some really good sessions. In fact, mine went up against two other app dev sessions and one entitled "free beer". It would seem I need to do a better job of <span data-toggle="tooltip" title="it's because I poked fun at dojo, isn't it?">bribing and/or coercing [@RichardMoy](//twitter.com/richardmoy)</span>.
+MWLUG has been going great, as expected. The worst thing I've been fighting is the overlap of some really good sessions. In fact, mine went up against two other app dev sessions and one entitled "free beer". It would seem I need to do a better job of bribing and/or coercing [@RichardMoy](https://twitter.com/richardmoy) (it's because I poked fun at dojo, isn't it?).
 
 #### The Plan
 A couple things came up that didn't go perfectly, but all in all the session was a success. One thing of note is that my preference towards using CDNs for common JS libraries also meant that my site, on very slow and spotty hotel wifi, performed slower (making my demo of the [PageSpeed Chrome extension](https://chrome.google.com/webstore/detail/page-speed-insights-with/lanlbpjbalfkflkhegagflkgcfklnbnh?hl=en) slightly less useful).

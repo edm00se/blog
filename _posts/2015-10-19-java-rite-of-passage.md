@@ -44,7 +44,7 @@ public static Database getMyDataNSF(){
 }
 ```
 
-For a full view of my [bean](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/config/AppUtil.java#L61-L81) or [intermediary method](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/app/Utils.java#L489-L499), <span data-toggle="tooltip" title="there's something exciting">go check out my last paragraph</span>.
+For a full view of my [bean](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/config/AppUtil.java#L61-L81) or [intermediary method](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/app/Utils.java#L489-L499), go check out my last paragraph (there's something exciting).
 
 #### Long Story Short...
 <div class="center">

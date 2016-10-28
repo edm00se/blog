@@ -11,7 +11,7 @@ share: true
 ---
 
 ### Introduction
-Many of the XPages Managed Bean demonstrations point to your ability to populate an _xp:comboBox_ with a custom defined <span data-toggle="tooltip" title="java.util.ArrayList">List</span> of <span data-toggle="tooltip" title="javax.faces.model.SelectItem">Select Items</span>. One thing that seems to happen to me is that I wind up having to re-sort such lists to work off of their Label, as opposed to their value; so as to look sorted, at least to human eyes.
+Many of the XPages Managed Bean demonstrations point to your ability to populate an _xp:comboBox_ with a custom defined `List` of `SelectItem`s. One thing that seems to happen to me is that I wind up having to re-sort such lists to work off of their Label, as opposed to their value; so as to look sorted, at least to human eyes.
 
 ##### A Brief ComboBox Anatomy Lesson
 An _xp:comboBox_ lets us build out a list (preferably somewhat short) of values with their labels, which are selected from a "drop down" like interface. More specifically, from MDN,

@@ -24,9 +24,9 @@ I've mentioned before a great love of the XPages development community. There ar
 Bottom line, I hope for this to be only the first of the content I contribute to Notesin9, my blog, GitHub, and elsewhere. I ask you to do as Dave suggests and follow the example of many set before us; if you have content to contribute, please do so. We're only made better by our communal efforts.
 
 ### A Quick Note
-David Leedy said some horrendously nice things about me I'd like to clear up. I'm generally a good guy, and I like to keep things relatively clean online, but if you get to know me you'll find I have <span data-toggle="tooltip" title="the downside to being a veteran and having worked in emergency medicine">a crazy sense of humor</span> and can come across strong; this is why I value and seek humility.
+David Leedy said some horrendously nice things about me I'd like to clear up. I'm generally a good guy, and I like to keep things relatively clean online, but if you get to know me you'll find I have a crazy sense of humor (the downside to being a veteran and having worked in emergency medicine) and can come across strong; this is why I value and seek humility.
 
-That being said, I may sound smart on occasion, I tend to know what I know and <span data-toggle="tooltip" title="really not know it, f.e.- I never took high school chemistry">be aware of what I don't</span>, I will never claim to be the smartest person in any room. I value intelligence in all its forms, from raw knowledge to deductive reasoning or plain and simple critical thinking. I also have the great advantage of being a (relatively new) member of an excellent community, which has a number of greatly talented members, who by far out shine my abilities, and I'm happy to be counted among them.
+That being said, I may sound smart on occasion, I tend to know what I know and be aware of what I don't, I will never claim to be the smartest person in any room. I value intelligence in all its forms, from raw knowledge to deductive reasoning or plain and simple critical thinking. I also have the great advantage of being a (relatively new) member of an excellent community, which has a number of greatly talented members, who by far out shine my abilities, and I'm happy to be counted among them.
 
 
 ### A Promise
@@ -35,4 +35,4 @@ I'll get an external microphone by the time I record my next Notesin9 video.
 ### My Company
 As David mentioned, I work for an IBM customer. I don't usually chuck my company's name around. My company is privately held, a fourth-generation family owned business, headquartered in Appleton, WI, and all around an excellent company to work for. My company is [The Boldt Company](//www.theboldtcompany.com/), which just finished celebrating its [125th year](//www.theboldtcompany.com/125-anniversary/home.php) in operation and we provide construction management and services to many across the country and have done and continue to do some international work.
 
-I will likely continue to not talk about my company a whole lot, as while they're great to work for, I'm <span data-toggle="tooltip" title="we're up to 2!">one of now two web developers</span> we have on staff; so there's not a lot of web development overlap excepting my own work.
+I will likely continue to not talk about my company a whole lot, as while they're great to work for, I'm one of now two web developers (we're up to 2!) we have on staff; so there's not a lot of web development overlap excepting my own work.
