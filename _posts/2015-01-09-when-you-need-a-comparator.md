@@ -35,10 +35,92 @@ Enter [java.util.Comparator](//docs.oracle.com/javase/7/docs/api/java/util/Compa
 ### Code
 Here's my super simple sample bean, with the _selectOptionsList_ being read-only (no setter method) as it's just the _selectedOption_ being what the value to be stored is.
 
-{% gist 34bc3a534c7e44ff5617 SampleComparatorUse.java %}
-<br />
+```java
+package com.eric.test;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+import javax.faces.model.SelectItem;
+
+public class SampleComparatorUse implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  private String selectedOption;
+  private List<SelectItem> selectOptionsList;
+
+  public SampleComparatorUse() {}
+
+  /**
+   * Custom Comparator, for use with sorting (ascending) a List<SelectItem>.
+   */
+  private static class LabelAscComparator implements Comparator<SelectItem> {
+    //uses a one-off cmoparison which returns comparison boolean, as int
+    public int compare(SelectItem s1, SelectItem s2) {
+        //you can also do a case sensitive via s1.getLabel().compareTo(s2.getLabel())
+      return s1.getLabel().compareToIgnoreCase(s2.getLabel());
+    }
+  }
+
+  /**
+   * Getter for Combo Box options, sorted alphabetically ascending
+   * by the label. Read-only, as it's a computed value, so no setter.
+   */
+  public List<SelectItem> getSelectOptionsList() {
+
+    if( this.selectOptionsList == null ) {
+      List<SelectItem> options = new ArrayList<SelectItem>();
+      //normally I compute this by pulling in values from another source, iterated
+      //these are statically added for demonstrative purposes
+      options.add(new SelectItem( "value3", "label3" ));
+      options.add(new SelectItem( "value1", "label1" ));
+      options.add(new SelectItem( "value2", "label2" ));
+
+      //auto-magic sorting! otherwise the order would be label3, label1, label2
+      //results, based on the label, in label1, label2, label3
+      Collections.sort( options, new LabelAscComparator() );
+
+      selectOptionsList = options;
+    }
+
+    return selectOptionsList;
+  }
+
+  /**
+   * @param selectedOption String value being set via the EL binding;
+   * this is the data field for what has been selected, standard setter.
+   */
+  public void setSelectedOption( String selectedOption ) {
+    this.selectedOption = selectedOption;
+  }
+
+  /**
+   * Standard getter for the selectedOption property of the bean.
+   */
+  public String getSelectedOption() {
+    return this.selectedOption;
+  }
+
+}
+```
+
 The XPage control implementation is a standard _xp:comboBox_ implemented with the value and select items (options) bound via EL. The value which the user selects is bound to the bean's property of _selectedOption_ while the list of SelectItems (options list, with both value and labels populated) is the _selectOptionsList_ property.
 
-{% gist 34bc3a534c7e44ff5617 SampleSelectItemBean.xsp.xml %}
-<br />
+```xml
+<?xml version="1.0" encoding="UTF-8">
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core">
+  <xp:comboBox
+    id="comboBox1"
+    value="#{myBean.selectedOption}">
+    <xp:selectItems>
+      <xp:this.value><![CDATA[#{myBean.selectOptionsList}]]></xp:this.value>
+    </xp:selectItems>
+  </xp:comboBox>
+</xp:view>
+```
+
 [Here's the full gist link](//gist.github.com/edm00se/34bc3a534c7e44ff5617), with class, XPage, and faces-config (in case anyone is looking for how my bean is registered).

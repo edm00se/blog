@@ -68,12 +68,53 @@ Alternatively, if you [clone the repository's `master` branch](https://github.co
 #### `server.js`
 The main server definition, which sets itself up with an [express](http://expressjs.com/) app handle, instantiates [`express-toobusy`](https://www.npmjs.com/package/express-toobusy) (to keep the Node process from melting under _extremely_ high loads), pulls in the `routes` module for the endpoint handling, and creates an error handler. The last thing is telling the app to listen on a port, meaning the app is running.
 
-{% gist ef66a551a04cae3378b42215f3449f03 server.js %}<br />
+```javascript
+/*  file: /server.js */
+var express = require('express'),
+  app = express(),
+  os = require('os');
+
+//enables and instantiates express-toobusy, which keeps it from melting under HIGH pressure
+app.use(require('express-toobusy')());
+
+require("./routes")(app);
+
+//establish simple text catch for Error 500
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.status(500).send("<h1>Error 500</h1>\nSomething broke! The error has been logged to the server console.");
+});
+
+//set to listen on environment port or port 3333, if no detected env var port
+var portToListenOn = process.env.PORT || 3333;
+app.listen(portToListenOn, function(){
+  console.log("NodeJS serving content from "+__dirname+" on "+os.hostname()+":"+portToListenOn);
+});
+```
 
 #### `routes/index.js`
 The `index.js` of the `routes` module is there to pull in the specific endpoints, which are contained within their own js files within the `./routes/` path.
 
-{% gist ef66a551a04cae3378b42215f3449f03 routes_index.js %}<br />
+```javascript
+/*  file: /routes/index.js */
+var path = require('path')
+
+// export a function that accepts `app` as a param
+module.exports = function (app) {
+    app.get('/', function (req, res, next) {
+        res.sendFile(path.join(__dirname, '../public', 'readme.html'));
+    });
+
+    // this should be in a `beers.js` file, pulled in by require('./beers')
+    app.get('/beers', function(req, res, next){
+        res.send('beers!');
+    });
+
+    // require('./breweries')(app);
+    // require('./vineyards')(app);
+    // add new lines for each other endpoint defined in its own file for simplicity
+};
+```
 
 #### Config
 The config module holds configuration info about the app, which is mostly unused in the initial version of this app. The two specific ones will rely on external connections, the properties of which will get stored here. For now, it's a placeholder module.

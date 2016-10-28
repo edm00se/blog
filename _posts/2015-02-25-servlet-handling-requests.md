@@ -41,7 +41,32 @@ We'll be handling multiple routed paths off a single collection endpoint (the co
 
 Since we will get a true match with [_Matcher.find()_](//docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
 
-{% gist 0ce40310e6c2497145a6 PatternMatchingRoute.java %}<br />
+```java
+// in a method to parse route params
+
+// Accommodate two requests, one for all resources, another for a specific resource
+private Pattern regExAllPattern = Pattern.compile("/collection");
+// a UNID is 32-char hex, /collection/{:unid}
+// UNID ref: http://www-01.ibm.com/support/docview.wss?uid=swg21112556
+private Pattern regExIdPattern = Pattern.compile("/collection/([0-9a-fA-F]{32})");
+
+// regex parse pathInfo
+Matcher matcher;
+
+// Check for ID case first, since the All pattern would also match
+matcher = regExIdPattern.matcher(pathInfo);
+if (matcher.find()) {
+  unid = Integer.parseInt(matcher.group(1));
+  System.out.println("do something with this document, the id is: "+unid);
+}
+
+matcher = regExAllPattern.matcher(pathInfo);
+if (matcher.find()) {
+  System.out.println("do something with the collection");
+}
+
+throw new ServletException("Invalid URI");
+```
 
 [EDIT]
 
@@ -58,7 +83,20 @@ Now that we've handled the route, it's time to handle any route parameters. Rout
 
 Route parameters are a way of handling required, hierarchically defining values in a request. They're not the only way and many people don't like them, but I'm a fan (for such hierarchical requirements). To parse them out, we need a handle on the _HttpServletRequest_'s _pathInfo_ property. We then split it off the _/_ character to have a collection, in this case a _List&lt;String&gt;_ of all the route path elements. Since the first three are related to the structure of the servlet, we need to start checking at the 4th (3rd position).
 
-{% gist 0ce40310e6c2497145a6 ServletRouteParamsOnly.java %}<br />
+```java
+String reqPath = req.getPathInfo();
+out.println("pathInfo: " + reqPath);
+List<String> routeParm = Arrays.asList(reqPath.split("/(.*?)"));
+if(routeParm.size() > 3) {
+  // /nsf/xsp/servletname is the base, so the fourth is the first routeParm
+  for( int i=3; i<routeParm.size(); i++ ) {
+    out.println( "routeParm: " + routeParm.get(i) );
+  }
+} else {
+  // didn't have any route parameters after the base
+  out.println("routeParm: " + "none");
+}
+```
 
 #### Query Parameters
 Query parameters should be familiar to every XPages developer. <s>In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.</s>

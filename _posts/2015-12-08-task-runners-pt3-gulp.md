@@ -48,8 +48,31 @@ gulp.task('default', ['someTask', 'anotherTask']);
 
 That level of simplicity after the `Gruntfile.js` business was something I found quite refreshing (sorry, I had to work it in somehow). To get started with gulp and jshint, we need to install jshint to be available as a plugin, again via npm with `npm install gulp-jshint --save-dev`. My basic example includes [gulp-util](https://github.com/gulpjs/gulp-util), which is an excellent package to help with interacting with plugins and the console's output; you'll need to either install that with `npm install gulp-util --save-dev` or ignore it (and remove its corresponding require line).
 
-{% gist 43fcb3fcac536267440d basicGulpfile.js %}
-<br />
+```javascript
+// 1 define the plugin imports
+var gulp  = require('gulp'),
+    gutil = require('gulp-util'),
+    jshint = require('gulp-jshint');
+
+/* 2 define the tasks, including the
+ * default task, aka- no args when running 'gulp'
+ */
+gulp.task('default', ['jshint','watch']);
+
+// note, order doesn't matter
+gulp.task('jshint', function() {
+  return gulp.src(['./NSF/WebContent/js/*.js'])
+    .pipe(jshint({
+        // any options for config of the jshint functionality
+    }))
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+/* Watch these files for changes and run the task on update */
+gulp.task('watch', function() {
+  gulp.watch(input.javascript, ['jshint']);
+});
+```
 
 Here, as you can see, even with defining my 'default', 'jshint', and 'watch' tasks, things are kept fairly simple. The file only truly loads any dependencies and registers tasks; that's it. I hope you're catching on to why I prefer gulpfile syntax.
 
@@ -59,7 +82,69 @@ As shown with Grunt, we can invoke a specific task or run the default without ar
 #### Expanded Example
 Here's the expanded example, with the same 'jshint', 'watch', and 'browser-reload' tasks. It _also_ has my `json-server` implementation, since my Grunt implementation had me running it as a background task. We again need to install the additional dependent packages of 'gulp-json-srv' and 'browser-sync' (if that isn't already installed from the last post). Again, these packages are listed in the `package.json` I provided in the first post, so if you have run `npm install`, you'll pick up on them.
 
-{% gist 43fcb3fcac536267440d gulpfileWithExpandedExample.js %}
+```javascript
+/* File: gulpfile.js */
+
+// grab our packages
+var gulp      = require('gulp'),
+  gutil       = require('gulp-util'),
+  jshint      = require('gulp-jshint'),
+  jsonServer  = require('gulp-json-srv'),
+  server      = jsonServer.start({  // config the json-server instance
+          data: 'db.json',
+          id: 'unid',
+          rewriteRules: {
+            "/xsp/houses": "/houses",
+            "/xsp/:houses/:id": "/:houses/:id",
+            "/xsp/characters": "/characters",
+            "/xsp/:characters/:id": "/:characters/:id"
+          },
+          deferredStart: true
+        }),
+  browserSync   = require('browser-sync').create();
+
+// configure the jshint task
+gulp.task('jshint', function() {
+  return gulp.src(['./NSF/WebContent/js/*.js'])
+    .pipe(jshint({
+      '-W033': true, // mising semicolon
+      '-W041': true, // use 'x' to compare with 'y'
+      '-W004': true, // x already in use
+      '-W014': true // bad line breaking before '||'
+    }))
+    .pipe(jshint.reporter('jshint-stylish'));
+});
+
+// configure which files to watch and what tasks to use on file changes
+gulp.task('watch', function() {
+  gulp.watch('./NSF/WebContent/js/*.js', ['jshint','browser-sync-reload']);
+  gulp.watch(['db.json'], function(){ server.reload(); });
+});
+
+// starts the json-server instance
+gulp.task('serverStart', function(){ server.start(); });
+
+// reload the json-server instance, and its assets
+gulp.task('serverReload', function(){ server.reload(); });
+
+// loading browser-sync as a proxy, must load after json-server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "http://localhost:3000/",
+        ui: {
+          weinre: {
+              port: 9090
+          }
+      }
+    });
+});
+
+// reload browserSync
+gulp.task('browser-sync-reload', function(){ browserSync.reload(); });
+
+// define the default task and add the watch task to it
+gulp.task('default', ['watch','serverStart','browser-sync']);
+```
 
 #### Comparing Gulp and Grunt
 Here's an example of my 'jshint' task running in both Grunt and gulp. As you can see, there's not a lot of difference at this granular level. I believe this is a credit to both implementations.

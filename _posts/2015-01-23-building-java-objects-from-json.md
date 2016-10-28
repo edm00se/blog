@@ -27,30 +27,108 @@ This is in contrast to the provided [_com.ibm.commons.util.io.json_ package](//p
 Part of the reason _com.ibm.commons.util.io.json_ is popular (aside that it comes with the server, a big plus) is that it maps well to how we think. Streaming in elements into an object tends to make sense to us, but there's another way. Here's what I'll refer to as the "old" way (it works, it's valid, but not ideal as I'll show).
 
 
-{% gist 828fd9635b18efcbb0d9 OldWayCreateJsonWithCommonsLib.java %} <br />
+```java
+private void buildJsonData() {
+  JsonJavaObject myData = new JsonJavaObject();
+  myData.putJsonProperty("hello", "world");
+  JsonJavaArray dataAr = new JsonJavaArray();
+    for( int i=0; i<5; i++ ) {
+        JsonJavaObject subObject = new JsonJavaObject();
+        subObject.putJsonProperty("_id",i+1);
+        subObject.putJsonProperty("someOtherKey", "someOtherValue");
+      }
+  myData.putArray("data", dataAr);
+  myData.putJsonProperty("error", false);
+}
+```
 
 
 This will generate a resulting JSON string with an object, represented as such:
 
 
-{% gist 828fd9635b18efcbb0d9 outputToJson.json %} <br />
+```json
+{
+  "hello": "world",
+  "dataAr": [
+        { "_id": 1, "someOtherKey": "someOtherValue" },
+        { "_id": 2, "someOtherKey": "someOtherValue" },
+        { "_id": 3, "someOtherKey": "someOtherValue" },
+        { "_id": 4, "someOtherKey": "someOtherValue" },
+        { "_id": 5, "someOtherKey": "someOtherValue" }
+    ],
+  "error": false
+}
+```
 
 
 It may not be very exciting, but it sure gets the job done. Here's what I'm excited about.
 
 ### "New" Way
-I first saw a technique in which a person used a Gson instance to generate, on the fly, _application/json_ by merely calling the  the [_Gson.toJson_ method](//google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html#toJson(java.lang.Object)). I thought this was cool, but it made good sense. The Java <span data-toggle="tooltip" title="Object object">object</span> already existed and inherited from a proper class, which can loosely map to the JavaScript prototypal elements (string, boolean, array, object, integer, etc.). Gson is not unique in this, as the IBM Commons JSON library can achieve the same thing, using a <span data-toggle="tooltip" title="JsonGenerator.toJson( JsonFactory factory, java.lang.Object value )">[_JsonGenerator_](//public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonGenerator.html#toJson(com.ibm.commons.util.io.json.JsonFactory, java.lang.Object))</span>. That's the easy side of things, the tricky part is going backwards, consuming JSON into a Java Object (or just creating it from existing Java objects without being so linear in re-iterating properties just to change the format they're stored in). 
+I first saw a technique in which a person used a Gson instance to generate, on the fly, _application/json_ by merely calling the  the [_Gson.toJson_ method](//google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html#toJson(java.lang.Object)). I thought this was cool, but it made good sense. The Java <span data-toggle="tooltip" title="Object object">object</span> already existed and inherited from a proper class, which can loosely map to the JavaScript prototypal elements (string, boolean, array, object, integer, etc.). Gson is not unique in this, as the IBM Commons JSON library can achieve the same thing, using a <span data-toggle="tooltip" title="JsonGenerator.toJson( JsonFactory factory, java.lang.Object value )">[_JsonGenerator_](//public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonGenerator.html#toJson(com.ibm.commons.util.io.json.JsonFactory, java.lang.Object))</span>. That's the easy side of things, the tricky part is going backwards, consuming JSON into a Java Object (or just creating it from existing Java objects without being so linear in re-iterating properties just to change the format they're stored in).
 
 
 #### IBM Commons JSON
-Using [_JsonParser_](//public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonParser.html), you can use [_fromJson_](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonParser.html#fromJson(com.ibm.commons.util.io.json.JsonFactory, java.lang.String)), which returns a java.lang.Object. In other words, you need to do your tests and transforms to get a handle on its structure. This works, but takes more effort (I would be glad for someone to show me how to map the IBM Commons library to the approach I'll show next).
+Using [_JsonParser_](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonParser.html), you can use [_fromJson_](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonParser.html#fromJson(com.ibm.commons.util.io.json.JsonFactory, java.lang.String)), which returns a java.lang.Object. In other words, you need to do your tests and transforms to get a handle on its structure. This works, but takes more effort (I would be glad for someone to show me how to map the IBM Commons library to the approach I'll show next).
 
 
 #### Google Gson
 The Gson approach is to take in a class definition (or type) as the second parameter in their [_fromJson_](//google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html#fromJson(com.google.gson.JsonElement, java.lang.Class)) method, immediately mapping your object to a well structured object that you can invoke for its properties. Here's a quick demonstration.
 
 
-{% gist 828fd9635b18efcbb0d9 newWayCreateJsonWithJson.java %} <br />
+```java
+  /*
+   * the main data object, we've read the API docs and know what to expect ;-)
+   * assuming that the previously output JSON data is what we're pulling off of
+   */
+  class SomeNiftyDataObject {
+    private String hello;
+    private List<SomeNiftySubObject> dataAr = new ArrayList<SomeNiftySubObject>();
+    private boolean error;
+
+      /*
+       * the sub-object, in the dataAr
+       * since we need to define the sub-object's
+       * structure as well
+       */
+      class SomeNiftySubObject {
+        private String _id;
+        private String someOtherKey;
+
+        /*
+         * Getter / Setter pairs
+         */
+        public String get_id() { return _id; }
+        public String getSomeOtherKey() { return someOtherKey; }
+
+        public void set_id( String id ) { this._id = id; }
+        public void setSomeOtherKey( String someOtherKey ) { this.someOtherKey = someOtherKey; }
+      }
+
+    /*
+     * Getter / Setter pairs
+     */
+     public String getHello() { return hello; }
+     public List<SomeNiftySubObject> getDataAr() { return dataAr; }
+     public boolean getError() { return error; }
+
+     public void setHello( String hello ) { this.hello = hello; }
+     public void setDataAr( List<SomeNiftySubObject> dataAr ) { this.dataAr = dataAr; }
+     public void setError( boolean error ) { this.error = error; }
+
+  }
+
+...
+  /*
+   * we're building data, from a received set of JSON, into
+   * a Java object, so we can do normal Java things with it
+   */
+  private void buildMyNewJsonData () {
+    // assuming that the JSON of the data is set in a string called rawData
+    Gson g = new Gson();
+    SomeNiftyDataObject nwData = g.fromJson( rawData, SomeNiftyDataObject.class );
+    //SomeNiftyDataObject is now instantiated with the data set according to our class above!
+  }
+```
 
 
 ### Why The "New" Way?

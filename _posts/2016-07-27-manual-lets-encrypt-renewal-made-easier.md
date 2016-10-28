@@ -16,29 +16,70 @@ A while back, I rolled [a personal project](https://github.com/edm00se/personal-
 ### The `.well-known/acme-challenge` Route
 As part of the validation process, the Let's Encrypt / certbot script needs to "call home" to verify your server is who it claims. The exact command I ran with `certbot-auto` followed the format of:
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 certbot-script.sh %}<br />
+```sh
+# lines broken apart for readability
+./certbot-auto certonly \
+  --manual \
+  --email <my.email@some.com> \
+  -d <my-domain-name> --agree-tos
+```
 
 \*note: you can add `--dry-run` to the end to... perform a "dry run"
 
 Here's what it looks like when I ran the `certbot-auto` script:
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 CertBot_Challenge_and_Response.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/CertBot_Challenge_and_Response.png"
+  alt="certbot challenge and response"
+  layout="responsive"
+  width="893" height="175"></amp-img>
+ <figcaption>certbot challenge and response</figcaption>
+</figure>
 
 Marky's example shows handle established in his Node + Express app, providing a response on the given relative path of `<domain>/.well-known/acme-challenge/<uuid-string>`. This is something that would require manual updating of the code base, so it's naturally the first thing I removed. This was a perfect job for a pair of environment variables, in my opinion. I [implemented it in the code as such](https://github.com/edm00se/personal-mock-url-shortener/blob/28ea4f1651f2729d466aa7a3bdee4bd11f11ad35/routes/index.js#L8-L10):
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 lets-encrypt-endpoint.js %}<br />
+```javascript
+app.get('/.well-known/acme-challenge/'+process.env.LETS_ENCRYPT_ROUTE,
+    function(req, res){
+  res.send(process.env.LETS_ENCRYPT_VERIFICATION);
+});
+```
 
 This means that so long as my Node app can resove the `LETS_ENCRYPT_ROUTE` and `LETS_ENCRYPT_VERIFICATION` values accordingly, I'm in business. This is done rather easily via the "Environment Variables" page of my application's dashboard, in the "user defined" tab.
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 User_Def_Env_Vars.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/User_Def_Env_Vars.png"
+  alt="user defined environment variables"
+  layout="responsive"
+  width="893" height="357"></amp-img>
+ <figcaption>user defined environment variables</figcaption>
+</figure>
 
 Once this is all done, you can replace the certificates for the custom domain with the freshly generated certificates. I added my certificate files (`.pem`) as the screen shot shows and it looks good in both the Bluemix dashboard and my Chrome inspector.
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 Replacing_the_Certs.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Replacing_the_Certs.png"
+  alt="replacing the certificates"
+  layout="responsive"
+  width="750" height="633"></amp-img>
+ <figcaption>replacing the certificates</figcaption>
+</figure>
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 Bluemix_All_Is_Good.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Bluemix_All_Is_Good.png"
+  alt="certificate confirmed on Bluemix"
+  layout="responsive"
+  width="679" height="664"></amp-img>
+ <figcaption>certificate confirmed on Bluemix</figcaption>
+</figure>
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 Chrome%20All%20Is%20Good.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Chrome_All_Is_Good.png"
+  alt="new certificate confirmed in Chrome"
+  layout="responsive"
+  width="987" height="463"></amp-img>
+ <figcaption>new certificate confirmed in Chrome</figcaption>
+</figure>
 
 ### Sequence of Events
 Generally speaking, the order of events to take are:
@@ -53,12 +94,24 @@ Generally speaking, the order of events to take are:
 ### One Hiccup
 A strange hiccup I encountered was what I believe to be a false positive in regards to my deletion of the existing (old) certificate. After a few tries, or a minor passage of time, it all rectified itself.
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 Timeout.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Timeout.png"
+  alt="delete certificate timeout"
+  layout="responsive"
+  width="517" height="274"></amp-img>
+ <figcaption>delete certificate timeout</figcaption>
+</figure>
 
 ### Thoughts
 Since Let's Encrypt is now by all regards [widely successful, with over 5 million certificates issued](https://letsencrypt.org/2016/06/22/https-progress-june-2016.html), I can't help but wonder how easy this _should_ be on any modern PaaS, such as Bluemix. Gone are the days of _needing_ to pay _lots of money_ for an HTTPS certificate, so <span data-toggle="tooltip" title="hear that Big Blue? let's do this thing!">the automation, configuration, and management of HTTPS certificates on behalf of the user _should_ be a minor formality, not to mention useful</span>. Do note, Bluemix does have a wild card HTTPS certificate which applies to any of its `.mybluemix.net` addresses, so this is unique to custom domains.
 
-{% gist 3bc4043c19537dd3958c7af42a9618d6 bluemix-wild-card-https-cert.png %}<br />
+<figure>
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/bluemix-wild-card-https-cert.png"
+  alt="Bluemix wildcard cert"
+  layout="responsive"
+  width="939" height="547"></amp-img>
+ <figcaption>Bluemix wildcard cert</figcaption>
+</figure>
 
 ### One Last Call For MWLUG
 [MWLUG](http://www.mwlug.com/) 2016 is nearly here. If you're able to, I really recommend coming to the event, as there are a great many people with a passion for what they do, who are looking to share. It's been a great event each time I've had the pleasure to attend and I'm glad to be going back, and speaking.

@@ -24,9 +24,28 @@ This series has been cooking longer than my turkey (about two weeks longer). It 
 ### Why Should I Care?
 A task runner is, at its simplest, a "worker" that peforms tasks (by configuration, definition, or defined standard). This can range from hooking into the npm scripts such as start or test in a `package.json` file (as npm and Node apps do) to more complex setups, such as those I'll get into. Here's a quick example of what I mean by the npm scripts in a node app's `package.json`:
 
-<div class="smallGistScroller">
-{% gist cc61c9817cec013ec55b package.json %}
-</div><br />
+{:.smallGistScroller}
+```json
+{
+  "name": "ProjectName",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node app.js",
+    "publish": "grunt && git subtree push --prefix site origin gh-pages"
+  },
+  "dependencies": {
+    "some-awesome-package": "^1.0.0",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-ejs-static": "^0.4.3"
+  }
+}
+```
 
 As you can see, this defines two "scripts" that npm will let us invoke from the command line; 'start' and 'publish'; I'm rather fond of the latter of those two, as it is a crafty way for me to be able to update the `gh-pages` (static site) associated with a GitHub repository, after performing the necessary build, all via my credentialed access. This is something that can be easily plugged into any Continuous Integration or Continuous Deployment setup, topics of which have been on my mind for the last few months. In short, with a single CLI entry, I can have current documentation automatically updated and published.
 
@@ -59,7 +78,17 @@ This will perform a [git sparse checkout](http://stackoverflow.com/questions/600
 * now you have an empty repository with the remote established (to the GitHub repository, calling itself "origin")
 * configure the repo for sparse checkout via `git config core.sparseCheckout true`
 * now we need to create and add the correct configuration to our `.git/info/sparse-checkout` file for it to know what to pull from the server copy this in:
-    * {% gist 43fcb3fcac536267440d sparse-checkout %}
+    * ```sh
+# .git/info/sparse-checkout
+.gitignore
+package.json
+.bowerrc
+bower.json
+db.json
+routes.json
+NSF/WebContent/
+ReadMe.md
+```
 * now we just need to pull the specified parts down into our local repository, via `git pull origin master`
 * now the usual npm dependencies, via `npm install` (the npm dependencies will install into `node_modules/`
 * now we install the bower components via `bower install` (don't worry, it's a listed dependency, along with json-server, so the last line will have installed it; just not globally); the bower dependencies will install into `NSF/WebContent/libs/` (which the code expects)

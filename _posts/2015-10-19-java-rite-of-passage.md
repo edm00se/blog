@@ -35,13 +35,20 @@ This means that I was continuously getting a handle on an object which had been 
 
 In short, the completed method I use to pass all my _getDataNSF_ calls through is _static_, but always resolves (correctly) through the managed bean (which contains only instance properties), which is instantiated and kept in memory per the _managed_ defintion of _*Scope_ in the _faces-config.xml_. The intermediary method looks like so:
 
-{% gist 61fcd7e0505fd5469385 SnippetGetDBObj.java %}
+```java
+public static Database getMyDataNSF(){
+  return FacesContext.getCurrentInstance().getApplication()
+    .getVariableResolver().resolveVariable(
+      FacesContext.getCurrentInstance(), "confBean")
+      .getDBObj();
+}
+```
 
 For a full view of my [bean](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/config/AppUtil.java#L61-L81) or [intermediary method](https://github.com/edm00se/Ice-And-Fire-On-Bluemix/blob/master/App%20ODP/Code/Java/com/westeros/app/Utils.java#L489-L499), <span data-toggle="tooltip" title="there's something exciting">go check out my last paragraph</span>.
 
 #### Long Story Short...
 <div class="center">
-	<amp-youtube
+  <amp-youtube
     data-videoid="qr2tmQIbdH8"
     layout="responsive"
     width="560" height="315"></amp-youtube>

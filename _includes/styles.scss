@@ -17,6 +17,12 @@ $grey-color:       #828282;
   }
 }
 
+.smallGistScroller {
+	height: 300px;
+  overflow-y: scroll;
+	overflow-x: auto;
+}
+
 .seriesNote,
 .seriesNote * {
   font-size: initial;

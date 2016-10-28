@@ -18,7 +18,31 @@ I have this in production on a few applications, and both I and the users love i
 
 Here's the gist:
 
-{% gist 9789653 %}
+```javascript
+/*
+ * Dojo version of the improved behavior of the XPages calendar picker.
+ * Adapted from the jQuery version, originally by Marky Roden.
+ * credit: http://xomino.com/2012/03/14/improving-user-interaction-with-xpages-date-picker/
+ * Adapted by Eric McCormick, @edm00se, http://about.me/EricMcCormick
+ */
+dojo.addOnLoad(function(){
+  //id has _Container and is class of xspInputFieldDateTimePicker
+  var myAr = dojo.query("[id$=_Container].xspInputFieldDateTimePicker");
+  //iterate over each element to apply affect
+  myAr.forEach(function(node, index, arr){
+    //current root node, based on id$=_Container
+    var curNode = node;
+    //span for the button to fire the picker
+    var myBtn = dojo.query('> span > span > span.dijitButtonContents',curNode)[0];
+    //actual <input> element into which is focused/typed
+    var myInputFld = dojo.query('> div > div.dijitInputField > input.dijitInputInner',curNode)[0];
+    //connect the focus event to the picker click event
+    dojo.connect(myInputFld,"onfocus",function(){myBtn.click()});
+    //provide an onkeypress preventDefault
+    dojo.connect(myInputFld,"onkeypress",function(evt){evt.preventDefault()});
+  });
+});
+```
 
 ### Breaking It Down
 We [bootstrap](http://en.wikipedia.org/wiki/Bootstrap) the function via the dojo [addOnLoad](http://dojotoolkit.org/reference-guide/1.6/dojo/addOnLoad.html) call and start by creating an array of the fields with an ID attribute containing '\_Container' and the class _xspInputFieldDateTimePicker_.  We then iterate over these DOM nodes, getting a handle on their button, and connecting the _click()_ event call for that button to the respective field during the _onfocus_ and/or _onkeypress_ events. I'm sure a more advanced user could improve the performance of my version of the function, and I welcome them to post a forked version; after all, why use GitHub/Gist if you don't want your code improved via the aid of others?

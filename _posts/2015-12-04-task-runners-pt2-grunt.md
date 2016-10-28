@@ -54,7 +54,7 @@ To install the plugins that we'll be depending on, one should install via npm, s
 #### Example Grunt Config
 We need to create a file called `Gruntfile.js`. Inside, we will build out the config to define the configuration, load the plugins, and establish the tasks we define, all of which will be wrapped in a function we export as a module. Using solely the jshint (jshint-stylish) plugin as an example, here's a basic structure:
 
-{% gist 43fcb3fcac536267440d baseGruntfile.js %}
+<!-- {% gist 43fcb3fcac536267440d baseGruntfile.js %} -->
 
 Now that we have the structure, we need to populate our configurations and tell our tasks (one shown) what to run. The task 'default' corresponds to invoking `grunt` with no parameters; if a task by another name is specified (e.g.- 'dist'), it will invoke the operations for that task.
 
@@ -117,7 +117,36 @@ grunt.registerTask('default', ['jshint','other tasks you want to include in the 
 
 Here's how it looks all together for a basic structure (just count to 5):
 
-{% gist 43fcb3fcac536267440d basicGruntfile.js %}
+```javascript
+// 1 our wrapper function (required by grunt and its plugins)
+module.exports = function(grunt) {
+
+  // 2 CONFIGURE GRUNT
+  grunt.initConfig({
+
+    // 3 define individual tasks
+
+    // get the configuration info from package.json
+    pkg: grunt.file.readJSON('package.json'),
+
+    // configure plugin with information, sample here is jshint, which doesn't like my code
+    jshint: {
+      options: {
+        reporter: require('jshint-stylish')
+      },
+      all: ['Grunfile.js', '**/*.js']
+    }
+
+  });
+
+  // 4 LOAD GRUNT PLUGINS
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  // 5 REGISTER TASKS, start with 'default'
+  grunt.registerTask('default', ['jshint','other task defined above']);
+
+};
+```
 
 #### Setting Up Our Tasks
 So, hopefully by now your mind is awash with thoughts like:

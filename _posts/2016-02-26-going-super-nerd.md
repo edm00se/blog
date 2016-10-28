@@ -24,7 +24,7 @@ Ultimately, my task was to:
 
 * scan my existing files for occurrences (such as `:‌beers‌:`, which happens a surprising amount)
 * register what needed to be replaced
-* replace with a corresponding HTML image tag (or the md image markup, like so `<img src="&zwj;h&zwj;t&zwj;t&zwj;p&zwj;s&zwj;:&zwj;/&zwj;/&zwj;path/to/&zwj;beers&zwj;.&zwj;p&zwj;n&zwj;g&zwj;">`)
+* replace with a corresponding HTML image tag (or the md image markup, with an `img` tag  and a `src` attribute pointing to a copy of an image file corresponding to the short code `src="https://path/to/beers.png`"`)
 
 ### Something Neat
 The side project I'm working on is collecting my better blog posts into an eBook format. This is mostly to be able to say I've done so, and when that finally hits, it'll be freely available in all major eBook formats. If you keep referencing my blog, that's the primary source, so no worries there.
@@ -57,15 +57,100 @@ Something I ran into while creating and testing the script was that Node's async
 
 Before I show you the full version, here's a basic overview of both how my script is structured and the async nature of Node.
 
-{% gist d7215253f732bb198482 test.js %}
-<br />
+```javascript
+#!/usr/bin/env node
+
+var util = require('util'),
+    fs = require('fs');
+
+console.log('starting');
+
+fs.readdir('./', function(err, files){
+    console.log('searching for .md');
+    files.filter(function(file){ return file.substr(-3) === '.md';  })
+    .forEach(function(file){
+        console.log('reading a .md file'+file);
+    });
+});
+
+console.log('done');
+```
 
 You may take note of the first line, which is `#!/usr/bin/env node` and points to my local node binary (according to its being picked up by the environment), a.k.a- the "hash bang". This is akin to how one might specify a shell script, such as `#!/bin/sh`. Basically, so long as you make the file executable, you can run a node script as if it's a shell script, since the shell script starts by pointing at what interpreter to use; it's perfectly legitimate! This is ultimately just a nifty thing, and one should take care as not to use any packages that might not be able to be used from a globally installed context, as most people don't like random `node_modules` directories strewn about their file systems. It's alternately equivalent to invoking the same script via `node script.js` as opposed to `./script.js` or `sh script.js`.
 
 Here's the full thing, in its original form:
 
-{% gist d7215253f732bb198482 handleEmojis.js %}
-<br />
+```javascript
+#!/usr/bin/env node
+
+var util = require('util'),
+    fs = require('fs'),
+    request = require('request'),
+    argv = require('minimist')(process.argv.slice(2)),
+    filePath = argv._[0],
+    imagePathPrefix = '/images/emoji/',
+    emojisUrl = "https://api.github.com/emojis",
+    emojisOb = {},
+    options = {
+      url: emojisUrl,
+      headers: {
+        'User-Agent': 'Awesome-Octocat-App'
+      }
+    },
+    re = /(\:\w+\:)(?=\s|[\!\.\?]|$)/gim;
+
+console.log('starting');
+
+request(options, function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    var fCt = 0;
+    var mCt = 0;
+    emojisOb = JSON.parse(body);
+    var fileNameAr = fs.readdirSync(filePath);
+    for( var i=0; i<fileNameAr.length; i++ ){
+        var curVal = filePath+fileNameAr[i];
+        if( curVal.substr(-3) === '.md' ){
+            var file = curVal;
+
+            var contents = fs.readFileSync(file, 'utf-8');
+
+            //fs.readFile(file, 'utf-8', function(err, contents){
+                fCt++;
+                if( re.test(contents) ){
+                    console.log('match found in '+file);
+                    mCt++;
+                    var result = contents;
+                    var foundMatch = false;
+                    for( var prop in emojisOb ){
+                        if( contents.indexOf(':'+prop+':') > -1 ){
+                            foundMatch = true;
+                            console.log('found a match for '+prop+' in '+file);
+                            var nwRe = new RegExp(":"+prop+":","gi");
+                            result = result.replace(nwRe, '<img src="'+imagePathPrefix+prop+'.png'+'" alt="'+prop+'" style="height:auto;width:21px;">');
+                        }
+                    }
+                    if(foundMatch){
+                        fs.writeFile(file, result, 'utf-8', function(er){
+                            if(er){
+                                console.log('error: '+er);
+                            }else{
+                                console.log('writing file back with updates')
+                            }
+                        });
+                    }
+                }
+            //});
+        }
+    }
+    console.log('found '+fCt+' .md files and '+mCt+' emoji short name occurrences');
+  }else{
+    console.log('error getting '+emojisUrl+', response status code: '+response.statusCode);
+    console.log('nothing to do, exiting');
+  }
+});
+
+console.log('done');
+```
 
 #### Effort For Gain
 In the end, I had something around 40 occurrences of emoji short names, so this may not have saved me much more work than I could have done with something else, but it was worth the experience to get more familiar with how to do such a thing in Node and also for what is in the next section.
@@ -91,8 +176,66 @@ I also grew tired of needing a Jenkins CI instance to do what I could do for fre
 
 Here's the [`.travis.yml` configuration file](https://github.com/edm00se/dev-blog-book/blob/master/.travis.yml). The reason it got larger than expected was due to the need to resolve the dependency of [calibre](http://calibre-ebook.com/), which wasn't working as I expected in the legacy vm. You can also notice that I'm using a GitHub Personal Access Token exposed (privately) to Travis CI as an environment variable for authenticated access, without exposing my credentials.
 
-{% gist 65d1555dc0e522a2667a .travis.yml %}
-<br />
+```yml
+language: node_js
+sudo: required
+dist: trusty
+node_js:
+  - v4
+cache:
+  directories:
+    - node_modules
+# whitelist
+branches:
+  only:
+    - master
+before_script:
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq libyajl-dev libxml2-dev libxqilla-dev
+  - if [ "$CXX" = "clang++" ]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
+  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+  - sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+  - npm i -g node-gyp && node-gyp clean
+  - npm i -g svgexport
+script:
+  - sudo chown -R $USER ~/
+  - ./node_modules/emoji-transmogrifier/src/cli/index.js zap
+  - gitbook install
+  - gitbook build
+  - gitbook pdf . build/DevBlog_Year1.pdf
+  - gitbook mobi . build/DevBlog_Year1.mobi
+  - gitbook epub . build/DevBlog_Year1.epub
+after_success: |
+  if [ -n "$GITHUB_API_KEY" ]; then
+    rm -rf .git
+    git config --global user.name "travis"
+    git config --global user.email "travis"
+    cd _book
+    git init
+    git remote add origin https://$GITHUB_API_KEY@github.com/edm00se/dev-blog-book
+    git checkout -b gh-pages
+    git fetch
+    git add .
+    git -c user.name='travis' -c user.email='travis' commit -m 'Travis CI Deploying'
+    git push -f origin gh-pages
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    cd ..
+    cd build
+    git init
+    git remote add origin https://$GITHUB_API_KEY@github.com/edm00se/dev-blog-book
+    git fetch
+    git checkout -b built
+    git add .
+    git -c user.name='travis' -c user.email='travis' commit -m 'Travis CI Deploying'
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    git push -f origin built
+    cd ..
+  fi
+```
 
 ### Summary
 All in all, I learned a few things, found a solution to a problem I had, and grew from the experience. I call this a "win". Hopefully this can inspire some of you to give something new a try, as it never hurts to expand the skill set.

@@ -73,15 +73,167 @@ I wrote a `Gruntfile.js` which performs the tasks of:
 
 Here's a copy of the `Gruntfile.js`. Note [the file array](https://github.com/camac/dora/blob/master/dora.pl#L133-L159), which I duplicated from the dora project, also note the variable definition of the ODP path; since I can't assume every project has the same ODP name, setting it up front means that my Jenkins task can update the `Gruntfile.js` for correct path, depending on anything from a per-project definition to an environment variable. Here it is:
 
-{% gist 9816aa9e8d0109c2009d Gruntfile.js %}
-<br />
+```javascript
+// Gruntfile.js
+/*
+ * This is a single-purpose Gruntfile which establishes a one-off mechanism for running the
+ * xsltproc task involved in DORA, but for more on-demand use in a build automation environment.
+ *
+ */
+
+// our wrapper function (required by grunt and its plugins)
+module.exports = function(grunt) {
+
+  // sets the ODP path, which defaults to './ODP/'; change to your ODP path relative to your Gruntfile.
+  var odp = './ODP/';
+
+  // array of source file matching (globbing) for files to process
+  // ref: https://github.com/camac/dora#installing-filters
+  var fileAr = [
+                odp+'**/*.aa',
+                odp+'**/*.column',
+                odp+'**/*.dcr',
+                odp+'**/*.fa',
+                odp+'**/*.field',
+                odp+'**/*.folder',
+                odp+'**/*.form',
+                odp+'**/*.frameset',
+                odp+'**/*.ija',
+                odp+'**/*.ja',
+                odp+'**/*.javalib',
+                odp+'**/*.lsa',
+                odp+'**/*.lsdb',
+                odp+'**/*.metadata',
+                odp+'**/*.navigator',
+                odp+'**/*.outline',
+                odp+'**/*.page',
+                odp+'**/*.subform',
+                odp+'**/*.view',
+                odp+'Resources/AboutDocument',
+                odp+'AppProperties/database.properties',
+                odp+'Resources/IconNote',
+                odp+'Code/actions/Shared?Actions',
+                odp+'Resources/UsingDocument'
+                ];
+
+  // time-grunt injecting to grunt instance
+  require('time-grunt')(grunt);
+
+  // CONFIGURE GRUNT
+  grunt.initConfig({
+
+    // all of our configuration will go here
+    xsltproc: {
+      options: {
+        stylesheet: './DXLClean.xsl', // either copy the DXLClean.xsl to the project folder for portabilty, or use the ~/dora/xsl/ path
+        novalid: true,
+        html: false
+      },
+      destTmp: {
+        files: [{
+          expand: true,
+          src: fileAr,
+          dest: 'tmp'
+        }]
+      },
+      destInPlace: {
+        files: [{
+          expand: true,
+          src: fileAr
+        }]
+      }
+    },
+
+    clean: {
+      tmp: ['./tmp']
+    },
+
+    curl: {
+      filter: {
+        src: 'https://raw.githubusercontent.com/camac/dora/master/xsl/DXLClean.xsl',
+        dest: './DXLClean.xsl'
+      },
+      gitignore: {
+        src: 'https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore',
+        dest: './.gitignore'
+      }
+    },
+
+    copy: {
+      main: {
+          files: [{
+              expand: true,
+              cwd: './tmp/'+odp,
+              src: ['**'],
+              dest: odp
+          }]
+      }
+  }
+
+  });
+
+  // LOAD GRUNT PLUGINS
+  grunt.loadNpmTasks('grunt-xsltproc');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+
+  // CREATE TASKS
+  grunt.registerTask('filterExistsCheck', function(){ // can refactor to use home dir relative, like above
+    if( !grunt.file.exists('./DXLClean.xsl') ){
+      console.log('no filter file found');
+      grunt.task.run('curl:filter');
+    }else{
+      console.log('filter file found');
+    }
+  });
+  grunt.registerTask('warn', function(){
+    var msg = "\nYou have invoked grunt with no options.\n";
+      msg += "======================================\n";
+      msg += "Run grunt with either the inPlace or tmp task specified, for the corresponding action.\n";
+    grunt.fail.fatal(msg);
+  });
+  grunt.registerTask('inPlace', ['filterExistsCheck','xsltproc:destInPlace']);
+  grunt.registerTask('tmp', ['filterExistsCheck','xsltproc:destTmp','copy','clean']);
+  grunt.registerTask('default', ['tmp']);
+
+};
+```
 
 An interesting thing I had to overcome was, in a larger ODP, I had to write out the modified versions of the files to a `tmp/` path, as re-writing them in-place was causing an error of "no contents", or some weirdness. Copying to a temporary location, then copying back in solved this, apparently. Also, you can see that aside from the `Gruntfile.js` and `package.json`, if it doesn't find a copy of the `DXLClean.xsl`, it pulls a copy from the dora repository.
 
 Here's a copy of the corresponding `package.json`, which I copy in if my Jenkins task script doesn't detect the `Gruntfile.js` and `package.json`. It's there exclusively for the dependency installation via `npm install` prior to the build.
 
-{% gist 9816aa9e8d0109c2009d package.json %}
-<br />
+```json
+{
+  "name": "some-big-xpages-project",
+  "version": "1.0.0",
+  "description": "a big XPages project that needs some filtering during build automation, prior to headless DDE build task",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-curl": "^2.2.0",
+    "grunt-httpcopy": "^0.3.0",
+    "grunt-xsltproc": "^0.6.1",
+    "time-grunt": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edm00se/xsltproc4domino.git"
+  },
+  "keywords": [],
+  "author": "Eric McCormick, @edm00se",
+  "license": "MIT"
+}
+```
 
 #### Executing Grunt
 Provided that your automatic build environment has access to an installed version of `node` and `npm`, then your build script/task should be able to execute the grunt tasks with the default task association, `grunt`. By convention, it's best to ensure that all dependencies are installed first with `npm install` from within the project. Alternatively, this could be specified in the `package.json` of your project to be an `npm` script definition, such as `npm run clean` (see the script "clean" in the `package.json`). The benefit of this is that the `npm` "clean" script can be expanded to perform any other `npm` or command line tasks needed for the project, with the same, single command governing all execution.

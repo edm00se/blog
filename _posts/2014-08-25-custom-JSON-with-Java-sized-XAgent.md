@@ -29,7 +29,19 @@ If that's the case, make sure you've turned on Domino Data Services for your NSF
 ### Custom JSON Data Generation
 My approach here is super simple, at least as far as the XPages part goes. The only thing I'm using the XPage for is as an end point, in [XAgent fashion](http://www.wissel.net/blog/d6plinks/shwl-7mgfbn). Seriously, it's just a hook into the Java method, have a look:
 
-{% gist ce4206cf3daff409b8f3 xaJsonFromJavaProvider.xsp.xml %}
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+  xmlns:xp="http://www.ibm.com/xsp/core"
+  rendered="false"
+  viewState="nostate">
+  <xp:this.afterRenderResponse>
+    <![CDATA[#{javascript:com.eric.test.DataProvider.GetMyDataAsJson();}]]>
+  </xp:this.afterRenderResponse>
+
+  XAgent. This will not render as a page, but as application/json data.
+</xp:view>
+```
 
 Just invoke the fully qualified package.Class.Method() in the afterRenderResponse and you're ready to go.
 
@@ -82,4 +94,140 @@ In client-side JavaScript, you can programmatically determine whether to take on
 [Update:] [As pointed out by Paul T. Calhoun](http://twitter.com/ptcalhoun/status/503993722556940288), a package available, if you're not looking to add the Google GSON jar, or any external library, you can implement [com.ibm.commons.util.io.json](http://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/package-summary.html). The largest difference I saw was the syntax. I'm sure someone more learned could tell me about the mechanics of the two packages. To view my Class with the IBM `com.ibm.commons.util.io.json` library implementation, check out [this gist here](http://gist.github.com/edm00se/e5626f63ef7573fd2f3e).
 
 Here's my method, complete with slightly rambling, but hopefully insightful to a newbie, comments.
-{% gist ce4206cf3daff409b8f3 DataProvider.java %}
+
+```java
+package com.eric.test;
+
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
+import javax.faces.context.ResponseWriter;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
+import lotus.domino.*;
+import com.ibm.xsp.model.domino.DominoUtils;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+/**
+ * Data provider Class with a single, public, static method
+ * to provide an XAgent micro-service, returning formatted
+ * data as application/json.
+ *
+ * @author Eric McCormick, @edm00se
+ *
+ */
+public class DataProvider {
+
+  /**
+   * This method performs some sample actions against
+   * a Domino View's Documents, reads them into a
+   * JsonArray, attaches it to the JsonObject response
+   * and returns it as a data response via FacesContext.
+   * This should be invoked as part of an XAgent.
+   *
+   * @return JsonObject sample response
+   * @throws IOException
+   */
+  public static void GetMyDataAsJson() throws IOException{
+    //initialize the main JsonObject for the response
+    JsonObject myData = new JsonObject();
+    /*
+     * Here we're establishing our external context handle,
+                 * where we get our response writer from.
+     */
+    FacesContext ctx = FacesContext.getCurrentInstance();
+    ExternalContext exCon = ctx.getExternalContext();
+    /*
+     * Using a response writer is one way of directly dumping into the response.
+     * Instead, I'm returning the JsonObject.
+     */
+    ResponseWriter writer = ctx.getResponseWriter();
+    HttpServletResponse response = (HttpServletResponse) exCon.getResponse();
+
+    //set my content type, use a robust character encoding, and don't cache my response
+    response.setContentType("application/json");
+    response.setHeader("Cache-Control", "no-cache");
+    response.setCharacterEncoding("utf-8");
+    try {
+
+      /*
+       * This is how we can get a handle on and use any URL parameters
+       * instead of the Domino SSJS param handle. Note that I check
+       * for the existence of the the parameter of myKey before assigning
+       * it, via ternary operator.
+       */
+      Map<String,Object> exConP = exCon.getRequestParameterMap();
+      String myParam = (exConP.containsKey("myKey")) ? exConP.get("myKey").toString() : null;
+
+      /*
+       * Using the Domino Session class, we can get a handle on our current
+       * session and interact with anything via the Java NotesDomino API.
+       */
+      Session s = DominoUtils.getCurrentSession();
+      Database db = s.getCurrentDatabase();
+      View vw = db.getView("GoTCharFlat");
+
+      /*
+       * perform any necessary business logic with the data
+       */
+
+      //creating an array of objects
+      JsonArray dataAr = new JsonArray();
+
+      /*
+       * This is an example only as there are easier ways to
+       * get a JSON response of a View; e.g.- Domino Data/Access Services.
+       */
+      Document first = vw.getFirstDocument();
+      //simple View iteration of documents and adding of a given value
+      while(first!=null){
+        //creates current object
+        JsonObject curOb = new JsonObject();
+        String name = first.getItemValueString("CharFullName_FL");
+        String title = first.getItemValueString("Title");
+        curOb.addProperty("name", name);
+        curOb.addProperty("title", title);
+        //adds current object into JsonArray
+        dataAr.add(curOb);
+
+        //no OpenNTF Domino API implemented, ham fist away!
+        Document tmpDoc = vw.getNextDocument(first);
+        first.recycle();
+        first = tmpDoc;
+      }
+      //wrap it up and add the JsonArray of JsonObjects to the main object
+      myData.add("data", dataAr);
+
+      /*
+       * Business logic done, setting error to false last, so
+       * if anything errors out, we'll catch it.
+       */
+      myData.addProperty("error", false);
+
+    }catch(Exception e){
+      /*
+       * On error, sets a boolean error value of true
+       * and adds the message into the errorMessage
+       * property.
+       */
+      myData.addProperty("error", true);
+      myData.addProperty("errorMessage", e.toString());
+      System.out.println("Error with data provision method:");
+      System.out.println(e.toString());
+    }
+    /*
+     * This will always return a fully formed JsonObject response.
+     * Meaning that if there's an error, we hear about it and can
+     * handle that on the client side for display while developing,
+     * or logging when in production.
+     *
+     * Note: since we're hijacking the FacesContext response, we're
+     * returning a string (not data object) into the ResponseWriter.
+     * This is why the method is void. Don't worry, it's application/json.
+     */
+    writer.write(myData.toString());
+  }
+
+}
+```

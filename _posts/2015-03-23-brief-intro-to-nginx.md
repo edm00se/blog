@@ -28,12 +28,12 @@ In order to access a server hosted within a vm (guest), for development purposes
 
 ### Steps
 
-1. To install in a Windows VM, download and install [nginx](http://nginx.org/) from the current, stable release; I installed to C:\nginx\
-2. Edit the _&lt;install path&gt;/conf/nginx.conf_ file with the marked changes in the file of the same name in this gist.
+1. To install in a Windows VM, download and install [nginx](http://nginx.org/) from the current, stable release; I installed to `C:\nginx\`
+2. Edit the `<install path>/conf/nginx.conf` file with the marked changes in the file of the same name in this gist.
 3. Start the nginx executable, located in your install path. There are service wrappers for Windows, or you can just kill the process to stop the nginx instance.
 
 #### Commands for Windows
-More information on the implementation of nginx in Windows can be found on [the corresponding docs page](//nginx.org/en/docs/windows.html). Here's the basic breakdown of commands, form within the nginx install directory:
+More information on the implementation of nginx in Windows can be found on [the corresponding docs page](https://nginx.org/en/docs/windows.html). Here's the basic breakdown of commands, form within the nginx install directory:
 
 {:.table .table-bordered .table-striped}
 | Command         |                                                                                      |
@@ -48,7 +48,34 @@ More information on the implementation of nginx in Windows can be found on [the 
 The config file contains a _server_ block, inside which is a _location /_ block. Inside that location block, we need to replace the root and index assignment with a *proxy_pass  http://127.0.0.1:8080;* line and a *proxy_http_version  1.1;* line.
 
 ### Sample Nginx.conf
-{% gist 306e8dacaac50ec49e56 nginx.conf %}<br />
+
+```javascript
+...
+server {
+        listen       80;
+        server_name  localhost;
+
+        # adds gzip options
+        gzip on;
+	gzip_types      text/css text/plain text/xml application/xml application/javascript application/x-javascript text/javascript application/json text/x-json;
+	gzip_proxied    no-store no-cache private expired auth;
+	#gzip_min_length 1000;
+	gzip_disable     "MSIE [1-6]\.";
+
+        ...
+
+	location / {
+		# Backend server to forward requests to/from
+		proxy_pass          http://127.0.0.1:8080;
+		proxy_http_version  1.1;
+
+		# adds gzip
+		gzip_static on;
+
+	}
+	...
+...
+```
 
 ### My Speed Claim
 I tweeted a pretty strong sounding result. In fact, I believe that my DDE local web preview being freshly restarted was part of the ridiculously long response for my data set, but there was still a significant improvement of around 400-500ms (down from just over a full second to just over half of one); which shows the improvements gained from *gzip*ing the static elements.
