@@ -54,8 +54,6 @@ To install the plugins that we'll be depending on, one should install via npm, s
 #### Example Grunt Config
 We need to create a file called `Gruntfile.js`. Inside, we will build out the config to define the configuration, load the plugins, and establish the tasks we define, all of which will be wrapped in a function we export as a module. Using solely the jshint (jshint-stylish) plugin as an example, here's a basic structure:
 
-<!-- {% gist 43fcb3fcac536267440d baseGruntfile.js %} -->
-
 Now that we have the structure, we need to populate our configurations and tell our tasks (one shown) what to run. The task 'default' corresponds to invoking `grunt` with no parameters; if a task by another name is specified (e.g.- 'dist'), it will invoke the operations for that task.
 
 You can see that this can quite powerful rather quickly. Any tasks that we we want to take can be automated using some simple, well thought out configurations. Provided we stick to some standardized rules, we can have consistently automated tasks which require minimal input to invoke.

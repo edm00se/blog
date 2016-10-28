@@ -55,16 +55,15 @@ Once you have identified the number of commits back to 'squash', then you can ru
 If the asciicast gives you trouble (possibly on mobile), just [take this link](https://asciinema.org/a/89834?autoplay=1).
 
 <div class="center">
-  <div class="center">
-    <amp-iframe
-      height="420"
-      width="518"
-      sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      allowfullscreen
-      frameborder="0"
-      src="https://asciinema.org/api/asciicasts/89834?">
-    </amp-iframe>
-  </div>
+  <amp-iframe
+    height="420"
+    width="518"
+    sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+    layout="responsive"
+    allowfullscreen
+    frameborder="0"
+    src="https://asciinema.org/api/asciicasts/89834?">
+  </amp-iframe>
 </div>
 
 ### IBM Champion Nominations

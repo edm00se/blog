@@ -10,17 +10,7 @@ comments: true
 share: true
 ---
 
-<!-- auto-magic TOC! -->
-<section>
-  <header data-toggle="tooltip" title="it's dangerous to go alone, take this">
-    <h2>Contents</h2>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section>
-
+{% include toc.html %}
 ### Intro
 
 Those that know me, or have followed my blog for a little while, have likely caught onto the fact that I'm a pretty big [AngularJS](https://angularjs.org/) fan. [Angular 2](https://angular.io/)
@@ -41,10 +31,10 @@ Take a simple "hello world" example, all we need, aside from including the `scri
 This achieved the following:
 - instantiated (bootstrapped) the application, by binding it to a given element
 - bound a(n interactive, input element with a) data property within the application's `scope` to a key of "name"
-- bound the output of the key to instances of its key name (denoted via `&zwnj;{&zwnj;{&zwnj; &zwnj;}&zwnj;}&zwnj;`)
+- bound the output of the key to instances of its key name (denoted via &lbrace;&lbrace; &rbrace;&rbrace;)
 - two-way data binding established, so that any update of the value for the "name" property would propagate to any other such instance in the DOM
 
-Out of the box, this comes with two-way data binding (one-way is available via the notation `&zwnj;{&zwnj;{&zwnj;:&zwnj;:&zwnj;name&zwnj;}&zwnj;}&zwnj;`); immediately, the utility of Angular is obvious and powerful.
+Out of the box, this comes with two-way data binding (one-way is available via the notation `{`&zwnj;`{::name}}`); immediately, the utility of Angular is obvious and powerful.
 
 We also had immediate access to many things like some really powerful filters and directives, many of the common ones were [already available for us](https://jsfiddle.net/edm00se/L3tykzrt/):
 
