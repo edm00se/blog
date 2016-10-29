@@ -17,7 +17,7 @@ I'm on Notes in 9 again. This time, I'm back with an introduction to general use
 Head over to [Notes in 9.com](http://www.notesin9.com/2016/02/24/notes-in-9-189-introduction-to-sonarqube-with-a-side-of-docker/) to check it out, or watch it embedded here or on YouTube.
 
 <div class="embed-responsive embed-responsive-16by9 center-block">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/vHADaUuJ7eY" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embedded/vHADaUuJ7eY" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### Summary

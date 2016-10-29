@@ -100,7 +100,7 @@ This embedded example has multiple sets of five `h3` tags, each with correspondi
   sandbox="allow-scripts allow-same-origin"
   layout="responsive"
   frameborder="0"
-  src="https://jsfiddle.net/edm00se/q5gffnmt/2/embed/result,html/">
+  src="https://jsfiddle.net/edm00se/q5gffnmt/2/embedded/result,html/">
 </amp-iframe>
 
 If you anticipate certain known points, you can do a couple of things, most of which amounts to either:

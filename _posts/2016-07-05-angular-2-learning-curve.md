@@ -25,7 +25,7 @@ Take a simple "hello world" example, all we need, aside from including the `scri
   sandbox="allow-scripts allow-same-origin"
   layout="responsive"
   frameborder="0"
-  src="https://jsfiddle.net/edm00se/0a0vga0k/embed/result,html/">
+  src="https://jsfiddle.net/edm00se/0a0vga0k/embedded/result,html/">
 </amp-iframe>
 
 This achieved the following:
@@ -42,7 +42,7 @@ We also had immediate access to many things like some really powerful filters an
   sandbox="allow-scripts allow-same-origin"
   layout="responsive"
   frameborder="0"
-  src="https://jsfiddle.net/edm00se/L3tykzrt/embed/result,html/">
+  src="https://jsfiddle.net/edm00se/L3tykzrt/embedded/result,html/">
 </amp-iframe>
 
 We even had the ability to [make use of templates](https://jsfiddle.net/edm00se/qf5trmkn/), either by HTML partials (actual `.html` files) or declaratively, as scripted components (often rather directive looking).
@@ -51,7 +51,7 @@ We even had the ability to [make use of templates](https://jsfiddle.net/edm00se/
   sandbox="allow-scripts allow-same-origin"
   layout="responsive"
   frameborder="0"
-  src="https://jsfiddle.net/edm00se/qf5trmkn/embed/result,html/">
+  src="https://jsfiddle.net/edm00se/qf5trmkn/embedded/result,html/">
 </amp-iframe>
 
 The code samples above are all still fully capable in Angular 2 and I would argue that Angular 2 can do much more than Angular 1.x, but there's a touch more to it. I still think it's fully worth learning Angular 2 and, if you _don't_ know Angular 1.x, my recommendation is to skip it and jump to 2.
