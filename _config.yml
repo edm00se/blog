@@ -54,6 +54,9 @@ kramdown:
   input: GFM
   toc_levels: 1..6
 
+exclude:
+  - _scripts
+
 gems:
   - github-pages
   - jemoji

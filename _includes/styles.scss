@@ -1,7 +1,8 @@
 @import 'bourbon/bourbon';
 @import 'syntax-highlighting';
 
-$grey-color:       #828282;
+$grey-color: #828282;
+$code-bg: #fffeee;
 
 .icon {
 
@@ -553,6 +554,15 @@ body {
       margin-top: 50px;
       margin-bottom: 0px;
       font-family: $font-sans;
+      code {
+        font-size: 80%;
+      }
+    }
+    ul li a code {
+      font-size: 80%;
+    }
+    ul li ul {
+      padding-bottom: initial;
     }
     h3 {
       font-size: 36px;
@@ -787,7 +797,10 @@ code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #eeeeff;
+  background-color: $code-bg; /* #eeeeff; */
+}
+.highlighter-rouge .highlight {
+  background-color: $code-bg;
 }
 
 code {
