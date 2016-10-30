@@ -13,7 +13,7 @@ share: true
 #### Notes in 9 180: Alternative Front-End Development for XPages
 I'm on Notes in 9 again! This is my second video and one where I tried out my new microphone (which I was told was necessary). It's kind of a variety show, but highlights the beauty of a segregated application design. It also shows off a nifty side thing, which is that XPages is now a recognized language/platform/something on GitHub; my efforts in the [pull request to the github/linguist repo](//github.com/github/linguist/pull/2438) was born from my envy of my company's newest web developer's primary background in ColdFusion (another JEE based stack, this one from Adobe) being fully set up before us; we should make the list.
 
-This episode also highlights my ability to mis-speak. I've been working on Notes/Domino, primarily XPages, since November of 2011; I erroneously said fall of 2012 in the video. But hey, you want to see my awesome ways of code-fu, so my ability to speak English should be mildly irrelevant :stuck_out_tongue_winking_eye:.
+This episode also highlights my ability to mis-speak. I've been working on Notes/Domino, primarily XPages, since November of 2011; I erroneously said fall of 2012 in the video. But hey, you want to see my awesome ways of code-fu, so my ability to speak English should be mildly irrelevant 😜.
 
 ### The Video
 Found [on Notes in 9](//www.notesin9.com/2015/09/01/notesin9-180-alternative-frontend-development-for-xpages/) or [on YouTube](//www.youtube.com/watch?v=_lHGZiD-aE0) (including here).

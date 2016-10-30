@@ -29,7 +29,22 @@ For all the ways of loading a JavaScript library into an XPage, I recommend read
 ### Front-End CDN Fallbacks
 Using a CDN always has the possibility, however small that may be depending on who's hosting, that the CDN server will be down, unreachable by the client, or just plain wrong. This is why many who have experienced this pain will create a client-side check to see if their required libraries are loaded and, if not, programmatically loading them from another, known source (e.g.- your hosting server). Here's a snippet from the bottom of an html file, just before the end <\/body> tag, in the style I prefer.
 
-{% gist 003b7306a949bf4b5ab6 %}
+```html
+<!-- attempt to load AngularJS from CDN -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+<!-- if AngularJS fails to load fallback a local version -->
+<script type="text/javascript">
+if(!window.angular){
+	var ang = document.createElement('script');
+	//exlpicit path to server library copy
+	ang.src = "//server.com/libs/angularjs/1.2.19/angular.min.js";
+	// relative path
+	// ang.src = "/libs/angularjs/1.2.19/angular.min.js";
+	document.getElementsByTagName('head')[0].appendChild(ang);
+}
+</script>
+```
 
 In this example, I would load my application logic, as this is an AngularJS driven page, after this block. By pushing the application libraries and app logic files to the end of the html document, I can increase the load time of the structure of the page, while giving the user the visual feedback of a page loading, even if it's before the content is ready. What's happening is that the standard CDN, coming from [Google's Hosted Libraries](http://developers.google.com/speed/libraries/devguide#angularjs), loads first. Then, in the script block, the call against whether the library exists is invoked and, if it is not, loads from the application server instead of the CDN.
 
@@ -43,15 +58,14 @@ To make this entire process happen "the XPages way", we need to move the computa
 
 The approach mirrors [this one for email addresses](http://openntf.org/XSnippets.nsf/snippet.xsp?id=validator-bean-method-for-email-adresses) on XSnippets, created by [Oliver Busse](http://twitter.com/zeromancer1972). Essentially, we're just using the bean to have a persistently available validation method that returns a boolean. The basic structure of the function will go like this:
 
-<pre>
-<code>
+```java
 /**
  * Static method, always takes URL parameter, returns
  * true for successful requests, false for bad ones.
- * 
+ *
  * @param u Url string against which to check.
  * @return boolean of successful check.
- * 
+ *
  */
 public static boolean checkUrl( String u ) {
 	HttpURLConnection.setFollowRedirects(false);
@@ -68,7 +82,6 @@ public static boolean checkUrl( String u ) {
 		return false;
 	}
 }
-</code>
-</pre>
+```
 
 Now, to avoid the hammering of Google's CDN every time a user loads a page, the scope for the bean version of this would be session based.
