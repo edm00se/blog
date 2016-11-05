@@ -30,6 +30,24 @@
   <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/assets/images/apple-touch-icon-144x144-precomposed.png" />
 
+  {% if site.twitter_username %}<!-- Twitter Cards -->
+  {% if page.imagefeature %}<meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}/images/{{ page.imagefeature }}">
+  {% else %}<meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}">{% endif %}
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@{{ site.owner.twitter }}">{% endif %}
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.imagefeature %}<meta property="og:image" content="{{ site.url }}{{ page.imagefeature }}">{% else %}<meta property="og:image" content="{{ site.baseurl }}/{{ site.default_bg }}">{% endif %}
+
   <script type="application/ld+json">
   {% include metadata.json %}
   </script>

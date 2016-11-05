@@ -18,7 +18,7 @@ Building on what I've been talking about recently, between a greater understandi
 {% include tweet.html id="664661632337997824" %}
 
 ### Ultra Nerdy
-How nerdy was it? We'll get to that by the end and I'll let you be the judge. The problem I was faced with was that I was working on reconciling some content for a side project, which is in [markdown](https://help.github.com/articles/markdown-basics/) (md). The content I needed to update was a number of emojis which had been rendered via a plugin, which would recognize the short name inside of a colons. For example `:​smile​:` which becomes :smile:, as you can see in [this blog post's source](https://github.com/edm00se/DevBlog/edit/master/_posts/2016-02-26-going-super-nerd.md#ultra-nerdy) vs the rendered content here. The plugin isn't available for the destination, but like all Markdown, will render in HTML. While I may be packaging what I've done up for a plugin for that environment _now_, the same functionality wasn't there when I started, so I had to DIY.
+How nerdy was it? We'll get to that by the end and I'll let you be the judge. The problem I was faced with was that I was working on reconciling some content for a side project, which is in [markdown](https://help.github.com/articles/markdown-basics/) (md). The content I needed to update was a number of emojis which had been rendered via a plugin, which would recognize the short name inside of a colons. For example `:​smile​:` which becomes 🙂, as you can see in [this blog post's source](https://github.com/edm00se/DevBlog/edit/master/_posts/2016-02-26-going-super-nerd.md#ultra-nerdy) vs the rendered content here. The plugin isn't available for the destination, but like all Markdown, will render in HTML. While I may be packaging what I've done up for a plugin for that environment _now_, the same functionality wasn't there when I started, so I had to DIY.
 
 Ultimately, my task was to:
 
@@ -165,7 +165,12 @@ To add it into my build task, after calling my `npm install` (and `gitbook insta
 ### One Step Further
 Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](http://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners](http://localhost:3000/task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and...  you get the picture, just check the readme's badges at the top.
 
-[![NPM](https://nodei.co/npm/emoji-transmogrifier.png)](https://nodei.co/npm/emoji-transmogrifier/)
+<a href="http://npm.im/emoji-transmogrifier">
+  <amp-img src="https://badge.fury.io/js/emoji-transmogrifier.svg"
+  alt="NPM"
+  layout="responsive"
+  width="126" height="20"></amp-img>
+</a>
 
 ### Another Step Further
 This is an update to the original article, expanding on some further developments that didn't quite warrant their own post.

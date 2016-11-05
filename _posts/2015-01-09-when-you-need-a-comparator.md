@@ -27,13 +27,13 @@ The HTML select (&lt;select&gt;) element represents a control that presents a me
   src="https://jsfiddle.net/edm00se/acchh2kv/embedded/result,html/">
 </amp-iframe>
 
-But you're here for the code. Here's an incredibly simple select tag implemented with three options. If you switch to the HTML pane, you'll see that the value (which is what can be data bound for value in the _xp:comboBox_ control) is 1, 2, or 3 while the labels are their English equivalent of One, Two, or Three. In classic Notes, we would achieve this by the usual list (line separated) by passing in sets of _Label &#124; Value_, separated by the pipe character. You can still do this in XPages, but if you're defining the source for one in a bean, you'll want to build out your List<SelectItem>. My sample class below shows this, but the meat and potatoes here is the Comparator.
+But you're here for the code. Here's an incredibly simple select tag implemented with three options. If you switch to the HTML pane, you'll see that the value (which is what can be data bound for value in the `xp:comboBox` control) is 1, 2, or 3 while the labels are their English equivalent of One, Two, or Three. In classic Notes, we would achieve this by the usual list (line separated) by passing in sets of _Label &#124; Value_, separated by the pipe character. You can still do this in XPages, but if you're defining the source for one in a bean, you'll want to build out your List&lt;SelectItem&gt;. My sample class below shows this, but the meat and potatoes here is the Comparator.
 
 ### A Comparator
 Enter [java.util.Comparator](//docs.oracle.com/javase/7/docs/api/java/util/Comparator.html). It's a member of the Collections Framework, making it ideal for sorting Collections (which a List is). So, to begin, we'll define a class (you can nest it in another class, as I have, a stand-alone class, or a member of another, utility class). This class contains a single, public compare method, which returns an int. It returns an int, as that's what's returned by the [compareToIgnoreCase method of java.lang.String](//docs.oracle.com/javase/7/docs/api/java/lang/String.html#compareToIgnoreCase(java.lang.String)). All the compare method is doing is comparing whether the first string is before or after the second string.
 
 ### Code
-Here's my super simple sample bean, with the _selectOptionsList_ being read-only (no setter method) as it's just the _selectedOption_ being what the value to be stored is.
+Here's my super simple sample bean, with the `selectOptionsList` being read-only (no setter method) as it's just the `selectedOption` being what the value to be stored is.
 
 ```java
 package com.eric.test;
@@ -50,14 +50,14 @@ public class SampleComparatorUse implements Serializable {
   private static final long serialVersionUID = 1L;
 
   private String selectedOption;
-  private List<SelectItem> selectOptionsList;
+  private List&lt;SelectItem&gt; selectOptionsList;
 
   public SampleComparatorUse() {}
 
   /**
-   * Custom Comparator, for use with sorting (ascending) a List<SelectItem>.
+   * Custom Comparator, for use with sorting (ascending) a List&lt;SelectItem&gt;.
    */
-  private static class LabelAscComparator implements Comparator<SelectItem> {
+  private static class LabelAscComparator implements Comparator&lt;SelectItem&gt; {
     //uses a one-off cmoparison which returns comparison boolean, as int
     public int compare(SelectItem s1, SelectItem s2) {
         //you can also do a case sensitive via s1.getLabel().compareTo(s2.getLabel())
@@ -69,10 +69,10 @@ public class SampleComparatorUse implements Serializable {
    * Getter for Combo Box options, sorted alphabetically ascending
    * by the label. Read-only, as it's a computed value, so no setter.
    */
-  public List<SelectItem> getSelectOptionsList() {
+  public List&lt;SelectItem&gt; getSelectOptionsList() {
 
     if( this.selectOptionsList == null ) {
-      List<SelectItem> options = new ArrayList<SelectItem>();
+      List&lt;SelectItem&gt; options = new ArrayList&lt;SelectItem&gt;();
       //normally I compute this by pulling in values from another source, iterated
       //these are statically added for demonstrative purposes
       options.add(new SelectItem( "value3", "label3" ));
@@ -107,7 +107,7 @@ public class SampleComparatorUse implements Serializable {
 }
 ```
 
-The XPage control implementation is a standard _xp:comboBox_ implemented with the value and select items (options) bound via EL. The value which the user selects is bound to the bean's property of _selectedOption_ while the list of SelectItems (options list, with both value and labels populated) is the _selectOptionsList_ property.
+The XPage control implementation is a standard `xp:comboBox` implemented with the value and select items (options) bound via EL. The value which the user selects is bound to the bean's property of `selectedOption` while the list of SelectItems (options list, with both value and labels populated) is the `selectOptionsList` property.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8">

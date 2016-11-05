@@ -34,7 +34,7 @@ I've been <span data-toggle="tooltip" title="looking at you, David"><s>accused</
 * I'm a developer
 * I only pretend to know admin-y things (to serve my development purposes)
 * I'll try not to bore you with installs and CLI commands that you can read from standard documentation
-* we can still respect each other as developers after my session is done :stuck_out_tongue_winking_eye: (it's about better applications)
+* we can still respect each other as developers after my session is done 😜 (it's about better applications)
 
 ### When
 My session, AD113: Speed Up Your Applications With Nginx and PageSpeed, will be from 3-4pm on Friday, 21-August-2015 in the Congress room. With any luck, that's [congress, as in a '... formal meeting...'](//en.wikipedia.org/wiki/Congress) of highly intelligent developers, not to be confused with [congress](//www.urbandictionary.com/define.php?term=Congress&defid=4452659).

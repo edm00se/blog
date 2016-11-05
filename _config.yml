@@ -10,6 +10,7 @@ title: Dev|Blog
 description: >
   a place for development successes, mistakes, and more
 logo: "/assets/images/logo.svg"
+default_bg: "/assets/images/logo.svg"
 name: 'Eric McCormick'
 bio: >
   A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.

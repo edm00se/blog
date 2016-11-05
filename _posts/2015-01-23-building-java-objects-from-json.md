@@ -134,4 +134,4 @@ The Gson approach is to take in a class definition (or type) as the second param
 ### Why The "New" Way?
 It's obviously more verbose up front, but done the "old" way, I didn't show all the type checks and conversions I would have to do to keep things working as expected. The "new" way defines the data format and ensures consistently well-formed objects; they are POJO instances after all (beans, except for the implementing java.util.Serializable bit, as we are using getter/setter methods).
 
-You've defined the format and instantiated data object, meaning that now all you need to do is use the standard EL get/set<PropertyName> to interact with the data. That's it, you're done!
+You've defined the format and instantiated data object, meaning that now all you need to do is use the standard EL get/set&lt;PropertyName&gt; to interact with the data. That's it, you're done!
