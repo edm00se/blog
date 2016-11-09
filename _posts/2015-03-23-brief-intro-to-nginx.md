@@ -49,33 +49,7 @@ The config file contains a _server_ block, inside which is a _location /_ block.
 
 ### Sample Nginx.conf
 
-```javascript
-...
-server {
-        listen       80;
-        server_name  localhost;
-
-        # adds gzip options
-        gzip on;
-	gzip_types      text/css text/plain text/xml application/xml application/javascript application/x-javascript text/javascript application/json text/x-json;
-	gzip_proxied    no-store no-cache private expired auth;
-	#gzip_min_length 1000;
-	gzip_disable     "MSIE [1-6]\.";
-
-        ...
-
-	location / {
-		# Backend server to forward requests to/from
-		proxy_pass          http://127.0.0.1:8080;
-		proxy_http_version  1.1;
-
-		# adds gzip
-		gzip_static on;
-
-	}
-	...
-...
-```
+{% include gist.html id="306e8dacaac50ec49e56" file="nginx.conf" %}
 
 ### My Speed Claim
 I tweeted a pretty strong sounding result. In fact, I believe that my DDE local web preview being freshly restarted was part of the ridiculously long response for my data set, but there was still a significant improvement of around 400-500ms (down from just over a full second to just over half of one); which shows the improvements gained from *gzip*ing the static elements.

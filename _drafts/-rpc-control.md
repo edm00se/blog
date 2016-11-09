@@ -5,7 +5,7 @@ title: "The JSON RPC Control"
 description: "my growing affection for an otherwise neglected control"
 category: xpages
 tags: [xpages, rpc, ajax, code-for-tim]
-modified: 2016-11-08
+modified: 2016-11-09
 comments: true
 share: true
 ---
@@ -19,10 +19,9 @@ What follows is an attempt at summarizing some of the information, much of which
 [The JSON RPC control for XPages](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/The_JSON_RPC_Service), `xe:jsonRpcService`, renders a JavaScript (client-side) handle with methods (`xe:remoteMethod`) defined; these methods can take arguments. The control's service  communicates back to the server and returns to the browser purely in JSON content (specifically `text/json;charset=utf8`, according to DevTools), which makes for a rather lightweight implementation, which I always enjoy; there is elegance in simplicity.
 
 #### RPC (Remote Procedure Call)
-<figure>
-"In distributed computing a remote procedure call (RPC) is when a computer program causes a procedure (subroutine) to execute in another address space (commonly on another computer on a shared network), which is coded as if it were a normal (local) procedure call, without the programmer explicitly coding the details for the remote interaction."
-<figcaption><a href="https://wikipedia.org/wiki/Remote_procedure_call">source: wikipedia.org</a></figcaption>
-</figure>
+
+> In distributed computing a remote procedure call (RPC) is when a computer program causes a procedure (subroutine) to execute in another address space (commonly on another computer on a shared network), which is coded as if it were a normal (local) procedure call, without the programmer explicitly coding the details for the remote interaction.
+> <figcaption><a href="https://wikipedia.org/wiki/Remote_procedure_call">source: wikipedia.org</a></figcaption>
 
 An RPC service is created to provide seamless, nuance-free, access to a remotely held and executed operation (subroutine, function, procedure; call it what you will) and allow invocation as a means of increasing access from a different entry point. Ultimately, what this really should mean to us is that we have a nicely packaged, (client-side) JavaScript accessible way to invoke our code or operations from SSJS or Java, in an _asynchronous_ fashion. This is really the key, in my opinion, as some people differentiate an RPC from a normal call as being a "fire and forget", without a return consideration; this is not part of any standard I can find and the RPC control (plus generated service) provides us a response; that came up, more on that below.
 

@@ -16,38 +16,7 @@ The Notes/Domino API is, to be polite, nuanced. It produces interesting results 
 
 Unbeknownst to me, Mark Leusink must have felt the same, as he posted a helper function to convert any value to an `Array` in his [$U.toArray XSnippet from December 2, 2011](http://openntf.org/XSnippets.nsf/snippet.xsp?id=convert-any-value-to-an-array). Since I didn't find XSnippets (somehow, I'm not certain how), I created my own version working directly with `java.util.Vector` s. I believe there is still merit to this, as when it performs the typeof, if it's already a `java.util.Vector`, it does no conversion, as opposed to invoking an additional `toArray()` call. My version also makes use of a switch block, which means that it handles unexpected results, in my opinion, somewhat gracefully. Have a look.
 
-```javascript
-var util = {
-  /**
-   * @author Eric McCormick
-   * src: http://edm00se.github.io/DevBlog/xpages/consistent-multivalue-formatting/
-   * @param java.util.Object to examine
-   * @return java.util.Vector of values from originating Object
-   **/
-  asVec: function(obj){
-    switch(typeof obj){
-      case "java.util.Vector": //it's already a Vector, just return it
-        return obj;
-        break;
-      case "java.util.ArrayList": //it's an ArrayList, return it as a Vector
-      case "Array": //it's an Array prototype, return it as a Vector
-        var x:java.util.Vector = new java.util.Vector();
-        var s = obj.size()||obj.length;
-        for(var i=0; i<s; i++){
-          x.add(obj[i]);
-        }
-        return x;
-        break;
-      case "java.lang.String":
-      default: //it's most likely a String, return it as a Vector
-        var x:java.util.Vector = new java.util.Vector();
-        x.add(obj);
-        return x;
-        break;
-    }
-  }
-};
-```
+{% include gist.html id="8301433" %}
 
 The first case executes and, knowing that it's in the end format, merely returns it immediately. The second and third case are handled the same, regardless of the differences between a `java.util.ArrayList` and `Array`, their values are still accessible via bracket notation, making the operations performed, with the exception of `.size()` versus `.length` call, the same.
 

@@ -37,24 +37,7 @@ The core connection component here is [the `jt400.jar`](http://jt400.sourceforge
 #### Data Connection Config
 For the config of connection, we'll want to establish the url to the IBM i, the path to the `lib/jt400.jar`, driver name (provided), and a valid user name and password. This is exported as an object, making it directly usable in the data handling (`util`) module, it's been pulled in via a `require` statement. You can see that I'm again using a number of environment variables to assign things like the url property, or username or password. My example has fail-over values, but it's best to keep those separate from the code base.
 
-```javascript
-var path = require('path');
-
-var jarFilePath = path.join(__dirname, '../lib', 'jt400.jar');
-var driverNm = 'com.ibm.as400.access.AS400JDBCDriver';
-var addr = process.env.URL || 'as400://ibmi.fullyqualifiedname.com';
-var uName = process.env.ISERIES_USER_NAME || 'user';
-var pWord = process.env.ISERIES_PASSWORD || 'secret';
-
-// a config object w/ specifics for the connection
-module.exports = {
-  libpath: jarFilePath,
-  drivername: driverNm,
-  url: addr,
-  user: uName,
-  password: pWord,
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="i-config_db.js" %}
 
 #### Data Service
 Next, I defined a common connection closing function, then two functions for the actual SQL statement handling; that's because this package has two separate methods. One is for queries (e.g.- `SELECT * FROM ...`) and one for updates (either `UPDATE` or `INSERT` operations); per the npm package documentation.
@@ -63,81 +46,7 @@ I wrapped up those functions using a common function for both initializing a con
 
 Lastly, I export those two primary functions as a JS object (as methods) to be called via their require statement in my `routes` files.
 
-```javascript
-var jdbc = new ( require('jdbc-pro') );
-var dbConf = require('../config/db.js');
-
-// handler to initialize the connection
-function initCon(cb){
-  jdbc.initialize(dbConf, function(err, res) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Connection initialized successfully!");
-      cb(null);
-    }
-  });
-};
-
-// handler to close the connection
-function closeCon(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log("Connection closed successfully!");
-  }
-};
-
-// wrapping the func, passing results or error via callback
-function getQueryResults(sql,cb){
-  initCon(function(err){
-    if(err){
-      console.log(err);
-    } else {
-      jdbc.open(function(err, conn) {
-        if (conn) {
-          // perform passed SQL statement, SELECT statement
-          jdbc.executeQuery(sql, function(err, results) {
-            if(err){
-              console.log(err);
-              cb(err,null);
-            } else {
-              cb(null,results);
-            }
-            closeCon(); // lastly, close the connection
-          });
-        }
-      });
-    }
-  });
-};
-
-// separately wrapped func for UPDATE or INSERT
-function getUpdateResults(sql,cb){
-  initCon(function(err){
-    jdbc.open(function(err, conn) {
-      if (conn) {
-        // perform passed SQL statement, INSERT or UPDATE
-        jdbc.executeUpdate(sql, function(err, results) {
-          if(err){
-            console.log(err);
-            cb(err,null);
-          } else {
-            cb(null,results);
-          }
-          closeCon();
-        });
-      }
-    });
-  });
-};
-
-// exporting what we care about in a structured format
-module.exports = {
-  query: getQueryResults,
-  update: getUpdateResults
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="i-util_index.js" %}
 
 #### Use
 Now that my connections are configured and my data handling is provisioned, all I need to do is invoke it in my various `routes`. As you can see from my data `util` module, the exposed `query` method is simple enough to use:
@@ -149,31 +58,7 @@ Now that my connections are configured and my data handling is provisioned, all 
 
 This way, if the error handle is null, it will not execute the error block, and vice versa. At this point, I hope the up-front modularizing is starting to show off its utility, as the implementation is about as simple as you can get.
 
-```javascript
-var util = require('../util');
-
-module.exports = function (app) {
-
-    app.get("/beers", function(req, res, next){
-      var resp = {};
-      util.query("SELECT * FROM beers", function(err, data){
-        if(err){
-          resp = {
-            "error": true,
-            "message": err
-          };
-        } else {
-          resp = {
-            "error": false,
-            "data": data
-          };
-        }
-      });
-        res.jsonp(resp);
-    });
-
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="i-routes_beers.js" %}
 
 The other available `routes` all get updated as well, but they're virtually identical, save for the specifics of the SQL query.
 

@@ -115,36 +115,7 @@ grunt.registerTask('default', ['jshint','other tasks you want to include in the 
 
 Here's how it looks all together for a basic structure (just count to 5):
 
-```javascript
-// 1 our wrapper function (required by grunt and its plugins)
-module.exports = function(grunt) {
-
-  // 2 CONFIGURE GRUNT
-  grunt.initConfig({
-
-    // 3 define individual tasks
-
-    // get the configuration info from package.json
-    pkg: grunt.file.readJSON('package.json'),
-
-    // configure plugin with information, sample here is jshint, which doesn't like my code
-    jshint: {
-      options: {
-        reporter: require('jshint-stylish')
-      },
-      all: ['Grunfile.js', '**/*.js']
-    }
-
-  });
-
-  // 4 LOAD GRUNT PLUGINS
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-
-  // 5 REGISTER TASKS, start with 'default'
-  grunt.registerTask('default', ['jshint','other task defined above']);
-
-};
-```
+{% include gist.html id="43fcb3fcac536267440d" file="basicGruntfile.js" %}
 
 #### Setting Up Our Tasks
 So, hopefully by now your mind is awash with thoughts like:
@@ -266,8 +237,8 @@ I initially intended to walk through every bit of my configuration, but instead 
 <figure class="center">
   <amp-img src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif"
   alt="jshint throwing warnings and watching file saves while reloading the browser on save events"
-  height="811" width="1329"
-  layout="fixed"></amp-img>
+  width="1329" height="811"
+  layout="responsive"></amp-img>
  <figcaption>jshint throwing warnings and watching file saves</figcaption>
 </figure>
 

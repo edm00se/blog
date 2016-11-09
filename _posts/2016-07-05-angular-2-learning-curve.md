@@ -29,6 +29,7 @@ Take a simple "hello world" example, all we need, aside from including the `scri
 </amp-iframe>
 
 This achieved the following:
+
 - instantiated (bootstrapped) the application, by binding it to a given element
 - bound a(n interactive, input element with a) data property within the application's `scope` to a key of "name"
 - bound the output of the key to instances of its key name (denoted via &#123;&#123; &#125;&#125;)
@@ -67,6 +68,7 @@ Angular 2 seems to compound this behavior, although I give them significant cred
 I love TypeScript. It solves the "problem" of a non-type'd language like JavaScript, in the world of strongly type'd data and competing languages. It's a natural fit to be used with any modern project, but Angular 2's Quickstart (which is a good one) still makes use of not just TypeScript, but _plenty_ of other dependencies as well.
 
 In fact, it's enough to get ones head spinning, with:
+
 - the many _&#64;angular_ components (eight, aside from _&#64;angular-core_)
 - [systemjs](https://npm.im/systemjs)
 - [core-js](https://npm.im/core-js)
@@ -116,6 +118,7 @@ I skipped over the [rxjs](https://npm.im/rxjs) package, mostly on account of the
 ### Personal Observations
 
 I've been playing with Angular 2 a little bit now, not as much as some in the community, but it has been my observation, that while I'm generally a ready-to-adopt, or at least a willing-to-try-out, sort of developer, my struggles with "getting" Angular 2 revolve specifically around:
+
 - understanding all the different imports and dependencies needed up-front (for normal app-dev workflow)
 - understanding component style development (it's new-ish to me, I'm glad I tried out [vue.js](https://vuejs.org/) first, as it wasn't "foreign")
 - understanding ES6- or TS- specific syntax

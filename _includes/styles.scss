@@ -102,8 +102,10 @@ img {
 
 /* search page styles */
 .search {
-  width: 100%;
-  padding-left: 10px;
+  width: 90%;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
   font-size: 1.5rem;
 }
 .search .search-field {

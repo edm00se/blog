@@ -16,13 +16,7 @@ A while back, I rolled [a personal project](https://github.com/edm00se/personal-
 ### The `.well-known/acme-challenge` Route
 As part of the validation process, the Let's Encrypt / certbot script needs to "call home" to verify your server is who it claims. The exact command I ran with `certbot-auto` followed the format of:
 
-```sh
-# lines broken apart for readability
-./certbot-auto certonly \
-  --manual \
-  --email <my.email@some.com> \
-  -d <my-domain-name> --agree-tos
-```
+{% include gist.html id="3bc4043c19537dd3958c7af42a9618d6" file="certbot-script.sh" %}
 
 \*note: you can add `--dry-run` to the end to... perform a "dry run"
 
@@ -38,12 +32,7 @@ Here's what it looks like when I ran the `certbot-auto` script:
 
 Marky's example shows handle established in his Node + Express app, providing a response on the given relative path of `<domain>/.well-known/acme-challenge/<uuid-string>`. This is something that would require manual updating of the code base, so it's naturally the first thing I removed. This was a perfect job for a pair of environment variables, in my opinion. I [implemented it in the code as such](https://github.com/edm00se/personal-mock-url-shortener/blob/28ea4f1651f2729d466aa7a3bdee4bd11f11ad35/routes/index.js#L8-L10):
 
-```javascript
-app.get('/.well-known/acme-challenge/'+process.env.LETS_ENCRYPT_ROUTE,
-    function(req, res){
-  res.send(process.env.LETS_ENCRYPT_VERIFICATION);
-});
-```
+{% include gist.html id="3bc4043c19537dd3958c7af42a9618d6" file="lets-encrypt-endpoint.js" %}
 
 This means that so long as my Node app can resove the `LETS_ENCRYPT_ROUTE` and `LETS_ENCRYPT_VERIFICATION` values accordingly, I'm in business. This is done rather easily via the "Environment Variables" page of my application's dashboard, in the "user defined" tab.
 

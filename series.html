@@ -1,28 +1,33 @@
 ---
 layout: page
-title: Categories
-permalink: /categories/
-tags: [Categories]
-description: "An index of posts sorted by categories."
-show_in_nav: true
+title: Series
+permalink: /series/
+tags: [Series]
+description: "An index of posts sorted by series."
+show_in_nav: false
 ---
 
-<ul class="tag-box inline">
-{% assign tags_list = site.categories %}
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %}
-      <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
-    {% endfor %}
-  {% else %}
-    {% for tag in tags_list %}
-      <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
-    {% endfor %}
+{% assign my_array = [] %}
+{% for post in site.posts %}
+  {% if post.series %}
+    {% unless my_array contains post.series %}
+        {{ post.series }}
+        {% capture my_array %}{{ my_array | push: post.series }}{% endcapture %}
+    {% endunless %}
   {% endif %}
+{% endfor %}
+{{ my_array | join: ', ' }}
+
+<ul class="tag-box inline">
+{% assign list = site.series %}
+  {% for ser in list %}
+    <li><a href="#{{ ser }}">{{ ser | capitalize }} </a></li>
+  {% endfor %}
 {% assign tags_list = null %}
 </ul>
 
-{% for tag in site.categories %}
-  <h2 id="{{ tag[0] }}" class="cat-header-label">{{ tag[0] | capitalize }}</h2>
+{% for tag in site.series %}
+  <h2 id="{{ tag }}" class="cat-header-label">{{ tag | capitalize }}</h2>
   <ul class="post-list">
     {% assign pages_list = tag[1] %}
     {% assign sorted = (pages_list | sort: 'date') | reverse %}

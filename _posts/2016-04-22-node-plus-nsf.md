@@ -38,71 +38,12 @@ My example is connecting via my local Notes client, which is using my Notes ID (
 #### Data Connection Config
 The main config contains only two things of note, the server (black for local) and file name (accessible via the DOM_SRV and DOM_DB environment variables, respectively).
 
-```javascript
-var srvNm = process.env.DOM_SRV || '';
-var dbNm = process.env.DOM_DB || 'SomeApp.nsf';
-
-module.exports = {
-	db: {server:srvNm,database:dbNm}
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-config_db.js" %}
 
 #### Data Service
 Once again, I'm using a common defined session open and close function (instead of connection init and terminate), with some wrapped functions for the different operations I'm using, passing in what I _need_ to invoke the calls, and passing in the callback function. This is all exported as a module that is consumed in `routes`.
 
-```javascript
-var domino = require('domino-nsf'),
-  config = require('../config/db.js'),
-  db = config.db;
-
-// initialize Session
-function initSession(cb){
-  domino.initSession();
-  cb();
-};
-
-// terminate Session
-function closeSession(){
-  domino.termSession();
-};
-
-// get Document contents by UNID
-function getDocumentByUnid(un,cb){
-  initSession(function(){
-    domino.getDocumentAsync(db,un,function(err,doc){
-      if(!err){
-        cb(null,doc);
-      }else{
-        cb(err);
-        console.log('Error: '+err);
-      }
-      closeSession();
-    });
-  });
-};
-
-// get View contents by View name
-function getViewContents(vw,cb){
-  var vwOb = {view:vw,category:""};
-  initSession(function(){
-    domino.getViewAsync(db,vwOb,function(err,view) {
-      if(!err){
-        cb(null,view);
-      }else{
-        cb(err);
-        console.log('Error: '+err);
-      }
-      closeSession();
-    });
-  });
-};
-
-// exporting what we care about in a structured format
-module.exports = {
-  getView: getViewContents,
-  getDoc: getDocumentByUnid
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-util_index.js" %}
 
 #### Use
 Just the same as last time, now that my connections are configured and my data handling is provisioned, all I need to do is invoke it in my various `routes`. As you can see from my data `util` module, the exposed `query` method is simple enough to use:
@@ -112,31 +53,7 @@ Just the same as last time, now that my connections are configured and my data h
 * passing in the parameter (View name, UNID string) and
 * a function, which has two parameters, error or data
 
-```javascript
-var util = require('../util');
-
-module.exports = function (app) {
-
-    app.get("/beers", function(req, res, next){
-    	var resp = {};
-    	util.getView('beers',function(err,data){
-            if(err){
-                resp = {
-                    "error": true,
-                    "message": err
-                };
-            } else {
-                resp = {
-                    "error": false,
-                    "data": data
-                };
-            }
-            res.jsonp(resp);
-        });
-    });
-
-};
-```
+{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-routes_beers.js" %}
 
 The other available `routes` all get updated as well.
 

@@ -43,50 +43,10 @@ If you would prefer to skip ahead, [just view my blog's pertaining diff](https:/
 I've always found that the simpler an implementation is, the better it holds up. I've included some inline comments to describe the function of each component.
 
 ##### CSS
-```css
-/*
-  * Applies the styles only to elements of .header-link inside of the .post-body, meaning that the rest of my blog's elements will be unaffected.
-  */
-.post-body .header-link {
-  left: -3rem; /* moves the anchor link to the left of the actual header */
-  opacity: 0; /* sets default state to not be shown */
-  transition: opacity 0.2s ease-in-out 0.1s; /* fancy fading in effect */
-  -webkit-transition: opacity 0.2s ease-in-out 0.1s; /* some vendor-specific implementations of the transition property */
-  -moz-transition: opacity 0.2s ease-in-out 0.1s;
-  -ms-transition: opacity 0.2s ease-in-out 0.1s;
-}
-
-/*
- * Defining the showing of the anchor/header links on hover of the h* elements, that are within the .post-body div.
- */
-.post-body h1:hover .header-link,
-.post-body h2:hover .header-link,
-.post-body h3:hover .header-link,
-.post-body h4:hover .header-link,
-.post-body h5:hover .header-link,
-.post-body h6:hover .header-link {
-  opacity: 1; /* show the site anchor */
-}
-```
+{% include gist.html id="5b7b74eaae43598656e614c6d1a53389" file="anchors.css" %}
 
 ##### JS
-```javascript
-/*
- * The corresponding JavaScript component, which only creates the link element in the DOM,
- * with the correct reference to the Font Awesome icon and CSS style class.
- */
- $(document).ready(function() {
-  return $("h2, h3, h4, h5, h6").each(function(i, el) { /* find the h* elements */
-    var $el, icon, id;
-    $el = $(el); /* get a handle on the current element */
-    id = $el.attr('id'); /* grab its id attribute */
-    icon = '<i class="fa fa-link"></i>'; /* define the icon w/ Font Awesome to be added */
-    if (id) {
-      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon)); /* create the link by prepending it to the h* tag */
-    }
-  });
-});
-```
+{% include gist.html id="5b7b74eaae43598656e614c6d1a53389" file="anchors.js" %}
 
 ### Recommendations for Web Applications
 As mentioned before, if there are _consistently availabe_ *id*s, they can be passed between users pretty successfully. If those _id_ attributes are computed dynamically as with XPages controls and elements, this is problematic (but expected, as you could potentially implement a Custom Control multiple times in an XPage, so unique namespaces are required).

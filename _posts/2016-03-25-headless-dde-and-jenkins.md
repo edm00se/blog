@@ -55,90 +55,27 @@ The below are different "build" scripts (some as BASH-like/compatible, one in pa
 #### 1. Metadata Filtering
 If you're unlucky enough to have a large enough Domino application to not want to use Build Automatically in DDE and not be able to benefit from the use of swiper, you'll want to filter your metadata before the headless designer import, as with my experience, dde will choke and create a useless file. This script ensures a fetch from the git remote (origin) and pulls down the specified Jenkins build parameter (`$TAGNAME`) from which to build. It then checks for a `package.json` and `Gruntfile.js` in the project, copying in a boilerplate copy (in [yesterday's blog post]({{ site.url }}/xpages/xsltproc-and-headless-dde/)) and updates the relative ODP (On Disk Project) path, as needed. The boilerplate `Gruntfile.js` assumes an ODP directory of `ODP/`, so the script here is changing that to `NSF/`. Lastly, it runs the install of the npm dependencies; not much, mostly just grunt and a couple grunt plugins.
 
-```sh
-# fetch tags, then checkout the specified tag, by Jenkins param env var
-git fetch
-git checkout $TAGNAME
-
-# check for whether package.json and Gruntfile.js exist, if not, copy them in
-if [[ ! -f package.json ]]; then
-	echo "package.json does not exist, copying one in"
-	cp /c/xsltproc4domino/boilerplate_package.json ./package.json
-fi
-if [[ ! -f Gruntfile.js ]]; then
-	echo "Gruntfile.js does not exist, copying one in"
-	cp /c/xsltproc4domino/boilerplate_Gruntfile.js ./Gruntfile.js
-fi
-
-# if you need to change the ODP path (e.g.- NSF instead of ODP), do so
-sed -i -e 's/\.\/ODP\//\.\/NSF\//g' ./Gruntfile.js
-
-# run npm install and Grunt, for the appropriate xsltproc transform
-npm install
-grunt
-```
+{% include gist.html id="d30002d54e07fe13f2ae" file="1-xsltproc4domino.sh" %}
 
 #### 2. Killing Previous Notes Processes
 This is debatable, but after having no (visually noticeable) notes process running and not seeing any successful builds, I added this to the Jenkins task. I keep a separate "admin" task which is just the [notes client killer](http://www.xpagedeveloper.com/software/client-killer), for emergencies. It's worth noting, the Jenkins instance shouldn't attempt more than one headless dde build at a time.
 
-`"C:\Program Files (x86)\XPageDeveloper\NotesClientKiller\Notes Client Killer.exe" -forceandclean`
+{% include gist.html id="d30002d54e07fe13f2ae" file="2-notesKiller.bat" %}
 
 #### 3. Headless DDE
 Time to build. This is an adapted version of the PowerShell script from Egor Margineanu, which I found out about from Cameron's blog post. Up front, I'm defining the project name, then the build name (which drives off the build number and project name).
 
-```powershell
-$projName="myProj"
-$buildTag=$env:TAGNAME
-$buildTag = $buildTag -replace '\.',''
-# avoid use of hyphens, underscores, or periods/decimals, they shouldn't matter but seem to get in the way
-$buildNum=$env:BUILD_NUMBER
-$buildName=$projName+'BuildNum'+$buildNum
-$workspace=$env:WORKSPACE
-Clear-Content HEADLESS0.log
-$args = '-RPARAMS -console -vmargs -Dcom.ibm.designer.cmd="true,true,'+$buildName+'.nsf,importandbuild,'+$workspace+'\NSF\.project,'+$buildName+'.nsf"'
-Write-Host $args
-$p = Start-Process designer -ArgumentList $args
-$target = 'notes2'
-$process = Get-Process | Where-Object {$_.ProcessName -eq $target}
-do {
-    Get-Content headless0.log -Wait | Select-String "closing designer" | %{ write-host Found $_; break}
-} until($process.HasExited)
-```
+{% include gist.html id="d30002d54e07fe13f2ae" file="3-headlessDDE.ps1" %}
 
 #### 4. Improving Build Status
 I had a few builds get flagged by Jenkins as successful, even though they failed to generate anything worthwhile. To compensate, this script checks for the `HEADLESSS0.log` and checks its contents for "job error", to see if dde is reporting out a failure; it flags the build accordingly.
 
-```sh
-cd "$WORKSPACE"
-
-if [[ -f "HEADLESS0.log" ]]; then
-   echo "'HEADLESS0.log' Exists"
-   if grep -qi "job error" $FILE; then
-      # code if found
-      exit 1
-  else
-      # code if not found
-      exit 0
-  fi
-else
-   echo "'HEADLESS0.log' Does Not Exist"
-   exit 1
-fi
-```
+{% include gist.html id="d30002d54e07fe13f2ae" file="4-setBuildStatus.sh" %}
 
 #### 5. (Optional) Send to SonarQube
 Let's face it, I really like SonarQube. It may not amount to much more than an automated peer review, but that's good and insightful stuff. You can skip this, obviously; mine's (currently) pushing to a docker image on the same PC, [like I demonstrated previously]({{ site.url }}/self-promotion/docker-plus-sonarqube/).
 
-```sh
-if [[ ! -f "sonar-project.properties" ]]; then
-	echo "sonar.projectKey=my:proj" > sonar-project.properties
-	echo "sonar.projectName=myProj" >> sonar-project.properties
-	echo "sonar.projectVersion=myProj-$TAGNAME-BuildNum$BUILD_NUMBER" >> sonar-project.properties
-	echo "sonar.sources=ODP\\Code\\Java\\com" >> sonar-project.properties
-	echo "sonar.sourceEncoding=UTF-8" >> sonar-project.properties
-fi
-sonar-runner
-```
+{% include gist.html id="d30002d54e07fe13f2ae" file="5-sonar.sh" %}
 
 ### Summary
 All in all, this is a big topic, but full of incredibly useful potential for those of us looking to "level up" our development workflows. Automation is king, in IT much in the same way that my accounting professor would exclaim "cash is king"; in my opinion. The more we can automate, the more we can focus on _actual development_.

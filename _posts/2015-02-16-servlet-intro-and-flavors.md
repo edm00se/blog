@@ -35,58 +35,7 @@ Note: I'm not covering implementation in this post, that will be covered in the 
 #### HttpServlet
 Probably the easiest to implement, to write the servlet, one must write a class which extends `HttpServlet`. This class can contain override methods for init and destroy and exposes the methods (VERBs such as GET, POST, PUT, and DELETE) available via `do*` methods (`doGet`, `doPost`, `doPut`, and `doDelete`). A servlet needs to provide its response in either a response writer or output stream. Have a look, this is a fully functioning, albeit simple, servlet.
 
-```java
-package com.hello.servlets;
-
-import java.io.PrintWriter;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-/**
- * Example Servlet, implemented as 'vanilla'
- * HttpServlet. Many non-Domino Java Servlets
- * implement HttpServlet.
- *
- * @author Eric McCormick, @edm00se
- *
- */
-public class ExampleHttpServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 1L;
-
-    @Override
-  public void init () {
-
-    }
-
-    @Override
-  public void destroy () {
-
-    }
-
-    @Override
-  protected void doGet (HttpServletRequest req, HttpServletResponse res) {
-        HttpServletRequest _req = req;
-        HttpServletResponse _res = res;
-        PrintWriter out = null;
-        try{
-            _res.setContentType("text/plain");
-            out = _res.getWriter();
-            out.println("Servlet Running");
-            out.println("You executed a "+_req.getMethod().toString()+" request.");
-        }catch(Exception e){
-            if(out!=null){
-                out.println("Sorry, an error occurred...");
-            }
-        }finally{
-            out.close();
-        }
-    }
-
-}
-```
+{% include gist.html id="fd47302a1918c93a262f" file="com.hello.servlets.ExampleHttpServlet.java" %}
 
 Hopefully this seems familiar, even if it's a new format. As you can see, I've only exposed GET as an available method against this servlet. You can provide the others via the `do*` methods or, you can specifically lock them down by providing a response code of `405` (method not allowed) with any additional information, error or other descriptive message. It's worth note that the only `do*` methods specifically available are `doGet`, `doPost`, `doPut`, and `doDelete`. To override this and provide, say, PATCH, as an available method, you would need to override the behavior offered by the default service method. This comes into play in the next approach, but we'll get there in a second.
 
@@ -95,177 +44,20 @@ An `HttpServlet` is exactly what it claims, but probably isn't the best option f
 #### DesignerFacesServlet
 So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there 😉. Some of the benefits include access to *Scope'd variables and any managed beans.
 
-```java
-package com.hello.servlets;
-
-import java.io.IOException;
-import java.io.PrintStream;
-import java.util.Map;
-
-import javax.faces.context.FacesContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.ibm.xsp.webapp.DesignerFacesServlet;
-
-/**
- * Example servlet showing the use of access to FacesContext.
- * This was originally blogged about by Jesse Gallagher and
- * is a near duplicate class.
- * src: https://frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1
- */
-public class ExampleServlet extends DesignerFacesServlet {
-  private static final long serialVersionUID = 1L;
-
-  @SuppressWarnings("unchecked")
-  @Override
-  public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-    // Set up handy environment variables
-    HttpServletRequest req = (HttpServletRequest)servletRequest;
-    HttpServletResponse res = (HttpServletResponse)servletResponse;
-    ServletOutputStream out = res.getOutputStream();
-    FacesContext facesContext = this.getFacesContext(req, res);
-
-    try {
-      res.setContentType("text/plain");
-
-      out.println("start");
-
-      // The sessionScope is available via the ExternalContext. Resolving the variable
-      //  would work as well
-      Map<Object, Object> sessionScope = facesContext.getExternalContext().getSessionMap();
-      // ... this is showing how we can get facesContext and *scope variables inside the servlet
-
-      out.println("done");
-
-    } catch(Exception e) {
-      // hit an error, dump out whatever is there
-      e.printStackTrace(new PrintStream(out));
-    } finally {
-      out.close();
-
-      // It shouldn't be null if things are going well, but a check never hurt
-      if(facesContext != null) {
-        //complete the response and release the handle on the FacesContext instance
-        facesContext.responseComplete();
-        facesContext.release();
-      }
-    }
-  }
-
-  /**
-   * @return FacesContext currentInstance
-   */
-  public static FacesContext getFacesContext() {
-    return FacesContext.getCurrentInstance();
-  }
-}
-```
+{% include gist.html id="fd47302a1918c93a262f" file="com.hello.servlets.ExampleDesignerFacesServlet.java" %}
 
 You can take note that we're being sure not just to close the output stream, but also the mark the `FacesContext` handle as `responseComplete` and releasing it back into the wild; **do not forget to do this**; this is implied for each and every response operation you provide.
 
 The largest thing to note is, as mentioned above, we're overriding the `service` method. This means that, by default, our accessing of the end point `happens` to be a GET. We need to provide for the response handling based on the request method. It would go something like this:
 
-```java
-String reqMethod = req.getMethod();
-
-if( reqMethod.equals("GET") ) {
-  try {
-    out.println("doing something with my GET");
-    } catch (Exception e) {
-      e.printStackTrace();
-      out.println(e.toString());
-    } finally {
-      facesContext.responseComplete();
-      facesContext.release();
-      out.close();
-    }
-} else if( reqMethod.equals("POST") ) {
-  try {
-    out.println("doing something with my POST");
-    } catch (Exception e) {
-      e.printStackTrace();
-      out.println(e.toString());
-    } finally {
-      facesContext.responseComplete();
-      facesContext.release();
-      out.close();
-    }
-}
-```
+{% include gist.html id="fd47302a1918c93a262f" file="partialMethodCheck.java" %}
 
 The tedium of always adding a `try`/`catch` block with `finally` blocks to `close` the output and mark the `FacesContext` as `responseComplete` and performing the `release` is exactly the sort of thing that we as developers like to automate, by abstracting.
 
 #### AbstractXSPServlet
 This is the third flavor; it extends and, ultimately, is a `DesignerFacesServlet`, but by using an abstracted Servlet class, we can automate each of `out.close()`, `facesContext.responseComplete()`, and `facesContext.release()`, with each response, with minimal hassle. Jesse came up with this and I've pulled a copy for my use [directly from his frostillic.us framework](//github.com/jesse-gallagher/XPages-Scaffolding/blob/master/frostillicus.framework.plugin/src/frostillicus/xsp/servlet/AbstractXSPServlet.java) for use in my own code base. I recommend you have a read and grab a copy. Essentially, as Jesse shows in his [part 7 of his building an app with the frostillic.us framework](//frostillic.us/blog/posts/D815DC7ED059395885257D6B00001006), all that's needed is to build a class to extend `AbstractXSPServlet` and override the `doService` method, which is wrapper with the necessary `out.close()`, `facesContext.responseComplete()`, and `facesContext.release()`, for each response. This means our servlet class only has to contain what we need it to. Also note that I'm starting to define my response code for each of the non-GET methods.
 
-```java
-package com.hello.servlets;
-
-import java.util.Enumeration;
-
-import javax.faces.context.FacesContext;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.ibm.commons.util.StringUtil;
-
-import frostillicus.xsp.servlet.AbstractXSPServlet;
-
-/**
- * Example Servlet implementing AbstractXSPServlet,
- * from Jesse Gallagher.
- *
- * @author Eric McCormick, @edm00se
- *
- */
-public class ExampleAbstractedServlet extends AbstractXSPServlet {
-
-  /* (non-Javadoc)
-   * @see frostillicus.xsp.servlet.AbstractXSPServlet#doService(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.faces.context.FacesContext, javax.servlet.ServletOutputStream)
-   */
-  @Override
-  protected void doService(HttpServletRequest req, HttpServletResponse res,
-      FacesContext facesContext, ServletOutputStream out)
-      throws Exception {
-
-        res.setContentType("text/plain");
-
-          String reqMethod = req.getMethod();
-
-          if( reqMethod.equals("GET") ) {
-
-          out.println("doing something with GET");
-
-          } else if( reqMethod.equals("POST") ) {
-            res.setStatus(200); // OK
-            out.println("doing something with POST");
-
-          } else if( reqMethod.equals("PUT") ) {
-            res.setStatus(200); // OK
-            out.println("doing something with PUT");
-
-          } else if( reqMethod.equals("DELETE") ) {
-            res.setStatus(200); // OK
-            out.println("doing something with DELETE");
-
-          } else if( reqMethod.equals("PATCH") ) {
-            res.setStatus(200); // OK
-            out.println("doing something with PATCH");
-
-          } else {
-            res.setStatus(405); // method not allowed
-            out.println("what the devil are you trying to do, break the server?");
-          }
-  }
-
-}
-```
+{% include gist.html id="fd47302a1918c93a262f" file="com.hello.servlets.ExampleAbstractedServlet.java" %}
 
 ##### Summary
 The big take away here is a common base of reference. Going forward, I'll be implementing Jesse's AbstractXSPServlet, which looks and acts differently than just a DesignerFacesServlet or HttpServlet. I recommend you examine what best fits your needs, but I think you should be happy with what it provides.
