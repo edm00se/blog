@@ -7,7 +7,7 @@ description: "Posts about JSON generation and consumption in Java in IBM Domino/
 series: json-with-java-in-xpages
 ---
 
-<h2 id="seriesTitle" style="color: #c91b26">Series on JSON Data with Java in XPages</h2>
+<h2 id="seriesTitle">Series on JSON Data with Java in XPages</h2>
 <ul class="post-list">
   <li>
       <a href="https://edm00se.io/xpages/rest-consumption-server-side">REST Consumption in Java on Domino
