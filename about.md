@@ -14,7 +14,7 @@ show_in_nav: true
 
 A full-stack developer, I have an passion for application structure, framework adoption, automation in tooling and deployment. My stack is generally either a Java plus RESTful API focused approach on IBM's Domino/XPages platform or Node with Express for a similar front-end.
 
-[Git](https://git-scm.com/) for life.
+Do you have questions for me that don't fit in this blog? You can [AMA, ask me (nearly) anything via an issue on GitHub](https://github.com/edm00se/ama).
 
 <!--
 I've had the honor of being [named an IBM Champion for 2015](/self-promotion/they-made-me-a-champion) [and 2016](https://www.ibm.com/developerworks/community/blogs/ibmchampion/entry/Announcing_the_IBM_Champion_Class_of_2016_for_IBM_Social_Business?lang=en) (in Collaboration Solutions).

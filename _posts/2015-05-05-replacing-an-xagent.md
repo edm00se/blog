@@ -17,7 +17,7 @@ share: true
 
 ☀️ 🍹 🎊 🍻 🎉
 
-It's been a little longer to get to this installment of my [Saga of Servlets series](//localhost:4000/servlet-series), but I guess that happens when things like the day job pick up with trouble shooting server issues and family life all seem to get in the way.
+It's been a little longer to get to this installment of my [Saga of Servlets series]({{ site.url }}/servlet-series), but I guess that happens when things like the day job pick up with trouble shooting server issues and family life all seem to get in the way.
 
 ### Intro
 This isn't the most "developer sexy" topic, but I hope is worthwhile (and something I promised would be in this series).

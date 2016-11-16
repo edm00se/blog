@@ -64,7 +64,7 @@ App Running on Bluemix: [iceandfire.mybluemix.net](http://iceandfire.mybluemix.n
 
 App (and data ODP) repository:
 
-<amp-iframe width=160 height=30
+<amp-iframe width="160" height="30"
     sandbox="allow-scripts allow-same-origin"
     layout="responsive"
     frameborder="0"

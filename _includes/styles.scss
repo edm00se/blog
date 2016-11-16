@@ -674,6 +674,22 @@ body {
     ol li {
       list-style-type: decimal;
     }
+    .flex-row-center {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+
+      figure {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+    }
   }
   .bottom-teaser {
     padding: 50px 0 0 0;
