@@ -18,6 +18,14 @@ As a video counterpart to the my [series on servlets]({{ site.url }}/servlet-ser
 1. it's an alternative to reading my (occasionally quite lengthy) blog posts; reading isn't for everyone
 2. it lets me give back to the same community that helped me not sink in my foray into Domino/XPages development
 
+<div class="center">
+  <amp-youtube
+    data-videoid="stJ3Yc1BOnU"
+    layout="responsive"
+    width="560" height="315">
+  </amp-youtube>
+</div>
+
 ### A Community That Cares
 I've mentioned before a great love of the XPages development community. There are a number of others who have been at this far longer than I who have aided my adoption of Domino/XPages in a way I didn't expect. Several months ago, David Leedy called for those with something to contribute to do so, as he periodically does in his plugs before and after the demos of the Notesin9 videos, and it struck home. I was starting to hit a stride in what I've been developing as the development plan for our how we conduct web app development here, and I thought what I had to share might be worthwhile. Some of my blogs posts have been mixed, those I wish to one day revisit and be a bit clearer on, some have been pretty excellent. In the end, I just hope they help a couple people out and maybe help give a base line on things like servlets for our community to reference.
 
