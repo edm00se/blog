@@ -12,6 +12,9 @@ description: >
 logo: "/assets/images/logo.svg"
 default_bg: "/assets/images/logo.svg"
 name: 'Eric McCormick'
+email: ''
+contact_link: 'https://edm00.se/email'
+ama: 'https://github.com/edm00se/ama'
 bio: >
   A full stack web developer who spends his days working on IBM's Domino and XPages platform and has a passion for Node and front-end frameworks and tooling.
 baseurl: "" # the subpath of your site, e.g. /blog

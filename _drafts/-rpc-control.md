@@ -5,7 +5,7 @@ title: "The JSON RPC Control"
 description: "my growing affection for an otherwise neglected control"
 category: xpages
 tags: [xpages, rpc, ajax, code-for-tim]
-modified: 2016-11-09
+modified: 2016-11-29
 comments: true
 share: true
 ---
@@ -29,18 +29,24 @@ An RPC service is created to provide seamless, nuance-free, access to a remotely
 Comparing the RPC control to other XPages controls can be a bit tricky, especially as the closest thing to it, in my opinion, is the REST control (`xe:restService`); it gets tricky as they both provide (client-side) JavaScript access to server-side operations/data, yet the way we go about accessing them can be quite different. We generally talk about data via a RESTful service in a collection vs record fashion, with changes being submitted in whole or part based on what we expose for an endpoint and available method (`PUT` vs `PATCH`, etc.). When it comes to the RPC control, we're instead invoking an operation and expecting back only that which we tell it to; a minimum of a success `boolean`.
 
 #### A Note on Return
-Always be sure to return a value. At first, I hooked my newly created RPC control's first method to a setter from a managed bean. This is fine and all, but generally setters, especially those auto-generated, "return" `void`, or nothing. This meant that my RPC method was returning a generic looking `error 400` on any request, including those that were succeeding action on the server. Once I changed the return type to `boolean` and changed my setter to treat the returned value as a value of success of the operation (e.g.- initiate at the beginning of the method as `false`, if you process all the way through to prior to the return without error, set to `true`), then my RPC started behaving as expected and stopped throwing errors to the client-side.
+Always be sure to return a value. At first, I hooked my newly created RPC control's first method to a setter from a managed bean. This is fine and all, but generally setters, especially those auto-generated, "return" `void`, or nothing. This meant that my RPC method was returning a generic looking `error 400` on any request, including those that were succeeding action on the server. Once I changed the return type to `boolean` and changed my setter to treat the returned value as a value of success of the operation (e.g.- initiate at the beginning of the method as `false`, if you process all the way through to prior to the return without error, set to `true`, or force `false` in the event of any captured error event), then my RPC started behaving as expected and stopped throwing errors to the client-side.
 
 #### Considerations
-asdf
+I believe that this is a service/control most useful for situations when an update to the server and response are needed, in an XPage, without the traditional AJAX-y, `XSP.partialRefresh[Get|Post]` style behavior. To phrase it another way, we're not executing the update of DOM elements, which are normally handled via their bound computations (or getter/setter methods), but rather we're performing a programmatic interaction with the server, with our own defined logic; this _may_ involve updating the DOM, but we get full control over the lifecycle. This isn't a control for every situation, but it certainly handy when it's useful. The largest differentiator in my head is that unlike the REST control (`xe:restService`), or any RESTful API, is that instead of performing an action _statelessly_ (against either collection or record/entry by ID), we're fully able to act _statefully_, in a way configured to our preference. There may be a more technical definition or a more fine line that's being tread, this is just my take away.
 
-#### References
-- https://www-10.lotus.com/ldd/ddwiki.nsf/dx/The_JSON_RPC_Service
-- https://wiki.openntf.org/pages/viewpage.action?pageId=3899422
-- http://johnjardin.ukuvuma.co.za/2011/10/28/xpage-video-tutorial-remote-services-rpc/
-- http://www.notesin9.com/2014/05/21/tim-explains-json-rpc-codefortim/
-- http://notesspeak.blogspot.com/2014/10/my-first-experience-using-json-rpc.html
-- https://xcellerant.net/2016/02/17/handling-errors-in-an-xpages-rpc-method/
+### Example
+
+- simple bean to work against
+- xpage w/ control, fields
+- some fields with naming and layout that isn't conducive to normal partial refresh w/ getter+setter calls
+- example w/ rpc calls, invoking in specified order via callbacks
+
+### References
+- [IBM Notes/Domino App Dev Wiki page](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/The_JSON_RPC_Service)
+- [Notes in 9 #33: Intro to Remote Services in Xpages](http://www.notesin9.com/2011/08/25/notesin9-033-introduction-to-remote-services-in-xpages/), by [John Jardin](http://johnjardin.ukuvuma.co.za/2011/10/28/xpage-video-tutorial-remote-services-rpc/)
+- [Tim Explains JSON RPC](http://www.notesin9.com/2014/05/21/tim-explains-json-rpc-codefortim/)
+- [Steve Zavocki's blogging on his initial take](http://notesspeak.blogspot.com/2014/10/my-first-experience-using-json-rpc.html)
+- [Blog post on Error Handling an RPC Service by Brad Balassaitis](https://xcellerant.net/2016/02/17/handling-errors-in-an-xpages-rpc-method/)
 
 ### Summary
-asdf
+All in all, I'm not entirely certain how I went so long without having enough of a need for me to dive into the RPC control. While my development style preference is in a certain direction, it certainly is a useful component and one which has eased some of my AJAX heavy issues with a bit of grace. Hopefully this is useful to others, if nothing else as [a roll up of some of the existing information which was out there](#references).

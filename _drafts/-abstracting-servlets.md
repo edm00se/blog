@@ -8,7 +8,6 @@ tags: [xpages, servlets, java]
 modified: 2016-11-01
 comments: true
 share: true
-toc: true
 ---
 
 {% include toc.html %}

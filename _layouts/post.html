@@ -61,12 +61,12 @@ layout: default
         <h5 class="index-headline featured"><span>More</span></h5>
         <footer class="site-footer">
           <section class="poweredby">Published with <a href="https://pages.github.com"> GitHub Pages</a> and <a href="https://github.com/ageitgey/amplify">Amplify</a></section>
-          <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe to my feed.</span></a>
+          <a class="subscribe" href="{{ '/feed.xml' | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe to my feed.</span></a>
           <div class="inner">
-            <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{site.name}}</a> &copy; {{ site.time | date: '%Y' }}<br>All rights reserved.</section>
+            <section class="copyright">All content copyright <a href="{{ site.contact_link }}">{{site.name}}</a> &copy; {{ site.time | date: '%Y' }}<br>All rights reserved.</section>
           </div>
           <div class="errata">
-            <p>Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/gh-pages/{{ page.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
+            <p>{% if site.ama %}Have questions? <a href="{{ site.ama }}" title="You can ask me nearly anything!">AMA</a><br />{% endif %}Notice any issues in this post? You can <a href="https://github.com/edm00se/DevBlog/edit/gh-pages/{{ page.path }}">submit a Pull Request</a> or <a href="https://github.com/edm00se/DevBlog/issues/new">raise an issue</a> on GitHub.</p>
           </div>
         </footer>
       </div>

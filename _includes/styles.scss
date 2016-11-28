@@ -330,14 +330,23 @@ body {
   }
 
   .page-links {
-      display: block;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
       position: absolute;
+      text-align: right;
       top: 10px;
       right: $rs;
       font-weight: 200;
       font-style: normal;
       font-size: 18px;
       line-height: 30px;
+
+      .pill {
+        flex-grow: 1;
+      }
 
       a {
         text-decoration: none;
