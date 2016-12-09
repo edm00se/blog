@@ -3,6 +3,6 @@
   sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
   resizable
   frameborder="0"
-  src="{{ site.disqus_gist_url }}?id={{ include.id }}{% if include.file %}&fileName={{ include.file }}{% endif %}">
+  src="{{ site.gist_embed_url }}?id={{ include.id }}{% if include.file %}&fileName={{ include.file }}{% endif %}">
   <div overflow tabindex="0" role="button" aria-label="Gist Embed">Gist Embed</div>
 </amp-iframe>
