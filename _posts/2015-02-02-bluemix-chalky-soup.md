@@ -18,7 +18,7 @@ Note: the basic authentication represented in the code and in the ReadMe.md of t
 If you're not interested in learning about my Bluemix experiences, then you can feel free to stop reading now. TLDR; I like what Bluemix does and can(/will) do, but there may be a way to make things easier for customer adoption, from the developer's perspective. For more on this, just scroll to the end of the post.
 
 ### Some Bluemix Thoughts
-I deployed [my nifty one-off app to Bluemix](https:////bit.ly/BlueChalkySoup), as mentioned above. I've done the same in the past with a digital version of my resume on [heroku](//heroku.com) and a simple (but custom) feed reading app on a node instance (which presents the full HTML content from RSS or Atom feeds, in a Bootstrap 3 layout, with app caching for minimal load while reading from a mobile device), hosted on [OpenShift](//www.openshift.com/); strangely enough, I've not dabbled with [AWS Elastic Beanstalk](//aws.amazon.com/elasticbeanstalk/). These few apps, while somewhat trivial, let me play with the major PaaS solutions I had seen as easily accessible to developers, and capable of scaling in demand to meet business needs. This was before Bluemix came about (initial release was Bluemix was the end of June 2014), so when given the opportunity to deploy something to it, I was happy to do so and try out the platform, even if in a limited capacity.
+I deployed [my nifty one-off app to Bluemix](https://bit.ly/BlueChalkySoup), as mentioned above. I've done the same in the past with a digital version of my resume on [heroku](//heroku.com) and a simple (but custom) feed reading app on a node instance (which presents the full HTML content from RSS or Atom feeds, in a Bootstrap 3 layout, with app caching for minimal load while reading from a mobile device), hosted on [OpenShift](//www.openshift.com/); strangely enough, I've not dabbled with [AWS Elastic Beanstalk](//aws.amazon.com/elasticbeanstalk/). These few apps, while somewhat trivial, let me play with the major PaaS solutions I had seen as easily accessible to developers, and capable of scaling in demand to meet business needs. This was before Bluemix came about (initial release was Bluemix was the end of June 2014), so when given the opportunity to deploy something to it, I was happy to do so and try out the platform, even if in a limited capacity.
 
 #### Bluemix Runtimes
 The available run times are pretty comparable to the competitors, with notable exception (from my perspective) being the upcoming XPages build pack (.xsp run time and Domino Data Service, both of which are very exciting for very obvious reasons to any Domino/XPage developer). I'm sure I'll post again once I've had my first taste of deploying an XPages app to Bluemix, and I can't wait to do it.
@@ -48,7 +48,7 @@ I was happy to see a number of things in my Bluemix account's dashboard. Specifi
 <figure class="center">
   <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DashboardView.png"
   alt="a view of the Bluemix dashboard"
-  height="1150" width="512"
+  height="512" width="1150"
   layout="responsive"></amp-img>
  <figcaption>a view of the Bluemix dashboard</figcaption>
 </figure>
@@ -65,7 +65,7 @@ Both of the other two PaaS services I've tried and used include a command line t
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/InstantiatedTimeToSetupWithCFCLI.png"
+  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/InstantiatedTImeToSetupWithCFCLI.png"
   alt="first use of the Cloud Foundry CLI tool"
   layout="responsive"
   width="890" height="557"></amp-img>
@@ -113,7 +113,7 @@ My initial trial account, which is tied to my IBM ID, has a 30-day window in whi
 <figure class="center">
   <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png"
   alt="confirming my free account apparently means putting my credit card on file"
-  height="896" width="575"
+  height="575" width="896"
   layout="responsive"></amp-img>
  <figcaption>confirming my free account apparently means putting my credit card on file</figcaption>
 </figure>
