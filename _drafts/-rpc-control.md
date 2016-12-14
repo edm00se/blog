@@ -36,6 +36,15 @@ I believe that this is a service/control most useful for situations when an upda
 
 ### Example
 
+Contrived example?
+
+- bean w/ setter depending on other property which sets first
+- shows setter order not explicit (e.g.- third prop = product of first and second)
+- alternate way of setting in "appropriate order"?
+- shows RPC control invoking method with appropriate setting sequence
+
+#### Need
+
 - simple bean to work against
 - xpage w/ control, fields
 - some fields with naming and layout that isn't conducive to normal partial refresh w/ getter+setter calls
