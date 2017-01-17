@@ -3,7 +3,7 @@ layout: post
 type: post
 title: "When You Need a Comparator"
 description: "sorting a Collection how you want"
-category: xpages
+category: java
 tags: [xpages, java, bean, comparator]
 modified: 2015-01-09
 comments: true
