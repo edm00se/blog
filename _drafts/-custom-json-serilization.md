@@ -5,7 +5,7 @@ title: "Custom JSON Serialization With GSON"
 description: "forcibly preventing scientific notation?"
 category: java
 tags: [java, xpages]
-modified: 2017-01-19
+modified: 2017-01-23
 comments: true
 share: true
 ---
