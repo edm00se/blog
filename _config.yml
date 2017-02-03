@@ -47,6 +47,15 @@ google_verify:      KrFPfZtEQFCrOg2OTSPZfK72gA7_aso_X1R2kVNtzaU
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        98426725A1ECABB0ECC93D5FB5CEBEB0
 
+# Manifest stuff
+manifest_name: edm00se.io | DevBlog
+manifest_short_name: edm00se.io # Appears in "Add to home screen" dialogues and may have other importance also
+manifest_lang: en
+manifest_background_color: white
+manifest_short_name:
+manifest_display: standalone
+manifest_theme_color: midnightblue
+
 sass:
   style: expanded
 

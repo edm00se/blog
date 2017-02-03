@@ -34,6 +34,7 @@ config.filesToCache = [
     '/assets/js/',
     '/sw-toolbox.js',
     '/sw/',
+    '/manifest.json',
     config.offlinePage,
     '/assets/images/logo.svg',
     '/favicon.ico',
