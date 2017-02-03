@@ -9,7 +9,7 @@ show_in_nav: true
 <figure class="about-fig">
   <amp-img src="{{ site.author_image }}?s=260" width="260" height="260" layout="fixed" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle" data-toggle="tooltip" title="that's me!"></amp-img>
   <span class="about-name">Eric McCormick</span>
-  <amp-img src="https://i.stack.imgur.com/YcEnK.png" width="175" height="42" layout="fixed" alt="IBM Champion logo" itemprop="image" class="champion-logo"></amp-img>
+  <amp-img src="{{ site.url }}/assets/images/champion/banner.jpg" width="175" height="42" layout="fixed" alt="IBM Champion logo" itemprop="image" class="champion-logo"></amp-img>
 </figure>
 
 A full-stack developer, I have an passion for application structure, framework adoption, automation in tooling and deployment. My stack is generally either a Java plus RESTful API focused approach on IBM's Domino/XPages platform or Node with Express for a similar front-end.

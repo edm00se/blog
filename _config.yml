@@ -22,6 +22,7 @@ disqus_shortname: em-devblog
 disqus_iframe_url: "https://ericmccormick.io/disqus_comments.html"
 gist_embed_url: "https://ericmccormick.io/gist_embed.html"
 url: "https://edm00se.io" # the base hostname & protocol for your site
+enable_pwa: true
 paginate:	5 # The number of posts to show per page on your homepage
 permalink:   /:categories/:title/
 # Read Time is a calculator to provide post read-time based on word count. TODO: skips gist content?
