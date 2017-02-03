@@ -26,5 +26,11 @@ layout: compress
         </script>
       </amp-analytics>
     {% endif %}
+    {% if site.enable_pwa %}
+    <amp-install-serviceworker src="/sw.js"
+      data-iframe-src="{{ site.url }}/sw.html"
+      layout="nodisplay">
+    </amp-install-serviceworker>
+    {% endif %}
   </body>
 </html>

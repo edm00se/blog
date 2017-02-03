@@ -22,6 +22,7 @@ disqus_shortname: em-devblog
 disqus_iframe_url: "https://ericmccormick.io/disqus_comments.html"
 gist_embed_url: "https://ericmccormick.io/gist_embed.html"
 url: "https://edm00se.io" # the base hostname & protocol for your site
+enable_pwa: true
 paginate:	5 # The number of posts to show per page on your homepage
 permalink:   /:categories/:title/
 # Read Time is a calculator to provide post read-time based on word count. TODO: skips gist content?
@@ -45,6 +46,15 @@ google_analytics:   UA-53507706-1
 google_verify:      KrFPfZtEQFCrOg2OTSPZfK72gA7_aso_X1R2kVNtzaU
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        98426725A1ECABB0ECC93D5FB5CEBEB0
+
+# Manifest stuff
+manifest_name: edm00se.io | DevBlog
+manifest_short_name: edm00se.io # Appears in "Add to home screen" dialogues and may have other importance also
+manifest_lang: en
+manifest_background_color: white
+manifest_short_name:
+manifest_display: standalone
+manifest_theme_color: midnightblue
 
 sass:
   style: expanded

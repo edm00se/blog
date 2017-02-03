@@ -1,5 +1,5 @@
 <header class="site-header">
-  <a href="{{ site.baseurl }}/" class="logo"><span class="logo"><amp-img src="{{ site.baseurl }}{{ site.logo }}" width="48" height="48" /></span></a>
+  <a href="{{ site.baseurl }}/" class="logo"><span class="logo"><amp-img src="{{ site.baseurl }}{{ site.logo }}" width="48" height="48" alt="site logo" /></span></a>
   <div class="page-links">
     <span class="pill"><a class="page-link" href="{{ site.baseurl }}/">&nbsp;Home</a></span>{% for my_page in site.pages %}{% if my_page.show_in_nav == true and my_page.title %}<span class="pill"><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></span>{% endif %}{% endfor %}
   </div>

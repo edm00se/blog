@@ -1,0 +1,45 @@
+---
+permalink: manifest.json
+---
+
+{
+  "lang": "{{ site.manifest_lang }}",
+  "background_color": "{{ site.manifest_background_color }}",
+  "name": "{{ site.manifest_name }}",
+  "short_name": "{{ site.manifest_short_name }}",
+  "display": "{{ site.manifest_display}}",
+  "start_url": ".",
+  "theme_color": "{{ site.manifest_theme_color }}",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/57X57-icon.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/72X72-icon.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/114X114-icon.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/144X144-icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ]
+}
