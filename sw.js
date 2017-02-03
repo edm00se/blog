@@ -17,23 +17,21 @@
 importScripts('/sw-toolbox.js');
 
 const config = {
-  offlinePage: '/offline/'
+  offlinePage: '/offline.html'
 }
 
 const IGNORED_URLS = []
 
 config.filesToCache = [
     '/',
-    '/offline/',
+    '/offline.html',
     '/about/',
     '/categories/',
     '/tags/',
-    '/assets/images/',
     '/assets/images/tb_sign1.png',
     '/assets/images/tbrun1.png',
-    '/assets/js/',
     '/sw-toolbox.js',
-    '/sw/',
+    '/sw.html',
     '/manifest.json',
     config.offlinePage,
     '/assets/images/logo.svg',
