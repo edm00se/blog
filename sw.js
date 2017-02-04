@@ -40,7 +40,7 @@ config.filesToCache = [
     'https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d?s=260',
     '/assets/images/champion/ibm-champion-2016-social-business.png',
     '/assets/images/champion/ibm-champion-2015-social-business.png',
-    '/assets/images/champion/banner.jpg'
+    '/assets/images/champion/banner.png'
 ];
 
 /**
