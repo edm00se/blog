@@ -4,7 +4,7 @@ type: post
 title: "Notes in 9: Highlights From My IBM Connect Session"
 description: "AD1380: A Beard, an App, a Blender, and announcing MWLUG session"
 category: self-promotion
-tags: [scm, git, xpages, grunt, connect, ibm]
+tags: [scm, git, xpages, grunt, connect, ibm, ni9]
 modified: 2016-06-28
 comments: true
 share: true

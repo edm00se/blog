@@ -4,7 +4,7 @@ type: post
 title: "Notes in 9: Alternative Front-End Development"
 description: "segregated application development at its best"
 category: self-promotion
-tags: [front-end, structure, rest, xpages]
+tags: [front-end, structure, rest, xpages, ni9]
 modified: 2015-09-02
 comments: true
 share: true

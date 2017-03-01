@@ -5,7 +5,7 @@ title: "A Video on Servlets"
 description: "an announcement and a couple random thoughts"
 category: self-promotion
 series: servlet-series
-tags: [xpages, domino, java, servlets]
+tags: [xpages, domino, java, servlets, ni9]
 modified: 2015-04-09
 comments: true
 share: true

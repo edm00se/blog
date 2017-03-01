@@ -4,7 +4,7 @@ type: post
 title: "Notes in 9: Docker + SonarQube"
 description: "an intro to two great topics"
 category: self-promotion
-tags: [scm, git, xpages]
+tags: [scm, git, xpages, ni9]
 modified: 2016-02-24
 comments: true
 share: true

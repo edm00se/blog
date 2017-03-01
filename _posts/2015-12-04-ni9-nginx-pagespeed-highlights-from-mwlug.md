@@ -4,7 +4,7 @@ type: post
 title: "Notes in 9: Nginx + PageSpeed"
 description: "highlights from my MWLUG session"
 category: self-promotion
-tags: [mwlug, nginx, xpages]
+tags: [mwlug, nginx, xpages, ni9]
 modified: 2015-12-04
 comments: true
 share: true
