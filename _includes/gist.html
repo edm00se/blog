@@ -1,8 +1,7 @@
-<amp-iframe width="600" height="100"
+<amp-iframe width="600" height="120"
   layout="responsive"
-  sandbox="allow-scripts allow-same-origin allow-modals allow-popups"
+  sandbox="allow-scripts allow-same-origin"
   resizable
-  frameborder="0"
   src="{{ site.gist_embed_url }}?id={{ include.id }}{% if include.file %}&fileName={{ include.file }}{% endif %}">
   <div overflow tabindex="0" role="button" aria-label="Gist Embed">Gist Embed</div>
 </amp-iframe>
