@@ -1,3 +1,6 @@
+---
+layout: null
+---
 /**
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
@@ -18,30 +21,35 @@ importScripts('/sw-toolbox.js');
 
 const config = {
   offlinePage: '/offline.html'
-}
+};
 
-const IGNORED_URLS = []
+const IGNORED_URLS = [];
 
-config.filesToCache = [
-    '/',
-    '/offline.html',
-    '/about/',
-    '/categories/',
-    '/tags/',
-    '/assets/images/tb_sign1.png',
-    '/assets/images/tbrun1.png',
-    '/sw-toolbox.js',
-    '/sw.html',
-    '/manifest.json',
-    config.offlinePage,
-    '/assets/images/logo.svg',
-    '/favicon.ico',
-    '/favicon.png',
-    'https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d?s=260',
-    '/assets/images/champion/ibm-champion-2016-social-business.png',
-    '/assets/images/champion/ibm-champion-2015-social-business.png',
-    '/assets/images/champion/banner.png'
+const DO_CACHE = [
+  '/',
+  '/offline.html',
+  '/about/',
+  '/categories/',
+  '/tags/',
+  '/assets/images/tb_sign1.png',
+  '/assets/images/tbrun1.png',
+  '/sw-toolbox.js',
+  '/sw.html',
+  '/manifest.json',
+  config.offlinePage,
+  '/assets/images/logo.svg',
+  '/favicon.ico',
+  '/favicon.png',
+  'https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d?s=260',
+  '/assets/images/champion/ibm-champion-2016-social-business.png',
+  '/assets/images/champion/ibm-champion-2015-social-business.png',
+  '/assets/images/champion/banner.png'
 ];
+
+// last n posts
+{% for post in site.posts limit:6 %}DO_CACHE.push("{{ post.url }}");{% endfor %}
+
+config.filesToCache = DO_CACHE;
 
 /**
  * Generates a placeholder SVG image of the given size.
