@@ -1,24 +1,26 @@
 ---
 layout: post
 type: post
-title: "Notes in 9: Dev Tools Grab Bg"
+title: "Notes in 9: Dev Tools Grab Bag"
 description: "a pair of Node-based tools for use with Domino + XPages"
 category: self-promotion
 tags: [xpages, node, npm, ni9, dora, generator-xsp]
-modified: 2017-03-04
+modified: 2017-04-04
 comments: true
 share: true
 ---
 
 ### Intro
-I'm on Notes in 9 again, with a "grab bag" of a couple of tools I've put together recently that may be of a varying degree of useful for other Domino + XPages developers.
+I'm on Notes in 9 again, with a "grab bag" of a couple of tools I've put together recently that may be of a varying degree of useful for other Domino + XPages developers. You don't _need_ these to do development, but for the right person, they may help with their development workflow.
+
+Also of note, with the upgrade to Swiper with the FP8 release of Notes + Domino Designer, the limitations previously mentioned are no longer there! This means that my second tool I talked about, `node-dora(-cli)`, may be even more niche, but hey, it was a good learning experience.
 
 ### The Video
-Head over to [Notes in 9.com episode #xxx](http://www.notesin9.com/2016/02/24/notes-in-9-189-introduction-to-sonarqube-with-a-side-of-docker/) to check it out, or watch it embedded here or on YouTube.
+Head over to [Notes in 9.com episode #205](http://www.notesin9.com/2017/04/04/notesin9-205-leverage-domino-development-with-new-tools/) to check it out, or watch it embedded here or on YouTube.
 
 <div class="center">
   <amp-youtube
-    data-videoid="vHADaUuJ7eY"
+    data-videoid="fR4z2VpAoWo"
     layout="responsive"
     width="560" height="315"></amp-youtube>
 </div>
