@@ -28,6 +28,8 @@ If you have been living under a rock, Docker is pretty much amazing. If you have
 
 #### Requests?
 
+If there's anything you'd like to see covered (and it's something I already have a solution to), feel free to ask about it.
+
 <div class="center">
   <amp-iframe width="500"
     height="540"
