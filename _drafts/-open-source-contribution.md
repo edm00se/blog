@@ -5,18 +5,21 @@ title: "Open Source Contribution"
 description: "learning by doing more"
 category: open-source
 tags: [java, xpages]
-modified: 2017-01-26
+modified: 2017-06-16
 comments: true
 share: true
+permalink: /open-source/contribution/
 ---
 
 ### Intro
 
-I have a bit of a passion for open source software. My preferred distribution of Linux has been Ubuntu since 4.10, the Warty Warthog, I've enjoyed most open source projects I've run into, and I thoroughly enjoy supporting open source projects. Recently I had an opportunity to learn a little more than I knew prior to, by being nudged to submit a pull request to an interesting project.
+It's time to clear some of the backlog. I started this post back around the end of January and it should probably be sent on its way to clear the pile of drafts I haven't finished yet... 🤔
+
+I have a bit of a passion for open source software. My preferred distribution of Linux has been Ubuntu since 4.10, the Warty Warthog (was even a minor contributor on a short lived, wildly popular project that aimed at improving the Ubuntu experience early on), I've enjoyed most open source projects I've run into, and I thoroughly enjoy supporting open source projects. Recently I had an opportunity to learn a little more than I knew prior to, by being nudged to submit a pull request to an interesting project.
 
 ### The Project
 
-The project is [prettier-eslint](https://github.com/kentcdodds/prettier-eslint-cli), to which I added a (simple) logging option `--silly-logs`. This came about while running a requested test from Mr. Kent C. Dodds, while the project was still in beta (pre-release).
+The project is [prettier-eslint's cli tool](https://github.com/kentcdodds/prettier-eslint-cli), to which I added a (simple) logging option `--silly-logs`. This came about while running a requested test from Mr. Kent C. Dodds, while the project was still in beta (pre-release). Why am I celebrating a CLI flag for a cli tool? I'm not, I'm more geeking out over the tool itself instead of my minor partial involvement. That's a part of the beauty of open source, anyone can contribute or help, even with something as small as testing out a beta pre-release for a real test.
 
 {% include tweet.html id="821767817569583104" %}
 
@@ -38,14 +41,22 @@ What is [prettier](http://npm.im/prettier)? It's a tool for consistently formatt
 
 ### The Pull Request
 
+https://github.com/prettier/prettier-eslint/pull/8
+
 https://github.com/kentcdodds/prettier-eslint-cli/pull/1#issuecomment-273576020
 
 ### Shout Out
 
-Now that it has hit version 1.0, the cli tool works great! It formats my code using `prettier` and triggers an `eslint --fix`, making my `eslint` config win in the end, with the formatting assist from `prettier`. It helps make for some good looking code, so you may wish to check it out. There's also [a package for](https://github.com/kentcdodds/prettier-eslint-atom) the [Atom](https://atom.io).
+Now that it has hit version 1.0, the cli tool works great! It formats my code using `prettier` and triggers an `eslint --fix`, making my `eslint` config win in the end, with the formatting assist from `prettier`. It helps make for some good looking code, so you may wish to check it out. There's also [a package for Atom](https://github.com/kentcdodds/prettier-eslint-atom) and for [VS Code](https://marketplace.visualstudio.com/items?itemName=RobinMalfait.prettier-eslint-vscode).
 
 ### Want to Get Involved?
 
-asdf
+My suggestion, especially if you're new at it, is to follow a small handful of developers on Twitter or GitHub; preferably ones with interesting projects that sound useful and innovative to you. Watch, read, learn, listen. When there's an opportunity to help, go for it. My only words of caution, don't commit to more than you can do and if you need help, ask for it. You'll `<sarcasm>` never guess who one of the developers I follow is `</sarcasm>` 🙄. In fact, one of the reason I follow Kent is that he actively pursues projects and contributes to help others contribute more; in my estimation, one hallmark of a truly good type of person. In fact, he's even got a (free) series on [egghead.io](https://egghead.io) that is helpful for such beginners:
 
-### 🍻
+> [How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
+
+### Closing Thoughts
+
+This is far from my first open source contribution, and it certainly won't be my last, but what stood out to me was that I was more assistive in being aware and willing to test something that just hacking away on my own side projects. Don't get me wrong, those have plenty of usefulness in their own right, but when we interact with others, we learn how they do things, and that can help us change and grow our own habits, processes, and traits.
+
+Until next time, 🍻!
