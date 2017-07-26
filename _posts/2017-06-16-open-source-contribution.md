@@ -47,7 +47,7 @@ Since this project was a CLI tool consuming a "regular" Node module (API), so th
 
 ### The Results
 
-This speaks for itself. Once the logging was established, some modifications were made int he `-cli` project, and now it plays great with my project's eslint config. That's a big win, in my opinion. Here it is, doing what it does w/ the same section of my code, acting as I want and cleaning things up for me.
+This speaks for itself. Once the logging was established, some modifications were made in the `-cli` project, and now it plays great with my project's eslint config. That's a big win, in my opinion. Here it is, doing what it does w/ the same section of my code, acting as I want and cleaning things up for me.
 
 <figure class="center">
   <amp-img src="{{ site.url }}/assets/images/post_images/PrettierEslint_WorkingGreat.png"
