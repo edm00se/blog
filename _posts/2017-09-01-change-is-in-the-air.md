@@ -42,7 +42,7 @@ That's all paid off and, with fall fast approaching, I've found myself wanting t
 
 ### That Conference
 
-This year, instead of joining friends at MWLUG 😢, I had the opportunity to attend [That Conference][that-conf-url] for the first time. It's been on my radar for a few years, but this was my first time and I was quite pleased with it. It had a lot of great sessions, some great keynotes, There were some breakout sessions as well, which included some great topics and I wish I'd gone to more. The one I _did_ go to was on [PWAs][pwa-url]; there was some good conversation which was made even better by the fact that there is some amazing potential for PWAs w/ the inclusion of [service workers][service-workers-url]. I'm hoping to go back next year as it was a great conference, only made better in that it was held at the [Kalahari Resort & Convention Center in Wisconsin Dells][kalahari-url].
+This year, instead of joining friends at [MWLUG][mwlug-url] 😢 (now renamed to CollabSphere, next in August 2018 in Ann Arbor, MI), I had the opportunity to attend [That Conference][that-conf-url] for the first time. It's been on my radar for a few years, but this was my first time and I was quite pleased with it. It had a lot of great sessions, some great keynotes, There were some breakout sessions as well, which included some great topics and I wish I'd gone to more. The one I _did_ go to was on [PWAs][pwa-url]; there was some good conversation which was made even better by the fact that there is some amazing potential for PWAs w/ the inclusion of [service workers][service-workers-url]. I'm hoping to go back next year as it was a great conference, only made better in that it was held at the [Kalahari Resort & Convention Center in Wisconsin Dells][kalahari-url].
 
 All in all, That Conference was great and I'm looking forward to it next year. If I'm ambitious enough, I'll submit an abstract as well.
 
@@ -74,3 +74,4 @@ Until next time, cheers! 🍻
 [fetch-api-url]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 [service-worker-api]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
 [is-sw-ready]: https://jakearchibald.github.io/isserviceworkerready/
+[mwlug-url]: http://www.mwlug.com/
