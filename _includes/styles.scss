@@ -3,6 +3,7 @@
 
 $grey-color: #828282;
 $code-bg: #fffeee;
+$max-content-width: 920px;
 
 .icon {
 
@@ -322,7 +323,7 @@ body {
 .site-header {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: $max-content-width;
   margin: 16px auto 0 auto;
   @include box-sizing(border-box);
   @include respond-to(800) {
@@ -406,7 +407,7 @@ body {
 
 .content {
   width: 100%;
-  max-width: 700px;
+  max-width: $max-content-width;
   margin: 25px auto 0 auto;
   @include box-sizing(border-box);
   @include respond-to(800) {
