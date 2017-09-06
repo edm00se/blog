@@ -127,17 +127,17 @@ img {
   background: white;
   box-shadow: 0 0 18px #e18728;
 }
-.post-tags {
+.post-tags, .post-meta-tags {
   display: inline-block;
-}
-.post-tags .tag {
-  display: inline-block;
-  background-color: #e6e6e6;
-  color: #333;
-  padding: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 15%;
+  .tag {
+    display: inline-block;
+    background-color: #e6e6e6;
+    color: #333;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 15%;
+  }
 }
 /* end search page styles */
 
