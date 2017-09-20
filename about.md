@@ -12,7 +12,7 @@ show_in_nav: true
   <amp-img src="{{ site.url }}/assets/images/champion/banner.png" width="175" height="42" layout="fixed" alt="IBM Champion logo" itemprop="image" class="champion-logo"></amp-img>
 </figure>
 
-As [a software developer\*][whats-in-a-title], I have an passion for application structure, framework adoption, automation in tooling and deployment. My stack is generally either a Java plus RESTful API focused approach on IBM's Domino/XPages platform or Node with Express for a similar front-end.
+As [a software developer\*][whats-in-a-title], I have an passion for application structure, framework adoption, automation in tooling, deployment, cloud, containers, serverless, and much more.
 
 Do you have questions for me that don't fit in this blog? You can [AMA, ask me (nearly) anything via an issue on GitHub](https://github.com/edm00se/ama).
 

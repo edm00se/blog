@@ -1,6 +1,6 @@
-# DevBlog
+# [edm00se.io](https://edm00se.io/)
 
-A blog for my shared trials, tribulations, and triumphs in the world of software development, containerization, cloud hosting, and more.
+A blog for capturing my efforts, thoughts, and more in dev, ops, cloud, and other more.
 
 <!--
 orange: #d07922
