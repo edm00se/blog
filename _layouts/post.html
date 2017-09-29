@@ -12,11 +12,11 @@ layout: default
           <a href="{{ site.url }}/categories/index.html#{{ page.categories | cgi_encode }}"
             data-toggle="tooltip" title="Other posts from the {{ tag }} category"
             rel="tag">{{ tag }}</a>
-          {% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>.&nbsp;
+          {% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>.<br />
           {% assign tagsize = page.tags.size %}
           {% if tagsize != 0 %}
           <span class="post-meta-tags entry-tags text-center">
-            <i class="fa fa-tags"></i>&nbsp;Tagged with: 
+            <i class="fa fa-tags"></i>Tagged with: 
             {% for tag in page.tags %}
             <a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}"
               data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}
