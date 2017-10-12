@@ -152,10 +152,10 @@ Here's an example of my 'jshint' task running in both Grunt and gulp. As you can
 Note: I took the default formatting for jshint in both Grunt and gulp, which is why they look so different. I can template the output differently, but didn't for brevity.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/task-runners/jsHintGruntVsGulp.gif"
   alt="jshint in both Grunt and gulp"
   height="363" width="566"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>jshint in both Grunt and gulp</figcaption>
 </figure>
 

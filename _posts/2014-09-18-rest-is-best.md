@@ -50,16 +50,16 @@ When we execute these AJAX calls, it takes time and processing effort (both for 
 The above doesn't show a whole lot of time elapsing, only about 38ms. It also shows a hover state being fetched; I didn't even plan on that (and is an argument against Dojo, IMO; I mean, lazy loading images for button styles?!?). I can also tell you that that server is having a good day and isn't refreshing anything more than the _xp:viewPanel_ for this page (so less intense computations). The application above has been re-developed, as a case study (with which I've been able to sell to my management and direct my development efforts accordingly), into a Bootstrap 3 with AngularJS application. Here's what happens when I perform the same paging task in the Angular version of this app. Apologies for the reduction in quality with the gif and redaction of company-specific information.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_noNetworkCalls_scrubbed.gif"
-  alt="paging with Angular" height="400" width="800"></amp-img>
+  <amp-anim src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_noNetworkCalls_scrubbed.gif"
+  alt="paging with Angular" height="400" width="800"></amp-anim>
  <figcaption>paging with Angular</figcaption>
 </figure>
 
 No network requests during paging, it's that cool. What's happening? It's behaving as a modern web application; a single page app, in fact, but I'll get to some of those specifics in a moment. Here's the same page again, with live full-text searching, across all fields (keys, as in JSON key: value pair, you can also filter by key) in the data array.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_liveSearch_scrubbed.gif"
-  alt="searching a data array in Angular" height="400" width="800"></amp-img>
+  <amp-anim src="{{ site.url }}/assets/images/post_images/angular_ngrepeat_liveSearch_scrubbed.gif"
+  alt="searching a data array in Angular" height="400" width="800"></amp-anim>
  <figcaption>searching a data array in Angular</figcaption>
 </figure>
 

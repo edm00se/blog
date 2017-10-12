@@ -13,11 +13,11 @@ share: true
 ### I'm Back
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/MauiYoureWelcome.gif"
-    width="498"
-    height="206"
-    layout="responsive"
-    alt="You're Welcome"></amp-img>
+  <amp-anim src="{{ site.url }}/assets/images/post_images/MauiYoureWelcome.gif"
+      width="498"
+      height="206"
+      alt="You're Welcome"
+      attribution="Maui is a character from the Disney film Moana. All rights belong to Disney."></amp-anim>
   <figcaption>What Can I Say?</figcaption>
  </figure>
 
@@ -30,11 +30,12 @@ If you find yourself asking "where was Eric?", this should summarize it all:
 Instead of trying to do everything all summer, I tend to take a break from blogging and a lot of open source endeavors over the summer. It means I can focus on family time along with yard and house projects.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/Olaf_summer.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/Olaf_summer.gif"
     width="245"
     height="160"
     layout="fixed"
-    alt="summer"></amp-img>
+    alt="summer"
+    animation="Olaf is a character from the Disney film Frozen. All rights belong to Disney."></amp-anim>
   <figcaption>Ah... Summer</figcaption>
 </figure>
 

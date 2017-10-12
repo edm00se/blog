@@ -15,10 +15,10 @@ share: true
 ### MWLUG is Nearly Here
 
 <figure class="center">
-  <amp-img src="http://i.giphy.com/mPOGx4hJtOWSA.gif"
+  <amp-anim src="http://i.giphy.com/mPOGx4hJtOWSA.gif"
   alt="call me excited"
   height="269" width="500"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>call me excited</figcaption>
 </figure>
 

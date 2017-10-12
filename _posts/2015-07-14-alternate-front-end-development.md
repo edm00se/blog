@@ -222,28 +222,28 @@ You'll see that the default page at the port `json-server` is serving on, that t
 I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US) for Chrome, as I'm used to it. You may wish to check out [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), another Chrome app, or you can load from your JS console or, as [I'll show later, actual web content](#one-last-thing).
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif"
   alt="GET collection"
   height="851" width="1596"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>GET collection</figcaption>
 </figure>
 
 ##### GET Record
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif"
   alt="GET 'document'"
   height="851" width="1596"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>GET 'document'</figcaption>
 </figure>
 
 ##### PUT Record
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif"
   alt="PUT 'document' with partial data update"
   height="851" width="1596"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>PUT 'document' with partial data update</figcaption>
 </figure>
 
@@ -269,10 +269,10 @@ This will make my NSF-relative calls to `/xsp/houses` resolve to the `houses` th
 `json-server --id unid --watch housesDB.json --routes routes.json`
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif"
+  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif"
   alt="serving static web content from 'public' folder"
   height="825" width="1256"
-  layout="responsive"></amp-img>
+  layout="responsive"></amp-anim>
  <figcaption>serving static web content from 'public' folder</figcaption>
 </figure>
 
