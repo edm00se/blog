@@ -1,7 +1,6 @@
 ---
 permalink: manifest.json
 ---
-
 {
   "lang": "{{ site.manifest_lang }}",
   "background_color": "{{ site.manifest_background_color }}",
@@ -39,6 +38,11 @@ permalink: manifest.json
     {
       "src": "assets/images/logo.png",
       "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/512X512-icon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

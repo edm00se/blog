@@ -52,7 +52,6 @@ manifest_name: edm00se.io | DevBlog
 manifest_short_name: edm00se.io # Appears in "Add to home screen" dialogues and may have other importance also
 manifest_lang: en
 manifest_background_color: white
-manifest_short_name:
 manifest_display: standalone
 manifest_theme_color: midnightblue
 
