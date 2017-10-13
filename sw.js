@@ -27,7 +27,6 @@ const IGNORED_URLS = [];
 
 const DO_CACHE = [
   '/',
-  '/offline.html',
   '/about/',
   '/categories/',
   '/tags/',

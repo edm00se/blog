@@ -20,12 +20,12 @@ On the 17th of October in 2013, Internet Explorer 11 was released from Microsoft
       height="281"
       alt="Out Gaston"
       attribution="Gaston is a character from the Disney film Beauty and the Beast. All rights belong to Disney."></amp-anim>
-  <figcaption>What Can I Say?</figcaption>
+  <figcaption>Good day sir. I said good day!</figcaption>
  </figure>
 
 ### Evergreen Browsers
 
-asdf
+What makes a browser, or any software for that matter, [evergreen][evergreen-about]? Well, 
 
 ### Why Does It Matter?
 
@@ -67,7 +67,7 @@ I'm fairly certain this will need to be [grassroots][grassroots-about] in nature
 
 \*Note: I don't mean to hate on IE, rather Microsoft has moved on with Edge and while they have taken a very business stance of supporting IE for a longer time than I would prefer, but it's for their business customers who have locked-in requirements of older software requiring, say, IE 7 😒. This is rather meant to highlight the need for us as the development community to force the 
 
-
+[evergreen-about]: https://www.hanselman.com/blog/TheEvergreenWeb.aspx
 [ie-version-history]: https://en.wikipedia.org/wiki/Internet_Explorer_version_history#Release_history_for_desktop_Windows_OS_version
 [chrome-version-history]: https://en.wikipedia.org/wiki/Google_Chrome_version_history
 [firefox-version-history]: https://en.wikipedia.org/wiki/Firefox_version_history#Rapid_releases
