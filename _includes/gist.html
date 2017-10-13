@@ -1,3 +1,4 @@
+<!--
 <amp-iframe width="600" height="120"
   layout="responsive"
   sandbox="allow-scripts allow-same-origin"
@@ -5,11 +6,10 @@
   src="{{ site.gist_embed_url }}?id={{ include.id }}{% if include.file %}&fileName={{ include.file }}{% endif %}">
   <div overflow tabindex="0" role="button" aria-label="Gist Embed">Gist Embed</div>
 </amp-iframe>
-<!--
+-->
 <amp-gist
   data-gistid="{{ include.id }}"
   {% if include.file %}data-file="{{ include.file }}"{% endif %}
   layout="fixed-height"
   height="{% if include.height %}{{ include.height }}{% else %}120{% endif %}">
 </amp-gist>
--->
