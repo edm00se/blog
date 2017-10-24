@@ -41,7 +41,7 @@ Any public repository works for Hacktoberfest, but you should ideally seek out s
 - [nuxt.js][nuxt-url], "...a framework for universal [Vue.js][vue-url] applications" (things including [SSR][ssr])
 - [nuxtent][nuxtent-url], a library for use with nuxt "for content heavy sites as easy as using Jekyll, Hugo, or any other static site generator"
 
-In case you haven't picked up on a theme, my love of vue has only grown over the last year. It's recently broken v2.5.0, had a full [road map published][vue-roadmap], and even done [an AMA on hashnode][vue-ama].
+In case you haven't picked up on a theme, my love of vue has only grown over the last year. It's recently broken v2.5.0, had a full [road map published][vue-roadmap], and even done [an AMA on hashnode][vue-ama]. It's a great project, is easily configured, reads well to a novice, has great documentation, is quite performant, and [projects are easily scaffolded][vue-cli] in a variety of flavors.
 
 #### Know of Any Good Open Source Projects?
 
@@ -73,3 +73,4 @@ There's a lot going on these days, it seems, but it's nice to take some time to 
 [gen-xsp-iss]: https://github.com/edm00se/generator-xsp/issues/new
 [gen-xsp-pr]: https://github.com/edm00se/generator-xsp/pull/new/master
 [ibm-champion-nomination]: https://www.ibm.com/developerworks/champion/nominate.html
+[vue-cli]: https://github.com/vuejs/vue-cli
