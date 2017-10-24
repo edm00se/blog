@@ -43,6 +43,10 @@ Any public repository works for Hacktoberfest, but you should ideally seek out s
 
 In case you haven't picked up on a theme, my love of vue has only grown over the last year. It's recently broken v2.5.0, had a full [road map published][vue-roadmap], and even done [an AMA on hashnode][vue-ama]. It's a great project, is easily configured, reads well to a novice, has great documentation, is quite performant, and [projects are easily scaffolded][vue-cli] in a variety of flavors.
 
+[Update]
+[Egghead.io][egghead] just release a full course covering creation of a news app with vue, the vue-cli, and nuxt. It's listed as free and looks to be a good one, so [go check it out!][vue-nuxt-egghead]
+[/Update]
+
 #### Know of Any Good Open Source Projects?
 
 As it happens, if you're a reader here from the Domino/XPages community, you may be aware of a tool I launched at the beginning of the year; an [XPages][xpages] ODP compatible [Yeoman generator][yeo], [generator-xsp][gen-xsp]. It's been [blogged about][gen-xsp-blog] and [screen cast on Notes in 9][gen-xsp-ni9]; so if you're curious to use, please do. More importantly, I'm seeking a combination of additional contributors or maintainers, so if you have thoughts, please [raise an issue][gen-xsp-iss] to suggest features, spot bugs, or [submit a PR][gen-xsp-pr].
@@ -74,3 +78,5 @@ There's a lot going on these days, it seems, but it's nice to take some time to 
 [gen-xsp-pr]: https://github.com/edm00se/generator-xsp/pull/new/master
 [ibm-champion-nomination]: https://www.ibm.com/developerworks/champion/nominate.html
 [vue-cli]: https://github.com/vuejs/vue-cli
+[egghead]: https://egghead.io/
+[vue-nuxt-egghead]: https://egghead.io/courses/create-a-news-app-with-vue-js-and-nuxt
