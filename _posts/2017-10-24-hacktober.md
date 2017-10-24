@@ -53,7 +53,7 @@ I've had the great honor of being named an IBM Champion for three years running.
 
 ### Summary
 
-There's a lot going on these days, it seems, but it's nice to take some time to pay back to open source for all the use its given us. No, it doesn't have to be mine by any means, there are lots of great projects that could use a little help. So get out there, there's still some time left in the month!
+There's a lot going on these days, it seems, but it's nice to take some time to pay back to open source for all the use its given us. No, it doesn't have to be mine by any means, there are lots of great projects that could use a little help. So get out there, there's still some time left in the month! Keep on hacking !
 
 [hacktoberfest-url]: https://hacktoberfest.digitalocean.com/
 [gh-url]: https://github.com/
