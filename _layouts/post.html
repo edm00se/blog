@@ -6,6 +6,7 @@ layout: default
     <div class="post-meta">
       <h1 class="post-title">{{ page.title }}</h1>
       <h2 class="post-sub-title">{{ page.description }}</h2>
+      {% if page.header_img %}<div class="post-header-img"><amp-img src="{{ site.url }}/assets/images/headers/{{ page.header_img }}" {% if page.header_img_alt %}alt="{{page.header_img_alt}}"{% endif %} {% if page.header_img_attrib %}data-attribution="{{page.header_img_attrib}}"{% endif %} width="{{ page.header_img_w }}" height="{{ page.header_img_h }}" layout="responsive"></amp-img></div>{% endif %}
       <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time> in
         <span class="post-tags">
           {% for tag in page.categories %}

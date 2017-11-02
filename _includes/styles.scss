@@ -519,6 +519,9 @@ body {
 .post {
   .post-meta {
     font-family: $font-sans;
+    .post-header-img {
+      padding-top: 0.5rem;
+    }
   }
   .post-title {
     font-weight: 700;
@@ -698,7 +701,14 @@ body {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
       }
-
+    }
+    .flex-row-center.custom-badges {
+      display: block;
+      text-align: center;
+      
+      figure {
+        display: inline-block;
+      }
     }
   }
   .bottom-teaser {
