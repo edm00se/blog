@@ -12,9 +12,17 @@ permalink: /serverless/concepts/
 series: serverless-intro
 ---
 
-### Serverless!
+### Intro
 
-Unless you've been living under a rock, you've heard the term "serverless" come up a few times. If you're curious as to what it is, why it matters, and whereabouts it fits into development, I'm hoping this will clear some of that up.
+Unless you've been living under a rock, you've heard the term "serverless" come up a few times. If you're curious as to what it is, why it matters, and whereabouts it fits into development, I'm hoping this will clear some of that up. But first, background and context.
+
+### Virtualization
+
+asdf
+
+### Enter: Serverless!
+
+asdf
 
 ### What Is It?
 
