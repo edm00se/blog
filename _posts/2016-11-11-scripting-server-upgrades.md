@@ -3,11 +3,12 @@ layout: post
 type: post
 title: "Scripting Server Upgrades"
 description: "GitLab running in Docker and the never-ending case for automation"
-category: scm
+category: docker
 tags: [scm, git, gitlab, docker, bash]
 modified: 2016-11-11
 comments: true
 share: true
+redirect_from: "/scm/scripting-server-upgrades/"
 ---
 
 ### Intro
