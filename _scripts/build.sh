@@ -1,3 +1,3 @@
 #!/bin/bash
 
-BUNDLE_GEMFILE=../Gemfile bundle exec jekyll build ../
+BUNDLE_GEMFILE=./Gemfile bundle exec jekyll build ./
