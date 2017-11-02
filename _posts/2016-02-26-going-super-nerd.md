@@ -78,12 +78,7 @@ To add it into my build task, after calling my `npm install` (and `gitbook insta
 ### One Step Further
 Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](http://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners]({{ site.url }}//task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and...  you get the picture, just check the readme's badges at the top.
 
-<a href="http://npm.im/emoji-transmogrifier">
-  <amp-img src="https://badge.fury.io/js/emoji-transmogrifier.svg"
-  alt="NPM"
-  layout="responsive"
-  width="126" height="20"></amp-img>
-</a>
+<a href="http://npm.im/emoji-transmogrifier"><amp-img src="https://badge.fury.io/js/emoji-transmogrifier.svg" alt="NPM" layout="responsive" width="126" height="20"></amp-img></a>
 
 ### Another Step Further
 This is an update to the original article, expanding on some further developments that didn't quite warrant their own post.
