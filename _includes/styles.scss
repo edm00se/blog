@@ -519,6 +519,9 @@ body {
 .post {
   .post-meta {
     font-family: $font-sans;
+    .post-header-img {
+      padding-top: 0.5rem;
+    }
   }
   .post-title {
     font-weight: 700;
