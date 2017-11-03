@@ -20,6 +20,20 @@ Unless you've been living under a rock, you've heard the term "serverless" come 
 
 asdf
 
+#### Virtual Machines
+
+asdf
+
+#### Containers
+
+asdf
+
+#### Orders of Magnitude
+
+asdf
+
+So, that should hopefully bring into place the question of how serverless compares to other virtualization technologies. For the order of operations, my suspicion is that the big servlerless (FaaS) providers (~~OpenWhisk on Bluemix~~ IBM Cloud Functions, AWS Lambda, Azure Functions) are using some orchestration of container configuration, on top of VMs; just all abstracted away from the user, since the configuration itself provides the requirements in the underlying runtime, etc.. There's [an open source project called OpenFaaS][gh-openfaas] which lets you deploy your own servlerless environment into a [Docker swarm][docker-swarm-getting-started] or [Kubernetes][k8s-url] cluster. If you're looking for a DIY version of Kubernetes for playing around on your localhost, check out [minikube][gh-minikube], which was made for just that purpose. As for Docker swarm, if you're looking to check out how to run a simple swarm to play with, check out [Play With Docker][pwd-url], which is a sandboxed environment that allows you to create up to 5 nodes, with a limited time of 4 hours; it's worth checking out and I may prepare a demo utilizing it in the near future.
+
 ### Enter: Serverless!
 
 asdf
@@ -27,12 +41,6 @@ asdf
 ### What Is It?
 
 asfd
-
-#### How Does It Compare to...?
-
-- Docker
-- VMs
-- &lt;insert other&gt;
 
 #### But What Does It Mean to Me?
 
@@ -54,3 +62,9 @@ where to run
 ### What Does It Solve?
 
 On-demand highly scalable "workers" that are configured so as not to require additional customer-driven server changes.
+
+[gh-openfaas]: https://github.com/openfaas/faas
+[docker-swarm-getting-started]: https://docs.docker.com/engine/swarm/swarm-tutorial/\
+[k8s-url]: https://kubernetes.io/
+[gh-minikube]: https://github.com/kubernetes/minikube
+[pwd-url]: https://labs.play-with-docker.com/
