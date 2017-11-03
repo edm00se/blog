@@ -89,10 +89,9 @@ The last thing I did was to update the "upgrade" BASH script I had written, as m
 
 ```sh
 docker-compose pull
+docker-compose down
 docker-compose up -d
 ```
-
-Why didn't I add a `docker-compose stop` in between those? That's because the `docker-compose up` command "Builds, (re)creates, starts, and attaches to containers for a service.", [per the documentation][docker-compose-up-specifics]. So it's managed for me, all the better 😁. 
 
 ### Deployment Concerns
 
