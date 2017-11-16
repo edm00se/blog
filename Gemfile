@@ -7,3 +7,4 @@ gem 'jekyll-mentions'
 gem 'jekyll-gist'
 gem 'jekyll-paginate'
 gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?

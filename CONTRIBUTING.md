@@ -7,7 +7,7 @@ If you're looking to contribute to my blog (for some strange reason), contact me
 You are free to fork my blog as a starter to creating one of your own, but you should:
 
 1. recognize that this blog uses the [amplify theme for Jekyll](https://github.com/ageitgey/amplify), which is separately maintained, and this blog has some unique features changed/added which are my own
-2. remove my post, draft, and image content as all content should be **your own** for _your_ blog
+2. remove my post, draft, page, and image content as all content should be **your own** for _your_ blog
 3. check out [my blog post on getting started with static site generators with GitHub Pages](https://edm00se.io/web/the-right-tool-for-the-job)
 4. install ruby, jekyll, and the `github-pages` and `bundler` ruby gems
 
