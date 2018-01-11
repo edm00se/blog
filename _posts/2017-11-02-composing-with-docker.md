@@ -88,9 +88,9 @@ Current working directory (cwd), denoted as `.` on *nix systems (and PowerShell)
 The last thing I did was to update the "upgrade" BASH script I had written, as my admin and I were using it already and it provides a sense of consistency. Underlying the script invocation and the wrapper I placed around the "guts" to handle a lockfile, I swapped out the `docker run ...` command and options for simply:
 
 ```sh
-docker-compose pull
-docker-compose down
-docker-compose up -d
+docker-compose pull # pulls the latest of any images in the registry
+docker-compose down # downs the current instance containers
+docker-compose up -d # creates and runs in the background a new, updated instance
 ```
 
 ### Deployment Concerns
