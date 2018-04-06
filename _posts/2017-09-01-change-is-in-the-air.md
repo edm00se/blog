@@ -35,7 +35,7 @@ Instead of trying to do everything all summer, I tend to take a break from blogg
     height="160"
     layout="fixed"
     alt="summer"
-    animation="Olaf is a character from the Disney film Frozen. All rights belong to Disney."></amp-anim>
+    attribution="Olaf is a character from the Disney film Frozen. All rights belong to Disney."></amp-anim>
   <figcaption>Ah... Summer</figcaption>
 </figure>
 
