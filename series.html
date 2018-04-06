@@ -30,7 +30,7 @@ show_in_nav: false
   <h2 id="{{ tag }}" class="cat-header-label">{{ tag | capitalize }}</h2>
   <ul class="post-list">
     {% assign pages_list = tag[1] %}
-    {% assign sorted = (pages_list | sort: 'date') | reverse %}
+    {% assign sorted = pages_list | sort: 'date' | reverse %}
     {% for post in sorted %}
       {% if post.title != null %}
         {% if group == null or group == post.group %}

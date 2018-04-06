@@ -71,7 +71,7 @@ kramdown:
 exclude:
   - _scripts
 
-gems:
+plugins:
   - github-pages
   - jemoji
   - jekyll-redirect-from
