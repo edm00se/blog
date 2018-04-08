@@ -43,13 +43,21 @@ A container (Docker, LXC, etc.) lets us abstract away almost anything to do with
 
 Considering that we can now deploy application stacks with a single configuration file, this makes a team's ability to deploy far more desirable than ever before. In the case of Docker, consider you have a `docker-compose.yml` (or `docker-cloud.yml`, the latest official default file name for a Docker Cloud stack) file, defining both the application code _and_ the database requirement. Assuming the database has its volume exposed and persisted, this makes maintenance of the database pretty easy and even more easily set up the first time; for any migrations, etc. My previous example of [setting up a GitLab server with Docker compose]({{ site.url }}/docker/composing-with/) did just this and, as far as the application knew, the database instance never "changed". So, provided you have a stack config defining each of your microservices (potentially including database, or at least configuration to connect to it), you have a highly reproducible application stack and great flexibility in working on any of the components to the application, without the need to halt an entire monolithic application in the process.
 
+### Intermission
+
+visual guide
+
 ### Enter: Serverless!
 
-This is where serverless comes in. If microservices 
+This is where serverless comes in. We can use, scale up/down, update, or replace these component parts on-demand, just at a far more focused granularity than general microservices architecture. The only "contract" involved is that there is an entrypoint to any particular serverless function, often referred to as a handler.
+
+<!--
+In my head, I tend to think of these handlers, the connection points between functions and application logic, as being [an interface][wiki-oop-interface], whereas the specifics inside the function are [the implementation][wiki-ref-impl]; obviously that's a limited comparison, but 
+-->
 
 ### What Is It?
 
-asfd
+asdf
 
 #### But What Does It Mean to Me?
 
@@ -89,3 +97,5 @@ For the order of operations, my suspicion is that the big hosted serverless prov
 [pwd-url]: https://labs.play-with-docker.com/
 [commitstrip-serverless-url]: http://www.commitstrip.com/en/2017/04/26/servers-there-are-no-servers-here/
 [alpine-url]: https://alpinelinux.org
+[wiki-oop-interface]: https://wikipedia.org/wiki/Protocol_(object-oriented_programming)
+[wiki-ref-impl]: https://wikipedia.org/wiki/Reference_implementation
