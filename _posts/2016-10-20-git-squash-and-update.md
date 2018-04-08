@@ -62,7 +62,12 @@ If the asciicast gives you trouble (possibly on mobile), just [take this link](h
     layout="responsive"
     allowfullscreen
     frameborder="0"
-    src="https://asciinema.org/api/asciicasts/89834?">
+    src="https://asciinema.org/a/89834/embed?autoplay=0&size=big">
+    <div overflow
+    tabindex="0"
+    role="button"
+    class="ampstart-card py1"
+    aria-label="Show more">Click to show more</div>
   </amp-iframe>
 </div>
 

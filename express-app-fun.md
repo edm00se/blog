@@ -6,7 +6,7 @@ tags: [node, express, iseries, jdbc, jt400, notes, domino, nsf]
 description: "Posts about Node + Express being used to create RESTful APIs to nearly any data source, with specifics on IBM i (iSeries/AS400) via jt400 and NSF via domino-nsf (from npm)."
 ---
 
-<h2 id="seriesTitle" style="color: #c91b26">Series on Node + Express RESTful APIs to connect to a variety of data sources</h2>
+<h2 id="seriesTitle" class="series-title">Series on Node + Express RESTful APIs to connect to a variety of data sources</h2>
 {% assign count = '0' %}
 {% assign idx = '0' %}
 {% for post in site.posts reversed %}

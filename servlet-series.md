@@ -7,7 +7,7 @@ tags: [xpages, json, java, servlet]
 description: "Posts about Java servlet creation and use with IBM Domino/XPages."
 ---
 
-<h2 id="seriesTitle" style="color: #c91b26">Series on Java servlets in Domino/XPages applications</h2>
+<h2 id="seriesTitle" class="series-title">Series on Java servlets in Domino/XPages applications</h2>
 {% assign count = '0' %}
 {% assign idx = '0' %}
 {% for post in site.posts reversed %}

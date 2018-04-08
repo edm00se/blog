@@ -1,14 +1,14 @@
 ---
 layout: post
 type: post
-title: "Serverless Concepts"
-description: "getting into the right mindset"
+title: "Serverless Theory"
+description: "yes, the code still runs on servers"
 category: serverless
-tags: [serverless, virtualization, containers, intro, concepts]
-modified: 2018-01-15
+tags: [serverless, virtualization, containers, intro, theory]
+modified: 2018-02-16
 comments: true
 share: true
-permalink: /serverless/concepts/
+permalink: /serverless/theory/
 series: serverless-intro
 ---
 
@@ -18,7 +18,7 @@ series: serverless-intro
       height="421"
       alt="Doctor Strange gets his learning on with the Ancient One"
       layout="responsive"></amp-img>
-  <!-- <figcaption>behold the power of serverless!</figcaption> -->
+  <figcaption>behold the power of serverless!</figcaption>
  </figure>
 
 Unless you've been living under a rock, you've heard the term ["serverless"][wiki-serverless] come up a few times. If you're curious as to what it is, why it matters, and whereabouts it fits into development, I'm hoping this will clear some of that up. But first, there are a couple things to get out of the way.
@@ -43,21 +43,13 @@ A container (Docker, LXC, etc.) lets us abstract away almost anything to do with
 
 Considering that we can now deploy application stacks with a single configuration file, this makes a team's ability to deploy far more desirable than ever before. In the case of Docker, consider you have a `docker-compose.yml` (or `docker-cloud.yml`, the latest official default file name for a Docker Cloud stack) file, defining both the application code _and_ the database requirement. Assuming the database has its volume exposed and persisted, this makes maintenance of the database pretty easy and even more easily set up the first time; for any migrations, etc. My previous example of [setting up a GitLab server with Docker compose]({{ site.url }}/docker/composing-with/) did just this and, as far as the application knew, the database instance never "changed". So, provided you have a stack config defining each of your microservices (potentially including database, or at least configuration to connect to it), you have a highly reproducible application stack and great flexibility in working on any of the components to the application, without the need to halt an entire monolithic application in the process.
 
-### Intermission
-
-visual guide
-
 ### Enter: Serverless!
 
-This is where serverless comes in. We can use, scale up/down, update, or replace these component parts on-demand, just at a far more focused granularity than general microservices architecture. The only "contract" involved is that there is an entrypoint to any particular serverless function, often referred to as a handler.
-
-<!--
-In my head, I tend to think of these handlers, the connection points between functions and application logic, as being [an interface][wiki-oop-interface], whereas the specifics inside the function are [the implementation][wiki-ref-impl]; obviously that's a limited comparison, but 
--->
+This is where serverless comes in. If microservices 
 
 ### What Is It?
 
-asdf
+asfd
 
 #### But What Does It Mean to Me?
 
@@ -97,5 +89,3 @@ For the order of operations, my suspicion is that the big hosted serverless prov
 [pwd-url]: https://labs.play-with-docker.com/
 [commitstrip-serverless-url]: http://www.commitstrip.com/en/2017/04/26/servers-there-are-no-servers-here/
 [alpine-url]: https://alpinelinux.org
-[wiki-oop-interface]: https://wikipedia.org/wiki/Protocol_(object-oriented_programming)
-[wiki-ref-impl]: https://wikipedia.org/wiki/Reference_implementation
