@@ -4,7 +4,7 @@ type: post
 title: "Developer Dog"
 description: "an Alexa skill for fun and encouragement"
 category: serverless
-tags: [serverless, alexa, aws, amazon, echo, javascript, node, faas]
+tags: [serverless, alexa, aws, amazon, echo, javascript, node, faas, skill]
 modified: 2017-09-29
 comments: true
 share: true
@@ -14,7 +14,7 @@ series: serverless-intro
 
 ### Background
 
-Here's a post I've been working on for longer than I care to admit to. For a few months, I've been wanting to kick off a series on serverless development practices, theory behind why serverless is such a game changer, as well as a couple of demos. The fact of the matter is, each time I've started, I've gotten so bogged down in writing a post about _what serverless is_ and the backing theory, I've managed to loose blogging momentum and it has since idled in my drafts folder for a while. So, what I've settled on for now, is a brief introductory to my first Alexa Skill, and the basics of how it works.37
+Here's a post I've been working on for longer than I care to admit to. For a few months, I've been wanting to kick off a series on serverless development practices, theory behind why serverless is such a game changer, as well as a couple of demos. The fact of the matter is, each time I've started, I've gotten so bogged down in writing a post about _what serverless is_ and the backing theory, I've managed to loose blogging momentum and it has since idled in my drafts folder for a while. So, what I've settled on for now, is a brief introductory to my first Alexa Skill, and the basics of how it works.
 
 ### Intro
 
@@ -28,17 +28,23 @@ A while back I tweeted out a short poll on what sort of Alexa Skill I should bui
 
 ### What Makes Up an Alexa Skill?
 
-At the most basic level, an Alexa Skill is comprise of two parts:
+At the most basic level, an Alexa Skill is comprised of three main parts:
 
-1. a backing service, generally a serverless implementation, hosted _somewhere_ that the Alexa skill can invoke
+- a backing **service**, generally a serverless implementation, hosted _somewhere_ that the Alexa skill can invoke
   - this can be a publicly accessible HTTP(S) endpoint
   - for Amazon's product usage, the most common is AWS Lambda
-  - AWS Lambdas use their ARN (Amazon Resource Names), which is an Amazon internal name space; quite easy to talk from Amazon Lambda to an Alexa Skill
+  - AWS Lambdas use their ARN (Amazon Resource Names), which is an Amazon internal name space; quite easy to talk from AWS Lambda to an Alexa Skill (point at the right ARN)
   - for Alexa skills, most often make use of the Alexa SDK or related packages (to assist in handling the hooks in a consistent fashion)
-2. a configuration of the Alexa Skill
+- a **configuration** of the Alexa Skill
   - matches vocal commands such as name and actions, responses
-3. it is published to the Alexa Skill "store" on Amazon
+  - it matches registered phrases to "intents"
+  - these intents can be either standard ones from Amazon, such as "cancel", or custom ones such as "do this thing I defined"
+- it is **published** to the Alexa Skill "store" on Amazon
   - it can be available to test pre-release / while in development, for the developer's associated account (and beta testers)
+  - the publishing process involves review
+  - my experience has been around 24 hours turn around
+  - some things are annoying in that they can be quite arbitrary
+    - like one of my skills which fit their described naming conventions as it is listed, but their review said it didn't; they were empirically incorrect, but there is _no_ appeals process
 
 ### How About an Example Skill?
 
@@ -85,6 +91,44 @@ exports.handler = function(event, context, callback) {
 // we'll populate these shortly
 const handlers = {}
 ```
+
+##### Configure Your Handlers
+
+Since we are now bringing in our handlers, here's a quick look at what is entailed. For starters, it's an object, as you can see from the declaration above. We will match our intent names to a function, which will perform actions and `emit` an action based on some pre-defined actions. These can also be a different registered intention, such as chaining an "I didn't understand that" prior to calling the help intent response.
+
+Here's a basic configuration for "Hello World".
+
+```js
+const handlers = {
+    'LaunchRequest': function () { // just opening the skill
+      this.emit('AMAZON.HelpIntent');
+    },
+    'HelloWorldIntent': function () { // the main intent
+      this.response.speak('Hello World!');
+      this.emit(':responseReady');
+    }, // now begin wiring of canned intents
+    'AMAZON.HelpIntent': function () {
+      const speechOutput = 'This is the Hello World Sample Skill.';
+      const reprompt = 'Say hello, to hear me speak.';
+
+      this.response.speak(speechOutput).listen(reprompt);
+      this.emit(':responseReady');
+    },
+    'AMAZON.CancelIntent': function () {
+      this.response.speak('Goodbye!');
+      this.emit(':responseReady');
+    },
+    'AMAZON.StopIntent': function () {
+      this.response.speak('See you later!');
+      this.emit(':responseReady');
+    },
+    'Unhandled': function () {
+      this.emit('AMAZON.HelpIntent');
+    }
+};
+```
+
+To break things down, you'll notice the first intent is the `LaunchIntent`. This 
 
 #### Example 2: Developer Dog
 
