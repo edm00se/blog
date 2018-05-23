@@ -5,7 +5,7 @@ title: "Hello Alexa"
 description: "an intro to serverless and Alexa skills"
 category: serverless
 tags: [serverless, alexa, aws, amazon, echo, javascript, node, faas, skill]
-modified: 2017-09-29
+modified: 2018-05-24
 comments: true
 share: true
 series: serverless-intro
@@ -15,6 +15,8 @@ series-part: 1
 ### Background
 
 Here's a post I've been working on for longer than I care to admit to. For a few months, I've been wanting to kick off a series on serverless development practices, theory behind why serverless is such a game changer, as well as a couple of demos. The fact of the matter is, each time I've started, I've gotten so bogged down in writing a post about _what serverless is_ and the backing theory, I've managed to loose blogging momentum and it has since idled in my drafts folder for a while. So, what I've settled on for now, is a brief introductory to my first Alexa Skill, and the basics of how it works.
+
+{% include toc.html %}
 
 ### Intro
 
@@ -26,7 +28,7 @@ A while back I tweeted out a short poll on what sort of Alexa Skill I should bui
 
 {% include tweet.html id="845786561186795521" %}
 
-### What Makes Up an Alexa Skill?
+### Constructing an Alexa Skill
 
 At the most basic level, an Alexa Skill is comprised of three main parts:
 
@@ -52,45 +54,30 @@ Before we go further, I'd like to ask you to think about how we register human s
 
 #### Example 1: Hello World
 
-Good ol' "Hello world", you know this one, right? So, what do we need to start with?
+Stop me if you've heard this before, but we'll begin with a good ol' "hello world", you know this one, right? So, what do we need to start with?
 
 ##### Scaffold The Project
 
 1. this is a Node.js example, so we'll be creating a new project directory and initializing with npm
-  - `mkdir hello-world`
-  - `cd hello-world`
-  - `npm init -y`
+    - `mkdir hello-world`
+    - `cd hello-world`
+    - `npm init -y`
 2. we'll use the official [Alexa Skills Kit SDK for Node.js][alexa-sdk-node]
-  - `npm install --save alexa-sdk`
+    - `npm install --save alexa-sdk`
 3. we'll have a short and sweet Node.js module, so create the source file
-  - `touch index.js`
+    - `touch index.js`
 4. massage your `package.json`, update your:
-  - name
-  - description
-  - ensure the "main" points to `index.js` (that should be the default)
+    - name
+    - description
+    - ensure the "main" points to `index.js` (that should be the default)
 
-##### Build Out Your `index.js`
+##### Build Out `index.js`
 
-???
-To properly match up with the Alexa SDK expects, we'll **export** a function, which will include some passing of a couple things. Why stick to this format? Because we'll be running on their server to be invoked by their runtime, so it needs to know what we have to provide. The `event` and `context` will get shuffled around, but the biggest thing to pay attention to here is the `handlers` that we'll be registering. These handlers are an object (map) that will match up a handful of "Intent"s with a function of their own.
-???
+To correctly hook into the epxected events, we'll **export** a `handler` function, containing hooks to our various "intentions". This is what is expected by the Alexa SDK; for more [on registering handlers, check out their wiki][alexa-sdk-register-handlers].
 
-Here's a commented start to this file:
+Here's a start to this file:
 
-```js
-'use strict';
-const Alexa = require('alexa-sdk');
-
-// this exported handler is what defines how the Alexa runtime can interact with our module
-exports.handler = function(event, context, callback) {
-    const alexa = Alexa.handler(event, context); // a new instance
-    alexa.registerHandlers(handlers); // registers handlers (below)
-    alexa.execute(); // now it's ready
-};
-
-// we'll populate these shortly
-const handlers = {}
-```
+{% include gist.html id="21702cdba32200001a6e3884b759415d" file="begin.js" %}
 
 ##### Configure Your Handlers
 
@@ -98,35 +85,7 @@ Since we are now bringing in our handlers, here's a quick look at what is entail
 
 Here's a basic configuration for "Hello World".
 
-```js
-const handlers = {
-    'LaunchRequest': function () { // just opening the skill
-      this.emit('AMAZON.HelpIntent');
-    },
-    'HelloWorldIntent': function () { // the main intent
-      this.response.speak('Hello World!');
-      this.emit(':responseReady');
-    }, // now begin wiring of canned intents
-    'AMAZON.HelpIntent': function () {
-      const speechOutput = 'This is the Hello World Sample Skill.';
-      const reprompt = 'Say hello, to hear me speak.';
-
-      this.response.speak(speechOutput).listen(reprompt);
-      this.emit(':responseReady');
-    },
-    'AMAZON.CancelIntent': function () {
-      this.response.speak('Goodbye!');
-      this.emit(':responseReady');
-    },
-    'AMAZON.StopIntent': function () {
-      this.response.speak('See you later!');
-      this.emit(':responseReady');
-    },
-    'Unhandled': function () {
-      this.emit('AMAZON.HelpIntent');
-    }
-};
-```
+{% include gist.html id="21702cdba32200001a6e3884b759415d" file="handlers.js" %}
 
 To break things down, you'll notice there are two forms of intents, custom and standard Amazon intents. The Amazon standard intents are common across skills, and cover cancellations, stopping, and asking for help.
 
@@ -141,3 +100,4 @@ I have a better example for the next post. It will cover an Alexa Skill I have d
 [google-home]: https://madeby.google.com/home/
 [alexa-sdk-node]: https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs
 [alexa-developer-skills]: https://developer.amazon.com/alexa-skills-kit/build
+[alexa-sdk-register-handlers]: https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/wiki/Developing-Your-First-Skill#implementing-request-handlers

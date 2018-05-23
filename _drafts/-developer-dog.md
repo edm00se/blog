@@ -5,7 +5,7 @@ title: "Developer Dog"
 description: "an Alexa skill for fun and encouragement"
 category: serverless
 tags: [serverless, alexa, aws, amazon, echo, javascript, node, faas, skill]
-modified: 2017-09-29
+modified: 2018-05-31
 comments: true
 share: true
 permalink: /serverless/encouraging-developers/
