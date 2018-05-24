@@ -22,11 +22,13 @@ Here's a post I've been working on for longer than I care to admit to. For a few
 
 Have you gotten past your fears of an always listening device on in your home? Has conversational computing started to change how you think about software development? Have you wanted to build your first Alexa Skill, with more than a simple "hello world"?
 
-[Amazon's Alexa (Echo) devices][amazon-echo] and [services][alexa-voice-service], along with [Google's Home][google-home] line of voice/audio products, are chaning the way everyday computing exists and is used in our lives. They're not the only ones, along with Siri, Cortana, and more, these voice and audio services have helped to begin a bit of a minor revolution. This one doesn't require singing and dancing, unless that's your thing, but rather that we re-examine the nature of how we interact with computing devices. The very nature of being able to speak aloud, give instruction in a natural langauge format, and receive information is probably one of the more underrated paradigm shifts of this decade. With any luck, it will only go onwards and upwards from here... unless Skynet takes over.
+[Amazon's Alexa (Echo) devices][amazon-echo] and [services][alexa-voice-service], along with [Google's Home][google-home] line of voice/audio products, are changing the way everyday computing exists and is used in our lives. They're not the only ones, along with Siri, Cortana, and more, these voice and audio services have helped to begin a bit of a minor revolution. This one doesn't require singing and dancing, unless that's your thing, but rather that we re-examine the nature of how we interact with computing devices. The very nature of being able to speak aloud, give instruction in a natural langauge format, and receive information is probably one of the more underrated paradigm shifts of this decade. With any luck, it will only go onwards and upwards from here... unless Skynet takes over.
 
-A while back I tweeted out a short poll on what sort of Alexa Skill I should build. I only included a couple options and got a couple votes back. Here are the results.
+A while back I tweeted out a short poll on what sort of Alexa Skill I should build. I included a couple options and got a couple votes back. Here are the results.
 
 {% include tweet.html id="845786561186795521" %}
+
+This will feed the next post, which covers the Alexa Skill I built. For now, let's have a look at how a basic Alexa Skill is structured.
 
 ### Constructing an Alexa Skill
 
@@ -93,7 +95,7 @@ The first custom intent is the `LaunchIntent`. That registers an action, "speaki
 
 ### Next Week: A Better Example
 
-I have a better example for the next post. It will cover an Alexa Skill I have deployed, along with some 
+I have a better example for the next post, the skill I wrote following the above twitter poll. Next time I will cover an Alexa Skill I have published, along with some show-and-tell about configuring the skill with intentions in the AWS Lambda and Alexa Skill Consoles.
 
 [amazon-echo]: http://www.amazon.com/echo
 [alexa-voice-service]: https://developer.amazon.com/alexa-voice-service
