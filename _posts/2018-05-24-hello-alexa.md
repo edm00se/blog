@@ -93,7 +93,7 @@ To break things down, you'll notice there are two forms of intents, custom and s
 
 The first custom intent is the `LaunchIntent`. That registers an action, "speaking" a phrase and emitting an event.
 
-### Next Week: A Better Example
+### Next Time: A Better Example
 
 I have a better example for the next post, the skill I wrote following the above twitter poll. Next time I will cover an Alexa Skill I have published, along with some show-and-tell about configuring the skill with intentions in the AWS Lambda and Alexa Skill Consoles.
 
