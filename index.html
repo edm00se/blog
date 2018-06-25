@@ -27,7 +27,7 @@ show_in_nav: true
                   {% else %}
           		{% assign readtime = post.content | strip_html | number_of_words | append: '.0' | divided_by:180 | ceil %}
             {% endif %}
-            {% if site.readtime %}&nbsp;<span class="post-read-time"><amp-img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAXVBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlBIYWHjAAAAHnRSTlMAAQIEBRESFxgZJyg3Ojs8PT95fn+Cg6Olpt7g4v22Nz8hAAAAeElEQVQIHQXBC2KCMAAFsLRrFbehzs9ECu/+xzSBelnG+porMI0kSdYjTHsevZTDM/uROjLjh7+s1Tl3tOA/syUdLTjkZaSgBSWrLcV3EpQM73Ra+0LP4pobwCMXdcsvMGdUpj23Xkq/Z5/gtCVJMiagXt/bWM4VH9b3CU6x8AI/AAAAAElFTkSuQmCC" layout="fixed" width="14" height="14" layout="responsive" alt="clock face"></amp-img>&nbsp;
+            {% if site.readtime %}&nbsp;<span class="post-read-time"><amp-img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAXVBMVEUAAAAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlAsPlBIYWHjAAAAHnRSTlMAAQIEBRESFxgZJyg3Ojs8PT95fn+Cg6Olpt7g4v22Nz8hAAAAeElEQVQIHQXBC2KCMAAFsLRrFbehzs9ECu/+xzSBelnG+porMI0kSdYjTHsevZTDM/uROjLjh7+s1Tl3tOA/syUdLTjkZaSgBSWrLcV3EpQM73Ra+0LP4pobwCMXdcsvMGdUpj23Xkq/Z5/gtCVJMiagXt/bWM4VH9b3CU6x8AI/AAAAAElFTkSuQmCC" layout="fixed" width="14" height="14" alt="clock face"></amp-img>&nbsp;
               {% if readtime > 1 and readtime < 1.5 %}~1 minute{% endif %}
               {% if readtime > 1.5 %}~<span class="time">{{ readtime }}</span> minutes{% endif %}
               {% if readtime < 1 %}Less than 1 minute to read{% endif %}
