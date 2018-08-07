@@ -14,7 +14,7 @@ series: serverless-intro
 
 {% include series.html %}
 
-Hello from [#THATConference][that-conf]! This is my second year attending and I've been quite happy. The only thing I miss here is the great people I had the privelege of meeting and seeing within the IBM and friends world, but my work has shifted away over the last year. I'm looking forward to a couple of ideas in the future though, so who knows what the future will bring.
+Hello from [#THATConference][that-conf]! This is my second year attending and I've been quite happy. The only thing I miss here is the great people I had the privelege of meeting and seeing within the IBM and friends world, such as the always excellent [MWLUG](http://mwlug.com) that was a little over a week ago, but my work has shifted away over the last year. I'm looking forward to a couple of ideas in the future though, so who knows what the future will bring.
 
 There's nothing like a full day at a conference to get your developer juices flowing and a desire to get back to contributing to the blog. I also want to clear out this series to make room for other, related, topics. So here it is! When last we left off, we had covered the basic structure of a serverless function, complete with the needed hooks and handlers for use as an Amazon Alexa Skill.
 
