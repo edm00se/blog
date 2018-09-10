@@ -44,10 +44,10 @@ const DO_CACHE = [
   '/favicon.png',
   'https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d?s=260',
   '/assets/images/champion/ibm-champion-2018-ibm-cloud.png',
-  '/assets/images/champion/ibm-champion-2018-social-business.png',
+  '/assets/images/champion/ibm-champion-2018-collaboration-solutions.png',
   '/assets/images/champion/ibm-champion-collaboration-solutions-3-year-milestone.png',
   '/assets/images/champion/ibm-champion-2017-ibm-cloud.png',
-  '/assets/images/champion/ibm-champion-2017-social-business.png',
+  '/assets/images/champion/ibm-champion-2017-collaboration-solutions.png',
   '/assets/images/champion/ibm-champion-2016-social-business.png',
   '/assets/images/champion/ibm-champion-2015-social-business.png',
   '/assets/images/champion/banner.png'
