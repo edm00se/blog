@@ -1,0 +1,6 @@
+# for local preview only
+url:      ""
+baseurl:  ""
+google_analytics:   UA-NOTHINGTOSEE-1
+disqus_shortname:   ""
+enable_pwa: false

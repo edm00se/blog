@@ -1,0 +1,79 @@
+# Welcome to Amplified for Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Dev|Blog
+description: >
+  software development, operations, and tech musings
+logo: "/assets/images/logo.svg"
+default_bg: "/assets/images/logo.svg"
+name: 'Eric McCormick'
+email: ''
+contact_link: 'https://edm00.se/contact'
+ama: 'https://github.com/edm00se/ama'
+bio: >
+  Software Developer, for the web, full-stack, Node virtuoso, git master, Docker acolyte, DevOps neophyte, IBM Champion.
+baseurl: "" # the subpath of your site, e.g. /blog
+disqus_shortname: em-devblog
+disqus_iframe_url: "https://ericmccormick.io/disqus_comments.html"
+#gist_embed_url: "https://ericmccormick.io/gist_embed.html"
+url: "https://edm00se.io" # the base hostname & protocol for your site
+enable_pwa: true
+paginate:	5 # The number of posts to show per page on your homepage
+permalink:   /:categories/:title/
+# Read Time is a calculator to provide post read-time based on word count. TODO: skips gist content?
+readtime: true
+wpm: 180
+search: true
+progressbar: false # great effect, pretty minimal, relies on a script that failes AMP validation
+anchors: false # another great effect, minimal, also uses script that fails AMP validation
+author_image: "https://www.gravatar.com/avatar/397da8c5ae99b2f89a207d9beda6984d"
+twitter_username: edm00se
+github_username:  edm00se
+stackoverflow:  https://stackoverflow.com/users/1720082/eric-mccormick
+linkedin:       https://www.linkedin.com/in/emccormick/
+instagram:      edm00se
+flickr:         edm00se
+# For Google Authorship https://plus.google.com/authorship
+google_plus:    https://plus.google.com/u/0/+EricMcCormickThereCanBeOnlyOne/
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-53507706-1
+google_verify:      KrFPfZtEQFCrOg2OTSPZfK72gA7_aso_X1R2kVNtzaU
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:        98426725A1ECABB0ECC93D5FB5CEBEB0
+
+# Manifest stuff
+manifest_name: edm00se.io | DevBlog
+manifest_short_name: edm00se.io # Appears in "Add to home screen" dialogues and may have other importance also
+manifest_lang: en
+manifest_background_color: white
+manifest_display: minimal-ui
+manifest_theme_color: midnightblue
+
+sass:
+  style: expanded
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # parse_block_html: true
+  auto_ids: true
+  input: GFM
+  toc_levels: 1..6
+
+exclude:
+  - _scripts
+
+plugins:
+  - github-pages
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-mentions
+  - jekyll-paginate

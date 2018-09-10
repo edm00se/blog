@@ -1,0 +1,6 @@
+<amp-gist
+  data-gistid="{{ include.id }}"
+  {% if include.file %}data-file="{{ include.file }}"{% endif %}
+  layout="fixed-height"
+  height="{% if include.height %}{{ include.height }}{% else %}120{% endif %}">
+</amp-gist>
