@@ -14,7 +14,7 @@ show_in_nav: true
 
 As [a software developer\*][whats-in-a-title], I have an passion for application structure, framework adoption, automation in tooling, deployment, cloud, containers, serverless, and much more.
 
-Do you have questions for me that don't fit in this blog? You can [AMA, ask me (nearly) anything via an issue on GitHub](https://github.com/edm00se/ama).
+Do you have questions for me that don't fit in this blog? You can [AMA, ask me anything, via an issue on GitHub](https://github.com/edm00se/ama).
 
 {% include badges.html %}
 

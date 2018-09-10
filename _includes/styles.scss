@@ -690,27 +690,17 @@ body {
     ol li {
       list-style-type: decimal;
     }
-    .flex-row-center {
-      display: -webkit-flex;
+    .custom-badges {
       display: flex;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      -webkit-align-items: center;
+      flex-wrap: wrap;
       align-items: center;
-      -webkit-justify-content: center;
       justify-content: center;
-
-      figure {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-    }
-    .flex-row-center.custom-badges {
-      display: block;
-      text-align: center;
       
       figure {
         display: inline-block;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: inherit;
       }
     }
   }
