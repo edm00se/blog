@@ -30,9 +30,7 @@ So, what I believe a single-page structured application does well is containing 
 * an application strategy that requires "less work" (it just shifts where your attention goes)
 
 ### A Brief Anatomy
-As you probably know by now, I'm a big fan of <a href="http://angularjs.org/">AngularJS</a>. It makes a lot of the client-side application development easier than you might think. The example file is the app/index.html file from the <a href="http://github.com/angular/angular-seed">angular-seed project on GitHub</a>.
-
-<script src="http://gist-it.sudarmuthu.com/github/angular/angular-seed/blob/master/app/index.html"></script>
+As you probably know by now, I'm a big fan of <a href="http://angularjs.org/">AngularJS</a>. It makes a lot of the client-side application development easier than you might think. AN example file is the `app/index.html` file from the <a href="http://github.com/angular/angular-seed">angular-seed project on GitHub</a>.
 
 The general progression is:
 
