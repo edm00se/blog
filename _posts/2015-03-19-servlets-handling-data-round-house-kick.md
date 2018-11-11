@@ -13,9 +13,9 @@ share: true
 
 {% include series.html %}
 ### A Fast-Paced, Round-House <s>Kick</s> Tour of Data Interactions
-[As promised at the end of the last post (in this series)]({{ site.url }}/xpages-servlets/servlet-handling-requests/), this post will walk through the entire life cycle of data reception and response handling. This is where my [ConnectED demo app-that-never-was]({{ site.url }}/self-promotion/a-chalk-talk-talk/) comes in, we're going to build part of it. We're going to create an endpoint which governs the provision of a collection of the houses of note in our fictitious land of Os (it's out west). I'll be providing the `com.westeros.servlets.HouseServlet` class, which is an `AbstractXSPServlet` ([previously demonstrated]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets)), to my `ServletFactory`.
+[As promised at the end of the last post (in this series)](/xpages-servlets/servlet-handling-requests/), this post will walk through the entire life cycle of data reception and response handling. This is where my [ConnectED demo app-that-never-was](/self-promotion/a-chalk-talk-talk/) comes in, we're going to build part of it. We're going to create an endpoint which governs the provision of a collection of the houses of note in our fictitious land of Os (it's out west). I'll be providing the `com.westeros.servlets.HouseServlet` class, which is an `AbstractXSPServlet` ([previously demonstrated](/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets)), to my `ServletFactory`.
 
-Note: I'll be sticking to the same, vanilla Java approach I've used previously in [this series]({{ site.url }}/servlet-series). I'll outright say it though, it'd be great to see how some of the processes involved in the setup can be automated and made easier, be it by `@` annotation or via other frameworks. I fully invite those more experienced in these methods to show us the way.
+Note: I'll be sticking to the same, vanilla Java approach I've used previously in [this series](/servlet-series). I'll outright say it though, it'd be great to see how some of the processes involved in the setup can be automated and made easier, be it by `@` annotation or via other frameworks. I fully invite those more experienced in these methods to show us the way.
 
 {% include toc.html %}
 ### The Endpoint
@@ -118,7 +118,7 @@ public class HouseServlet extends AbstractXSPServlet {
 ```
 
 #### Collection
-The collection will iterate records and return the JSON array of objects representing each house. I'm going to wrap the array as a data element, to give some mild metadata I usually provide, including a simple version of any request parameters and, lastly, an error flag (with an error message, if the boolean `error` property is true); this is consistent with [what I've done before]({{ site.url }}/xpages/custom-JSON-with-Java-sized-XAgent).
+The collection will iterate records and return the JSON array of objects representing each house. I'm going to wrap the array as a data element, to give some mild metadata I usually provide, including a simple version of any request parameters and, lastly, an error flag (with an error message, if the boolean `error` property is true); this is consistent with [what I've done before](/xpages/custom-JSON-with-Java-sized-XAgent).
 
 Below, when I handle the reflection of JSON to a Java Object (in conjunction with the ), I will show how to use both. Here's the providing of a collection, pulling entry information from a `ViewNavigator` into the Java object that will become the JSON string. I'm going to use a `HashMap` as my base object, with an `ArrayList` which will hold the individual data entries. <!-- As I like to do, I'm going to wrap some basic request info up front and, provided it successfully gets to the end of the request, provide an `error` property as a boolean. -->
 
@@ -408,7 +408,7 @@ An object model, for my purposes, is a bean. It provides the definitions for wha
 If you're ever looking for help in generating a POJO from JSON, I recommend checking out [jsonschema2pojo.org](//jsonschema2pojo.org). As I'm an avid user of Gson and Apache Commons, the options I select are JSON (not JSONSchema), Gson, Use double numbers, Use Commons-Lang3, and Include `toString`; like this:
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/JsonSchema2Pojo_settingsExample.png"
+  <amp-img src="/assets/images/post_images/JsonSchema2Pojo_settingsExample.png"
   alt="JsonSchema2Pojo.org example settings"
   layout="fixed"
   width="308" height="499"></amp-img>

@@ -11,7 +11,7 @@ share: true
 ---
 
 ### For Starters
-This post <a href="{{ site.url }}/xpages/rest-consumption-server-side/">relies on the previous one</a>, which covers the use of a Java class to consume RESTful data. By implementing this, we were able to pull data and assign it, in the example via a viewScope variable, into an xp:dataTable element. This post is basic, but shows how powerful this can be. Some implied aspects are:
+This post <a href="/xpages/rest-consumption-server-side/">relies on the previous one</a>, which covers the use of a Java class to consume RESTful data. By implementing this, we were able to pull data and assign it, in the example via a viewScope variable, into an xp:dataTable element. This post is basic, but shows how powerful this can be. Some implied aspects are:
 
 1. URL building to contain
   * the appropriate endpoint

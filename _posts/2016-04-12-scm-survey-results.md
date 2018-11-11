@@ -19,7 +19,7 @@ The TLCC + Teamstudio webinar today is "Getting Started with the OpenNTF Domino 
 Last week, I put out a few toughts out in regards to source control management (scm) and even included a single question survey.
 
 ### Results
-Here is the main donut chart, which is the same from my [previous post]({{ site.url }}/scm/source-control-survey/), which have been live updating, as they're published from right in Google Docs in the [response spreadsheet](https://docs.google.com/spreadsheets/d/1AW-db53FKmx_ppiXGpByjNxNVf99SjP3dlx7vnKqh_E/edit?usp=sharing) I set up.
+Here is the main donut chart, which is the same from my [previous post](/scm/source-control-survey/), which have been live updating, as they're published from right in Google Docs in the [response spreadsheet](https://docs.google.com/spreadsheets/d/1AW-db53FKmx_ppiXGpByjNxNVf99SjP3dlx7vnKqh_E/edit?usp=sharing) I set up.
 
 <div class="text-center">
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1AW-db53FKmx_ppiXGpByjNxNVf99SjP3dlx7vnKqh_E/pubchart?oid=1932817384&amp;format=interactive"></iframe>

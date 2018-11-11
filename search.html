@@ -12,7 +12,7 @@ show_in_nav: true
 </div>
 
 <!-- Script pointing to jekyll-search.js -->
-<script src="{{ site.url }}/assets/js/jekyll-search.min.js"></script>
+<script src="/assets/js/jekyll-search.min.js"></script>
 <script type="text/javascript">
   if( !window.domReady ){
     window.domReady = function(callback) {
@@ -45,8 +45,8 @@ show_in_nav: true
     SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
-      json: '{{ site.url }}/search.json',
-      searchResultTemplate: '<li class="result-entry"><a href="{url}">{title}</a><br />{descrip},<br /> in <a href="{{ site.url }}/categories/#{category}">{category}</a> on {shortdate}<br /><span class="post-tags">{tagAr}</span></li>'
+      json: '/search.json',
+      searchResultTemplate: '<li class="result-entry"><a href="{url}">{title}</a><br />{descrip},<br /> in <a href="/categories/#{category}">{category}</a> on {shortdate}<br /><span class="post-tags">{tagAr}</span></li>'
     });
     var q = getParameterByName('query');
     var searchFld = document.getElementById("search-input");

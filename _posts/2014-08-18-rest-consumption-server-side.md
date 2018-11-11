@@ -37,7 +37,7 @@ I've used two [Java ARchive resources (JARs)](http://en.wikipedia.org/wiki/JAR_(
 [Per request](http://twitter.com/XPageDeveloper/status/501728122828374017), here's a breakdown of where you can get the two libraries I used; the [Apache Commons Validator library](http://commons.apache.org/proper/commons-validator/), for the URLValidator, and the [Google GSON library](https://code.google.com/p/google-gson/), for the ease of building and returning a JSON Object. To bring these files into an NSF, merely import them as Code > JAR elements in Designer, as such:
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/AddJarsToNSF.png"
+  <amp-img src="/assets/images/post_images/AddJarsToNSF.png"
   alt="JARs are imported as NSF resources"
   height="214" width="241"></amp-img>
  <figcaption>JARs are imported as NSF resources</figcaption>

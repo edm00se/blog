@@ -15,7 +15,7 @@ share: true
 On the 17th of October in 2013, Internet Explorer 11 was released from Microsoft. That means that as of today, this popular\* browser is now four years old and, with all respect to it, it really ought to go.
 
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/Out_Gaston.gif"
+  <amp-anim src="/assets/images/post_images/Out_Gaston.gif"
       width="250"
       height="281"
       alt="Out Gaston"

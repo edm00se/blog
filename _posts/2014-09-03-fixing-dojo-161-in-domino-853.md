@@ -26,7 +26,7 @@ That being said, I still had the controls I wanted to play with, so I still trie
 Domino 8.5.3 has Dojo 1.6.1. The culprit in question, as I found out from attempting to use Chrome with the Enhanced Grid, the issue was with the child selector call.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/dojoBeastInLair.png"
+  <amp-img src="/assets/images/post_images/dojoBeastInLair.png"
   alt="the beast in its lair"
   layout="responsive"
   width="1283" height="351"></amp-img>
@@ -53,7 +53,7 @@ You can see there are actually three files, one minified, one minified and gzip'
 Now that the original, un-compressed version has its updates, it's time for those minified and minified and gzip'd versions. If you're using an editor like [Notepad++](http://notepad-plus-plus.org/), you can use a plugin such as JSTool to perform the JSMin operation.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/npppJSmin.png"
+  <amp-img src="/assets/images/post_images/npppJSmin.png"
   alt="minifying with JSTool in Notepad++"
   layout="responsive"
   width="610" height="445"></amp-img>
@@ -63,7 +63,7 @@ Now that the original, un-compressed version has its updates, it's time for thos
 Save that file over the dojo.js file. Now for the gzip'd version. With 7zip, you can perform a right-click on the dojo.js file and select 7zip > Add to Archive. For the settings, select the correct archive format, ensuring the .gz extension gets applied and overwrite the existing dojo.js.gz file.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/gzipWith7zip.png"
+  <amp-img src="/assets/images/post_images/gzipWith7zip.png"
   alt="gzip-ing with 7zip"
   layout="responsive"
   width="630" height="547"></amp-img>
@@ -74,7 +74,7 @@ Save that file over the dojo.js file. Now for the gzip'd version. With 7zip, you
 Now you only need to restart the Domino server and you can start using it. Just restarting the http task doesn't quite do it, as Domino needs to fully re-register all its known libraries (not just re-initialize the handling of http connections). If you don't, but you set the library in the Xsp Properties, you will not be able to load your new version, as the selected library will return a runtime error, as the server hasn't registered it yet.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/noDiceOnNewDojoLibraryYet.png"
+  <amp-img src="/assets/images/post_images/noDiceOnNewDojoLibraryYet.png"
   alt="no dice yet, restart the server"
   layout="responsive"
   width="1232" height="287"></amp-img>
@@ -84,7 +84,7 @@ Now you only need to restart the Domino server and you can start using it. Just 
 To use it in an NSF, open the Xsp Properties file and specify your modified name in the Dojo version field. If you prefer the source, it's applied by _xsp.client.script.dojo.version=1.6.1.modified_ (or .source, whichever you call it). Note to leave off the _dojo-_ prefix.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/useNewDojoLibraryInXspProperties.png"
+  <amp-img src="/assets/images/post_images/useNewDojoLibraryInXspProperties.png"
   alt="specify the new dojo library in XSP Properties"
   layout="responsive"
   width="716" height="517"></amp-img>
@@ -95,7 +95,7 @@ To use it in an NSF, open the Xsp Properties file and specify your modified name
 You are now able to use the Dojo Enhanced DataGrid with the _dojox.grid.enhanced.plugins.Filter_!
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/dojoEnhancedGridFilteredResults.png"
+  <amp-img src="/assets/images/post_images/dojoEnhancedGridFilteredResults.png"
   alt="winter is coming"
   layout="responsive"
   width="616" height="325"></amp-img>

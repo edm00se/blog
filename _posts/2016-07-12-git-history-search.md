@@ -23,7 +23,7 @@ Git is powerful, you can find commits that change the occurrences of a given str
 We're basically using the [`git log`](https://git-scm.com/docs/git-log) command with just a little complexity, I promise it's not too scary. If you're still feeling put off, here's a Link Octocat to help you on your way.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/linktocat.svg"
+  <amp-img src="/assets/images/post_images/linktocat.svg"
   alt="it's dangerous to go alone, take this"
   height="240" width="240"
   layout="responsive"></amp-img>

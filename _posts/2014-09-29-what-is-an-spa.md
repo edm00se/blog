@@ -26,7 +26,7 @@ So, what I believe a single-page structured application does well is containing 
 * the only way to build modern web applications
 * an argument against having multi-page web applications (let's face it, you can't cram it all in every time)
 * perfect for every application
-* <a href="{{ site.url }}/xpages/rest-is-best/#comment-1609384268">necessarily new</a> (some of the mechanics are, but straight up web pages with JS manipulations have existed ever since JavaScript was implemented); making SPAs more of a design strategy
+* <a href="/xpages/rest-is-best/#comment-1609384268">necessarily new</a> (some of the mechanics are, but straight up web pages with JS manipulations have existed ever since JavaScript was implemented); making SPAs more of a design strategy
 * an application strategy that requires "less work" (it just shifts where your attention goes)
 
 ### A Brief Anatomy
@@ -61,7 +61,7 @@ This is definitely one where IBM has tried to give us something that the front-e
 Something I haven't figured out how to do yet in Domino is to regulate the content cache for certain resources. I'm interested in particular in things like CSS and images. As I try to make life easier on myself, I tend to host most of the elements I'm interested in caching (ideally for about 30 days) reside in my ..\Domino\data\domino\html\ path, for what I don't use from a <a href="//en.wikipedia.org/wiki/Content_delivery_network">CDN</a> (and CDN fall-back copies). I also don't know how this interacts with the resource aggregation property (_xsp.resources.aggregate_ see above). I'm also uncertain about how the use of the _xsp.expires.global_ property compares against server hosted resources (..\Domino\data\domino\html\).
 
 ##### Lazy Loading
-I've <a href="{{ site.url }}/xpages/rest-is-best/#rest-is-lean">previously talked</a> about how I have a dislike for (at least 1.6's and/or older versions of) Dojo's lazy loading of button styles. Aside: I also think that not using _dijit.form.Button_ would take care of that, but that's not my call, sadly. I also mentioned how some of this <a href="{{ site.url }}/xpages/rest-is-best/#comment-1605659445">has improved with Dojo's AMD</a> over time and multiple releases. The fact of the matter is: I want to control what and how much is transported over the network connection at any given request; and <a href="{{ site.url }}/xpages/rest-is-best/#comment-1599645245">I'm not alone</a>.
+I've <a href="/xpages/rest-is-best/#rest-is-lean">previously talked</a> about how I have a dislike for (at least 1.6's and/or older versions of) Dojo's lazy loading of button styles. Aside: I also think that not using _dijit.form.Button_ would take care of that, but that's not my call, sadly. I also mentioned how some of this <a href="/xpages/rest-is-best/#comment-1605659445">has improved with Dojo's AMD</a> over time and multiple releases. The fact of the matter is: I want to control what and how much is transported over the network connection at any given request; and <a href="/xpages/rest-is-best/#comment-1599645245">I'm not alone</a>.
 
 This is such a big topic to me, because I spend a lot of my time and development effort building, extending, and maintaining a (very) large application for my company. This application, which has turned into more of a platform, spans every individual location of ours across the country. This application calls home to our corporate servers making line quality a bit of a topic as well. Server locations, 
 
@@ -69,7 +69,7 @@ This is such a big topic to me, because I spend a lot of my time and development
 So how can we make better applications? My theory is that we need every single tool in the tool box. _Traditional XPages development_ doesn't go away, not in the least. In fact, I look at Angular and other client-side frameworks as a tool to expand on what we already do.
 
 ##### The XPages Way
-There is no one, true gold standard "XPages way" of creating an application. It's one of the strengths and weaknesses of XPages, simultaneously. First, the weaknesses. XPages lets us dump code virtually everywhere, which is great, except for the potential of <a href="{{ site.url }}/xpages/unraveling-the-mvc-mysteries/#stop-using-your-xpage-for-application-logic">spaghetti code</a><sup>&#8482;</sup>. But as a developer advances in both ability and development practices, the path eventually seems to lead to a combination of managed beans and plugins. These make for some great, business grade applications that have strength in utility and capability.
+There is no one, true gold standard "XPages way" of creating an application. It's one of the strengths and weaknesses of XPages, simultaneously. First, the weaknesses. XPages lets us dump code virtually everywhere, which is great, except for the potential of <a href="/xpages/unraveling-the-mvc-mysteries/#stop-using-your-xpage-for-application-logic">spaghetti code</a><sup>&#8482;</sup>. But as a developer advances in both ability and development practices, the path eventually seems to lead to a combination of managed beans and plugins. These make for some great, business grade applications that have strength in utility and capability.
 
 Leading us to XPages' strengths, the ability to adapt and adopt newer (yes, it's debatable) ways of development with our platform. 
 

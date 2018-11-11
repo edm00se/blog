@@ -37,7 +37,7 @@ XPages makes use of XHRs with every partialRefresh event, usually in the form of
 Here's an example, taken from the always excellent OpenNTF.org site. Inside a project page, there are the tabs for the content pane. Selecting a tab fires a <a href="http://dojotoolkit.org/reference-guide/1.6/dojo/xhrPost.html">dojo XHR POST</a> to the server, which then loads the content for the element to be changed, and the client-side XSP object loads it into the DOM (at the ID specified). XPages does this with HTML generated from the server session Domino has established for the user's interaction. You can view these interactions from most web browsers, just open up the developer tools for your browser (shown is Chrome's DevTools) and look for network events.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost.png"
+  <amp-img src="/assets/images/post_images/XPagesPartialRefreshPost.png"
   alt="sample XPages partialRefresh call"
   layout="responsive"
   width="1019" height="792"></amp-img>
@@ -45,7 +45,7 @@ Here's an example, taken from the always excellent OpenNTF.org site. Inside a pr
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesPartialRefreshPost_results.png"
+  <amp-img src="/assets/images/post_images/XPagesPartialRefreshPost_results.png"
   alt="sample XPages partialRefresh call response"
   layout="responsive"
   width="1010" height="781"></amp-img>

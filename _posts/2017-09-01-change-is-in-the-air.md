@@ -13,7 +13,7 @@ share: true
 ### I'm Back
 
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/MauiYoureWelcome.gif"
+  <amp-anim src="/assets/images/post_images/MauiYoureWelcome.gif"
       width="498"
       height="206"
       alt="You're Welcome"
@@ -30,7 +30,7 @@ If you find yourself asking "where was Eric?", this should summarize it all:
 Instead of trying to do everything all summer, I tend to take a break from blogging and a lot of open source endeavors over the summer. It means I can focus on family time along with yard and house projects.
 
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/Olaf_summer.gif"
+  <amp-anim src="/assets/images/post_images/Olaf_summer.gif"
     width="245"
     height="160"
     layout="fixed"

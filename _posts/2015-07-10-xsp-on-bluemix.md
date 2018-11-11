@@ -11,7 +11,7 @@ share: true
 ---
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/lookSirDroids.jpg"
+  <amp-img src="/assets/images/post_images/lookSirDroids.jpg"
   alt="the droids I've been looking for"
   height="240" width="320"
   layout="responsive"></amp-img>
@@ -22,7 +22,7 @@ share: true
 It's here! Ten days into the first month of the 2nd half of 2015, IBM's XPages runtime (and XPages NoSQL DB service) are live in 'beta'/experimental. Does that mean it will change? Absolutely. I also, absolutely, believe that's a good thing, as how the runtime grows and adapts to meet the needs of its user/developer base will only help strengthen it, with the right amount of user/developer feedback. So, I find myself with nearly no free time wondering how soon I can start creating an interesting app for deployment to Bluemix.
 
 ### Why Do I Care?
-As [I alluded to in my last post on Bluemix]({{ site.url }}/bluemix/bluemix-chalky-soup/#some-bluemix-thoughts), Bluemix is a game changer, for Notes/XPages developers, as the deployment mechanisms, environment, and scalability are far more flexible and in line with the rest of the web app dev community, when it comes to PaaS. We also gain access to other Database formats directly from the XPages runtime, [as Niklas Heidloff has blogged about](//heidloff.net/nh/home.nsf/article.xsp?id=07.07.2015124933NHEEQ3.htm), in addition to having access to other runtimes being able to work with our existing Domino data, once replicated into the Bluemix, XPages NoSQL Database. The permutations give us the best of Domino data (existing or new) and cloud runtime options of XPages or many others.
+As [I alluded to in my last post on Bluemix](/bluemix/bluemix-chalky-soup/#some-bluemix-thoughts), Bluemix is a game changer, for Notes/XPages developers, as the deployment mechanisms, environment, and scalability are far more flexible and in line with the rest of the web app dev community, when it comes to PaaS. We also gain access to other Database formats directly from the XPages runtime, [as Niklas Heidloff has blogged about](//heidloff.net/nh/home.nsf/article.xsp?id=07.07.2015124933NHEEQ3.htm), in addition to having access to other runtimes being able to work with our existing Domino data, once replicated into the Bluemix, XPages NoSQL Database. The permutations give us the best of Domino data (existing or new) and cloud runtime options of XPages or many others.
 
 ##### Side Note
 Bluemix isn't a magic bullet. It won't write my apps for me or somehow make any app structured or written poorly perform auto-magically better. It gives us a considerable amount of more options and brings us in line with IBM's cloud solutions. I like that, since IBM's focusing on this thing called "cloud" more and more; it means we're not being left behind, but rather kept at the forefront of their efforts.
@@ -38,7 +38,7 @@ Plenty more, it would seem. This is just the initial launch and brings in line s
 The XPages runtime is considered "experimental", it's not 'alpha' but it's not 'beta'. I still managed to throw together some Pratt Keeping for Bluemix though.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png"
+  <amp-img src="/assets/images/post_images/XPagesOnBluemix_PrattKeeping.png"
   alt="you're my boy Blue!"
   width="1280" height="632"
   layout="responsive"></amp-img>

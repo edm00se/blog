@@ -13,7 +13,7 @@ share: true
 
 {% include series.html %}
 ### Intro
-The [first post]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) covered the first two parts of [this series]({{ site.url }}/servlet-series/), the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement a servlet so that they're actually accessable via an end point.
+The [first post](/xpages-servlets/servlet-intro-and-flavors) covered the first two parts of [this series](/servlet-series/), the basics of what a servlet is and three "flavors" of servlet classes. This post begins with how to implement a servlet so that they're actually accessable via an end point.
 
 ### ServletFactory
 [A factory is](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)), [in OOP](https://en.wikipedia.org/wiki/Object-oriented_programming), an object for creating other objects. In order for these servlets to be "registered" with the application to be end point accessible, they need to be provided by a ServletFactory; specifically, one that implements `com.ibm.designer.runtime.domino.adapter.IServletFactory`. This will register an end point via a pair of <span data-toggle="tooltip" title="java.util.Map">Map</span>s which match, via a key, the package.class name to the end point name. This makes the servlet accessible via `<your NSF>/xsp/<end-point-name>`.
@@ -42,7 +42,7 @@ The file we'll created needs to be in the project bulid path. In Domino 9 (and l
 You'll need to right-click on your `Code/Java` folder and select New, followed by Other. Select folder and create one called `META-INF/services/`` (it'll nest the second one).
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/servlet/createNewResource-PkgExplorer.png"
+  <amp-img src="/assets/images/post_images/servlet/createNewResource-PkgExplorer.png"
   alt="creating a folder/file resource in Package Explorer"
   layout="responsive"
   width="525" height="206"></amp-img>
@@ -50,7 +50,7 @@ You'll need to right-click on your `Code/Java` folder and select New, followed b
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/servlet/createNewFolderFile-PkgExplorer.png"
+  <amp-img src="/assets/images/post_images/servlet/createNewFolderFile-PkgExplorer.png"
   alt="create a folder in Package Explorer"
   layout="responsive"
   width="526" height="502"></amp-img>

@@ -22,7 +22,7 @@ A Beard, An App, A Blender: One Developer's Take on _Expanding How We Can_ Build
 If you've been wanting to dive in but have felt that there's a whole bag of snakes that need to be straightened out first, this post is for you.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/rango.png"
+  <amp-img src="/assets/images/post_images/rango.png"
   alt="stay with me now!"
   width="233" height="291"
   layout="fixed"></amp-img>

@@ -17,7 +17,7 @@ Impatient and want to see the code? Jump down to [my Java class](#handling-the-d
 Generating custom JSON data is, unless you're on a verison of Domino server previous to 8.5.3 UP1, _virtually_ unnecessary. Everything you see below can be fully replicated via the Domino Data/Access Services. The reason for that is the fact that I made use of a simple NotesView iteration pattern to generate and return the application/json data. The missing piece, the _whole reason why_, is on _your_ **application requirements**. When you need JSON formatted data in a custom format due to formatting preferences or application logic needs, and it can't just be in a View, that's when this comes into play. So if you start doing what I've done, ask yourself first, can it be just in a View?
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_DataServiceResponse.png"
+  <amp-img src="/assets/images/post_images/GoTchars_DataServiceResponse.png"
   alt="if you can, use DAS"
   layout="responsive"
   width="1225" height="623"></amp-img>
@@ -52,7 +52,7 @@ Creating a JsonObject with with the Google GSON library can be done a couple way
 The result gives us exactly what we're looking for.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_CustJavaJSONprovider.png"
+  <amp-img src="/assets/images/post_images/GoTchars_CustJavaJSONprovider.png"
   alt="if you try sometimes, you get what you need"
   layout="responsive"
   height="528" width="1402"></amp-img>
@@ -63,7 +63,7 @@ The result gives us exactly what we're looking for.
 With the right tools, things get easier. Chrome's DevTools give a nice Preview tab to individual network requests. When it comes to json data, it lets us drill down nicely or switch over and view the raw response. Like this:
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/GoTchars_ChromePreview.png"
+  <amp-img src="/assets/images/post_images/GoTchars_ChromePreview.png"
   alt="maybe we can have nice things"
   layout="responsive"
   height="280" width="1208"></amp-img>

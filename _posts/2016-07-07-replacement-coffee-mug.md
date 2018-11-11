@@ -11,13 +11,13 @@ share: true
 ---
 
 ### Intro
-This post has little, if anything, to do with coding. I'm posting it in my ["aside" category]({{ site.url }}/categories/#aside), which should be a giveaway for this sort of occasional thing.
+This post has little, if anything, to do with coding. I'm posting it in my ["aside" category](/categories/#aside), which should be a giveaway for this sort of occasional thing.
 
 ### In Memoriam
 My trusty coffee mug, which has been with me since prior to graduating university, has served me well. Sadly, after a fateful day involving being knocked over and rolling off of the desk, it landed, handle first, onto the floor. While surgery (sugru-ry?) was able to restore most function to the mug, it retained a deep crack under the surface of the enamel paint, running vertically for nearly the entirety of its height, leading to its inevitable decline in health. It is survived by its desk mates "laptop" and monitors "lefty" and "righty".
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/TrustyMug.jpg"
+  <amp-img src="/assets/images/post_images/TrustyMug.jpg"
   alt="trusty mug pic"
   width="1200" height="1200"
   layout="responsive"></amp-img>

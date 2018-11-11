@@ -13,7 +13,7 @@ share: true
 
 {% include series.html %}
 ### Previously, on [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets)
-So far in [this series]({{ site.url }}/servlet-series/) I've covered some [basics]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors) on servlets, implementing our methods along with a showing of the ["flavors"]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets) of servlets, and how to implement these servlets [via a ServletFactory]({{ site.url }}/xpages-servlets/servlet-implementation/). This has been the ground work for everything that comes next.
+So far in [this series](/servlet-series/) I've covered some [basics](/xpages-servlets/servlet-intro-and-flavors) on servlets, implementing our methods along with a showing of the ["flavors"](/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets) of servlets, and how to implement these servlets [via a ServletFactory](/xpages-servlets/servlet-implementation/). This has been the ground work for everything that comes next.
 
 ### What to Do With My Servlet?
 A servlet can be just about anything. It can receive a payload of data (or just handle a simple network GET request) and process and return almost anything. Ultimately, I want to provide RESTful API interaction to the front-end side of my application, by:

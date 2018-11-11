@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
   {% if page.layout == 'post' %}
   <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
@@ -13,11 +13,10 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   {% endif %}
   {% if site.enable_pwa %}
-  <meta name="apple-mobile-web-app-capable" content="yes" />
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   {% endif %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -25,28 +24,30 @@
 
   <!-- Icons -->
   <!-- 16x16 -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   <!-- 32x32 -->
-  <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
   <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/images/57X57-icon.png" />
+  <link rel="apple-touch-icon-precomposed" href="/assets/images/57X57-icon.png" />
   <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/assets/images/72x72-icon.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/72x72-icon.png" />
   <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/assets/images/114X114-icon.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/114X114-icon.png" />
   <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/assets/images/144X144-icon.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/144X144-icon.png" />
 
   <!-- webapp stuff -->
   <link rel="manifest" href="/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-title" content="edm00se/blog">
   <meta name="theme-color" content="{{ site.manifest_theme_color }}">
 
   {% if site.twitter_username %}<!-- Twitter Cards -->
   {% if page.imagefeature %}<meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}/images/{{ page.imagefeature }}">
+  <meta name="twitter:image" content="/images/{{ page.imagefeature }}">
   {% else %}<meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}">{% endif %}
+  <meta name="twitter:image" content="{% if page.image.thumb %}/images/{{ page.image.thumb }}{% else %}/images/{{ site.logo }}{% endif %}">{% endif %}
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:creator" content="@{{ site.owner.twitter }}">{% endif %}
@@ -56,9 +57,9 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
-  {% if page.imagefeature %}<meta property="og:image" content="{{ site.url }}{{ page.imagefeature }}">{% else %}<meta property="og:image" content="{{ site.baseurl }}/{{ site.default_bg }}">{% endif %}
+  {% if page.imagefeature %}<meta property="og:image" content="{{ page.imagefeature }}">{% else %}<meta property="og:image" content="{{ site.baseurl }}/{{ site.default_bg }}">{% endif %}
 
   <script type="application/ld+json">
   {% include metadata.json %}

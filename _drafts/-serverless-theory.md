@@ -13,7 +13,7 @@ series: serverless-intro
 ---
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/AnceintOneLearnsStrangeSomeSpells.jpg"
+  <amp-img src="/assets/images/post_images/AnceintOneLearnsStrangeSomeSpells.jpg"
       width="800"
       height="421"
       alt="Doctor Strange gets his learning on with the Ancient One"
@@ -41,7 +41,7 @@ A container (Docker, LXC, etc.) lets us abstract away almost anything to do with
 
 \* Distributions like [alpine linux][alpine-url] help strip away as much junk as possible. Between its \<5Mb size and efficient package manager, it's practically made for high performance and carries a low resource cost that works great in containers.
 
-Considering that we can now deploy application stacks with a single configuration file, this makes a team's ability to deploy far more desirable than ever before. In the case of Docker, consider you have a `docker-compose.yml` (or `docker-cloud.yml`, the latest official default file name for a Docker Cloud stack) file, defining both the application code _and_ the database requirement. Assuming the database has its volume exposed and persisted, this makes maintenance of the database pretty easy and even more easily set up the first time; for any migrations, etc. My previous example of [setting up a GitLab server with Docker compose]({{ site.url }}/docker/composing-with/) did just this and, as far as the application knew, the database instance never "changed". So, provided you have a stack config defining each of your microservices (potentially including database, or at least configuration to connect to it), you have a highly reproducible application stack and great flexibility in working on any of the components to the application, without the need to halt an entire monolithic application in the process.
+Considering that we can now deploy application stacks with a single configuration file, this makes a team's ability to deploy far more desirable than ever before. In the case of Docker, consider you have a `docker-compose.yml` (or `docker-cloud.yml`, the latest official default file name for a Docker Cloud stack) file, defining both the application code _and_ the database requirement. Assuming the database has its volume exposed and persisted, this makes maintenance of the database pretty easy and even more easily set up the first time; for any migrations, etc. My previous example of [setting up a GitLab server with Docker compose](/docker/composing-with/) did just this and, as far as the application knew, the database instance never "changed". So, provided you have a stack config defining each of your microservices (potentially including database, or at least configuration to connect to it), you have a highly reproducible application stack and great flexibility in working on any of the components to the application, without the need to halt an entire monolithic application in the process.
 
 ### Enter: Serverless!
 

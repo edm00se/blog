@@ -10,7 +10,7 @@ The tumbeasts are to be blamed, as it seems you have been voted off the Internet
 This site makes use of a [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers), which is probably why you can actually see this page.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/tbrun1.png"
+  <amp-img src="/assets/images/tbrun1.png"
     alt="thar be tumbeasts"
     width="1205" height="556"
     layout="responsive"></amp-img>

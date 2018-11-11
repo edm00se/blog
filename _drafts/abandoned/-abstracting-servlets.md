@@ -46,7 +46,7 @@ As for the [`SerlvetResponse.getWriter()`](http://docs.oracle.com/javaee/6/api/j
 
 ### This Normalcy in `HttpServlet`s
 
-Using a `DesignerFacesServlet` is the way to go (albeit by an abstracted class, [as covered previously]({{ site.url }}/xpages-servlets/servlet-intro-and-flavors/#designerfacesservlet)) when it comes to an `HttpServlet` in a Domino NSF that requires a user's `Session` (or anything derived off the `FacesContext` instance).
+Using a `DesignerFacesServlet` is the way to go (albeit by an abstracted class, [as covered previously](/xpages-servlets/servlet-intro-and-flavors/#designerfacesservlet)) when it comes to an `HttpServlet` in a Domino NSF that requires a user's `Session` (or anything derived off the `FacesContext` instance).
 A `javax.servlet.http.HttpServlet` is incredibly simple to implement, as all is needed is to extend it, then provide our operations in a `doGet`, `doPost`, `doPut`, or `doDelete` method. How simple can it get? A downside of the `DesignerFacesServlet` (directly) requires we override the entire `service` method, or in Jesse's `AbstractXSPServlet`, the `doService` method. We then have to figure out what sort of network request was sent, etc.
 I've been poking around through a few projects lately and, after a while of staring at Jesse's frostillicus framework, I started toying with framing out what may be a framework of my own, moving forward. I started thinking a lot about `abstract` classes and how they can simplify some otherwise tedious processes.
 

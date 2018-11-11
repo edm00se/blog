@@ -20,7 +20,7 @@ Also, I've gotten my email from IBM confirming the selection of my application d
 Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime with which I spend most of my day job working.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/scottySays.jpg"
+  <amp-img src="/assets/images/post_images/right-tool-for-job-jekyll/scottySays.jpg"
   alt="do as Scotty says, he's a miracle worker"
   height="240" width="320"
   layout="responsive"></amp-img>
@@ -44,7 +44,7 @@ The generation also can/does (depending on your static site generator or pre-pro
 Used with a static site generator, Markdown files often have what's called "front matter" which helps to describe the file and provide properties in a consistent format. Here's an example of the front matter for this post for use with my Jekyll / GitHub Pages instance.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/right-tool-for-job-jekyll/postFrontMatter.png"
+  <amp-img src="/assets/images/post_images/right-tool-for-job-jekyll/postFrontMatter.png"
   alt="front matter with this Markdown"
   height="328" width="737"
   layout="responsive"></amp-img>

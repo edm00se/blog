@@ -3,12 +3,12 @@
   <head>
     <title>installing service worker</title>
     <script type="text/javascript">
-      var swsource = "{{ site.url }}/sw.js";
+      var swsource = "/sw.js";
       if("serviceWorker" in navigator) {
           navigator.serviceWorker.register(swsource).then(function(reg){
               console.log('ServiceWorker scope: ', reg.scope);
           }).catch(function(err) {
-              console.log('ServiceWorker registration failed: ', err);
+              console.error('ServiceWorker registration failed: ', err);
           });
       };
     </script>
