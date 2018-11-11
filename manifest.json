@@ -7,7 +7,7 @@ permalink: manifest.json
   "name": "{{ site.manifest_name }}",
   "short_name": "{{ site.manifest_short_name }}",
   "display": "{{ site.manifest_display}}",
-  "start_url": ".",
+  "start_url": "index.html",
   "theme_color": "{{ site.manifest_theme_color }}",
   "icons": [
     {

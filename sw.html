@@ -8,7 +8,7 @@
           navigator.serviceWorker.register(swsource).then(function(reg){
               console.log('ServiceWorker scope: ', reg.scope);
           }).catch(function(err) {
-              console.log('ServiceWorker registration failed: ', err);
+              console.error('ServiceWorker registration failed: ', err);
           });
       };
     </script>
