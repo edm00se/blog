@@ -20,7 +20,7 @@ I had some trepidation about this post; it revolves around the fact that I'm "co
 I've referred to this series as [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets). While most Java servlets are intended for use over HTTP (at least from a JEE, web container standpoint), this is not exclusive; I've used HTTPServlet as analagous to Servlet (for better or for worse).
 
 ##### RESTful API
-A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered]({{ site.url }}/xpages/rest-is-best/)); this generally boils down to:
+A REST API is an architectural style of API. There is no concrete definition of what required for an API to be RESTful, but it's best if it follows a couple conventions ([previously covered](/xpages/rest-is-best/)); this generally boils down to:
 
 * a resource based interface, following <span data-toggle="tooltip" title="Hypermedia as the Engine of Application State">HATEOAS</span>
 * be stateless (no server session required, the URI request gives all the server needs to know)
@@ -41,10 +41,10 @@ Obviously, certain beginner XPages development approaches (those conducive to SS
 ###### Aside (talking crazy for a moment)
 Some of these concepts are central to what I've seen previewed of the [XPages (XSP) application runtime](//heidloff.net/nh/home.nsf/article.xsp?id=26.01.2015175730NHEMVZ.htm) and [Domino Data Service](//ryanjbaxter.com/2014/09/22/using-your-domino-data-in-apps-deployed-to-bluemix/) on Bluemix. That the data container being forced to be separate from the application layer isn't just a good idea with Bluemix (which enforces the segregation of concerns as does almost any other application stack, considering that nearly all out there aren't configured like an NSF), but means that the XPages runtime can hook into any database; something it's already capable of, but often not done. In fact, segregating the data NSF from the application NSF isn't a new concept either, but hey, it's my paragraph 😃. I'm also fairly certain that the segregation of the XSP runtime from the other, traditional NSF components may be the gateway for us to get an updated JVM, but maybe I'm just greedy.
 
-Ultimately, the point I'm trying to make, is that we have a lot of options and decisions we can make with Domino/XPages, but with any ambiguity, there are potential pitfalls. One way this is changing, IMO, is [the bringing of the XSP(XPages) runtime to Bluemix](//www.slideshare.net/MartinDonnelly1/connected2015-domino-apps-for-bluemix/9). In case you missed it, [I've posted a couple early thoughts on Bluemix]({{ site.url }}/bluemix/bluemix-chalky-soup/), and I'm both impressed and excited for what it can and will bring to the table for my company and I.
+Ultimately, the point I'm trying to make, is that we have a lot of options and decisions we can make with Domino/XPages, but with any ambiguity, there are potential pitfalls. One way this is changing, IMO, is [the bringing of the XSP(XPages) runtime to Bluemix](//www.slideshare.net/MartinDonnelly1/connected2015-domino-apps-for-bluemix/9). In case you missed it, [I've posted a couple early thoughts on Bluemix](/bluemix/bluemix-chalky-soup/), and I'm both impressed and excited for what it can and will bring to the table for my company and I.
 
 ### Front-End Consumption
-Having shaped our back-end [earlier in this series]({{ site.url }}/xpages-servlets/servlets-handling-data-round-house-kick/) to adhere to a primarily RESTful API format, we can now consume that API by _some front-end_. In the [Notes in 9 173: Getting Started With (HTTP)Servlets](https://www.youtube.com/watch?v=stJ3Yc1BOnU&t=32m47s) video, I demonstrated this principle via the [Postman REST client](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) (a Chrome extension). There are others out there and you could even [test from your command line via cURL](//www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/), if you're so inclined. What this demonstrates is that virtually _any_ front-end can consume the API, it just comes down to how you expose/provision that API and what you point to it.
+Having shaped our back-end [earlier in this series](/xpages-servlets/servlets-handling-data-round-house-kick/) to adhere to a primarily RESTful API format, we can now consume that API by _some front-end_. In the [Notes in 9 173: Getting Started With (HTTP)Servlets](https://www.youtube.com/watch?v=stJ3Yc1BOnU&t=32m47s) video, I demonstrated this principle via the [Postman REST client](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) (a Chrome extension). There are others out there and you could even [test from your command line via cURL](//www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/), if you're so inclined. What this demonstrates is that virtually _any_ front-end can consume the API, it just comes down to how you expose/provision that API and what you point to it.
 
 It also shows the method of data transfer. In order for a front-end to work with my RESTful API, it will need to:
 
@@ -72,7 +72,7 @@ There are a lot of acronyms in framework architecture that get thrown around. He
 * MVVM - Model-View-ViewModel
 * MVW / MV* - Model-View-Whatever
 
-This list is far from all-inclusive, and is a bit of a side-topic to <span data-toggle="tooltip" title="there will be code soon, I swear!">what I want to focus on here</span>. Just [remember how a model, view, and controller]({{ site.url }}/xpages/unraveling-the-mvc-mysteries/) represent <span data-toggle="tooltip" title="mmm.. pie">different pieces of the application pie</span>, and all will be good.
+This list is far from all-inclusive, and is a bit of a side-topic to <span data-toggle="tooltip" title="there will be code soon, I swear!">what I want to focus on here</span>. Just [remember how a model, view, and controller](/xpages/unraveling-the-mvc-mysteries/) represent <span data-toggle="tooltip" title="mmm.. pie">different pieces of the application pie</span>, and all will be good.
 
 If you want to read up more on the theory of why you would want an MVC/* framework, I recommend checking out [this answer on Quora](//www.quora.com/When-does-it-make-sense-to-use-an-MVC-framework-for-JavaScript) on the subject. It's a good read which espouses the need for the a framework but as they point out, no one solution (e.g.- Backbone in their example) is an end-all, be-all.
 
@@ -153,7 +153,7 @@ So, all those naysayers, I say pick a framework. I'm going with AngularJS and it
 </figure>
 
 ### Tomorrow
-[Come back tomorrow for the conclusion of this epic journey]({{ site.url }}/xpages-servlets/building-a-front-end-pt2-an-app-with-angular).
+[Come back tomorrow for the conclusion of this epic journey](/xpages-servlets/building-a-front-end-pt2-an-app-with-angular).
 
 <div class="center">
 	<amp-youtube

@@ -15,7 +15,7 @@ toc: true
 {% include series.html %}
 {% include toc.html %}
 ### Intro
-[Last time]({{ site.url }}/xpages/xsltproc-and-headless-dde/) I described a major building block which has made my efforts to have a build automation machine (in the process of being turned into a vm) for  my largest application. This includes a number of advantages, from being able to produce a copy of the application design at a given commit/tag/version from its git repository on demand or on schedule. It also means that the many possibilities when it comes to being able to hook in the creation of a current javadoc, unit testing, and more. The sky is the limit and I'm setting down some of what I do with my current headless dde build task from my Jenkins CI instance.
+[Last time](/xpages/xsltproc-and-headless-dde/) I described a major building block which has made my efforts to have a build automation machine (in the process of being turned into a vm) for  my largest application. This includes a number of advantages, from being able to produce a copy of the application design at a given commit/tag/version from its git repository on demand or on schedule. It also means that the many possibilities when it comes to being able to hook in the creation of a current javadoc, unit testing, and more. The sky is the limit and I'm setting down some of what I do with my current headless dde build task from my Jenkins CI instance.
 
 Please note, I'm not much in favor of repeating myself or others' works. While I wrote a fair amount about some of the basics of task runner use, much of which can be found elsewhere, I did so to build a platform for the uninitiated, as my focus was always on the end goal of how it hooks into my development workflow; the workflow of a  developer with Domino/XPages, that's the unique aspect. When it comes to this post, I won't be talking about the details of what to do to create a Jenkins CI instance or perform some of the already well established requirements, but rather I'm going to assume that:
 
@@ -38,7 +38,7 @@ Please note, I'm not much in favor of repeating myself or others' works. While I
   * to run as logged in user (does not happen if done as a Windows service, sadly; gets a little fiddly)
   * configured to allow interacting with the desktop (may only apply to Jenkins as a service, but it's set up in my environment)
   * task will contain (by my implementation) 4 steps (optional 5th)
-    1. (optional*, unless large NSF w/ build issues) the xslt processing assets (from [my last blog post]({{ site.url }}/xpages/xsltproc-and-headless-dde/)) to ensure a clean ODP import by headless DDE
+    1. (optional*, unless large NSF w/ build issues) the xslt processing assets (from [my last blog post](/xpages/xsltproc-and-headless-dde/)) to ensure a clean ODP import by headless DDE
     2. (optional) Notes Client Killer (helps, in case Jenkins task +/- headless DDE gets hung; at a minimum, have a separate Jenkins task to call the client killer)
     3. PowerShell (installed for Windows, also a PS script, below) to execute the headless DDE build
     4. scan the `HEADLESS0.log` for whether to mark the task a failure (Jenkins had mis-reported "SUCCESS" when the headless DDE call failed to build a usable NSF)
@@ -53,7 +53,7 @@ Go ahead, I'll wait while you set it all up (yes, I'm full of snarcasm).
 The below are different "build" scripts (some as BASH-like/compatible, one in particular is PowerShell, with the Jenkins PowerShell plugin). Together, they make up a larger "Jenkins task", which I started as a "Freestyle project" and set up the git repository association for. In theory, I could drive every release to the master branch into a build, but currently, I've added a build parameter, so that I am prompted for either a git commit or tag (in my case, version numbers) of which to build. Otherwise, things like setting up email notifications, etc. are all up to you.
 
 #### 1. Metadata Filtering
-If you're unlucky enough to have a large enough Domino application to not want to use Build Automatically in DDE and not be able to benefit from the use of swiper, you'll want to filter your metadata before the headless designer import, as with my experience, dde will choke and create a useless file. This script ensures a fetch from the git remote (origin) and pulls down the specified Jenkins build parameter (`$TAGNAME`) from which to build. It then checks for a `package.json` and `Gruntfile.js` in the project, copying in a boilerplate copy (in [yesterday's blog post]({{ site.url }}/xpages/xsltproc-and-headless-dde/)) and updates the relative ODP (On Disk Project) path, as needed. The boilerplate `Gruntfile.js` assumes an ODP directory of `ODP/`, so the script here is changing that to `NSF/`. Lastly, it runs the install of the npm dependencies; not much, mostly just grunt and a couple grunt plugins.
+If you're unlucky enough to have a large enough Domino application to not want to use Build Automatically in DDE and not be able to benefit from the use of swiper, you'll want to filter your metadata before the headless designer import, as with my experience, dde will choke and create a useless file. This script ensures a fetch from the git remote (origin) and pulls down the specified Jenkins build parameter (`$TAGNAME`) from which to build. It then checks for a `package.json` and `Gruntfile.js` in the project, copying in a boilerplate copy (in [yesterday's blog post](/xpages/xsltproc-and-headless-dde/)) and updates the relative ODP (On Disk Project) path, as needed. The boilerplate `Gruntfile.js` assumes an ODP directory of `ODP/`, so the script here is changing that to `NSF/`. Lastly, it runs the install of the npm dependencies; not much, mostly just grunt and a couple grunt plugins.
 
 {% include gist.html id="d30002d54e07fe13f2ae" file="1-xsltproc4domino.sh" %}
 
@@ -73,7 +73,7 @@ I had a few builds get flagged by Jenkins as successful, even though they failed
 {% include gist.html id="d30002d54e07fe13f2ae" file="4-setBuildStatus.sh" %}
 
 #### 5. (Optional) Send to SonarQube
-Let's face it, I really like SonarQube. It may not amount to much more than an automated peer review, but that's good and insightful stuff. You can skip this, obviously; mine's (currently) pushing to a docker image on the same PC, [like I demonstrated previously]({{ site.url }}/self-promotion/docker-plus-sonarqube/).
+Let's face it, I really like SonarQube. It may not amount to much more than an automated peer review, but that's good and insightful stuff. You can skip this, obviously; mine's (currently) pushing to a docker image on the same PC, [like I demonstrated previously](/self-promotion/docker-plus-sonarqube/).
 
 {% include gist.html id="d30002d54e07fe13f2ae" file="5-sonar.sh" %}
 

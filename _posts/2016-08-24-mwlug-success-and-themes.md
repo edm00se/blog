@@ -52,7 +52,7 @@ As for [`generator-xsp`](https://github.com/edm00se/generator-xsp#readme), it's 
 All in all, the ultimate goal of my session was to demonstrate more of the higher process of development workflow automation. If a job is repeatable and/or configurable, why not automate it? There's a great [argument for automation](https://medium.com/@kentcdodds/an-argument-for-automation-fce8394c14e2), which hinges on the concept of automation not just as a convenience, but as a configurable standard. We can all use a bit more automation in CI/CD concerns, building performant versions of our web apps, testing, documentation, and even project scaffolding.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/AutomateTheStuffing.png"
+  <amp-img src="/assets/images/post_images/AutomateTheStuffing.png"
   alt="Mark Whatney - automate the stuffing out of this"
   width="736" height="395"
   layout="responsive"></amp-img>

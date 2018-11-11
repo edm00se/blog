@@ -13,7 +13,7 @@ share: true
 ### Vote for IBM ConnectED 2015 Sessions
 Also known as <a href="//www.socialbizug.org/blogs/We87208a0e2cc_4798_ac0e_537d0ced54e2/entry/from_soup_to_sandwich_making_mvc_java_classes_and_front_end_development_work_for_you?lang=en_us">**Please Vote For Me!**</a>
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/deadpool.jpg"
+  <amp-img src="/assets/images/post_images/deadpool.jpg"
   alt="Meeeeee!"
   height="400" width="800"></amp-img>
  <figcaption>Meeeeee!</figcaption>

@@ -11,7 +11,7 @@ share: true
 ---
 
 [Update]
-This pertains primarily to an older version of my blog. The section permalinks and contribution sections still apply, but there is no longer a search component accessible from other than the [Search page]({{ site.url }}/search/).
+This pertains primarily to an older version of my blog. The section permalinks and contribution sections still apply, but there is no longer a search component accessible from other than the [Search page](/search/).
 [/Update]
 
 ### Intro
@@ -21,7 +21,7 @@ In speaking with someone recently, it was brought up that there were features to
 Right there, with the "hamburger" icon. You can find links to the series pages, categories I've posted in, and the tags I've tagged each of my posts with, for correlating related posts.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/blogMenu.png"
+  <amp-img src="/assets/images/post_images/blog_psa/blogMenu.png"
   alt="mmm... hamburgers"
   width="379" height="409"
   layout="responsive"></amp-img>
@@ -29,10 +29,10 @@ Right there, with the "hamburger" icon. You can find links to the series pages, 
 </figure>
 
 ### Search
-Ever since it first came to be, this blog has had both a menu and a search fuction. The search took some re-work after a few months of being in limbo after a conversion, but I think it's fairly useful, as it uses a simple jQuery search against a [simple but effective search.json file]({{ site.url }}/search.json).
+Ever since it first came to be, this blog has had both a menu and a search fuction. The search took some re-work after a few months of being in limbo after a conversion, but I think it's fairly useful, as it uses a simple jQuery search against a [simple but effective search.json file](/search.json).
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/blogSearch.png"
+  <amp-img src="/assets/images/post_images/blog_psa/blogSearch.png"
   alt="a simple yet effective search mechanism in a convenient overlay"
   width="700" height="205"
   layout="responsive"></amp-img>
@@ -46,7 +46,7 @@ I've recently gone through a couple of additions that may be of use to some. I'v
 If you're familiar with GitHub's section (header) links that appear on hover, you know that it can be a handy way to link someone to a particular section. Seeing how this is an [easy to implement jQuery script](https://github.com/edm00se/DevBlog/commit/b5037217e7e46c7e4a377c2e8009147e3c7eec91#diff-1), I thought it could be useful to someone or, if not, at least myself. Just hover over the section header (works for header tags `h1` through `h6`) and when you see the hyperlink icon, you know you can right-click and copy the fully qualified URL.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/GitHubStyleSectionLinks.png"
+  <amp-img src="/assets/images/post_images/blog_psa/GitHubStyleSectionLinks.png"
   alt="styled after GitHub"
   width="436" height="192"
   layout="responsive"></amp-img>
@@ -57,7 +57,7 @@ If you're familiar with GitHub's section (header) links that appear on hover, yo
 I've updated my contribution document and [added templates for any Issues or Pull Requests](https://github.com/edm00se/DevBlog/commit/3e370c64dc7856e852360522f457765e555e701c), now that [templates are offered for GitHub Issues and Pull Requests](https://github.com/blog/2111-issue-and-pull-request-templates). Basically, if you find a typo, you can submit a Pull Request (or just alert me as usual) 😉.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/findSomething.png"
+  <amp-img src="/assets/images/post_images/blog_psa/findSomething.png"
   alt="now people don't have to comment on my typos, they can fix them for me!"
   width="700" height="241"
   layout="responsive"></amp-img>
@@ -71,7 +71,7 @@ I'm still ironing out the "feature image" aspect of the expanded atom feed which
 
 Adding from mobile Safari:
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/addToNews.png"
+  <amp-img src="/assets/images/post_images/blog_psa/addToNews.png"
   alt="adding from the iOS mobile Safari sharing screen"
   width="250" height="445"
   layout="responsive"></amp-img>
@@ -80,7 +80,7 @@ Adding from mobile Safari:
 
 Searching in Apple News:
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/blog_psa/appleNewsSearch.png"
+  <amp-img src="/assets/images/post_images/blog_psa/appleNewsSearch.png"
   alt="stay with me now!"
   width="250" height="445"
   layout="fixed"></amp-img>

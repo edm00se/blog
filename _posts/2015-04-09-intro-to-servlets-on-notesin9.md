@@ -13,7 +13,7 @@ share: true
 
 {% include series.html %}
 ### I'm on Notesin9!
-As a video counterpart to the my [series on servlets]({{ site.url }}/servlet-series/), my first submitted [Notesin9](//www.notesin9.com/2015/04/09/notesin9-173-getting-started-with-servlets/) video has gone live. This serves my interests in two ways:
+As a video counterpart to the my [series on servlets](/servlet-series/), my first submitted [Notesin9](//www.notesin9.com/2015/04/09/notesin9-173-getting-started-with-servlets/) video has gone live. This serves my interests in two ways:
 
 1. it's an alternative to reading my (occasionally quite lengthy) blog posts; reading isn't for everyone
 2. it lets me give back to the same community that helped me not sink in my foray into Domino/XPages development

@@ -56,7 +56,7 @@ Note: most of these "fancy editors" make an effort at guessing the correct langu
 I tried to blur the names to protect any innocent servers.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_beforeHighlighting.png"
+  <amp-img src="/assets/images/post_images/nsd_beforeHighlighting.png"
   alt="oh look, a giant block of text"
   width="1500" height="1039"
   layout="responsive"></amp-img>
@@ -65,7 +65,7 @@ I tried to blur the names to protect any innocent servers.
 
 #### After Language Syntax Highlighting
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting1.png"
+  <amp-img src="/assets/images/post_images/nsd_afterHighlighting1.png"
   alt="oh look, a slightly more readable giant block of text"
   width="1500" height="1041"
   layout="responsive"></amp-img>
@@ -73,7 +73,7 @@ I tried to blur the names to protect any innocent servers.
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/nsd_afterHighlighting2.png"
+  <amp-img src="/assets/images/post_images/nsd_afterHighlighting2.png"
   alt="slightly more readable giant block of text"
   width="1261" height="1044"
   layout="responsive"></amp-img>

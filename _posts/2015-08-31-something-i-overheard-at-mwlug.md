@@ -21,7 +21,7 @@ I added a bit from a tweet by Tony McGuckin about the XPages runtime's component
 There's an intersting slump I experience after getting back from a conference. Not only do I get to clear out of the mountain of things that seem to crop up only while I'm out of the office, but it seems that I'm able to come away from such a gathering with other developers with lots of great ideas for both my growth as a developer but also for what I'm able to accomplish for my company and its users that it's a nearly unbearable amount to be able to extract from my own head, but I try. For this last week though, I just worked the tasks at hand.
 
 #### A Funny Thing
-While at MWLUG, I overheard someone make a reference to people "not liking POST" as an HTTP request. I'm fairly certain it may have been said in jest as [a blog post I wrote previously]({{ site.url }}/xpages/rest-is-best) talked about "classical" AJAX-y requests containing markup (specifically analagous to an XPages partial refresh event, which fires a dojo.xhrPost that returns the HTML content of the selected _refreshId_ and re-injects the content to the page). So here's a reminder to all, XPages gives us:
+While at MWLUG, I overheard someone make a reference to people "not liking POST" as an HTTP request. I'm fairly certain it may have been said in jest as [a blog post I wrote previously](/xpages/rest-is-best) talked about "classical" AJAX-y requests containing markup (specifically analagous to an XPages partial refresh event, which fires a dojo.xhrPost that returns the HTML content of the selected _refreshId_ and re-injects the content to the page). So here's a reminder to all, XPages gives us:
 
 * an application runtime (JSF)
 * a striped database (though for performance it's best to separate it)
@@ -36,7 +36,7 @@ As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than
 
 ##### The Screen Shot
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/XPages_runtime.png"
+  <amp-img src="/assets/images/post_images/XPages_runtime.png"
   alt="the XPages runtime and its components from JSF and additions"
   layout="fixed"
   width="860" height="644"></amp-img>
@@ -55,4 +55,4 @@ As my demo application has been showing, I've been going the direction of a fron
 That being said, my advice to any in a "normal" XPages context is **embrace the JSON-RPC** control and Java beans (managed or POJO). If your business logic is driven inside a controller class, it can just as easily be invoked from a bean or from a servlet (or from SSJS inside a JSON-RPC's method script). If Java isn't your thing (if you're still learning, and you should embrace your JEE stack), [the JSON-RPC control](//www.notesin9.com/2014/05/21/tim-explains-json-rpc-codefortim/) lets you accomplish most of the same task of exposing server-side operations and logic, with minimal overhead, to the client-side (browser) for CSJS access; it's a win-win either way.
 
 ### In Case You Missed It...
-[My last post, recapping my session at MWLUG]({{ site.url }}/self-promotion/mwlug-ad113-success/), managed to get missed in my first tweet of the link. I updated the previous post (announcing my session at MWLUG) with a link at the top, but some may have missed it. Please check it out, there's a link to [my slide deck](//www.slideshare.net/edm00se/ad113-speed-up-your-applications-w-nginx-and-pagespeed), [GitHub repository](//github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed) with my configs, screen shots of my configs in use, and (you guessed it) my slide deck in PDF and PPTX formats.
+[My last post, recapping my session at MWLUG](/self-promotion/mwlug-ad113-success/), managed to get missed in my first tweet of the link. I updated the previous post (announcing my session at MWLUG) with a link at the top, but some may have missed it. Please check it out, there's a link to [my slide deck](//www.slideshare.net/edm00se/ad113-speed-up-your-applications-w-nginx-and-pagespeed), [GitHub repository](//github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed) with my configs, screen shots of my configs in use, and (you guessed it) my slide deck in PDF and PPTX formats.

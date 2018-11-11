@@ -9,7 +9,7 @@ show_in_nav: true
 <figure class="about-fig">
   <amp-img src="{{ site.author_image }}?s=260" width="260" height="260" layout="fixed" alt="{{ site.owner.name }}'s photo" itemprop="image" class="post-avatar img-circle" data-toggle="tooltip" title="that's me!"></amp-img>
   <span class="about-name">Eric McCormick</span>
-  <amp-img src="{{ site.url }}/assets/images/champion/banner.png" width="175" height="42" layout="fixed" alt="IBM Champion logo" itemprop="image" class="champion-logo"></amp-img>
+  <amp-img src="/assets/images/champion/banner.png" width="175" height="42" layout="fixed" alt="IBM Champion logo" itemprop="image" class="champion-logo"></amp-img>
 </figure>
 
 As [a software developer\*][whats-in-a-title], I have an passion for application structure, framework adoption, automation in tooling, deployment, cloud, containers, serverless, and much more.

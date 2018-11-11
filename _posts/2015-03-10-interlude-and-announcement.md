@@ -13,7 +13,7 @@ share: true
 
 {% include series.html %}
 ### An Interlude for Servlets
-My [series on servlets]( {{ site.url }}/servlet-series ) is in a temporary interlude. Don't worry, I've been working on it, the only problem is the issue I ran into. I was forced to re-evaluate some of the assumptions I had made previously and, to be quite honest, I'm glad I ran into that issue now, as opposed to much later. Suffice it to say, there is much more to come and I am excited to bring my next post, but I won't publish it [<s>again</s>](https://twitter.com/edm00se/status/571629407695069184) until it's ready.
+My [series on servlets]( /servlet-series ) is in a temporary interlude. Don't worry, I've been working on it, the only problem is the issue I ran into. I was forced to re-evaluate some of the assumptions I had made previously and, to be quite honest, I'm glad I ran into that issue now, as opposed to much later. Suffice it to say, there is much more to come and I am excited to bring my next post, but I won't publish it [<s>again</s>](https://twitter.com/edm00se/status/571629407695069184) until it's ready.
 
 <amp-twitter width="390" height="50"
     layout="responsive"

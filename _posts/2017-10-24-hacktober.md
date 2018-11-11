@@ -16,7 +16,7 @@ permalink: /open-source/hacktober2017/
 October brings many good things with it. It's the beginning of autumnal colors here, along with some yard raking in my case. It also brings with it not just Oktoberfest, but Hacktoberfest!
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/Hacktoberfest2017.png"
+  <amp-img src="/assets/images/post_images/Hacktoberfest2017.png"
   alt="hacktoberfest 2017"
   layout="fixed"
   width="404" height="452"></amp-img>

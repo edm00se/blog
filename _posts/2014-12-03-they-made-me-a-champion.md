@@ -30,7 +30,7 @@ All in all, a person who "aids the cause", as it were. There are many outlets, w
 * and more I probably don't even know of
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/Dpool_loot.png"
+  <amp-img src="/assets/images/post_images/Dpool_loot.png"
   alt="I want it all"
   height="560" width="567"
   layout="responsive"></amp-img>

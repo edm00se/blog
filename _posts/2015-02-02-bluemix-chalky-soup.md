@@ -24,7 +24,7 @@ I deployed [my nifty one-off app to Bluemix](https://bit.ly/BlueChalkySoup), as 
 The available run times are pretty comparable to the competitors, with notable exception (from my perspective) being the upcoming XPages build pack (.xsp run time and Domino Data Service, both of which are very exciting for very obvious reasons to any Domino/XPage developer). I'm sure I'll post again once I've had my first taste of deploying an XPages app to Bluemix, and I can't wait to do it.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/BluemixRuntimes.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/BluemixRuntimes.png"
   alt="runtimes currently available in Bluemix"
   layout="responsive"
   width="958" height="405"></amp-img>
@@ -46,7 +46,7 @@ Bluemix's runtime offerings are fairly robust, with room for more and custom bui
 I was happy to see a number of things in my Bluemix account's dashboard. Specifically, when working with heroku and OpenShift, I found their terminologies of "gears" and "workers" more confusing than not. A developer can look up the definition and equate it to something in their head, but with Bluemix, you look at your dashboard and you can see how much RAM each instance uses and how many instances you will allow it to scale to, out of your max allotment. These are terms that those who don't understand the cloud can grasp, and makes it easier on my part as a developer to sell my management to the platform. Chalk that one up in the success column.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DashboardView.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/DashboardView.png"
   alt="a view of the Bluemix dashboard"
   height="512" width="1150"
   layout="responsive"></amp-img>
@@ -57,7 +57,7 @@ I was happy to see a number of things in my Bluemix account's dashboard. Specifi
 Both of the other two PaaS services I've tried and used include a command line tool for managing your cloud deployment and deployed app management; in addition to the web interfaces they provide with some of these tools. The power given by Bluemix's use of the Cloud Foundry CLI tool is impressively easy to use by any developer. With heroku, there's the heroku toolbelt, and with OpenShift, there's the rhc tool. As a comparison, it's probably on-par for ease of use, but maybe it's my being more accustomed to these PaaS CLI tools, but I found my use of the CF CLI was a very quick learning curve, with minimal fuss. Once more, success in meeting in the industry standard on CLI tools.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/GettingStarted_CF.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/GettingStarted_CF.png"
   alt="getting started"
   layout="responsive"
   width="1009" height="604"></amp-img>
@@ -65,7 +65,7 @@ Both of the other two PaaS services I've tried and used include a command line t
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/InstantiatedTImeToSetupWithCFCLI.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/InstantiatedTImeToSetupWithCFCLI.png"
   alt="first use of the Cloud Foundry CLI tool"
   layout="responsive"
   width="890" height="557"></amp-img>
@@ -79,7 +79,7 @@ The Cloud Foundry CLI isn't the only way to deploy to Bluemix. You can also use 
 One handy feature is the ability to connect from DevOps. This means you can push your changes to DevOps via the master branch of a git repository that can trigger a build on Bluemix. This integrates services across IBM's spectrum of cloud solutions and was pretty easy to use. I tested it, even though I had to re-add my files to the git repo for DevOps as it semi-forced me to take a starter app when I initialized the repo, as the Bluemix app was created first; which seems to be out of their preferred sequence. In other words, if you're going to use DevOps, start things from there and tell it to enable Bluemix deployment. Not everyone uses DevOps, but it's something that I would give some serious consideration to, considering my trial's ease of implementation; another win.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/DevOpsSettingsEnableBluemix.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/DevOpsSettingsEnableBluemix.png"
   alt="Settings > Options > Enable Bluemix"
   layout="responsive"
   width="984" height="703"></amp-img>
@@ -90,7 +90,7 @@ One handy feature is the ability to connect from DevOps. This means you can push
 Obviously, in a pricing scheme which relies on GB-Hours as the unit of measure, you'll want to scale your application to the needs of its use. As stated in the Domino/XPages Applications on Bluemix session (and elsewhere from IBM), there will always be a free tier for an application. There's a caveat to that, which I'll get to in a bit. When you've got it set up and running, it's an impressive thing to see.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/AppPriceEstimation.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/AppPriceEstimation.png"
   alt="there's even an app price estimation form, shown is the single instance on a free account"
   layout="responsive"
   width="850" height="225"></amp-img>
@@ -101,7 +101,7 @@ Obviously, in a pricing scheme which relies on GB-Hours as the unit of measure, 
 So I think there's an excellent argument to be made that Bluemix is a significant contender in the PaaS market, with great ways of deploying and maintaining applications. The argument can also be made that IBM offers some unique options which make them a go-to for use by existing and new users of their systems; specifically in the Domino Data Service + XPages runtime and Watson driven services, respectively. There's just one thing bugging me, and it's this.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/TrialExpiration.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/TrialExpiration.png"
   alt="initial trial accounts last 30 days"
   layout="responsive"
   width="392" height="180"></amp-img>
@@ -111,7 +111,7 @@ So I think there's an excellent argument to be made that Bluemix is a significan
 My initial trial account, which is tied to my IBM ID, has a 30-day window in which I have access to up to 4 application instances and 2GB of RAM. This is pretty darned powerful, more than I needed to setup and sell myself on the platform. But I'm playing the long game with my development management team, who having been RPG developers with less knowledge of how web applicaitons work, make for some intersting conversations on occassion. In order to sell the platform to them, I need to be able to do what I'm doing now, as I'm half-way into my 30-day trial, at some point when they're ready for the conversation (and I've got them prepared to accept "the cloud" as a solution); probably within a year or so. I _could_ roll a different ID, but this is my IBM ID, it's me, and that would be silly. I've heard that applications will have a free tier, but once the free resources are consumed in a month, something will happen I don't want; I'll be charged. This is unique to Bluemix, that when my 30-day free trial comes to an end, the account becomes freemium, with my credit card needing to be on file.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/ConfirmFreeAccount.png"
   alt="confirming my free account apparently means putting my credit card on file"
   height="575" width="896"
   layout="responsive"></amp-img>
@@ -122,7 +122,7 @@ Why can't we just have a free account that doesn't incur charges? There must be 
 
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/HerokuSignupFreeAcct.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/HerokuSignupFreeAcct.png"
   alt="no trial period then credit card, I have an app running perpetually, which is most often inactive"
   layout="responsive"
   width="807" height="782"></amp-img>
@@ -130,7 +130,7 @@ Why can't we just have a free account that doesn't incur charges? There must be 
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix_thoughts/OpenShiftSignupFreeAcct.png"
+  <amp-img src="/assets/images/post_images/bluemix_thoughts/OpenShiftSignupFreeAcct.png"
   alt="OpenShift does something similar"
   layout="responsive"
   width="1270" height="847"></amp-img>

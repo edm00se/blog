@@ -176,7 +176,7 @@ watch: {
 Here's what [the resulting expanded Gruntfile.js ](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/7b294ea62c84e0e921d32857b857b633ab6ac26c/basicGruntfile_expandedWithJsHintAndWatch.js) does for us:
 
 <figure class="center">
-  <amp-anim src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHint.gif"
+  <amp-anim src="/assets/images/post_images/task-runners/watchAndJsHint.gif"
   alt="jshint throwing warnings and watching file saves"
   height="743" width="574"
   layout="fixed"></amp-anim>
@@ -235,7 +235,7 @@ What I ran into was that either the `json-server` instance wouldn't start correc
 I initially intended to walk through every bit of my configuration, but instead I'll leave you with a (very brief) animated gif and [a link to my full `Gruntfile.js`](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/89dfc045561d8936b30beaf8b4137ebc54e5a466/Gruntfile.js). Here it is all starting to come together:
 
 <figure class="center">
-  <amp-anim src="{{ site.url }}/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif"
+  <amp-anim src="/assets/images/post_images/task-runners/watchAndJsHintBrowserSync.gif"
   alt="jshint throwing warnings and watching file saves while reloading the browser on save events"
   width="1329" height="811"
   layout="responsive"></amp-anim>

@@ -62,7 +62,7 @@ TL;DR: There's no native support of the native browser [Fetch API][mdn-fetch-api
 
 #### 2. Registering Handlers
 
-Registering the intent handlers is quite similar to [the basic one outlined in the previous post]({{site.url}}/serverless/hello-alexa/#configure-your-handlers). The largest difference is that the "facts" are being brought in via a handle to a promise, the resulting array has a random member selected, and the response is built out. In this skill, I'm also building out a "card", which is displayed in the app or on a visual Echo device.
+Registering the intent handlers is quite similar to [the basic one outlined in the previous post](/serverless/hello-alexa/#configure-your-handlers). The largest difference is that the "facts" are being brought in via a handle to a promise, the resulting array has a random member selected, and the response is built out. In this skill, I'm also building out a "card", which is displayed in the app or on a visual Echo device.
 
 {% include gist.html id="f2245b183ce69f28879ab2191a711491" file="handlers.js" %}
 

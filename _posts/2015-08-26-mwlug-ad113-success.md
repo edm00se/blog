@@ -11,7 +11,7 @@ share: true
 ---
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/angry-deadpool.jpg"
+  <amp-img src="/assets/images/post_images/angry-deadpool.jpg"
   alt="against two other app dev sessions and free beer?!"
   height="324" width="575"
   layout="responsive"></amp-img>

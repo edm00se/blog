@@ -17,7 +17,7 @@ share: true
 
 ☀️ 🍹 🎊 🍻 🎉
 
-It's been a little longer to get to this installment of my [Saga of Servlets series]({{ site.url }}/servlet-series), but I guess that happens when things like the day job pick up with trouble shooting server issues and family life all seem to get in the way.
+It's been a little longer to get to this installment of my [Saga of Servlets series](/servlet-series), but I guess that happens when things like the day job pick up with trouble shooting server issues and family life all seem to get in the way.
 
 ### Intro
 This isn't the most "developer sexy" topic, but I hope is worthwhile (and something I promised would be in this series).
@@ -58,4 +58,4 @@ While we may be using a uniquely abstracted variant of an _HttpServlet_, by buil
 ### Summary
 If we want to be more of a Java EE developer, which is the industry equivalent norm for an XPages developer (by my interpretation), then we should ebmrace the more industry norm practices. In this case, it also means we drop some of the unnecessary JSF "baggage" from the process of merely handling a data response.
 
-The final part of this series will cover some of the client-side application in using the the _HttpServlet_ we set up in the [Round House <s>Kick</s> Tour of data handling]({{ site.url }}/xpages-servlets/servlets-handling-data-round-house-kick/). It may come soon, if I can keep my spawning of non-series post ideas in check.
+The final part of this series will cover some of the client-side application in using the the _HttpServlet_ we set up in the [Round House <s>Kick</s> Tour of data handling](/xpages-servlets/servlets-handling-data-round-house-kick/). It may come soon, if I can keep my spawning of non-series post ideas in check.

@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 [Update]
-This topic is so awesome I turned it into [a video for Notes in 9, check it out]({{ site.url }}/self-promotion/ni9-alt-front-end-dev).
+This topic is so awesome I turned it into [a video for Notes in 9, check it out](/self-promotion/ni9-alt-front-end-dev).
 [/Update]
 
 {% include toc.html %}
@@ -26,7 +26,7 @@ It's no secret I'm a strong advocate for segregated application design practices
 That last one is probably foreign to a lot of people, but as one of two web developers on my company's organic staff (up from one, and the only Domino/XPages developer), this means I want to unify efforts across our application platforms and also make things easier to plug a contract developer into. It speeds up their efforts, makes it easier to plug into source control (for not just tracking, but also support purposes), and overall will aid my sanity (I hope).
 
 ### A Segregated Approach for the Front-End
-I've spent a considerable amount of time covering the back-end approach that I'm migrating to; just [look at all but the last two-part piece in my series on Java HTTPServlets with XPages]({{ site.url }}/servlet-series/). But what if we hire out some work to be done on the front-end; wouldn't it be nice for that developer to work on _only_ on that front-end, without any need for other setup? I think it would and this ought to outline how this can be achieved fairly quickly.
+I've spent a considerable amount of time covering the back-end approach that I'm migrating to; just [look at all but the last two-part piece in my series on Java HTTPServlets with XPages](/servlet-series/). But what if we hire out some work to be done on the front-end; wouldn't it be nice for that developer to work on _only_ on that front-end, without any need for other setup? I think it would and this ought to outline how this can be achieved fairly quickly.
 
 ### A Sample Data Set of JSON
 Since I'm interacting with my data via a RESTful `HTTPServlet`, this makes things rather easy for me to create one of the required parts. I need to have a sample set of data, which I can interact with to confirm/deny my interactions are well formed and test with some form of data. In this case, I'm assuming this is for making changes to an existing application, but if it's a new one, someone would want to sit down and define a sample set of data; this is normal operation for myself and, I expect, most developers. For my use case, I copied the network response from my `.../xsp/<collectionName>` `GET` call into a `db.json` (I'm using `housesDB.json`, except for my GIFs below, which are another source, but follow the same structure) file. This will need one minor change, and that's to wrap the data array into a slightly different format, so that `json-server` can read it correctly (I stripped out my usual `request` block with any params and the `error` true/false, for simplicity).
@@ -211,7 +211,7 @@ Here come a few examples, in all the glory an animated GIF of a REST API client 
 You'll see that the default page at the port `json-server` is serving on, that there are a couple things, such as a hyperlink to the collections, overall "db", and link back to the readme on GitHub. In the console, we can see that we can even take a "snap shot" of the "db"; this will save the data at that point in time to a separate `.json` file.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/json-server/basicLoad.png"
+  <amp-img src="/assets/images/post_images/json-server/basicLoad.png"
   alt="the basic page with helper info"
   height="737" width="1140"
   layout="responsive"></amp-img>
@@ -222,7 +222,7 @@ You'll see that the default page at the port `json-server` is serving on, that t
 I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US) for Chrome, as I'm used to it. You may wish to check out [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), another Chrome app, or you can load from your JS console or, as [I'll show later, actual web content](#one-last-thing).
 
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGet.gif"
+  <amp-anim src="/assets/images/post_images/json-server/basicCollectionGet.gif"
   alt="GET collection"
   height="851" width="1596"
   layout="responsive"></amp-anim>
@@ -231,7 +231,7 @@ I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/deta
 
 ##### GET Record
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionGetRecord.gif"
+  <amp-anim src="/assets/images/post_images/json-server/basicCollectionGetRecord.gif"
   alt="GET 'document'"
   height="851" width="1596"
   layout="responsive"></amp-anim>
@@ -240,7 +240,7 @@ I'm using the [Advanced REST API Client](https://chrome.google.com/webstore/deta
 
 ##### PUT Record
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/basicCollectionPutRecord.gif"
+  <amp-anim src="/assets/images/post_images/json-server/basicCollectionPutRecord.gif"
   alt="PUT 'document' with partial data update"
   height="851" width="1596"
   layout="responsive"></amp-anim>
@@ -269,7 +269,7 @@ This will make my NSF-relative calls to `/xsp/houses` resolve to the `houses` th
 `json-server --id unid --watch housesDB.json --routes routes.json`
 
 <figure>
-  <amp-anim src="{{ site.url }}/assets/images/post_images/json-server/servingStaticWebContent.gif"
+  <amp-anim src="/assets/images/post_images/json-server/servingStaticWebContent.gif"
   alt="serving static web content from 'public' folder"
   height="825" width="1256"
   layout="responsive"></amp-anim>
@@ -282,7 +282,7 @@ I hope you can see the benefit of being able to work on your front-end independe
 You can find these updates in my [App of Ice and Fire](https://github.com/edm00se/AnAppOfIceAndFire) repository on GitHub. Please feel free to check it out and play with it. Until next time.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/brace_XPages_Bluemix.jpg"
+  <amp-img src="/assets/images/post_images/brace_XPages_Bluemix.jpg"
   alt="brace yourselves, XPages on Bluemix is coming"
   height="500" width="332"
   layout="fixed"></amp-img>

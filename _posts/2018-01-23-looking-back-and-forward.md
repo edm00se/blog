@@ -13,7 +13,7 @@ share: true
 The past year has been great fun. I've had a couple of major changes, including a change in job and beginning to work from home. I've also done a few different projects that I hadn't been involved in before. I'll get to those in a little bit, but first...
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/GoodNewsEveryone.png"
+  <amp-img src="/assets/images/post_images/GoodNewsEveryone.png"
   alt="good news everyone"
   width="480" height="260"
   layout="responsive"></amp-img>

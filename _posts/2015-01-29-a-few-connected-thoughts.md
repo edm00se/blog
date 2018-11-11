@@ -66,7 +66,7 @@ Being a developer often includes a bit of a rebellious nature. So while we had a
 
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/BlueChalkySoup.png"
+  <amp-img src="/assets/images/post_images/BlueChalkySoup.png"
   alt="Chalk Talk Soup: hosted on Bluemix"
   layout="fixed"
   width="256" height="320"></amp-img>

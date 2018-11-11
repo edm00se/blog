@@ -15,7 +15,7 @@ share: true
 Here's a curious one, in which I found myself with a limitation of not being able to output JSON with scientific notation values.
 
 <figure class="center">
-  <amp-anim src="{{ site.url }}/assets/images/post_images/ExcuseMe.gif"
+  <amp-anim src="/assets/images/post_images/ExcuseMe.gif"
   alt="wait, what?"
   width="500" height="213"
   layout="responsive"></amp-anim>

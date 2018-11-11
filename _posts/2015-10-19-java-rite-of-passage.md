@@ -22,7 +22,7 @@ What wound up tripping me up was that I was attempting to access my data NSF in 
 When using a static method, it is attached to the Class it is defined in, not any given instance. For convenience sake, this can be handy as you can invoke it directly by `MyClass.getSomethingStatically()` as opposed to access/create an instance of the Class in order to get the properties, a la `MyClass a = new MyClass(); a.getSomeInstanceProperty();`. Eclipse based editors make it really easy to add the _static_ modifier/key word to a method that you've typed in as if it were static.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/easyToMakeStatic.png"
+  <amp-img src="/assets/images/post_images/easyToMakeStatic.png"
   alt="why do you make it so easy!?" height="116" width="586"></amp-img>
  <figcaption>why do you make it so easy!?</figcaption>
 </figure>

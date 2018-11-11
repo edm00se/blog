@@ -26,7 +26,7 @@ It's been a little while since I blogged last. This has been due to a combinatio
 There's one more thing involved, which is a tougher topic. Since MWLUG, there was a bit of a shift from the previous head scratching and beard stroking (for those of us so endowed) regarding the future of platform development of Domino.
 
 <figure class="center">
-  <amp-img src="{{ site.url }}/assets/images/post_images/BeardStroke.jpg"
+  <amp-img src="/assets/images/post_images/BeardStroke.jpg"
   alt="a beard grants pondering skills, +10"
   height="480" width="480"
   layout="responsive"></amp-img>

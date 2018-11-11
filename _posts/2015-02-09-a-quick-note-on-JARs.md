@@ -11,7 +11,7 @@ share: true
 ---
 
 [Edit]
-[In the comments, Sven Petri pointed out]({{ site.url }}/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the `java.policy` ([a `java.pol` file is preferable](http://oliverbusse.notesx.net/hp.nsf/blogpost.xsp?documentId=EAA)) file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local `/jvm/lib/ext/` path.
+[In the comments, Sven Petri pointed out](/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the `java.policy` ([a `java.pol` file is preferable](http://oliverbusse.notesx.net/hp.nsf/blogpost.xsp?documentId=EAA)) file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local `/jvm/lib/ext/` path.
 [/Edit]
 
 ### Preface
@@ -29,7 +29,7 @@ grant { permission java.security.AllPermission; }
 To rule out what I have going in my primarily development environment (something that doesn't come up for me as a staff employee of an IBM customer, as my environment doesn't change, unless I add a picture of my kid to my desk), I created a fresh install of Notes/Domino Designer. I took a look at the `<install>/jvm/lib/security/java.policy` file and noticed something that works to our advantage as developers.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/JARs/StockJvmPropertiesJvmLibExt.png"
+  <amp-img src="/assets/images/post_images/JARs/StockJvmPropertiesJvmLibExt.png"
   alt="we can put our JARs in the jvm/lib/ext folder"
   layout="responsive"
   width="458" height="82"></amp-img>
@@ -42,7 +42,7 @@ So, without the need to edit the java.policy file, this makes things a much easi
 Here's my import from my series demo code imported into my fresh DDE install via my Git repo. As expected, without any JAR to find, it's going to fail.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/JARs/ImportingGsonWithoutJAR.png"
+  <amp-img src="/assets/images/post_images/JARs/ImportingGsonWithoutJAR.png"
   alt="hey look, nothing"
   layout="responsive"
   width="502" height="114"></amp-img>
@@ -52,7 +52,7 @@ Here's my import from my series demo code imported into my fresh DDE install via
 Having shut down Designer and placing the `com.google.gson` JAR into the `<install>/jvm/lib/ext/` path and then starting it back up again, you can see that it's now resolved. All without touching the java.policy file.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png"
+  <amp-img src="/assets/images/post_images/JARs/JARaddedOnlyToJvmLibExt.png"
   alt="looking? found someone I would say you have, hmmm?"
   layout="responsive"
   width="505" height="132"></amp-img>
@@ -63,7 +63,7 @@ Having shut down Designer and placing the `com.google.gson` JAR into the `<insta
 The plus side to this approach is that it's now also available in Java agents.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/JARs/JARaccessibleFromJavaAgent.png"
+  <amp-img src="/assets/images/post_images/JARs/JARaccessibleFromJavaAgent.png"
   alt="consistent JAR dependencies with Java Agents and XPages runtime"
   layout="responsive"
   width="627" height="343"></amp-img>

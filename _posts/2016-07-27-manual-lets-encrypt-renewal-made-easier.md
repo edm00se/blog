@@ -23,7 +23,7 @@ As part of the validation process, the Let's Encrypt / certbot script needs to "
 Here's what it looks like when I ran the `certbot-auto` script:
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/CertBot_Challenge_and_Response.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/CertBot_Challenge_and_Response.png"
   alt="certbot challenge and response"
   layout="responsive"
   width="893" height="175"></amp-img>
@@ -37,7 +37,7 @@ Marky's example shows handle established in his Node + Express app, providing a 
 This means that so long as my Node app can resove the `LETS_ENCRYPT_ROUTE` and `LETS_ENCRYPT_VERIFICATION` values accordingly, I'm in business. This is done rather easily via the "Environment Variables" page of my application's dashboard, in the "user defined" tab.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/User_Def_Env_Vars.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/User_Def_Env_Vars.png"
   alt="user defined environment variables"
   layout="responsive"
   width="893" height="357"></amp-img>
@@ -47,7 +47,7 @@ This means that so long as my Node app can resove the `LETS_ENCRYPT_ROUTE` and `
 Once this is all done, you can replace the certificates for the custom domain with the freshly generated certificates. I added my certificate files (`.pem`) as the screen shot shows and it looks good in both the Bluemix dashboard and my Chrome inspector.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Replacing_the_Certs.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/Replacing_the_Certs.png"
   alt="replacing the certificates"
   layout="responsive"
   width="750" height="633"></amp-img>
@@ -55,7 +55,7 @@ Once this is all done, you can replace the certificates for the custom domain wi
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Bluemix_All_Is_Good.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/Bluemix_All_Is_Good.png"
   alt="certificate confirmed on Bluemix"
   layout="responsive"
   width="679" height="664"></amp-img>
@@ -63,7 +63,7 @@ Once this is all done, you can replace the certificates for the custom domain wi
 </figure>
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Chrome_All_Is_Good.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/Chrome_All_Is_Good.png"
   alt="new certificate confirmed in Chrome"
   layout="responsive"
   width="987" height="463"></amp-img>
@@ -84,7 +84,7 @@ Generally speaking, the order of events to take are:
 A strange hiccup I encountered was what I believe to be a false positive in regards to my deletion of the existing (old) certificate. After a few tries, or a minor passage of time, it all rectified itself.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/Timeout.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/Timeout.png"
   alt="delete certificate timeout"
   layout="responsive"
   width="517" height="274"></amp-img>
@@ -95,7 +95,7 @@ A strange hiccup I encountered was what I believe to be a false positive in rega
 Since Let's Encrypt is now by all regards [widely successful, with over 5 million certificates issued](https://letsencrypt.org/2016/06/22/https-progress-june-2016.html), I can't help but wonder how easy this _should_ be on any modern PaaS, such as Bluemix. Gone are the days of _needing_ to pay _lots of money_ for an HTTPS certificate, so <span data-toggle="tooltip" title="hear that Big Blue? let's do this thing!">the automation, configuration, and management of HTTPS certificates on behalf of the user _should_ be a minor formality, not to mention useful</span>. Do note, Bluemix does have a wild card HTTPS certificate which applies to any of its `.mybluemix.net` addresses, so this is unique to custom domains.
 
 <figure>
-  <amp-img src="{{ site.url }}/assets/images/post_images/bluemix-lets-encrypt/bluemix-wild-card-https-cert.png"
+  <amp-img src="/assets/images/post_images/bluemix-lets-encrypt/bluemix-wild-card-https-cert.png"
   alt="Bluemix wildcard cert"
   layout="responsive"
   width="939" height="547"></amp-img>
