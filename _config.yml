@@ -16,7 +16,7 @@ email: ''
 contact_link: 'https://edm00.se/contact'
 ama: 'https://github.com/edm00se/ama'
 bio: >
-  Software Developer, for the web, full-stack, Node virtuoso, git master, Docker acolyte, DevOps neophyte, IBM Champion.
+  Software Developer, Master of the Arcane Arts. OIF veteran, IBM Champion.
 baseurl: "" # the subpath of your site, e.g. /blog
 disqus_shortname: em-devblog
 disqus_iframe_url: "https://ericmccormick.io/disqus_comments.html"
