@@ -25,7 +25,7 @@ My trusty coffee mug, which has been with me since prior to graduating universit
 </figure>
 
 ### Accepting Submissions
-I am accepting suggestions/submissions. If you're having trouble with the embedded Google Form, [here's the link directly](http://goo.gl/forms/Hn9IiIYqb22eREAb2).
+I am accepting suggestions/submissions. If you're having trouble with the embedded Google Form, [here's the link directly](https://docs.google.com/forms/d/18gjdmG_-X5c5YKqT95trQvhAApJqQ7ZAI5_-EjFse4M).
 
 <amp-iframe
 	width="760"

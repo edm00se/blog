@@ -77,7 +77,7 @@ Cheers! 🍻
 [dev-dog-site]: https://edm00se.codes/dev-dog/
 [amzn-dev-dog]: https://bit.ly/dev-dog-skill
 [edm00se-stackoverflow]: https://stackoverflow.com/search?q=user%3A1720082+created%3A2017
-[docker-tips-playlist]: https://goo.gl/forms/WkwQLcc7XCaQMPbc2
+[docker-tips-playlist]: https://docs.google.com/forms/d/e/1FAIpQLSfb3Pbhxs9KRcs8UpT4XJE4bTj0gJeZ1Ay9F57xt6KYtU_aJA/viewform
 [franz-messenger]: https://meetfranz.com
 [electron]: https://electronjs.org
 [ibm-ww]: https://workspace.ibm.com/
