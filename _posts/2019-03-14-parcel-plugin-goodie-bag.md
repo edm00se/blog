@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "A Parcel Plugin"
+title: "A Parcel Plugin For Goodies"
 description: "making IE(11) support just a bit easier"
 category: web
 tags: [web, parcel, plugin, javascript, ie]
