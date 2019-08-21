@@ -47,7 +47,7 @@ At first, I just picked a domain name I already owned and controlled and knew I 
 - testing it out
   - this went strangely without a hiccup, hooray! 🎉
 
-Where is it now? If you're intersted, you can check out my repository, [`github.com/edm00se/amp-hacks`][gh-amp-hacks-repo]. Feel free to check it out, see what it does, or fork it and make it your own.
+Where is it now? If you're interested, you can check out my repository, [`github.com/edm00se/amp-hacks`][gh-amp-hacks-repo]. Feel free to check it out, see what it does, or fork it and make it your own.
 
 That's it, the big reveal. Have hacks that are needed to make things work? Throw them in their own box and keep them, documented and available, but isolated. One day they can be removed and the world will be a little bit brighter for it.
 
@@ -70,6 +70,8 @@ I've dabbled over the last year, give or take, in:
 - [svelte][svelte], because I love JS, but also love extreme simplicity; this isn't an SSG, but rather an application framework with a focus on low code, reactivity, and no virtual DOM
 
 I'm not sure where I'm going with this blog, but considering my obsession over development tooling and the frequency with which I overhaul my blog as an excuse to try out something new, I can't help but imagine it's only a matter of some time before it happens. It's already been about [three years in this format][post-reincarnated], so it's probably time to reincarnate it again.
+
+{% include tweet.html id="1164279630326636549" %}
 
 ### Summary
 
