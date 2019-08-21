@@ -20,12 +20,14 @@ I liked a lot about [AMP][amp-proj] when I first heard of it. The primary concep
 
 #### Content Driven Sites
 
-Content heavy sites are likely to gain a lot from this format, whether it's AMP's implementation or otherwise. I'm a surprisingly big fan of it still, even though I'm moving on. It ultimately achieves a pleasant mobile experience, with a caveat or two. 
+Content heavy sites are likely to gain a lot from this format, whether it's AMP's implementation or otherwise. I'm a surprisingly big fan of it still, even though I'm moving on. It ultimately achieves a pleasant mobile experience, with a caveat or two.
 
 #### Restrictions Against Even The Best Intentions
 
 - disqus / comments
-- search
+- search (other than an `amp-form` pointing to the google search result page)
+  - rather defeats the purpose of a dedicated search page
+  - no type-ahead, awareness of content
 - random things, such as named elements (can't do permalinking?!)
 
 #### My Blog As A Trial
