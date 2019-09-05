@@ -2,16 +2,36 @@
 <html>
   <head>
     <title>installing service worker</title>
-    <script type="text/javascript">
-      var swsource = "/sw.js";
-      if("serviceWorker" in navigator) {
-          navigator.serviceWorker.register(swsource).then(function(reg){
-              console.log('ServiceWorker scope: ', reg.scope);
-          }).catch(function(err) {
-              console.error('ServiceWorker registration failed: ', err);
-          });
-      };
-    </script>
+    <script type="module">
+      import { Workbox } from "https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-window.prod.mjs";
+      if ("serviceWorker" in navigator) {
+        var swsource = "/sw.js";
+        const wb = new Workbox(swsource);
+        wb.addEventListener("installed", event => {
+          if (event.isUpdate) {
+            console.log('should show update modal');
+            $('#contentUpdateModal').modal('show');
+          }
+        });
+        wb.register();
+      }
+      </script>
+      <div class="modal fade" id="contentUpdateModal" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">New Content Available!</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info center-block"
+                data-loading-text="Updating with new content..."
+                onclick="$(this).button('loading');window.location.reload();">
+                  Refresh
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
   </head>
   <body>
   </body>
