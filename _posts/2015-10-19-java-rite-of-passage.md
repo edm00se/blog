@@ -62,10 +62,10 @@ Announcing [the _bluemix_ version of my demo app repository on GitHub](https://g
 
 App Running on Bluemix: [iceandfire.mybluemix.net](http://iceandfire.mybluemix.net/)
 
-App (and data ODP) repository:
+[App (and data ODP) repository](https://github.com/edm00se/AnAppOfIceAndFire):
 
 <amp-iframe width="160" height="30"
-    sandbox="allow-scripts allow-same-origin"
+    sandbox="allow-scripts allow-same-origin allow-popups"
     layout="responsive"
     frameborder="0"
     src="https://ghbtns.com/github-btn.html?user=edm00se&repo=Ice-And-Fire-On-Bluemix&type=star&count=true&size=large">
