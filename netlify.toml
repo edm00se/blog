@@ -1,0 +1,13 @@
+[build]
+  base = "/"
+  publish = "/_site/"
+  command = "_scripts/build.sh"
+# old:command = "bundle exec jekyll build --config _config.yml && npx workbox-cli injectManifest _config/workbox-config.js"
+# [context.production]
+#   base = "/"
+#   publish = "/_site/"
+#   command = "bundle exec jekyll build --config _config.yml && npm i workbox-build && node _config/workbox-build.js"
+# [context.deploy-preview]
+#   base = "/"
+#   publish = "/_site/"
+#   command = "bundle exec jekyll build --config _config.yml"
