@@ -13,8 +13,6 @@ let config = {
   maximumFileSizeToCacheInBytes: 2.5 * 1024 * 1024
 };
 
-console.log(config);
-
 injectManifest(config)
   .then(({count, size}) => {
     console.log(`Generated ${config.swDest}, which will precache ${count} files, totaling ${size} bytes.`)
