@@ -10,28 +10,14 @@
         wb.addEventListener("installed", event => {
           if (event.isUpdate) {
             console.log('should show update modal');
-            $('#contentUpdateModal').modal('show');
+            if(window.prompt('A content update available. Care to update now?')){
+              window.location.reload();
+            }
           }
         });
         wb.register();
       }
       </script>
-      <div class="modal fade" id="contentUpdateModal" tabindex="-1" role="dialog" data-backdrop="static">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">New Content Available!</h4>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info center-block"
-                data-loading-text="Updating with new content..."
-                onclick="$(this).button('loading');window.location.reload();">
-                  Refresh
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
   </head>
   <body>
   </body>
