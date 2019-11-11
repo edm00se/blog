@@ -51,3 +51,15 @@ Additionally, this greater and true understanding of imported code means that th
 Over the last year, I've been increasing my use of TypeScript in my day-to-day work and have considered incorporating it more into my open source and dabbling projects. The best part of it all is that having created [my own preferred flavor of a starter repo](https://github.com/edm00se/vue-parcel-starter) makes this easy to test in a branch and the use of my preferred build tool, [Parcel](https://parceljs.org/), makes this [extremely easy to setup and try out](https://github.com/edm00se/vue-parcel-starter/pull/61/files#diff-60b2029a3ac639f9ff664d542400700aR10).
 
 So, do you _need_ to use TypeScript or another static typing solution in your JavaScript? No, you can write perfectly valid JS without it. What I do ask myself has to do far more with whether I want to skip out on some of what TS can give me, without any additional effort. I'm sure you'll find your own answer, but hopefully I've inspired a little extra consideration.
+
+### Bonus
+
+As mentioned above, adding TS to my starter repo was easy, almost too easy. When tooling does what it should, it can lead us to great places. Here's how easy it was.
+
+<figure class="center">
+  <amp-anim src="/assets/images/post_images/addingTypeScript.gif"
+  alt="live parcel dev server detects changes, installs typescript dep, new build is good"
+  height="482" width="947"
+  layout="responsive"></amp-anim>
+ <figcaption>adding typescript to vue components with parcel, stupid easy</figcaption>
+</figure>
