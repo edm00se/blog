@@ -8,7 +8,7 @@
 # Site settings
 title: Dev|Blog
 description: >
-  software development, operations, and tech musings
+  software development, operations, tooling, and tech musings
 logo: "/assets/images/logo.svg"
 default_bg: "/assets/images/logo.svg"
 name: 'Eric McCormick'

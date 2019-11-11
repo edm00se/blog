@@ -629,6 +629,12 @@ body {
       margin-top: 30px;
 
     }
+    figure.bg-dark {
+      img {
+        background-color: lightgray;
+        border-radius: 1.5rem;
+      }
+    }
     figure {
       margin: 0;
       padding: 0 0 30px;
