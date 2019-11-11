@@ -12,7 +12,7 @@ layout: feeds
         <title>{{ post.title }}</title>
         <link>{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <pubDate>{{ post.modified | date_to_rfc822 }}</pubDate>
         <description><![CDATA[{{ post.content}}]]></description>
       </item>
     {% endfor %}
