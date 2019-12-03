@@ -71,7 +71,7 @@ I've dabbled over the last year, give or take, in:
 
 I'm not sure where I'm going with this blog, but considering my obsession over development tooling and the frequency with which I overhaul my blog as an excuse to try out something new, I can't help but imagine it's only a matter of some time before it happens. It's already been about [three years in this format][post-reincarnated], so it's probably time to reincarnate it again.
 
-{% include tweet.html id="1164279630326636549" %}
+<!-- {% include tweet.html id="1164279630326636549" %} -->
 
 ### Summary
 
