@@ -84,4 +84,4 @@ In case you missed it, [Hacktoberfest 2016](https://hacktoberfest.digitalocean.c
 Seriously, if you're interested in and are looking to contribute to my [XPages compatible Yeoman generator, "generator-xsp"](http://npm.im/generator-xsp), I am more than happy to bring others in to contribute. I have some [general guidelines](https://github.com/edm00se/generator-xsp#want-more) and [a few ideas](https://github.com/edm00se/generator-xsp/projects/1) for a couple additional features.
 
 ### Summary
-As always, thanks for reading. ð»
+As always, thanks for reading. 🍻

@@ -78,7 +78,7 @@ I'm fairly certain this will need to be [grassroots][grassroots-about] in nature
 
 \*Note: I don't mean to hate on IE, rather Microsoft has moved on with Edge and while they have taken a very business stance of supporting IE for a longer time than I would prefer, but it's for their business customers who have locked-in requirements of older software requiring, say, IE 7 ð. This is rather meant to highlight the need for us as the development community to force the movement and let the "norm" be something favorable to everyone.
 
-Until next time, ð»!
+Until next time, 🍻!
 
 [evergreen-about]: https://www.hanselman.com/blog/TheEvergreenWeb.aspx
 [obj-init-shorthand]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015

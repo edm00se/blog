@@ -1,17 +1,15 @@
 ---
-layout: post
-type: post
-title: "Handling Requests in a Servlet"
-description: "dare we get RESTful?"
+title: 'Handling Requests in a Servlet'
+description: 'dare we get RESTful?'
+date: 2015-02-25
+published: true
+series: true
+tags: ['xpages', 'domino', 'java', 'servlet']
+canonical_url: false
 category: xpages-servlets
-series: servlet-series
-tags: [xpages, domino, java, servlet]
-modified: 2015-02-25
-comments: true
-share: true
 ---
 
-{% include series.html %}
+<!-- {% include series.html %} -->
 ### Previously, on [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets)
 So far in [this series](/servlet-series/) I've covered some [basics](/xpages-servlets/servlet-intro-and-flavors) on servlets, implementing our methods along with a showing of the ["flavors"](/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets) of servlets, and how to implement these servlets [via a ServletFactory](/xpages-servlets/servlet-implementation/). This has been the ground work for everything that comes next.
 
@@ -20,14 +18,13 @@ A servlet can be just about anything. It can receive a payload of data (or just 
 
 * abstracting the CRUD operations, in order to
 * validate received data changes (not committing changes in case of failure, throwing an error, with messages, to the user)
-* and provide a layer of business logic for those interactions, enforcing a set of rules by which all data objects will adhere to (I have previously described this as "loose schema", which is a misnomer, as the entire purpose of a schema is to provide [_strict_ provisioning](//en.wikipedia.org/wiki/Database_schema) at the db level; aka- integrity constraints)
+* and provide a layer of business logic for those interactions, enforcing a set of rules by which all data objects will adhere to (I have previously described this as "loose schema", which is a misnomer, as the entire purpose of a schema is to provide [_strict_ provisioning](https://en.wikipedia.org/wiki/Database_schema) at the db level; aka- integrity constraints)
 
 ### Receiving Requests
 As I've mentioned above, I've referenced a pattern of /collection/{:id} for an endpoint. The basic premise is that you provide the base endpoint of .../collection (usually shown as the plural version, so for a collection of users, it would be /user**s**) which at the base level gives the full collection, but when is followed by a route parameter of an ID (for example, a 32-character length hexadecimal value,< like our Notes Document UNIDs), it will handle requests specific to that document. This effectively makes our servlet at one endpoint a two-part affair. Here's the approach I'll be using, with strictly _application/json_ content type.
 
 #### Formatting and Documentation
 
-{:.table .table-bordered}
 | Route                   | Methods Allowed        |
 |-------------------------|------------------------|
 | .../collection          | GET                    |
@@ -39,38 +36,13 @@ One major benefit of using a REST API framework in Java is the ability to automa
 #### Route Matching
 We'll be handling multiple routed paths off a single collection endpoint (the collection and the collection/{:id}). The approach I'll be implementing in the route matching will make use of regular expressions. This involves defining a pattern and testing that against the requested path for a match. This will make use of _java.util.regex.Pattern_ and _java.util.regex.Matcher_, respectively.
 
-Since we will get a true match with [_Matcher.find()_](//docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
+Since we will get a true match with [_Matcher.find()_](https://docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
 
-```java
-// in a method to parse route params
-
-// Accommodate two requests, one for all resources, another for a specific resource
-private Pattern regExAllPattern = Pattern.compile("/collection");
-// a UNID is 32-char hex, /collection/{:unid}
-// UNID ref: http://www-01.ibm.com/support/docview.wss?uid=swg21112556
-private Pattern regExIdPattern = Pattern.compile("/collection/([0-9a-fA-F]{32})");
-
-// regex parse pathInfo
-Matcher matcher;
-
-// Check for ID case first, since the All pattern would also match
-matcher = regExIdPattern.matcher(pathInfo);
-if (matcher.find()) {
-  unid = Integer.parseInt(matcher.group(1));
-  System.out.println("do something with this document, the id is: "+unid);
-}
-
-matcher = regExAllPattern.matcher(pathInfo);
-if (matcher.find()) {
-  System.out.println("do something with the collection");
-}
-
-throw new ServletException("Invalid URI");
-```
+https://gist.github.com/edm00se/7d1abeb5ee555631b638b3299cd66998#routeMatching.java
 
 [EDIT]
 
-It was brought to my attention that route matching is easier via @ annotations, as one might use via an approach [with Jersey](//jersey.java.net/). I absolutely agree, but up until now, for this series, I've taken a framework-free approach to generating and implementing servlets. I'll just say that there's a very good reason that such frameworks are out there, and even implementing just the pieces for the @ annotations could be effort well spent. I fully welcome any response piece on this topic, as I'm not experienced with Jersey (my preference to RegEx matching comes from my NodeJS/Express API experience).
+It was brought to my attention that route matching is easier via @ annotations, as one might use via an approach [with Jersey](https://jersey.java.net/). I absolutely agree, but up until now, for this series, I've taken a framework-free approach to generating and implementing servlets. I'll just say that there's a very good reason that such frameworks are out there, and even implementing just the pieces for the @ annotations could be effort well spent. I fully welcome any response piece on this topic, as I'm not experienced with Jersey (my preference to RegEx matching comes from my NodeJS/Express API experience).
 
 [/EDIT]
 
@@ -83,20 +55,7 @@ Now that we've handled the route, it's time to handle any route parameters. Rout
 
 Route parameters are a way of handling required, hierarchically defining values in a request. They're not the only way and many people don't like them, but I'm a fan (for such hierarchical requirements). To parse them out, we need a handle on the _HttpServletRequest_'s _pathInfo_ property. We then split it off the _/_ character to have a collection, in this case a _List&lt;String&gt;_ of all the route path elements. Since the first three are related to the structure of the servlet, we need to start checking at the 4th (3rd position).
 
-```java
-String reqPath = req.getPathInfo();
-out.println("pathInfo: " + reqPath);
-List<String> routeParm = Arrays.asList(reqPath.split("/(.*?)"));
-if(routeParm.size() > 3) {
-  // /nsf/xsp/servletname is the base, so the fourth is the first routeParm
-  for( int i=3; i<routeParm.size(); i++ ) {
-    out.println( "routeParm: " + routeParm.get(i) );
-  }
-} else {
-  // didn't have any route parameters after the base
-  out.println("routeParm: " + "none");
-}
-```
+https://gist.github.com/edm00se/7d1abeb5ee555631b638b3299cd66998#routeParams.java
 
 #### Query Parameters
 Query parameters should be familiar to every XPages developer. <s>In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.</s>

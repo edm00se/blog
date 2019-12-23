@@ -65,4 +65,4 @@ All in all, I tried not to repeat myself from the last post, but as you can see,
 
 For those who find this to be a good topic, please contribute or at least show your interest, as it's always great to contribute to an open source project you care about and show support for it.
 
-Until next time, ð»!
+Until next time, 🍻!

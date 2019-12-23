@@ -25,4 +25,4 @@ The new theme I've adopted (and customized a fair amount already), [amplify for 
 This isn't born purely of a desire to have an even higher [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) ranking, but I have managed to settle on a theme that looks and reads well, focuses on the content, and eliminates a lot of the bloat of some of the jQuery driven effects that were really just window dressing.
 
 ### Future
-I've got a couple of things cooking in the development space, this is merely a pit stop along the way. Until next time, ð»
+I've got a couple of things cooking in the development space, this is merely a pit stop along the way. Until next time, 🍻

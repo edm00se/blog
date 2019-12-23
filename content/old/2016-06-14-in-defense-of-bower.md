@@ -85,4 +85,4 @@ What the comparison of bower with npm should highlight is a couple of specific t
 
 It's my belief that if you're resistant to learning something like how npm can play into front-end dependency management, that "a little learning can go a long way". It's not "better" for every use case, but it certainly opens the doors for most use cases going forward. Bower does a good job of accomplishing what it set out to do, it's just not the only tool in town.
 
-Until next time, write better apps! ð»
+Until next time, write better apps! 🍻

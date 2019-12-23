@@ -224,7 +224,7 @@ gulp.task('default', ['build', 'watch', 'serverStart','browser-sync']);
 ### Summary
 As you can see, things have gotten more complex, but that's only because I wanted to do more things with gulp. I've found that the more I use Grunt and gulp, the more I want to keep a "grab bag" of likely tasks that require little additional fiddling, which speaks to the benefits of keeping to a convention of project structure between projects.
 
-I will be working the themes of testing and hooking into build automation further down the road. These topics also play directly into [my IBM Connect 2016 session](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=AD-1380), which I hope to see everyone at. I'll have a proper session announcement post later on as well. Until then, ð»!
+I will be working the themes of testing and hooking into build automation further down the road. These topics also play directly into [my IBM Connect 2016 session](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=AD-1380), which I hope to see everyone at. I'll have a proper session announcement post later on as well. Until then, 🍻!
 
 #### GitHub
 I've also taken my working copy of the front-end assets I've been testing with along with my `Gruntfile.js`, `gulpfile.js`, and `package.json` and put them into [a GitHub repository](https://github.com/edm00se/Task-Runners-With-Domino).

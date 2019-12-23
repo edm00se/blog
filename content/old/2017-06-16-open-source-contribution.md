@@ -73,4 +73,4 @@ This is far from my first open source contribution, and it certainly won't be my
 
 Until next time, cheers!
 
-### ð»
+### 🍻

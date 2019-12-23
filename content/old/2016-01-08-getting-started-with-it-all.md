@@ -138,4 +138,4 @@ I love the Java editor from Eclipse; it has great JavaDoc integration and syntax
 * [WebStorm](https://www.jetbrains.com/webstorm/), described as "the smartest JavaScript IDE", with a slew of pretty excellent features. The biggest detractor IMO is after the free 30-day trial, it has a recurring annual cost ([break down here](https://www.jetbrains.com/webstorm/buy/#section=personal)), but the personal/developer annual cost isn't unreasonable and the work they keep doing keeps adding excellent features.
 
 ### Summary
-All in all, this should help get any of you who feel they could use a little help "getting started" a good kick in the right direction. Per usual, if you have any questions or recommendations to add to this list, please let me know here, on Twitter, or in the XPages Slack chat. Until next time, ð»!
+All in all, this should help get any of you who feel they could use a little help "getting started" a good kick in the right direction. Per usual, if you have any questions or recommendations to add to this list, please let me know here, on Twitter, or in the XPages Slack chat. Until next time, 🍻!

@@ -109,7 +109,7 @@ Per usual, I have a repository on GitHub where you can find this in full. Feel f
 
 The simple node example can be found on GitHub as well, [github.com/edm00se/simple-docker-compose-node-redis-demo][gh-compose-example].
 
-Until next time, ð»!
+Until next time, 🍻!
 
 [compose-file]: https://docs.docker.com/compose/compose-file/
 [gitlab-compose-file-ex]: https://docs.gitlab.com/omnibus/docker/README.html#install-gitlab-using-docker-compose

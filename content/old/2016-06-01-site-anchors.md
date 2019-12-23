@@ -71,4 +71,4 @@ If you anticipate certain known points, you can do a couple of things, most of w
 Chris Toohey did a great job recently of covering the options for this, and [his blog post on the subject](http://www.dominoguru.com/page.xsp?id=control_rendered_html_id_ibm_domino_xpages.html) goes into pretty good detail on doing just this with XPages.
 
 ### Summary
-All in all, I had something neat, it didn't work "in production", and instead of fiddling to far with it, I remembered that I'm a developer and this is easy stuff. It's also a pretty useful feature I use pretty regularly, so I'm just looking to share the lesson learned. Until next time, ð»!
+All in all, I had something neat, it didn't work "in production", and instead of fiddling to far with it, I remembered that I'm a developer and this is easy stuff. It's also a pretty useful feature I use pretty regularly, so I'm just looking to share the lesson learned. Until next time, 🍻!

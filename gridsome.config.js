@@ -30,6 +30,8 @@ module.exports = {
         },
         remark: {
           plugins: [
+            'remark-attr',
+            [ 'gridsome-plugin-remark-codesandbox' ],
             [
               '@noxify/gridsome-plugin-remark-embed',
               {

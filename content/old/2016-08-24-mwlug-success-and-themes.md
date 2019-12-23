@@ -66,4 +66,4 @@ The [git repository is on GitHub](https://github.com/edm00se/BP101-A-Modernized-
 MWLUG saw its fair share of conjecture regarding the future of Domino. While we've been getting a mix somewhere between radio silence and confusing messages, hopefully we can have the record set straight and be able to get back to work. For some time, I've been a proponent of using Domino/XPages in a way that speaks to the power of the XPages runtime and uses all the modern front-end tooling. This helps us keep our skills sharp and marketable, yet makes good use of our existing systems. I won't talk about _should the worst happen_, as I've not heard anything truly definitive yet, but keeping our applications and business logic portable is _always_ a good idea.
 
 ### Summary
-Thanks to those that attended my session. I think we had a great time and some good discussion, along with a few cool toys being demonstrated. Until next time, ð»!
+Thanks to those that attended my session. I think we had a great time and some good discussion, along with a few cool toys being demonstrated. Until next time, 🍻!

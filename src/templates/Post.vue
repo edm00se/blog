@@ -59,6 +59,28 @@ export default {
     isProd: function() {
       return process.env.NODE_ENV !== 'development';
     }
+  },
+  mounted() {
+    // only load twitter embed script if twitter content detected
+    if(this.$page.post.content.includes('https://twitter.com')){
+      // twitter embed script: until gridsome-plugin-remark-twitter is fixed
+      /* eslint-disable */
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t.widgets.load();
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function (f) {
+          t._e.push(f);
+        };
+        return t;
+      }(document, "script", "twitter-wjs"));
+      /* eslint-enable */
+    }
   }
 };
 </script>
@@ -122,6 +144,25 @@ query Post ($id: ID!) {
       margin-left: calc(var(--space) * -1);
       display: block;
       max-width: none;
+    }
+
+    table {
+      margin-bottom: 1rem;
+    }
+    table, th, td {
+      border: 1px solid var(--body-color);
+      padding: 5px;
+      text-align: left;
+    }
+
+    twitter-widget {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    pre>code {
+      background-color: initial;
+      border: initial;
     }
   }
 }

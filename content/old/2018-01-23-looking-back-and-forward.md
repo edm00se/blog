@@ -63,7 +63,7 @@ As always, contributions are welcome!
 
 ### Until Next Time
 
-Cheers! ð»
+Cheers! 🍻
 
 
 [npm-edm00se]: https://www.npmjs.com/~edm00se

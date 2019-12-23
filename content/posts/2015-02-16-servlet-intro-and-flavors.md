@@ -1,17 +1,15 @@
 ---
-layout: post
-type: post
-title: "Servlet Basics"
-description: "an introduction"
+title: 'Servlet Basics'
+description: 'an introduction'
+date: 2015-02-16
+published: true
+tags: ['xpages', 'domino', 'java', 'servlet']
+series: true
+canonical_url: false
 category: xpages-servlets
-series: servlet-series
-tags: [xpages, domino, java, servlet]
-modified: 2015-02-16
-comments: true
-share: true
 ---
 
-{% include series.html %}
+<!-- {% include series.html %} -->
 #### Preface
 This post is essentially the first two parts of the several I've already identified I'll be blogging about. I kept waffling between wanting the first three in one post, which would have been huge, and just one, which would have been short. Here's what I came up with. You can also keep track of this and the other parts of the series on the [servlet series](/servlet-series/) page.
 
@@ -42,22 +40,22 @@ Hopefully this seems familiar, even if it's a new format. As you can see, I've o
 An `HttpServlet` is exactly what it claims, but probably isn't the best option for those who want to make use of much of the application, session, or anything which depends on FacesContext.
 
 #### DesignerFacesServlet
-So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there ð. Some of the benefits include access to *Scope'd variables and any managed beans.
+So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there 😉. Some of the benefits include access to *Scope'd variables and any managed beans.
 
-{% include gist.html id="fd47302a1918c93a262f" file="com.hello.servlets.ExampleDesignerFacesServlet.java" %}
+https://gist.github.com/edm00se/fd47302a1918c93a262f#com.hello.servlets.ExampleDesignerFacesServlet.java
 
 You can take note that we're being sure not just to close the output stream, but also the mark the `FacesContext` handle as `responseComplete` and releasing it back into the wild; **do not forget to do this**; this is implied for each and every response operation you provide.
 
 The largest thing to note is, as mentioned above, we're overriding the `service` method. This means that, by default, our accessing of the end point `happens` to be a GET. We need to provide for the response handling based on the request method. It would go something like this:
 
-{% include gist.html id="fd47302a1918c93a262f" file="partialMethodCheck.java" %}
+https://gist.github.com/edm00se/fd47302a1918c93a262f#partialMethodCheck.java
 
 The tedium of always adding a `try`/`catch` block with `finally` blocks to `close` the output and mark the `FacesContext` as `responseComplete` and performing the `release` is exactly the sort of thing that we as developers like to automate, by abstracting.
 
 #### AbstractXSPServlet
 This is the third flavor; it extends and, ultimately, is a `DesignerFacesServlet`, but by using an abstracted Servlet class, we can automate each of `out.close()`, `facesContext.responseComplete()`, and `facesContext.release()`, with each response, with minimal hassle. Jesse came up with this and I've pulled a copy for my use [directly from his frostillic.us framework](//github.com/jesse-gallagher/XPages-Scaffolding/blob/master/frostillicus.framework.plugin/src/frostillicus/xsp/servlet/AbstractXSPServlet.java) for use in my own code base. I recommend you have a read and grab a copy. Essentially, as Jesse shows in his [part 7 of his building an app with the frostillic.us framework](//frostillic.us/blog/posts/D815DC7ED059395885257D6B00001006), all that's needed is to build a class to extend `AbstractXSPServlet` and override the `doService` method, which is wrapper with the necessary `out.close()`, `facesContext.responseComplete()`, and `facesContext.release()`, for each response. This means our servlet class only has to contain what we need it to. Also note that I'm starting to define my response code for each of the non-GET methods.
 
-{% include gist.html id="fd47302a1918c93a262f" file="com.hello.servlets.ExampleAbstractedServlet.java" %}
+https://gist.github.com/edm00se/fd47302a1918c93a262f#com.hello.servlets.ExampleAbstractedServlet.java
 
 ##### Summary
 The big take away here is a common base of reference. Going forward, I'll be implementing Jesse's AbstractXSPServlet, which looks and acts differently than just a DesignerFacesServlet or HttpServlet. I recommend you examine what best fits your needs, but I think you should be happy with what it provides.

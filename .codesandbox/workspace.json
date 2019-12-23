@@ -16,7 +16,7 @@
       ]
     },
     {
-      "open": true,
+      "open": false,
       "views": [
         {
           "id": "codesandbox.terminal"

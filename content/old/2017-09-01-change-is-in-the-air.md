@@ -65,7 +65,7 @@ One other big change from this summer is that, for the last two months, I've sta
 
 I have a few ideas. That's all I'm saying right now, since I've got my sights set on a few things which are going to take a bit of setup. Watch this space.
 
-Until next time, cheers! ð»
+Until next time, cheers! 🍻
 
 [that-conf-url]: https://www.thatconference.com/
 [pwa-url]: https://developers.google.com/web/progressive-web-apps/

@@ -46,4 +46,4 @@ Shean and I started from a pretty stock looking NSF, with the front-end app resi
 I have several projects all coming to a head at about the same time, so hopefully I can get a couple wrapped up so I can blog about them. My day job is keeping me plenty busy as well, so my blogging frequency may be down a bit during the upcoming month or two, but I'll still be here.
 
 ### Summary
-Again, thank you to those that attended Shean and my session and let's all build better apps! ð»
+Again, thank you to those that attended Shean and my session and let's all build better apps! 🍻

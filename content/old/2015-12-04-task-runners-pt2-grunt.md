@@ -243,7 +243,7 @@ I initially intended to walk through every bit of my configuration, but instead 
 </figure>
 
 ### In Summary
-Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, ð»!
+Grunt is a great place to start. It's a mature and robust solution for a lot of task running needs. There's a standard for configuration files and the pluggable nature reflects in the comparative ease involved for adding in plugins as you progress through a project. In the end, I found myself moving in another direction, which I'll get into next time. Until then, 🍻!
 
 ### To Be Continued...
 ...in part 3, with gulp!

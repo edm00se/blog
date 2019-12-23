@@ -42,4 +42,4 @@ Now that we have a new way of handling our `Gson` instantiation, we can use it a
 
 I'm still left questioning why I had to do this, but the exercise is an intersting one anyway. Should someone need to customize their responses even further, this is a great place to start from. I'm still a pretty big fan of GSON and while it may not be for everyone, or even the best option in OSGi plugin development with options like JAX-RS and others, it's certainly a heavily used library that is both useful and generally easy to implement.
 
-### ð»
+### 🍻

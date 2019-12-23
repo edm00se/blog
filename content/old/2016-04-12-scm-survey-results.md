@@ -60,4 +60,4 @@ If you're one of those file system copy or 'none' folks, I seriously hope you're
 ### Summary
 All in all, if you're a hold out against using an scm, I think you'll notice that I'm skeptical of your choice in the matter. The advantage of using an scm is, I hope, self-evident. You can store your changes as revisions with minimal overhead to your development process; you can relate your revisions to issues (features, bugs, etc.), often with a simple addition to your commit message (refs, fixes, closes) if you're using something like GitHub, Bitbucket, GitLab, or others; and then there's the confidence in knowing that no matter what you change, you can always roll back to a previous commit (or tag or release) and know that your code will be as pristine as it was when you knew it was working, all by a simple command (or button click, for the GUI fans).
 
-All in all, thanks for the interest and the feed back. It's always nice to know what others think on a matter. As usual, write better code! ð»
+All in all, thanks for the interest and the feed back. It's always nice to know what others think on a matter. As usual, write better code! 🍻
