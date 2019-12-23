@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Handling Data in a Servlet"
-description: “going Chuck Norris on some data“
+description: "going Chuck Norris on some data"
 category: xpages-servlets
 series: servlet-series
 tags: [xpages, domino, java, servlet]

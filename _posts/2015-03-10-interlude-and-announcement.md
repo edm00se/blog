@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Interlude for Servlets"
-description: “a 4-piece arrangement“
+description: "a 4-piece arrangement"
 category: admin
 series: servlet-series
 tags: [admin]
