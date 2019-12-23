@@ -6,7 +6,9 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "dev": "npm run develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "npm run lint:md",
+    "lint:md": "remark content/**/*.md"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
@@ -20,7 +22,12 @@
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
+    "remark-cli": "^7.0.1",
+    "remark-preset-lint-recommended": "^3.0.3",
     "sass-loader": "^8.0.0"
   },
-  "keywords": []
+  "keywords": [],
+  "remarkConfig": {
+    "plugins": ["remark-preset-lint-recommended"]
+  }
 }
