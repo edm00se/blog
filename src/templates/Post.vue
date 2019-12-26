@@ -62,23 +62,24 @@ export default {
   },
   mounted() {
     // only load twitter embed script if twitter content detected
-    if(this.$page.post.content.includes('https://twitter.com')){
+    if (this.$page.post.content.includes('https://twitter.com')) {
       // twitter embed script: until gridsome-plugin-remark-twitter is fixed
       /* eslint-disable */
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
           t = window.twttr || {};
         if (d.getElementById(id)) return t.widgets.load();
         js = d.createElement(s);
         js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
+        js.src = 'https://platform.twitter.com/widgets.js';
         fjs.parentNode.insertBefore(js, fjs);
         t._e = [];
-        t.ready = function (f) {
+        t.ready = function(f) {
           t._e.push(f);
         };
         return t;
-      }(document, "script", "twitter-wjs"));
+      })(document, 'script', 'twitter-wjs');
       /* eslint-enable */
     }
   }
@@ -163,6 +164,13 @@ query Post ($id: ID!) {
     pre>code {
       background-color: initial;
       border: initial;
+      word-wrap: break-word;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+
+    .gist td {
+      border: inherit;
     }
   }
 }
