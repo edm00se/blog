@@ -1,20 +1,20 @@
 ---
-layout: post
-type: post
-title: "Something I Overheard at MWLUG"
-description: "on HTTP requests and application structure"
+title: 'Something I Overheard at MWLUG'
+description: 'on HTTP requests and application structure'
+date: 2015-08-31
+published: true
+tags: ['mwlug', 'structure', 'rest', 'xpages']
+canonical_url: false
 category: app-structure
-tags: [mwlug, structure, rest, xpages]
-modified: 2015-08-31
-comments: true
-share: true
 ---
 
 #### Intro
 This is a quick post, covering something I overheard while at MWLUG and comes back to some application architectural principles which I have a bit of a passion for. Read on at your own peril ð
 
 [Update]
+
 I added a bit from a tweet by Tony McGuckin about the XPages runtime's components.
+
 [/Update]
 
 ### Back to the Grind After MWLUG
@@ -26,22 +26,21 @@ While at MWLUG, I overheard someone make a reference to people "not liking POST"
 * an application runtime (JSF)
 * a striped database (though for performance it's best to separate it)
 * with a greatly convenient security model (that makes it _very_ easy to map roles and groups across applications)
-* and a bunch of OoB (out of the box) controls that aid in [RAD](//en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](//www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
+* and a bunch of OoB (out of the box) controls that aid in [RAD](https://en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
 
 [Update]
+
 As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than just the JSF runtime components. Since it's a larger list than my couple of bullet points, I'll let the tweet and screen shot from the linked XPages Masterclass video do the talking.
 
 ##### The Tweet
-{% include tweet.html id="638678645595336704" %}
+
+https://twitter.com/tonymcguckin/status/638678645595336704
+
 
 ##### The Screen Shot
-<figure>
-  <amp-img src="/assets/images/post_images/XPages_runtime.png"
-  alt="the XPages runtime and its components from JSF and additions"
-  layout="fixed"
-  width="860" height="644"></amp-img>
- <figcaption>the XPages runtime and its components from JSF and additions</figcaption>
-</figure>
+
+![the XPages runtime and its components from JSF and additions](./images/XPages_runtime.png)
+
 [/Update]
 
 #### My Beef With Transporting Markup
@@ -52,7 +51,7 @@ My list above of what XPages provides us lists the controls that we most often a
 #### What to Do About It
 As my demo application has been showing, I've been going the direction of a front-end heavy app (AngularJS app in the UI) with HTTP servlet RESTful API driven data access. This doesn't necesssarily need an XPages design element (root XPage and Custom Control) since it can/is served from the WebContent directory. For any still wondering, yes I do continue development on and maintain applications that aren't entirely "my way" when it comes to what are already in use. I've refactored core code when able (I've seen some scary SSJS libraries and vanquished as many beasts as I've been able to) because I firmly believe in keeping core business logic separate from UI logic.
 
-That being said, my advice to any in a "normal" XPages context is **embrace the JSON-RPC** control and Java beans (managed or POJO). If your business logic is driven inside a controller class, it can just as easily be invoked from a bean or from a servlet (or from SSJS inside a JSON-RPC's method script). If Java isn't your thing (if you're still learning, and you should embrace your JEE stack), [the JSON-RPC control](//www.notesin9.com/2014/05/21/tim-explains-json-rpc-codefortim/) lets you accomplish most of the same task of exposing server-side operations and logic, with minimal overhead, to the client-side (browser) for CSJS access; it's a win-win either way.
+That being said, my advice to any in a "normal" XPages context is **embrace the JSON-RPC** control and Java beans (managed or POJO). If your business logic is driven inside a controller class, it can just as easily be invoked from a bean or from a servlet (or from SSJS inside a JSON-RPC's method script). If Java isn't your thing (if you're still learning, and you should embrace your JEE stack), [the JSON-RPC control](https://www.notesin9.com/2014/05/21/tim-explains-json-rpc-codefortim/) lets you accomplish most of the same task of exposing server-side operations and logic, with minimal overhead, to the client-side (browser) for CSJS access; it's a win-win either way.
 
 ### In Case You Missed It...
-[My last post, recapping my session at MWLUG](/self-promotion/mwlug-ad113-success/), managed to get missed in my first tweet of the link. I updated the previous post (announcing my session at MWLUG) with a link at the top, but some may have missed it. Please check it out, there's a link to [my slide deck](//www.slideshare.net/edm00se/ad113-speed-up-your-applications-w-nginx-and-pagespeed), [GitHub repository](//github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed) with my configs, screen shots of my configs in use, and (you guessed it) my slide deck in PDF and PPTX formats.
+[My last post, recapping my session at MWLUG](/self-promotion/mwlug-ad113-success/), managed to get missed in my first tweet of the link. I updated the previous post (announcing my session at MWLUG) with a link at the top, but some may have missed it. Please check it out, there's a link to [my slide deck](https://www.slideshare.net/edm00se/ad113-speed-up-your-applications-w-nginx-and-pagespeed), [GitHub repository](https://github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed) with my configs, screen shots of my configs in use, and (you guessed it) my slide deck in PDF and PPTX formats.

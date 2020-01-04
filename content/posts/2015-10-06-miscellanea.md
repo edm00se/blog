@@ -1,20 +1,18 @@
 ---
-layout: post
-type: post
-title: "Miscellanea"
-description: "some things that have been cropping up"
+title: 'Miscellanea'
+description: 'some things that have been cropping up'
+date: 2015-10-06
+published: true
+tags: ['xpages', 'bluemix', 'xpages-servlets', 'java', 'open source', 'github', 'scm']
+canonical_url: false
 category: xpages
-tags: [xpages, bluemix, xpages-servlets, java, open source, github, scm]
-modified: 2015-10-06
-comments: true
-share: true
 ---
 
 #### Intro
 A few things have been on my mind over the last couple weeks and I thought I'd share them. Stay tuned for my demo app on Bluemix, and if I re-record what I need to, there may be yet another Notes in 9 video submission coming soon; the highlights of [my MWLUG session](/self-promotion/mwlug-ad113-success/).
 
-#### <amp-img class="img-no-btm-margin" src="/assets/images/champion/star.png" alt="IBM Champion Star" layout="fixed" width="32" height="30"></amp-img> IBM Champion Nominations
-In case you somehow missed it, IBM Champion nominations are open. Unlike a few, I've not taken to tweeting about who I've submitted nominations for; that's neither a slight to those that have nor an insult to any. Those whose work has greatly impacted me over the last year for my work and interest in development for the IBM platform I work on are the ones I've submitted. Most people could probably guess who I've submitted for, but that's not the point. If someone has made a difference to you in your efforts and you feel <span data-toggle="tooltip" title="not necessarily to wield MjÃ¶lnir">they're worthy</span>, submit them for the Champion program to help return that credit by the aid you've received.
+#### IBM Champion Nominations
+In case you somehow missed it, IBM Champion nominations are open. Unlike a few, I've not taken to tweeting about who I've submitted nominations for; that's neither a slight to those that have nor an insult to any. Those whose work has greatly impacted me over the last year for my work and interest in development for the IBM platform I work on are the ones I've submitted. Most people could probably guess who I've submitted for, but that's not the point. If someone has made a difference to you in your efforts and you feel they're worthy, submit them for the Champion program to help return that credit by the aid you've received.
 
 About the IBM Champion program:
 [https://www.ibm.com/developerworks/champion/index.html](https://www.ibm.com/developerworks/champion/index.html)

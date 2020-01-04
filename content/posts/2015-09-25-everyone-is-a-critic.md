@@ -1,13 +1,11 @@
 ---
-layout: post
-type: post
-title: "DesignerFacesServlets on Bluemix"
+title: 'DesignerFacesServlets on Bluemix'
 description: "everyone's a critic"
+date: 2015-09-25
+published: true
+tags: ['xpages', 'bluemix', 'xpages-servlets']
+canonical_url: false
 category: bluemix
-tags: [xpages, bluemix, xpages-servlets]
-modified: 2015-09-25
-comments: true
-share: true
 ---
 
 #### Everyone's A Critic
@@ -16,9 +14,4 @@ My daughter apparently wanted to contribute towards the end of this, she grew ti
 
 #### The Video
 
-<div class="center">
-	<amp-youtube
-    data-videoid="6TtyHbb_inQ"
-    layout="responsive"
-    width="560" height="315"></amp-youtube>
-</div>
+https://www.youtube.com/watch?v=6TtyHbb_inQ
