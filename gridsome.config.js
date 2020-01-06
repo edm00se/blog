@@ -10,6 +10,7 @@ module.exports = {
   siteName: 'Dev | Blog',
   siteDescription:
     'software development, operations, tooling, and musings on technology',
+  siteUrl: 'https://edm00se.io',
 
   templates: {
     Post: [{
@@ -49,6 +50,14 @@ module.exports = {
             ]
           ]
         }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['https://gist.github.com/*'],
+        config: {}
       }
     }
   ],

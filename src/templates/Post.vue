@@ -51,6 +51,8 @@ export default {
           rel: 'stylesheet',
           href:
             'https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css'
+            // 'https://unpkg.com/github-syntax-light@0.5.0/lib/github-light.css'
+            // 'https://unpkg.com/github-syntax-dark@0.5.0/lib/github-dark.css'
         } // TODO: switch to local styles, to accomodate for dark/light theme
       ]
     };
@@ -61,6 +63,8 @@ export default {
     }
   },
   mounted() {
+    require(`prismjs/themes/prism${window.__theme == 'dark' ? '-dark' : ''}.css`);
+    
     // only load twitter embed script if twitter content detected
     if (this.$page.post.content.includes('https://twitter.com')) {
       // twitter embed script: until gridsome-plugin-remark-twitter is fixed
