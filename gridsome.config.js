@@ -4,13 +4,19 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const paramCase = require('param-case');
+
 module.exports = {
   siteName: 'Dev | Blog',
   siteDescription:
     'software development, operations, tooling, and musings on technology',
 
   templates: {
-    Post: '/:title',
+    Post: [{
+      path: (node) => {
+        return  node.category ? `/${node.category}/${paramCase(node.title)}`: `/${paramCase(node.title)}`;
+      }
+    }],
     Tag: '/tag/:id'
   },
 
