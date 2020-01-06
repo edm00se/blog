@@ -1,23 +1,22 @@
 ---
-layout: post
-type: post
-title: "Task Runners pt.2: Grunt"
-description: "the noise we make running some tough tasks manually"
+title: 'Task Runners pt.2: Grunt'
+description: 'the noise we make running some tough tasks manually'
+date: 2015-12-04
+published: true
+series: true
+tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
+canonical_url: false
 category: web
-series: task-runners-with-domino
-tags: [grunt, gulp, git, scm, static, generator]
-modified: 2015-12-04
-comments: true
-share: true
 ---
 
-{% include series.html %}
-{% include toc.html %}
+<!-- {% include series.html %} -->
+<!-- {% include toc.html %} -->
+
 ### Intro
 Last time we covered what task runners are and why we should want to use them. Today I'm going to cover some of the foundational elements of using [Grunt](http://gruntjs.com/).
 
 ### Task Runners of Note: Grunt and Gulp
-The two most common and well known task runners (though there are [others, of course](http://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
+The two most common and well known task runners (though there are [others, of course](https://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](https://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
 
 #### A Word of Warning
 Many projects take the opinion that source (non optimized) files should be in a combination of `vendor/` (or `lib/` as I used) and `src/` (or `source/`) paths. This has a general benefit of making it easier to keep track of what resources are from where, and that any built (optimized) files would reside in a potential `dist/` path (or equivalent), for consistency. This isn't always the case, especially with the default location of CSS and JavaScript files in an NSF (`Resources/StyleSheets/` for CSS, `Code/ScriptLibraries` for JavaScript (client-side having .js extensions, vs SSJS having .jss), and images in `Resources/assets/images/`). It is my recommendation that if you keep your source files in these default locations, to have your `build/` or `dist/` path be in the `WebContent/` path for ease of separation.
@@ -27,24 +26,8 @@ The code base from my "follow along at home" git repository keeps all my source 
 Enough talk, time for some configs.
 
 ### Grunt
-<!--
-The plugins we'll be using are:
 
-{:.table .table-bordered}
-Plugin |	Description
------- | -----------
-[contrib-jshint](https://www.npmjs.org/package/grunt-contrib-jshint)		|	Validate files using jshint
-[jshint-stylish](https://www.npmjs.com/package/jshint-stylish)  			| Stylish reporting for jshint
-[contrib-uglify](https://www.npmjs.org/package/grunt-contrib-uglify)		|	Minify JS files using UglifyJS
-[contrib-watch](https://www.npmjs.org/package/grunt-contrib-watch)			|	Run tasks whenever watched files are changed
-[contrib-clean](https://www.npmjs.org/package/grunt-contrib-clean) 			|	Clean up files and folders
-[contrib-copy](https://www.npmjs.org/package/grunt-contrib-copy) 			|	Copy files and folders
-[contrib-concat](https://www.npmjs.org/package/grunt-contrib-concat)		|	Combine files into a single file
-[contrib-cssmin](https://www.npmjs.org/package/grunt-contrib-cssmin)		|	Compress CSS files
-[contrib-imagemin](https://www.npmjs.org/package/grunt-contrib-imagemin)	|	Minify PNG, JPG, and GIFs
-[contrib-htmlmin](https://www.npmjs.org/package/grunt-contrib-htmlmin)		|	Minify HTML files
--->
-[Grunt](http://gruntjs.com/) is a "JavaScript task runner", which runs on top of Node and is installable from npm via `npm install -g grunt-cli` for a global installation or `npm install grunt-cli --save-dev` for installation into your current project and saving as a development dependency in your `package.json`.
+[Grunt](https://gruntjs.com/) is a "JavaScript task runner", which runs on top of Node and is installable from npm via `npm install -g grunt-cli` for a global installation or `npm install grunt-cli --save-dev` for installation into your current project and saving as a development dependency in your `package.json`.
 
 The Grunt officially maintained plugins use the `contrib-<name>` convention, which generally relate to `grunt-contrib-<name>` [on GitHub](https://github.com/gruntjs/).
 
@@ -60,7 +43,6 @@ You can see that this can quite powerful rather quickly. Any tasks that we we wa
 
 It's easier to keep your static web assets in `WebContent/` in corresponding paths for images, stylesheets, etc., but with some careful configuration, you can work with the "normal" Domino Designer resource paths in the ODP. Those corresponding paths are:
 
-{:.table .table-bordered}
 Resource    	|	Path
 ------ | -----------
 Images			|	`NSF/Resources/assets/images/`
@@ -115,7 +97,7 @@ grunt.registerTask('default', ['jshint','other tasks you want to include in the 
 
 Here's how it looks all together for a basic structure (just count to 5):
 
-{% include gist.html id="43fcb3fcac536267440d" file="basicGruntfile.js" %}
+https://gist.github.com/edm00se/43fcb3fcac536267440d#basicGruntfile.js
 
 #### Setting Up Our Tasks
 So, hopefully by now your mind is awash with thoughts like:
@@ -175,13 +157,7 @@ watch: {
 
 Here's what [the resulting expanded Gruntfile.js ](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/7b294ea62c84e0e921d32857b857b633ab6ac26c/basicGruntfile_expandedWithJsHintAndWatch.js) does for us:
 
-<figure class="center">
-  <amp-anim src="/assets/images/post_images/task-runners/watchAndJsHint.gif"
-  alt="jshint throwing warnings and watching file saves"
-  height="743" width="574"
-  layout="fixed"></amp-anim>
- <figcaption>jshint throwing warnings and watching file saves</figcaption>
-</figure>
+![jshint throwing warnings and watching file saves](./images/task-runners/watchAndJsHint.gif)
 
 ##### Run a Server Task and Watch for Changes
 A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. Their docs usually show how to use a generic server task, but my preference is to replace that with the `json-server` instance we set up previously.
