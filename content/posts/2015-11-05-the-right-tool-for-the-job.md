@@ -13,7 +13,7 @@ category: web
 
 I'm currently following along with [Jesse Gallagher](https://frostillic.us/)'s "That Java Thing" series, as I'm hoping it demystifies the process of creating an OSGi plug-in for me, and I highly recommend any XPages developer out there follow along as well. Jesse is approaching things from a pretty good stand point and I'm sure it'll be worth the ride.
 
-Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016 ð! I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
+Also, I've gotten my email from IBM confirming the selection of my application development session for IBM Connect 2016 🎉! I'll have more news on that in the near future and I sincerely hope it'll have something for everyone; you'll certainly notice several themes I've been blogging and talking about over the last year and change. So, with any luck, I'll see you in Orlando.
 
 ### Intro
 Most people that know me know that I have a certain take on development for Domino/XPages. This isn't a bad thing, in fact I think it points to the great flexibility of the XPages runtime with which I spend most of my day job working.
