@@ -1,5 +1,10 @@
 {
   "infiniteLoopProtection": true,
   "hardReloadOnChange": false,
-  "view": "browser"
+  "view": "browser",
+  "server": "true",
+  "template": "gridsome",
+  "container": {
+    "port": 8080
+  }
 }
