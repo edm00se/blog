@@ -3,7 +3,7 @@ title: 'Building Java Objects From JSON'
 description: 'a better way'
 date: 2015-01-23
 published: true
-tags: ['xpages', 'domino', 'java', 'json', 'gson']
+tags: ['xpages', 'domino', 'java', 'json', 'gson', 'rest']
 category: java
 ---
 

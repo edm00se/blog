@@ -3,7 +3,7 @@ title: 'Handling Data in a Servlet'
 description: 'going Chuck Norris on some data'
 date: 2015-03-19
 published: true
-series: true
+series: xpages-servlets
 tags: ['xpages', 'domino', 'java', 'servlet']
 canonical_url: false
 category: xpages-servlets

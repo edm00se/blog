@@ -3,7 +3,7 @@ title: 'Rebirth: An App of Ice and Fire'
 description: 'refactoring the build process to better the app'
 date: 2016-12-14
 published: true
-series: true # servlet-series
+series: servlet-series
 tags: ['scm', 'git', 'npm', 'gulp']
 canonical_url: false
 category: xpages

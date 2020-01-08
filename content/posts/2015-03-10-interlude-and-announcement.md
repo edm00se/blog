@@ -3,7 +3,7 @@ title: 'Interlude for Servlets'
 description: 'a 4-piece arrangement'
 date: 2015-03-10
 published: true
-series: true
+series: xpages-servlets
 tags: ['admin']
 canonical_url: false
 category: admin
@@ -21,7 +21,7 @@ https://twitter.com/edm00se/status/571667777800417280
 
 Over the last week or so, I started to run into an issue I had trouble quantifying. Thankfully, with the help of some intelligent people on twitter (Jesse for one, who seemed to know what I ran into almost immediately) I once again appreciate the fact that our #XPages developer community is a strong one which is almost always willing to help someone through an issue. It's a credit to this community and one of the reasons that this blog exists. When David Leedy suggested those with anything they could share, ought to, it hit home as I've benefited greatly from the work of others.
 
-##### The Issue
+#### The Issue
 
 I shifted my development environment to a new vm and, while doing some actual code work in preparation for the next post in the servlet series, I noticed that my servlets that depended `DesignerFacesServlet` had stopped working. After consulting with Jesse Gallagher, there seems to be some issues with ClassLoader outside of XPages design elements without this.
 

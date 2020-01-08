@@ -3,7 +3,7 @@ title: 'Developer Dog'
 description: 'an Alexa skill for fun and encouragement'
 date: 2018-08-07
 published: true
-series: true # serverless-intro
+series: serverless-intro
 tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'faas', 'skill']
 canonical_url: false
 category: serverless

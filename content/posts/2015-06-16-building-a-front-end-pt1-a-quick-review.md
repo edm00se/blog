@@ -3,7 +3,7 @@ title: 'Building a Front-End, pt.1'
 description: 'a quick review'
 date: 2015-06-16
 published: true
-series: true
+series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: xpages-servlets
 ---

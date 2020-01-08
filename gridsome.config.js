@@ -25,7 +25,8 @@ module.exports = {
       }
     }],
     Tag: '/tag/:id',
-    Category: '/categories/:id'
+    Category: '/categories/:id',
+    Series: '/series/:id'
   },
 
   plugins: [
@@ -43,6 +44,10 @@ module.exports = {
           },
           category: {
             typeName: 'Category',
+            create: true
+          },
+          series: {
+            typeName: 'Series',
             create: true
           }
         }

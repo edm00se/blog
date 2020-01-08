@@ -3,7 +3,7 @@ title: 'The Road Goes Ever On and On'
 description: "a quick recap of the servlet series and projections on what's to come"
 date: 2015-06-22
 published: true
-series: true
+series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: self-promotion
 ---

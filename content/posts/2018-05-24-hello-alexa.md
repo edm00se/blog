@@ -3,7 +3,7 @@ title: 'Hello Alexa'
 description: 'an intro to serverless and Alexa skills'
 date: 2018-05-24
 published: true
-series: true # serverless-intro
+series: serverless-intro
 tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'faas', 'skill']
 canonical_url: false
 category: serverless

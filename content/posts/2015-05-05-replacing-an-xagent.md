@@ -3,7 +3,7 @@ title: 'From XAgents to Servlets'
 description: "adopt the industry practice, don't forget what you've learned"
 date: 2015-05-05
 published: true
-series: true
+series: xpages-servlets
 tags: ['xpages', 'domino', 'java', 'servlet']
 category: xpages-servlets
 ---

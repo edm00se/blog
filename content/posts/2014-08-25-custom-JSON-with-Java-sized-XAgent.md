@@ -3,7 +3,7 @@ title: 'Completing the Circle: Custom JSON Data from Java'
 description: 'an all-Java way of using XAgents for the JSON data you were looking for'
 date: 2014-08-25
 published: true
-tags: ['xpages', 'domino', 'java', 'json', 'data', 'xagent', 'angularjs']
+tags: ['xpages', 'domino', 'java', 'json', 'data', 'xagent', 'rest', 'angularjs']
 category: xpages
 ---
 

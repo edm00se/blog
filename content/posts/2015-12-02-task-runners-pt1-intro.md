@@ -3,7 +3,7 @@ title: 'Task Runners pt.1, An Introduction'
 description: 'optimizing static web content'
 date: 2015-12-02
 published: true
-series: true
+series: task-runners-with-domino
 tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
 canonical_url: false
 category: web
