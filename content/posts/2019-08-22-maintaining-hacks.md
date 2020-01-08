@@ -1,13 +1,11 @@
 ---
-layout: post
-type: post
-title: "Maintaining Hacks"
-description: "an exercise in keeping sanity through archaic needs"
+title: 'Maintaining Hacks'
+description: 'an exercise in keeping sanity through archaic needs'
+date: 2019-08-22
+published: true
+tags: ['web', 'architecture', 'structure', 'amp', 'mobile', 'content']
+canonical_url: false
 category: web
-tags: [web, architecture, amp, mobile, content]
-modified: 2019-08-22
-comments: true
-share: true
 ---
 
 Writing a hacky bit of software to "make something work" is rarely anything a developer wishes to do. They're ~~crimes~~ acts of necessity, born of the moment. True innovation exists within the **need** to achieve a task, but sometimes we merely do what we need to do to get the job done. This post exemplifies one such effort on my part, along with my further efforts to keep the madness at bay.
@@ -52,7 +50,7 @@ Where is it now? If you're interested, you can check out my repository, [`github
 That's it, the big reveal. Have hacks that are needed to make things work? Throw them in their own box and keep them, documented and available, but isolated. One day they can be removed and the world will be a little bit brighter for it.
 
 <!--
-<a href="https://github.com/edm00se/amp-hacks"><amp-img src="https://img.shields.io/github/stars/edm00se/amp-hacks?style=social" alt="GitHub stars" height="20" width="76"></amp-img></a> <a href="https://github.com/edm00se/amp-hacks"><amp-img src="https://img.shields.io/github/forks/edm00se/amp-hacks?label=Fork&style=social" alt="GitHub forks" height="20" width="72"></amp-img></a>
+[![GitHub stars](https://img.shields.io/github/stars/edm00se/amp-hacks?style=social){.skinny}](https://github.com/edm00se/amp-hacks) [![GitHub forks](https://img.shields.io/github/forks/edm00se/amp-hacks?label=Fork&style=social){.skinny}](https://github.com/edm00se/amp-hacks)
 -->
 
 ### A Leading Question
@@ -71,7 +69,7 @@ I've dabbled over the last year, give or take, in:
 
 I'm not sure where I'm going with this blog, but considering my obsession over development tooling and the frequency with which I overhaul my blog as an excuse to try out something new, I can't help but imagine it's only a matter of some time before it happens. It's already been about [three years in this format][post-reincarnated], so it's probably time to reincarnate it again.
 
-<!-- {% include tweet.html id="1164279630326636549" %} -->
+<!-- https://twitter.com/edm00se/status/1164279630326636549 -->
 
 ### Summary
 

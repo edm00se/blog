@@ -1,22 +1,21 @@
 ---
-layout: post
-type: post
-title: "Hello Alexa"
-description: "an intro to serverless and Alexa skills"
+title: 'Hello Alexa'
+description: 'an intro to serverless and Alexa skills'
+date: 2018-05-24
+published: true
+series: true # serverless-intro
+tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'faas', 'skill']
+canonical_url: false
 category: serverless
-tags: [serverless, alexa, aws, amazon, echo, javascript, node, faas, skill]
-modified: 2018-05-24
-comments: true
-share: true
-series: serverless-intro
 ---
 
-{% include series.html %}
+<!-- {% include series.html %} -->
+
 ### Background
 
 Here's a post I've been working on for longer than I care to admit to. For a few months, I've been wanting to kick off a series on serverless development practices, theory behind why serverless is such a game changer, as well as a couple of demos. The fact of the matter is, each time I've started, I've gotten so bogged down in writing a post about _what serverless is_ and the backing theory, I've managed to loose blogging momentum and it has since idled in my drafts folder for a while. So, what I've settled on for now, is a brief introductory to my first Alexa Skill, and the basics of how it works.
 
-{% include toc.html %}
+<!-- {% include toc.html %} -->
 
 ### Intro
 
@@ -26,7 +25,7 @@ Have you gotten past your fears of an always listening device in your home? Has 
 
 A while back I tweeted out a short poll on what sort of Alexa Skill I should build. I included a couple options and got a couple votes back. Here are the results.
 
-{% include tweet.html id="845786561186795521" %}
+https://twitter.com/edm00se/status/845786561186795521
 
 This will feed the next post, which covers the Alexa Skill I built. For now, let's have a look at how a basic Alexa Skill is structured.
 
@@ -79,7 +78,7 @@ To correctly hook into the epxected events, we'll **export** a `handler` functio
 
 Here's a start to this file:
 
-{% include gist.html id="21702cdba32200001a6e3884b759415d" file="begin.js" %}
+https://gist.github.com/edm00se/21702cdba32200001a6e3884b759415d#begin.js
 
 ##### Configure Your Handlers
 
@@ -87,7 +86,7 @@ Since we are now bringing in our handlers, here's a quick look at what is entail
 
 Here's a basic configuration for "Hello World".
 
-{% include gist.html id="21702cdba32200001a6e3884b759415d" file="handlers.js" %}
+https://gist.github.com/edm00se/21702cdba32200001a6e3884b759415d#handlers.js
 
 To break things down, you'll notice there are two forms of intents, custom and standard Amazon intents. The Amazon standard intents are common across skills, and cover cancellations, stopping, and asking for help.
 

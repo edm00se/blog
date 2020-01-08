@@ -1,26 +1,24 @@
 ---
-layout: post
-type: post
-title: "Proxying Parcel"
-description: "super-powered front-end development"
+title: 'Proxying Parcel'
+description: 'super-powered front-end development'
+date: 2019-01-14
+published: true
+tags: ['parcel', 'proxy', 'tomcat', 'domino', 'tooling', 'web', 'development']
+canonical_url: false
 category: web
-tags: [parcel, proxy, tomcat, domino, tooling, web, development]
-modified: 2019-01-14
-comments: true
-share: true
 ---
 
 ### Intro
 
 Parcel describes itself as a "blazing fast, zero configuration web application bundler". I agree with that statement. It's been my targeted development server and front-end bundler for a while now. I've even gone so far as to [create a starter][vue-parcel-starter], just to contain what little config I need to get my preferred tool set to work just right on top of it.
 
-### What Parcel Brings ð¦ â¡ï¸
+### What Parcel Brings 📦 ⚡️
 
 Parcel is a great bundler, which handles things like optimization from uglification to transpilation, code splitting, HMR (w/ ES6 style `import`s), intelligent logging, speedy builds (through parallel workers and caching of code structure), and more. It does this all with zero configuration required out of the box. In fact, when I first tried Parcel, it set such a high bar that even the great strides done in webpack 4, to lower the amount of required config, don't quite match up to my satisfaction level with Parcel. It's why my mug can be found on the [Parcel Open Collective][parcel-open-collective] page in the donor section; a few bucks a month can help an open source project a fair amount.
 
 From the developer perspective, it's virtually flawless. Many framework CLI tools set up a well filled out webpack config, and that's great. The only problem is that if your application requires any different asset types or for manual fiddling into some of the specifics. My experience with parcel has involved absolutely no configuration of asset types (css, html, js, framework, ts; the last one requires a ts config, but always does), and I've been better off for it.
 
-### Why Bring a Proxy to the Parcel Party ð¥³
+### Why Bring a Proxy to the Parcel Party 🥳
 
 If you're working against a back-end, say for a monolithic application, especially one that isn't driven by [express][express], you'll probably want to direct your traffic accordingly while developing locally.
 
@@ -47,7 +45,7 @@ Conceptually, we'll be following a pretty standard format of switching off of a 
 
 It's lightly annotated and reads pretty easily.
 
-{% include gist.html id="5162791576ed6c36b58f71d65646d64b" file="dev-server.js" %}
+https://gist.github.com/edm00se/5162791576ed6c36b58f71d65646d64b#dev-server.js
 
 #### Of Note
 

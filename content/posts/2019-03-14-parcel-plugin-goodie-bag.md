@@ -1,16 +1,14 @@
 ---
-layout: post
-type: post
-title: "A Parcel Plugin For Goodies"
-description: "making IE(11) support just a bit easier"
+title: 'A Parcel Plugin For Goodies'
+description: 'making IE(11) support just a bit easier'
+date: 2019-03-14
+published: true
+tags: ['web', 'parcel', 'plugin', 'javscript', 'ie']
+canonical_url: false
 category: web
-tags: [web, parcel, plugin, javascript, ie]
-modified: 2019-03-14
-comments: true
-share: true
 ---
 
-# Happy Ï Day!
+# Happy π Day!
 
 ### Intro
 

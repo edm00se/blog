@@ -1,24 +1,17 @@
 ---
-layout: post
-type: post
-title: "Side Benefits of Static Typing"
-description: "static typing your JavaScript carries more than the obvious"
+title: 'Side Benefits of Static Typing'
+description: 'static typing your JavaScript carries more than the obvious'
+date: 2019-11-11
+published: true
+tags: ['web', 'javascript', 'typescript', 'preprocessing']
+canonical_url: false
 category: web
-tags: [web, javascript, typescript, preprocessing]
-modified: 2019-11-11
-comments: true
-share: true
 ---
 
 Regardless of your being for or against statically typing and transpiling your JavaScript code, there are advantages to doing so. No system is absolute and yes, it does transpile into JavaScript proper. That said, there can be a great number of conveniences brought in by typing your JS source code. The most obvious major reasos is that, properly defined, your models, API use, and function input and output will be consistently to an expected format. This addresses one of the largest complaints about JavaScript as a language, that everything is so [loosey-goosey](https://m-w.com/dictionary/loosey-goosey).
 
-<figure class="bg-dark">
-  <amp-img src="/assets/images/post_images/untitledGoose.png"
-  alt="good news everyone"
-  width="250" height="250"
-  layout="fixed"></amp-img>
- <figcaption>The titular antihero and miscreant of the <a href="https://goose.game/">Untitled Goose Game</a>.</figcaption>
-</figure>
+![the (un)titled goose](./images/untitledGoose.png){.skinny}
+*The titular antihero and miscreant of the [Untitled Goose Game](https://goose.game/)*
 
 Beyond this primary advantage, there are a good number of side benefits to using a static typed system in front of your JavaScript code base.
 
@@ -56,10 +49,5 @@ So, do you _need_ to use TypeScript or another static typing solution in your Ja
 
 As mentioned above, adding TS to my starter repo was easy, almost too easy. When tooling does what it should, it can lead us to great places. Here's how easy it was.
 
-<figure class="center">
-  <amp-anim src="/assets/images/post_images/addingTypeScript.gif"
-  alt="live parcel dev server detects changes, installs typescript dep, new build is good"
-  height="482" width="947"
-  layout="responsive"></amp-anim>
- <figcaption>adding typescript to vue components with parcel, stupid easy</figcaption>
-</figure>
+![live parcel dev server detects changes, installs typescript dep, new build is good](./images/addingTypeScript.gif)
+*adding typescript to vue components with parcel, stupid easy*

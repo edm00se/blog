@@ -1,24 +1,18 @@
 ---
-layout: post
-type: post
-title: "Good News"
-description: "and a little retrospective"
+title: 'Good News'
+description: 'and a little retrospective'
+date: 2018-01-23
+published: true
+tags: ['scm', 'git', 'xpages', 'ibm', 'node']
+canonical_url: false
 category: self-promotion
-tags: [scm, git, xpages, ibm, node.js]
-modified: 2018-01-23
-comments: true
-share: true
 ---
+
 
 The past year has been great fun. I've had a couple of major changes, including a change in job and beginning to work from home. I've also done a few different projects that I hadn't been involved in before. I'll get to those in a little bit, but first...
 
-<figure>
-  <amp-img src="/assets/images/post_images/GoodNewsEveryone.png"
-  alt="good news everyone"
-  width="480" height="260"
-  layout="responsive"></amp-img>
- <figcaption>How about some good news for a change?</figcaption>
-</figure>
+![good news everyone](./images/GoodNewsEveryone.png){.skinny}
+*How about some good news for a change?*
 
 ### Thank You!
 
@@ -49,13 +43,13 @@ On the side, over the last year, I've also taken up the hobbies of 3D printing, 
 
 ### More Recently
 
-{% include tweet.html id="954467891453284353" %}
+https://twitter.com/edm00se/status/954467891453284353
 
 Recently, just this past week in fact, I created and launched a "recipe" for [Franz][franz-messenger]. Franz is an [Electron based][electron] application client that wraps around many messenger formats, including WhatsApp, Skype, Slack, and other web services, such as Google Inbox, and more.
 
 Franz version 5, which is in active beta, is pretty stable and has quite an extensible format, which made creating a new "service" type pretty easy. In fact, it was so easy to implement, I added a service "recipe" for [IBM Watson Workspace][ibm-ww] during my lunch break. It's essentially configured as a low complexity [node module][node-module] with some configuration definitions, regarding the live web portal (workspace.ibm.com), and a rather small JS function for an event loop which registers events, such as direct messages or general/chat messages. If you're intrigued, check out the repository.
 
-##### [GitHub: Watson Workspace for Franz][franz-watson-workspace]
+#### [GitHub: Watson Workspace for Franz][franz-watson-workspace]
 
 Included in the readme are instructions for how to clone the "recipe", until it has been merged into Franz's codebase, which I'll submit after its had some beta testing.
 
@@ -64,7 +58,6 @@ As always, contributions are welcome!
 ### Until Next Time
 
 Cheers! 🍻
-
 
 [npm-edm00se]: https://www.npmjs.com/~edm00se
 [gen-xsp]: https://www.npmjs.com/package/generator-xsp
