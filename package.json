@@ -12,6 +12,10 @@
     "new": "node scripts/newPost.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/remark-prismjs": "^0.2.0",
@@ -21,7 +25,8 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-codesandbox": "^0.4.2",
     "remark-attr": "^0.9.0",
-    "vue-disqus": "3.0.5"
+    "vue-disqus": "3.0.5",
+    "vue-svg-loader": "^0.15.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
