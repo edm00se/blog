@@ -64,7 +64,7 @@ If you feel you know someone who deserves to be nominated, especially if someone
 
 In case you missed it, [Hacktoberfest 2016](https://hacktoberfest.digitalocean.com/) is under way! If you haven't already, all you need is 4 Pull Requests on GitHub to get there. If you're looking to contribute on a project, you may know of one that is more than willing to take on some PRs. ð
 
-Seriously, if you're interested in and are looking to contribute to my [XPages compatible Yeoman generator, "generator-xsp"](http://npm.im/generator-xsp), I am more than happy to bring others in to contribute. I have some [general guidelines](https://github.com/edm00se/generator-xsp#want-more) and [a few ideas](https://github.com/edm00se/generator-xsp/projects/1) for a couple additional features.
+Seriously, if you're interested in and are looking to contribute to my [XPages compatible Yeoman generator, "generator-xsp"](https://npm.im/generator-xsp), I am more than happy to bring others in to contribute. I have some [general guidelines](https://github.com/edm00se/generator-xsp#want-more) and [a few ideas](https://github.com/edm00se/generator-xsp/projects/1) for a couple additional features.
 
 ### Summary
 

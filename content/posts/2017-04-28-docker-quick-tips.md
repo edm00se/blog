@@ -29,4 +29,4 @@ If there's anything you'd like to see covered (and it's something I already have
   </iframe>
 </div>
 
-[docker-tips-playlist]: http://bit.ly/EricDockerQuickTips
+[docker-tips-playlist]: https://bit.ly/EricDockerQuickTips

@@ -13,7 +13,7 @@ category: web
 <!-- {% include toc.html %} -->
 
 ### Intro
-Last time we covered what task runners are and why we should want to use them. Today I'm going to cover some of the foundational elements of using [Grunt](http://gruntjs.com/).
+Last time we covered what task runners are and why we should want to use them. Today I'm going to cover some of the foundational elements of using [Grunt](https://gruntjs.com/).
 
 ### Task Runners of Note: Grunt and Gulp
 The two most common and well known task runners (though there are [others, of course](https://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/)) are currently Grunt and gulp. There is a fair amount of overlap in what they seek to accomplish, but as with many open source projects, where they differ is in implementation and intent. Grunt has been around for a while and took the approach of including some common, core tasks with plugins added over time. Gulp addressed some of the concerns about including certain version of tasks as part of a core by taking the approach that every task is a plugin, eliminating versioning concerns, and all tasks are piped through each other (it reads like a whole lot of chain loading), and gulp makes use of streams (an entire subject in and of itself I won't get into). A decent walk through of the history of these task runners is a slide deck from a presentation called [Build Wars](https://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/) and is a decent read.
@@ -163,16 +163,16 @@ Here's what [the resulting expanded Gruntfile.js ](https://gist.githubuserconten
 A lot of grunt documentation will assume that you'll be working against some purely client-side assets, making the "server task" for development a simpler thing. Their docs usually show how to use a generic server task, but my preference is to replace that with the `json-server` instance we set up previously.
 
 ##### Watching for Changes and Reloading the Browser
-Let's face it, we want even more automation. We don't _just_ want our files to be checked on save, we want something that effectively presses the refresh button in our browser after we do that same save. Not only is [this lazy](http://threevirtues.com/), but it's incredibly handy for rapidly prototyping codefor a browser while working split-screen.
+Let's face it, we want even more automation. We don't _just_ want our files to be checked on save, we want something that effectively presses the refresh button in our browser after we do that same save. Not only is [this lazy](https://threevirtues.com/), but it's incredibly handy for rapidly prototyping codefor a browser while working split-screen.
 
-There are two plugins worthy of mention. First is the [`live-reload`](http://livereload.com/) which was my go-to up until recently when I discovered [browser-sync](http://www.browsersync.io/) in a demonstration of gulp (don't worry, that'll come next time). A lot of IDEs and "smart" text editors like [SublimeText](http://www.sublimetext.com/) (my preferred editor for front-end and non-Eclipse and non-DDE work) support live-reload, but browser-sync works just as well and includes some more advanced features, so my coming config will reflect that.
+There are two plugins worthy of mention. First is the [`live-reload`](https://livereload.com/) which was my go-to up until recently when I discovered [browser-sync](https://www.browsersync.io/) in a demonstration of gulp (don't worry, that'll come next time). A lot of IDEs and "smart" text editors like [SublimeText](https://www.sublimetext.com/) (my preferred editor for front-end and non-Eclipse and non-DDE work) support live-reload, but browser-sync works just as well and includes some more advanced features, so my coming config will reflect that.
 
 Both of these have grunt plugins, making things a little easier.
 
 * [grunt-contrib-livereload](https://github.com/gruntjs/grunt-contrib-livereload)
 * [grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync)
 
-I'm also rather impressed with the level of documentation for browser-sync's plugins [for Grunt](http://www.browsersync.io/docs/grunt/) and [gulp](http://www.browsersync.io/docs/gulp/). Good documentation should never be under-appreciated. Why use browser-sync?
+I'm also rather impressed with the level of documentation for browser-sync's plugins [for Grunt](https://www.browsersync.io/docs/grunt/) and [gulp](https://www.browsersync.io/docs/gulp/). Good documentation should never be under-appreciated. Why use browser-sync?
 
 * it's easy to install and use
 * can be used with a task runner or stand-alone

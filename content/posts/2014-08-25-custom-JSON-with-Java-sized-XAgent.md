@@ -57,7 +57,7 @@ With the right tools, things get easier. Chrome's DevTools give a nice Preview t
 
 New to Chrome DevTools? Check out [this free primer course](https://discover-devtools.codeschool.com/) from codeschool.com.
 
-### A Brief [AngularJS](http://angularjs.org/) Plug
+### A Brief [AngularJS](https://angularjs.org/) Plug
 
 In client-side JavaScript, you can programmatically determine whether to take one path or another, but with AngularJS, this gets much easier with [_ng-show_](https://docs.angularjs.org/api/ng/directive/ngShow) and [_ng-hide_](https://docs.angularjs.org/api/ng/directive/ngHide). For those used to computing the visibility property in XPages, similar to `<xp:div rendered="#{javascript:myVariable==true}">`, this is _mildly_ analagous; as such:
 `<div ng-show="myData.error == false">`.

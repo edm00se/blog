@@ -16,7 +16,7 @@ Also of note, with the upgrade to Swiper with the FP8 release of Notes + Domino 
 
 ### The Video
 
-Head over to [Notes in 9.com episode #205](http://www.notesin9.com/2017/04/04/notesin9-205-leverage-domino-development-with-new-tools/) to check it out, or watch it embedded here or on YouTube.
+Head over to [Notes in 9.com episode #205](https://www.notesin9.com/2017/04/04/notesin9-205-leverage-domino-development-with-new-tools/) to check it out, or watch it embedded here or on YouTube.
 
 https://www.youtube.com/watch?v=fR4z2VpAoWo
 

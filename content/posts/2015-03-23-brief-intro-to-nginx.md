@@ -42,7 +42,7 @@ More information on the implementation of nginx in Windows can be found on [the 
 | nginx -s reopen | re-open log files                                                                    |
 
 ### Description
-The config file contains a _server_ block, inside which is a _location /_ block. Inside that location block, we need to replace the root and index assignment with a *proxy_pass  http://127.0.0.1:8080;* line and a *proxy_http_version  1.1;* line.
+The config file contains a _server_ block, inside which is a _location /_ block. Inside that location block, we need to replace the root and index assignment with a *proxy_pass  https://127.0.0.1:8080;* line and a *proxy_http_version  1.1;* line.
 
 ### Sample Nginx.conf
 

@@ -9,7 +9,7 @@ category: xpages
 
 [Edit]
 
-[In the comments, Sven Petri pointed out](/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the `java.policy` ([a `java.pol` file is preferable](http://oliverbusse.notesx.net/hp.nsf/blogpost.xsp?documentId=EAA)) file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local `/jvm/lib/ext/` path.
+[In the comments, Sven Petri pointed out](/xpages/a-quick-note-on-JARs/#comment-1872739749) the need to have the JAR in the same relative path in the Designer environment conducting any build of the NSF. This is absolutely worth noting, though my excitement on this topic was driven by the lack of need to edit the `java.policy` ([a `java.pol` file is preferable](https://oliverbusse.notesx.net/hp.nsf/blogpost.xsp?documentId=EAA)) file. Ultimately, everyone ought to communicate with their customers and/or administrators as to the external dependencies, to avoid any build issues by customer admins or non-developers. Basically, make sure people know to drop a copy of the JARs from the server in their local `/jvm/lib/ext/` path.
 
 [/Edit]
 

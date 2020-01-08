@@ -45,7 +45,7 @@ In my last post, I made a promise of a beverage or three of choice to those who 
 ### My Demo App Comes to Bluemix
 Announcing [the _bluemix_ version of my demo app repository on GitHub](https://github.com/edm00se/Ice-And-Fire-On-Bluemix). This has been a culmination of a number of things and paves the way for some pretty epic plans I have for the future. Please feel free to check it out and poke around a bit. I've got big plans for the future of this demo app and it's just getting started.
 
-App Running on Bluemix: [iceandfire.mybluemix.net](http://iceandfire.mybluemix.net/)
+App Running on Bluemix: [iceandfire.mybluemix.net](https://iceandfire.mybluemix.net/)
 
 [App (and data ODP) repository](https://github.com/edm00se/AnAppOfIceAndFire):
 

@@ -58,4 +58,4 @@ Until next time, cheers! 🍻
 [fetch-api-url]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 [service-worker-api]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
 [is-sw-ready]: https://jakearchibald.github.io/isserviceworkerready/
-[mwlug-url]: http://www.mwlug.com/
+[mwlug-url]: https://www.mwlug.com/
