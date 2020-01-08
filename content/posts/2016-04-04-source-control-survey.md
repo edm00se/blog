@@ -1,20 +1,18 @@
 ---
-layout: post
-type: post
-title: "Source Control Thoughts"
-description: "and a survey"
+title: 'Source Control Thoughts'
+description: 'and a survey'
+date: 2016-04-04
+published: true
+tags: ['scm', 'dvcs', 'vcs', 'git', 'hg', 'svn', 'cvs', 'ciao']
+canonical_url: false
 category: scm
-tags: [scm, dvcs, vcs, git, hg, svn, cvs, ciao]
-modified: 2016-04-04
-comments: true
-share: true
 ---
 
 ### Intro
 Amongst several things lately, such as basement remodeling, configuring my new home NAS, and yard work, I've had a few interesting thoughts on my mind lately. In fact, I've started up a couple of interesting side projects. Before I'm ready to share those, I have to shout about something from the roof tops. Ready?
 
 ### Source Control Can Save Your Life!*
-Maybe not your *corporeal life, but certainly our digital life. Having nearly given myself a heart attack an hour before my [MWLUG 2015 presentation on web app performance enhancing with Nginx and PageSpeed](https://github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed/tree/master/configs) by deleting a critical config file (I had a backup, it turned out okay), I created a git repo in my vm and never again questioned the integrity of my config directory. This isn't to say I haven't [screwed anything up with a git repo](//self-promotion/connect-success-and-a-demo/), but that was due to my want to use a single app/NSF+ODP for _three separate versions_ of my app; that's on me for trying to get fancy with branch switching and not guaranteeing enough time for dependency installations. But I digress.
+Maybe not your *corporeal life, but certainly our digital life. Having nearly given myself a heart attack an hour before my [MWLUG 2015 presentation on web app performance enhancing with Nginx and PageSpeed](https://github.com/edm00se/AD113-Speed-Up-Your-Apps-with-Nginx-and-PageSpeed/tree/master/configs) by deleting a critical config file (I had a backup, it turned out okay), I created a git repo in my vm and never again questioned the integrity of my config directory. This isn't to say I haven't [screwed anything up with a git repo](/self-promotion/connect-success-and-a-demo/), but that was due to my want to use a single app/NSF+ODP for _three separate versions_ of my app; that's on me for trying to get fancy with branch switching and not guaranteeing enough time for dependency installations. But I digress.
 
 Source control, or the more basic task of change tracking and revision control (regardless of individual source control management system (scm)) is what is of benefit. If your preference is to svn because you're a die-hard, old school type; more power to you. Let it be known that I'm a huge fan of DVCS though, as the concurrent full-project access for editing by multiple developers is a pretty slick thing, as opposed to a check-out, check-in mechanism.
 
@@ -22,9 +20,8 @@ Source control, or the more basic task of change tracking and revision control (
 Now that I've jumped off my soap box, I'm curious as to what everyon I know uses. So please let me know what your preferred is and the chart below in the [Results](#results) section should automatically update based on the form responses.
 
 Note: scroll down in the embedded form for the "submit" button.
-<div class="embed-responsive embed-responsive-4by3">
-<iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/1Msa4qLi0GwIREW09s4BDPG8lTSYiT2CSRyJECps_E6g/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-</div>
+
+<iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/1Msa4qLi0GwIREW09s4BDPG8lTSYiT2CSRyJECps_E6g/viewform?embedded=true" width="760" height="309" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 #### Results
 <div class="text-center">

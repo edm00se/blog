@@ -1,20 +1,18 @@
 ---
-layout: post
-type: post
-title: "2015: A Year In Review"
-description: "looking back to look forward"
+title: '2015: A Year In Review'
+description: 'looking back to look forward'
+date: 2016-01-05
+published: true
+tags: ['ibm connect', 'session', 'series', '2015']
+canonical_url: false
 category: self-promotion
-tags: [ibm connect, session, series, 2015]
-modified: 2016-01-05
-comments: true
-share: true
 ---
 
 ### Intro
 It's a new year! 2016 is here and it's off to a great start. I had some excellent time off with family, as I hope everyone else did, and I'm looking forward to what 2016 will bring, after such a successful 2015. In my day job, we've restructured how we go through our application development lifecycle and it is paying off with every feature release and major release. Needless to say, as busy as I'm keeping, things are much improved and things are better than ever; always a plus.
 
 ### Session at IBM Connect
-IBM Connect here I come ð! I'll be giving a session on how to expand your application devlopment workflow, using some of what I've found best practices and just plain good ideas. There should be something for every developer (and possibly developer-adjacent roles), all wrapped up in a whirlwind of slides and demos. It'll be fun. So, please join me for:
+IBM Connect here I come 🎉! I'll be giving a session on how to expand your application devlopment workflow, using some of what I've found best practices and just plain good ideas. There should be something for every developer (and possibly developer-adjacent roles), all wrapped up in a whirlwind of slides and demos. It'll be fun. So, please join me for:
 
 [AD-1380
 A Beard, An App, A Blender: One Developer's Take on _Expanding How We Can_ Build<s>ing</s> Apps with Domino/XPages](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=AD-1380) on Monday, 01-Feb, 04:45 PM-05:45 PM at the Hilton Orlando, in room Florida 6-7.
@@ -32,9 +30,4 @@ Lastly, on a more personal note, my efforts on expanding build automation at my 
 
 Stay tuned for these and other exciting topics!
 
-<div class="center">
-	<amp-youtube
-    data-videoid="HI6984KMSPw"
-    layout="responsive"
-    width="560" height="315"></amp-youtube>
-</div>
+<!-- https://www.youtube.com/watch?v=HI6984KMSPw -->

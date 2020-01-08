@@ -1,19 +1,17 @@
 ---
-layout: post
-type: post
-title: "SCM Survey Results"
-description: "and a shout out"
+title: 'SCM Survey Results'
+description: 'and a shout out'
+date: 2016-04-04
+published: true
+tags: ['scm', 'dvcs', 'vcs', 'git', 'hg', 'svn', 'cvs', 'ciao']
+canonical_url: false
 category: scm
-tags: [scm, dvcs, vcs, git, hg, svn, cvs, ciao]
-modified: 2016-04-12
-comments: true
-share: true
 ---
 
 ### Shout Out
 The TLCC + Teamstudio webinar today is "Getting Started with the OpenNTF Domino API", presented by Paul Withers and Jesse Gallagher. I've been listening/watching while working and if you're looking to ease your pain with some of the idiosynchrises in XPages, you'll want to check out the webinar (a recording of the webinar should pop up before long, I'll link to it here) and give the [OpenNTF Domino API](https://openntf.org/main.nsf/project.xsp?r=project/OpenNTF%20Domino%20API) a go.
 
-{% include tweet.html id="719903028661338113" %}
+https://twitter.com/edm00se/status/719903028661338113
 
 ### Intro
 Last week, I put out a few toughts out in regards to source control management (scm) and even included a single question survey.
@@ -26,9 +24,8 @@ Here is the main donut chart, which is the same from my [previous post](/scm/sou
 </div>
 
 #### Totals
-With a total of 53 unique responses (so far as I can tell), I feel like this was a pretty good turn out in number of votes. Here's the break down; note: I've omitted [CVS (concurrent versions system)](http://www.nongnu.org/cvs/), with 0 total votes.
+With a total of 53 unique responses (so far as I can tell), I feel like this was a pretty good turn out in number of votes. Here's the break down; note: I've omitted [CVS (concurrent versions system)](https://www.nongnu.org/cvs/), with 0 total votes.
 
-{:.table .table-bordered .table-striped}
 | Value            | Total         | Pct.   |
 | ---------------- |:-------------:| ------:|
 | git              | 35            | 66.04% |
@@ -43,7 +40,6 @@ I think it's not a huge surprise that [git](https://git-scm.com/) took first pla
 #### Extracting Meaning
 For a clearer overall picture, I summed the values of those using a [dvcs](https://en.wikipedia.org/wiki/Distributed_version_control) (git or hg) to a value of 'distributed', those using a centralized version control system to a value of 'central' (this includes Teamstudio Ciao responses, as it requires a check-in, check-out mechanic), those using a file system copy to a value of 'questionable choices' (it's better than nothing I'll grant you, but you could be doing _so much more_), and those with none to 'living dangerously'. Those results, in table and pie chart form:
 
-{:.table .table-bordered .table-striped}
 | Value                | Total         | Pct.   |
 | -------------------- |:-------------:| ------:|
 | distributed          | 39            | 73.58% |

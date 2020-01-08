@@ -151,8 +151,17 @@ query Post ($id: ID!) {
       max-width: none;
     }
 
+    img.skinny {
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     table {
       margin-bottom: 1rem;
+      margin-left: auto;
+      margin-right: auto;
     }
     table, th, td {
       border: 1px solid var(--body-color);
@@ -166,6 +175,7 @@ query Post ($id: ID!) {
     }
 
     pre>code {
+      font-family:'Courier New', Courier, monospace;
       background-color: initial;
       border: initial;
       word-wrap: break-word;

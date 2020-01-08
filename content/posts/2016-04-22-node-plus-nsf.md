@@ -1,22 +1,21 @@
 ---
-layout: post
-type: post
-title: "Using Node to Connect to a Notes/Domino NSF"
-description: "we might as well get Domino in on the fun"
+title: 'Using Node to Connect to a Notes/Domino NSF'
+description: 'we might as well get Domino in on the fun'
+date: 2016-04-22
+published: true
+tags: ['node', 'express', 'iseries', 'jdbc', 'jt400', 'notes', 'domino', 'nsf']
+series: true # node-express-iseres-nsf
+canonical_url: false
 category: node
-series: node-express-iseries-nsf
-tags: [node, express, iseries, jdbc, jt400, notes, domino, nsf]
-modified: 2016-04-22
-comments: true
-share: true
 ---
 
-{% include series.html %}
-{% include toc.html %}
+<!-- {% include series.html %} -->
+<!-- {% include toc.html %} -->
+
 ### Intro
 I'm back, with the third in my 3-part series on connecting to "almost anything". First, we created a base application, from which nearly any db connection could be made and `routes` established to be handled with their dependent db operations managed through the `util` module, to consolidate the db interaction functions. This time, we'll be interacting with a Notes/Domino NSF, via the [domino-nsf](https://www.npmjs.com/package/domino-nsf) packge (on npm) by [Nils Tarjei Hjelme](https://medium.com/@nthjelme).
 
-This package is something I learned of in the `#dominonodejs` channel of the OpenNTF Slack chat ([click here to join](http://openntfslackin.mybluemix.net/)). Here's the corresponding [GitHub source](https://github.com/nthjelme/nodejs-domino) to the npm package (it'll link from the npmjs.com page after the next publish, courtesy of [a pull request](https://github.com/nthjelme/nodejs-domino/pull/1)). Not being the patient sort, I apparently felt it could use an expanded example, in the form of an Express app.
+This package is something I learned of in the `#dominonodejs` channel of the OpenNTF Slack chat ([click here to join](https://openntfslackin.mybluemix.net/)). Here's the corresponding [GitHub source](https://github.com/nthjelme/nodejs-domino) to the npm package (it'll link from the npmjs.com page after the next publish, courtesy of [a pull request](https://github.com/nthjelme/nodejs-domino/pull/1)). Not being the patient sort, I apparently felt it could use an expanded example, in the form of an Express app.
 
 ### Before We Get Started, A Reminder About App Structure
 This is a pretty important topic, in my opinion, and one that never seems to get quite the right level of import assigned to it. I've preached the advantages of a well laid out application before, but here's an opportunity to show exactly what I mean.
@@ -38,12 +37,12 @@ My example is connecting via my local Notes client, which is using my Notes ID (
 #### Data Connection Config
 The main config contains only two things of note, the server (black for local) and file name (accessible via the DOM_SRV and DOM_DB environment variables, respectively).
 
-{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-config_db.js" %}
+https://gist.github.com/edm00se/ef66a551a04cae3378b42215f3449f03#d-config_db.js
 
 #### Data Service
 Once again, I'm using a common defined session open and close function (instead of connection init and terminate), with some wrapped functions for the different operations I'm using, passing in what I _need_ to invoke the calls, and passing in the callback function. This is all exported as a module that is consumed in `routes`.
 
-{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-util_index.js" %}
+https://gist.github.com/edm00se/ef66a551a04cae3378b42215f3449f03#d-util_index.js
 
 #### Use
 Just the same as last time, now that my connections are configured and my data handling is provisioned, all I need to do is invoke it in my various `routes`. As you can see from my data `util` module, the exposed `query` method is simple enough to use:
@@ -53,7 +52,7 @@ Just the same as last time, now that my connections are configured and my data h
 * passing in the parameter (View name, UNID string) and
 * a function, which has two parameters, error or data
 
-{% include gist.html id="ef66a551a04cae3378b42215f3449f03" file="d-routes_beers.js" %}
+https://gist.github.com/edm00se/ef66a551a04cae3378b42215f3449f03#d-routes_beers.js
 
 The other available `routes` all get updated as well.
 
