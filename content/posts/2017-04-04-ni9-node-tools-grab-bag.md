@@ -6,6 +6,7 @@ published: true
 tags: ['xpages', 'node', 'npm', 'ni9', 'dora', 'generator-xsp']
 canonical_url: false
 category: self-promotion
+permalink: /self-promotion/ni9-node-tools-grab-bag/
 ---
 
 ### Intro

@@ -6,6 +6,7 @@ published: true
 tags: ['web', 'browser', 'security', 'standards']
 canonical_url: false
 category: web
+permalink: /web/evergreen-web/
 ---
 
 ### Happy 🎂 Day IE 11!

@@ -3,8 +3,9 @@ title: 'Alternate Front-End Development'
 description: 'work on your front-end without Domino Designer or Server'
 date: 2015-07-14
 published: true
-tags: ['front-end', 'development', 'json-server']
-category: 'front-end'
+tags: ['web', 'front-end', 'development', 'json-server']
+category: web
+permanent: /front-end/alternate-front-end-development/
 ---
 
 [Update]

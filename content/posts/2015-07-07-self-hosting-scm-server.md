@@ -5,6 +5,7 @@ date: 2015-07-07
 published: true
 tags: ['source control', 'redmine', 'gitlab', 'gogs', 'github', 'bitbucket']
 category: scm
+permalink: /scm/self-hosting-scm-server/
 ---
 
 ### Intro

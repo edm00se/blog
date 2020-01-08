@@ -5,6 +5,7 @@ date: 2015-01-12
 published: true
 tags: ['xpages', 'domino', 'ibm', 'ibmconnected2015']
 category: self-promotion
+permalink: /self-promotion/a-chalk-talk-talk/
 ---
 
 ### Intro

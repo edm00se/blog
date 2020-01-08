@@ -7,6 +7,7 @@ series: xpages-servlets
 tags: ['admin']
 canonical_url: false
 category: admin
+permalink: /admin/interlude-and-announcement/
 ---
 
 <!-- {% include series.html %} -->

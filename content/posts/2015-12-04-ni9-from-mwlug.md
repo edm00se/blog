@@ -6,6 +6,7 @@ published: true
 tags: ['mwlug', 'nginx', 'xpags', 'ni9']
 canonical_url: false
 category: self-promotion
+permalink: /self-promotion/ni9-nginx-pagespeed-highlights-from-mwlug/
 ---
 
 ### Intro

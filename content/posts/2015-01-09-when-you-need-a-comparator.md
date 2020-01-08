@@ -1,7 +1,7 @@
 ---
 title: 'When You Need a Comparator'
 description: 'sorting a Collection how you want'
-date: 2014-08-18
+date: 2015-01-09
 published: true
 tags: ['xpages', 'java', 'bean', 'comparator']
 category: java

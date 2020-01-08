@@ -7,6 +7,7 @@ series: build-automation
 tags: ['xpages', 'dde', 'jenkins']
 canonical_url: false
 category: xpages
+permalink: /xpages/headless-dde-and-jenkins/
 ---
 
 <!-- {% include series.html %} -->

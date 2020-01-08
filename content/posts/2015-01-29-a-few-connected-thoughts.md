@@ -5,6 +5,7 @@ date: 2015-01-29
 published: true
 tags: ['xpages', 'domino', 'ibm', 'conferene', 'lotussphere', 'bluemix']
 category: xpages
+permalink: /xpages/a-few-connected-thoughts/
 ---
 
 ### IBM ConnectED 2015

@@ -5,7 +5,8 @@ date: 2015-10-19
 published: true
 tags: ['xpages', 'bluemix', 'xpages-servlets', 'java', 'github']
 canonical_url: false
-category: bluemix
+category: xpages
+permalink: /xpages/java-rite-of-passage/
 ---
 
 ### Intro

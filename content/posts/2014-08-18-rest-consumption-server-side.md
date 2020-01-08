@@ -5,6 +5,7 @@ published: true
 tags: ['xpages', 'domino', 'java', 'rest']
 description: 'consuming data on the server to lighten the client load'
 category: xpages
+permalink: /xpages/rest-consumption-server-side/
 ---
 
 ### REST Consumption

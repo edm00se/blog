@@ -5,6 +5,7 @@ date: 2015-02-09
 published: true
 tags: ['xpages', 'domino', 'java']
 category: xpages
+permalink: /xpages/a-quick-note-on-JARs/
 ---
 
 [Edit]
@@ -14,12 +15,15 @@ category: xpages
 [/Edit]
 
 ### Preface
+
 Either I just didn't know that this was a viable option or we've all been living in the dark for too long. My suspicion is the former, but what follows is a quick run down of my preferred approach for using the `com.google.gson` library (or any JAR), server-wide (without OSGi deployment). TLDR; drop it in `<install>/jvm/lib/ext/` and restart your Domino server (don't forget to do it with your local/dev environment as well).
 
 ### What?
+
 While preparing for my impending blog series on servlets, I've been hammering out a couple of details regarding external dependencies (aka- JAR files). The short story is that I assumed things had to be a certain way (including the `java.policy` edit for granting all permissions), but that wasn't the case. If you want to read the full circle of comments, [go check them out](https://disqus.com/home/discussion/em-devblog/building_java_objects_from_json_93/#comment-1813504147).
 
 ### Why?
+
 It seems that setting up what I regard as server elements, even these add-on ones, is something I don't do every day. Any developer can see quickly that re-importing the same JAR file you use across your application instances can become quite tedious, quickly. But it would seem that there is a better way of doing things than just importing your JAR to each NSF and needing to add a line on the server (in `<install>/jvm/lib/security/java.policy`) of
 
 ```
@@ -33,6 +37,7 @@ To rule out what I have going in my primarily development environment (something
 So, without the need to edit the java.policy file, this makes things a much easier sell to your admins (even though I recommend just buying them their beverage of choice ðº), as adding an industry accepted library to your server stack has a whole different tone than potentially scaring them with words like "grant" and "java.security.AllPermission". One still needs access to the file system, so it may not do some people a lot of good; which is why, going forward with this series, I'll be making the effort to give every GSON specific task I perform a fair shake with the equivalent using the _com.ibm.commons.util.io.json_ package.
 
 ### See It In Action
+
 Here's my import from my series demo code imported into my fresh DDE install via my Git repo. As expected, without any JAR to find, it's going to fail.
 
 ![hey look, nothing](./images/JARs/ImportingGsonWithoutJAR.png)
@@ -42,11 +47,13 @@ Having shut down Designer and placing the `com.google.gson` JAR into the `<insta
 ![looking? found someone I would say you have, hmmm?](./images/JARs/JARaddedOnlyToJvmLibExt.png)
 
 ##### Added Benefit
+
 The plus side to this approach is that it's now also available in Java agents.
 
 ![consistent JAR dependencies with Java Agents and XPages runtime](./images/JARs/JARaccessibleFromJavaAgent.png)
 
 ### Caveat
+
 As is inevitable with such things, there is a caveat to the use of the `<install>/jvm/lib/ext/` path for JAR inclusion, primarily revolving around any libraries which are already a part of Domino.
 
 https://twitter.com/leyrer/status/564821946270240769

@@ -1,5 +1,5 @@
 ---
-title: 'Fixing Dojo 1.6.1 in Domino 8.4.3'
+title: 'Fixing Dojo 1.6.1 in Domino 8.5.3'
 description: 'fixing dojo 1.6.1 in Domino 8.5.3'
 date: 2014-09-03
 published: true

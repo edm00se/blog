@@ -6,6 +6,7 @@ published: true
 series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: xpages-servlets
+permalink: /xpages-servlets/building-a-front-end-pt1-a-quick-review/
 ---
 
 <!-- {% include series.html %} -->

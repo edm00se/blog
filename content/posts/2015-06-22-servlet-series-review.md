@@ -6,6 +6,7 @@ published: true
 series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: self-promotion
+permalink: /self-promotion/servlet-series-review/
 ---
 
 <!-- {% include series.html %} -->

@@ -6,6 +6,7 @@ published: true
 series: xpages-servlets
 tags: ['xpages', 'domino', 'java', 'servlet']
 category: xpages-servlets
+permalink: /xpages-servlets/replacing-an-xagent/
 ---
 
 <!-- {% include series.html %} -->

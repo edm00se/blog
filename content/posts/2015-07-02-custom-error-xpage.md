@@ -5,7 +5,7 @@ date: 2015-07-02
 published: true
 tags: ['xpages', 'domino', 'javascript']
 category: xpages
-redirect_from: '/self-promotion/custom-error-xpage/'
+permalink: /xpages/custom-error-xpage/
 ---
 
 ### Intro

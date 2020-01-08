@@ -6,6 +6,7 @@ published: true
 tags: ['node', 'npm', 'yeoman', 'angular', 'vue.js', 'webpack', 'java', 'xpages', 'rest', 'api', 'scm', 'git', 'mwlug']
 canonical_url: false
 category: self-promotion
+permalink: /self-promotion/mwlug-success-and-themes/
 ---
 
 ### Intro

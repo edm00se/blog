@@ -6,12 +6,15 @@ published: true
 tags: ['xpages', 'domino', 'ibm', 'champion']
 canonical_url: false
 category: self-promotion
+permalink: /self-promotion/champion-renewal/
 ---
 
 ### 2016 IBM Champions Announced
+
 IBM has announced the [ICS Champions for 2016](https://www.ibm.com/developerworks/community/blogs/ibmchampion/entry/Announcing_the_IBM_Champion_Class_of_2016_for_IBM_Social_Business?lang=en). I'm honored to join many others who have been selected for aother year and I hope that my chronicles continue to aid others in the communitiy I've found a good home with. More importantly, I'm quite happy about some of the new additions to the IBM Champion crowd, including [Toby Samples](https://www.tobysamples.com/) and [Steve Zavocki](https://notesspeak.blogspot.com/); both of whom are quite deserving in my opinion. May their contributions continue to improve our collective efforts.
 
 ### What Is An IBM Champion?
+
 [From IBM](https://www.ibm.com/developerworks/champion/ "IBM Champion page on developerWorks"),
 
 > IBM Champion program
@@ -27,6 +30,7 @@ All in all, a person who "aids the cause", as it were. There are many outlets, w
 * and more I probably don't even know of, which reminds me...
 
 #### XPages Slack Chat
+
 The [XPages Slack chat](https://xpages.slack.com), courtesy of David Leedy and Jesse Gallagher; this is [open to all XPage-rs (sign-up)](https://xpages-slack-invites.herokuapp.com/), though the official owners ask for a coupole of rules to be observed, the full can be read up on [the Notes in 9 post](https://www.notesin9.com/2015/11/16/announcing-the-xpages-development-chat-on-slack/), the short version amounts to:
 
 * no griping, just focus on solutions (we're there to collaborate)
@@ -36,4 +40,5 @@ The [XPages Slack chat](https://xpages.slack.com), courtesy of David Leedy and J
 Of additional note, it's best to enter your real name into your account profile. So far, I'm a huge fan of the XPages Slack chat and I look forward to what everyone can help each other out with.
 
 ### Stay Tuned
+
 There are many good things to come, especially as I have two blog series I'm currently working on finalizing and [an IBM Connect session](https://www-950.ibm.com/events/global/connect/sessions/preview.html?sessionid=BP-1380) that builds on some of those principles. Here's to a great 2016! 🍻 ð
