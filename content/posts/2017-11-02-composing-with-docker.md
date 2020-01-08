@@ -67,7 +67,7 @@ You may notice I'm referencing the current working directory with `.`. This work
 
 ##### A Note on CWD
 
-Current working directory (cwd), denoted as `.` on *nix systems (and PowerShell) is pretty powerful. It's available in Docker compose config files, but not in a vanilla `docker run...` command. If you're looking to get around that limitation and have access to a *nix or like environment, check out my [quick tip on subject on YouTube][yt-docker-cwd].
+Current working directory (cwd), denoted as `.` on \*nix systems (and PowerShell) is pretty powerful. It's available in Docker compose config files, but not in a vanilla `docker run...` command. If you're looking to get around that limitation and have access to a *nix or like environment, check out my [quick tip on subject on YouTube][yt-docker-cwd].
 
 https://www.youtube.com/watch?v=MdRWkqcbLJI&list=PLk_BgI9qpsGjVwLPqBpVKqA3M4Sdv8wlw
 
