@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1 class="tag-title text-center space-bottom">
-      <font-awesome :icon="['fas', 'link']"/> {{ $page.series.title }}
+      <font-awesome :icon="['fas', 'link']"/> {{ $page.series.title }} <font-awesome :icon="['fas', 'link']"/>
     </h1>
 
     <div class="posts">
@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+svg.svg-inline--fa {
+  width: auto;
+  height: 1em;
+}
 </style>
 
