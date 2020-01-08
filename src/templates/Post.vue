@@ -63,6 +63,7 @@ export default {
     }
   },
   mounted() {
+    // TODO: change when theme is toggled
     require(`prismjs/themes/prism${window.__theme == 'dark' ? '-dark' : ''}.css`);
     
     // only load twitter embed script if twitter content detected

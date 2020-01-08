@@ -24,7 +24,8 @@ module.exports = {
         }
       }
     }],
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    Category: '/categories/:id'
   },
 
   plugins: [
@@ -39,22 +40,11 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             create: true
+          },
+          category: {
+            typeName: 'Category',
+            create: true
           }
-        },
-        remark: {
-          plugins: [
-            'remark-attr',
-            [ 'gridsome-plugin-remark-codesandbox' ],
-            [
-              '@noxify/gridsome-plugin-remark-embed',
-              {
-                enabledProviders: ['Youtube', 'Twitter', 'Gist', 'JSFiddle'],
-                'JSFiddle': {
-                  secureConnection: true
-                }
-              }
-            ]
-          ]
         }
       }
     },
@@ -74,7 +64,20 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: ['@gridsome/remark-prismjs']
+      plugins: [
+        '@gridsome/remark-prismjs',
+        'remark-attr',
+        [ 'gridsome-plugin-remark-codesandbox' ],
+        [
+          '@noxify/gridsome-plugin-remark-embed',
+          {
+            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'JSFiddle'],
+            'JSFiddle': {
+              secureConnection: true
+            }
+          }
+        ]
+      ]
     }
   }
 };
