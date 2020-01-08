@@ -158,6 +158,14 @@ query Post ($id: ID!) {
       margin-right: auto;
     }
 
+    img + em,
+    img + noscript + em {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     table {
       margin-bottom: 1rem;
       margin-left: auto;

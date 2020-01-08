@@ -1,16 +1,15 @@
 ---
-layout: post
-type: post
 title: "Angular 2's Learning Curve"
 description: "don't ignore it, as its gains are pretty amazing"
+date: 2016-07-05
+published: true
+tags: ['angular', 'typescript', 'es6', 'es5', 'npm']
+canonical_url: false
 category: web
-tags: [angular, typescript, es6, es5, npm]
-modified: 2016-07-05
-comments: true
-share: true
 ---
 
-{% include toc.html %}
+<!-- {% include toc.html %} -->
+
 ### Intro
 
 Those that know me, or have followed my blog for a little while, have likely caught onto the fact that I'm a pretty big [AngularJS](https://angularjs.org/) fan. [Angular 2](https://angular.io/)
@@ -21,39 +20,24 @@ Angular (1.x) was incredibly easy to get started with. I don't know if we were s
 
 Take a simple "hello world" example, all we need, aside from including the `script` tag for `angular.js` in our HTML file, all we needed to do was to write out [something like this](https://jsfiddle.net/edm00se/0a0vga0k/):
 
-<amp-iframe width="700" height="300"
-  sandbox="allow-scripts allow-same-origin"
-  layout="responsive"
-  frameborder="0"
-  src="https://jsfiddle.net/edm00se/0a0vga0k/embedded/result,html/">
-</amp-iframe>
+https://jsfiddle.net/edm00se/0a0vga0k?tabs=result,html/
 
 This achieved the following:
 
 - instantiated (bootstrapped) the application, by binding it to a given element
 - bound a(n interactive, input element with a) data property within the application's `scope` to a key of "name"
-- bound the output of the key to instances of its key name (denoted via &#123;&#123; &#125;&#125;)
+- bound the output of the key to instances of its key name (denoted via `{{ }}`)
 - two-way data binding established, so that any update of the value for the "name" property would propagate to any other such instance in the DOM
 
-Out of the box, this comes with two-way data binding (one-way is available via the notation `{`&zwnj;`{::name}}`); immediately, the utility of Angular is obvious and powerful.
+Out of the box, this comes with two-way data binding (one-way is available via the notation `{{::name}}`); immediately, the utility of Angular is obvious and powerful.
 
 We also had immediate access to many things like some really powerful filters and directives, many of the common ones were [already available for us](https://jsfiddle.net/edm00se/L3tykzrt/):
 
-<amp-iframe width="700" height="300"
-  sandbox="allow-scripts allow-same-origin"
-  layout="responsive"
-  frameborder="0"
-  src="https://jsfiddle.net/edm00se/L3tykzrt/embedded/result,html/">
-</amp-iframe>
+https://jsfiddle.net/edm00se/L3tykzrt?tabs=result,html/
 
 We even had the ability to [make use of templates](https://jsfiddle.net/edm00se/qf5trmkn/), either by HTML partials (actual `.html` files) or declaratively, as scripted components (often rather directive looking).
 
-<amp-iframe width="700" height="300"
-  sandbox="allow-scripts allow-same-origin"
-  layout="responsive"
-  frameborder="0"
-  src="https://jsfiddle.net/edm00se/qf5trmkn/embedded/result,html/">
-</amp-iframe>
+https://jsfiddle.net/edm00se/qf5trmkn?tabs=result,html/
 
 The code samples above are all still fully capable in Angular 2 and I would argue that Angular 2 can do much more than Angular 1.x, but there's a touch more to it. I still think it's fully worth learning Angular 2 and, if you _don't_ know Angular 1.x, my recommendation is to skip it and jump to 2.
 
@@ -90,7 +74,6 @@ So far as I can tell, a developer who is setting out to learn about "all these t
 
 Here's the road map, more or less, as I see it today.
 
-{:.table .table-bordered .table-striped}
 | Order | Lib/Package                                                   | What                                | Est. Time |
  | -----| ------------------------------------------------------------- | ----------------------------------- | ------------- |
 | 1     | TypeScript                                                    | [Quick Start][1]                    | 10 min |
@@ -99,7 +82,7 @@ Here's the road map, more or less, as I see it today.
 | 3     | Package/module bundling (systemjs, webpack, browserify, jspm) | Pick one, hope for the best         | 5 min\* |
 | 4     | Angular 2 (concepts/101)                                      | [The 5-min TS Quick Start][2]       | 5 min\* |
 | 5     | Angular 2 (more in-depth)                                     | [The "Tour of Heroes" tutorial][3]  | 60 min\*\* |
-| 6     | Angular CLI tool (to help scaffold projects)                  | [Angular CLI][4]                    | 10 min |
+| 6     | Angular CLI tool (to help scaffold projects)                  | [Angular CLI][4]                    | 10 min |{:.table .table-bordered .table-striped}
 
 \* Note: my time estimates are for the linked quick starts, tutorials, or reading and basic comprehension. I've no expectation of becoming a master in any of these subjects of tooling any time too quickly.
 
@@ -128,7 +111,7 @@ I've been playing with Angular 2 a little bit now, not as much as some in the co
 
 ### Angular CLI Tool
 
-The Angular team created a CLI tool that can help scaffold out, perform local serving with live reload, and distributable and deployment tasks. They do a good job of [outlining the steps to get setup with their documentation](https://github.com/angular/angular-cli#table-of-contents), but honestly I might recommend the [scotch.io tutorial](https://scotch.io/tutorials/use-the-angular-cli-for-faster-angular-2-projects) as it's a bit more approachable for those feeling the [JavaScript fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.owoxcwpe9). As a loose analogy, this amounts to a well structured [Yeoman generator](http://yeoman.io/generators/) with a well structured gulpfile. If you want to see what that looks like, check out [the video](/self-promotion/ni9-connect-highlights-and-mwlug-announcement/#the-video) from my [latest Notes in 9, #191](http://www.notesin9.com/2016/06/28/notesin9-191-a-beard-an-app-and-a-blender/).
+The Angular team created a CLI tool that can help scaffold out, perform local serving with live reload, and distributable and deployment tasks. They do a good job of [outlining the steps to get setup with their documentation](https://github.com/angular/angular-cli#table-of-contents), but honestly I might recommend the [scotch.io tutorial](https://scotch.io/tutorials/use-the-angular-cli-for-faster-angular-2-projects) as it's a bit more approachable for those feeling the [JavaScript fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.owoxcwpe9). As a loose analogy, this amounts to a well structured [Yeoman generator](https://yeoman.io/generators/) with a well structured gulpfile. If you want to see what that looks like, check out [the video](/self-promotion/ni9-connect-highlights-and-mwlug-announcement/#the-video) from my [latest Notes in 9, #191](https://www.notesin9.com/2016/06/28/notesin9-191-a-beard-an-app-and-a-blender/).
 
 ### Summary
 

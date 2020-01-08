@@ -17,7 +17,7 @@ An _xp:comboBox_ lets us build out a list (preferably somewhat short) of values 
 
 > The HTML select (&lt;select&gt;) element represents a control that presents a menu of options. The options within the menu are represented by &lt;option&gt; elements, which can be grouped by &lt;optgroup&gt; elements. Options can be pre-selected for the user.
 
-https://jsfiddle.net/edm00se/acchh2kv/embedded/result,html/
+https://jsfiddle.net/edm00se/acchh2kv?tabs=result,html/
 
 But you're here for the code. Here's an incredibly simple select tag implemented with three options. If you switch to the HTML pane, you'll see that the value (which is what can be data bound for value in the `xp:comboBox` control) is 1, 2, or 3 while the labels are their English equivalent of One, Two, or Three. In classic Notes, we would achieve this by the usual list (line separated) by passing in sets of _Label &#124; Value_, separated by the pipe character. You can still do this in XPages, but if you're defining the source for one in a bean, you'll want to build out your List&lt;SelectItem&gt;. My sample class below shows this, but the meat and potatoes here is the Comparator.
 
