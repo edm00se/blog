@@ -6,7 +6,7 @@
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-      <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
+      <Pager :class="'pager'" :info="$page.posts.pageInfo"/>
     </div>
     
   </Layout>
@@ -42,16 +42,36 @@ query($page: Int) {
 <script>
 import Author from '~/components/Author.vue';
 import PostCard from '~/components/PostCard.vue';
-import Pagination from '~/components/Pagination.vue';
+import { Pager } from 'gridsome';
 
 export default {
   components: {
     Author,
     PostCard,
-    Pagination
+    Pager
   },
   metaInfo: {
     title: 'Home'
   }
 };
 </script>
+
+<style lang="scss" scoped>
+nav.pager {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+
+  a {
+    color: var(--title-text);
+    text-decoration: none;
+
+    &.active {
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+  }
+}
+</style>
