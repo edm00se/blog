@@ -72,6 +72,9 @@ nav.pager {
       font-weight: bolder;
       text-decoration: underline;
     }
+    &:hover {
+      color: var(--link-color);
+    }
   }
 }
 </style>

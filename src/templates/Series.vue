@@ -48,11 +48,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-svg.svg-inline--fa {
-  width: auto;
-  height: 1em;
-}
-</style>
-

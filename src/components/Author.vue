@@ -14,8 +14,8 @@
     <p class="author__intro">{{ $static.metadata.siteDescription }}</p>
 
     <p class="author__links">
-      <a href="https://twitter.com/edm00se">Twitter</a>
-      <a href="https://github.com/edm00se">GitHub</a>
+      <a href="https://twitter.com/edm00se"><font-awesome :icon="['fab', 'twitter']" /> Twitter</a>
+      <a href="https://github.com/edm00se"><font-awesome :icon="['fab', 'github']" /> GitHub</a>
     </p>
   </div>
 </template>
