@@ -23,7 +23,7 @@ query($page: Int) {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "D MMMM, YYYY")
         timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
