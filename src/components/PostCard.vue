@@ -75,5 +75,9 @@ export default {
     text-indent: -9999px;
     z-index: 0;
   }
+
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
 }
 </style>
