@@ -11,6 +11,7 @@ module.exports = {
   siteDescription:
     'software development, operations, tooling, and musings on technology',
   siteUrl: 'https://edm00se.io',
+  icon: './src/favicon.png',
 
   templates: {
     Post: [{
@@ -83,7 +84,15 @@ module.exports = {
         contentTypes: ['Post'],
         feedOptions: {
           title: `Eric McCormick's Dev Blog`,
-          description: 'software development, operations, tooling, and tech musings'
+          description: 'software development, operations, tooling, and tech musings',
+          copyright: `Copyright 2014–${new Date().getFullYear()} Eric McCormick`,
+          image:
+            "https://edm00se.io/logo_600.png",
+          favicon: "https://edm00se.io/logo_180.png",
+          author: {
+            name: "Eric McCormick",
+            link: "https://edm00se.codes/"
+          }
         },
         rss: {
           enabled: true,
