@@ -19,7 +19,7 @@
     </div>
 
     <div v-if="isProd" class="post-comments">
-      <vue-disqus shortname="em-devblog" :identifier="$page.post.title"></vue-disqus>
+      <vue-disqus shortname="em-devblog"></vue-disqus>
     </div>
 
     <Author class="post-author"/>
