@@ -30,12 +30,14 @@
 import PostMeta from '~/components/PostMeta';
 import PostTags from '~/components/PostTags';
 import Author from '~/components/Author.vue';
+import VueDisqus from '~/components/VueDisqus.vue';
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    VueDisqus
   },
   metaInfo() {
     return {
