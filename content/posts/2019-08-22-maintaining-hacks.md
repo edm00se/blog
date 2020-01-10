@@ -43,7 +43,7 @@ At first, I just picked a domain name I already owned and controlled and knew I 
   - updating my AMP site (blog) to point to the new destination (a simple replace of domain/path from the old one to the new one)
   - updating Disqus as to the authorized domain access
 - testing it out
-  - this went strangely without a hiccup, hooray! ð
+  - this went strangely without a hiccup, hooray! 🎉
 
 Where is it now? If you're interested, you can check out my repository, [`github.com/edm00se/amp-hacks`][gh-amp-hacks-repo]. Feel free to check it out, see what it does, or fork it and make it your own; or stare in horror at the workaround needed. For reference the repository is new, but the pages date back to about 3 years ago in a different repo I've since archived; I finally stuffed my hacks into their own box.
 
