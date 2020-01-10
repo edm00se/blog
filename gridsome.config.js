@@ -60,6 +60,22 @@ module.exports = {
         exclude: ['https://gist.github.com/*'],
         config: {}
       }
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        flexsearch: {
+          profile: 'balance'
+        },
+        collections: [
+          {
+            typeName: 'Post',
+            indexName: 'Post',
+            fields: ['title', 'description', 'tags', 'date']
+          }
+        ],
+        searchFields: ['title', 'description', 'tags']
+      }
     }
   ],
 

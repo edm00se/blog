@@ -6,8 +6,7 @@
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-      <!-- <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" /> -->
-        <Pager :class="'pager'" :info="$page.posts.pageInfo"/>
+      <Pager :class="'pager'" :info="$page.posts.pageInfo"/>
     </div>
     
   </Layout>
@@ -24,7 +23,7 @@ query($page: Int) {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "D MMMM, YYYY")
         timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
@@ -72,6 +71,9 @@ nav.pager {
     &.active {
       font-weight: bolder;
       text-decoration: underline;
+    }
+    &:hover {
+      color: var(--link-color);
     }
   }
 }
