@@ -25,7 +25,6 @@ export default {
   },
   mixins: [Search],
   mounted() {
-    console.log(this.$route.query);
     let queryParm = (this.$route.query.q||this.$route.query.query||'');
     if(queryParm){
       this.searchTerm = decodeURIComponent(queryParm);
