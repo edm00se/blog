@@ -1,5 +1,13 @@
 <template>
 	<g-link class="logo" to="/">
+		<!--
+		<g-image
+      alt="site logo"
+      class="logo__image"
+      src="../favicon.png"
+      width="180"
+      height="180" />
+		-->
 	  <span class="logo__text">
 	    &larr; {{ $static.metadata.siteName }}
 	  </span>
