@@ -76,6 +76,32 @@ module.exports = {
         ],
         searchFields: ['title', 'description', 'tags']
       }
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: `Eric McCormick's Dev Blog`,
+          description: 'software development, operations, tooling, and tech musings'
+        },
+        rss: {
+          enabled: true,
+          output: '/rss.xml'
+        },
+        atom: {
+          enabled: true,
+          output: '/atom.xml'
+        },
+        json: {
+          enabled: true,
+          output: '/feed.json'
+        },
+        maxItems: 25,
+        htmlFields: null,
+        enforceTrailingSlashes: false,
+        filterNodes: (node) => true
+      }
     }
   ],
 
