@@ -100,7 +100,7 @@ module.exports = {
         },
         atom: {
           enabled: true,
-          output: '/atom.xml'
+          output: '/feed.atom'
         },
         json: {
           enabled: true,
