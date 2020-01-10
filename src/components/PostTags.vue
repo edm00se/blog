@@ -26,6 +26,7 @@ export default {
   	color: currentColor!important; //Todo: remove important;
   	padding: .5em;
   	border-radius: var(--radius);
+		display: inline-block;
 
 		span {
 			white-space: nowrap;
