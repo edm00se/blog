@@ -8,5 +8,3 @@
 
 /self-promotion/custom-error-xpage/   /xpages/custom-error-xpage/
 /docker/docker-quick-tips/            /docker/quick-tips/
-
-/analytics/collect                    /.netlify/functions/collect
