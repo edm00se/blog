@@ -2,7 +2,7 @@
 title: 'IoT and Raspberry Pi'
 description: 'and cloud services, and...'
 date: 2016-05-20
-published: true
+published: false
 tags: ['node', 'raspberry-pi', 'ibm', 'watson', 'cloud', 'iot']
 canonical_url: false
 category: iot-pi

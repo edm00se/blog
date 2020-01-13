@@ -7,6 +7,7 @@ tags: ['xpages', 'domino', 'java', 'servlet']
 series: xpages-servlets
 canonical_url: false
 category: xpages-servlets
+permalink: /xpages-servlets/servlet-implementation
 ---
 
 <!-- {% include series.html %} -->

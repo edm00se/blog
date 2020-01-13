@@ -6,6 +6,7 @@ published: true
 tags: ['xpages', 'bluemix', 'xpages-servlets', 'java', 'open source', 'github', 'scm']
 canonical_url: false
 category: xpages
+permalink: /xapges/miscellanea
 ---
 
 #### Intro

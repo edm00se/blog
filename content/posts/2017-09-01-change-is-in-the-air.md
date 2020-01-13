@@ -6,6 +6,7 @@ published: true
 tags: ['open-source', 'conference', 'summer', 'day-job']
 canonical_url: false
 category: self-promotion
+permalink: /self-promotion/change-is-in-the-air
 ---
 
 ### I'm Back

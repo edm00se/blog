@@ -16,13 +16,7 @@ module.exports = {
   templates: {
     Post: [{
       path: (node) => {
-        if(node.permalink){
-          return node.permalink;
-        } else {
-          return  node.category ?
-            `/${node.category}/${paramCase(node.title)}`
-            : `/${paramCase(node.title)}`;
-        }
+        return node.permalink ? node.permalink : `/${paramCase(node.title)}`;
       }
     }],
     Tag: '/tag/:id',
