@@ -6,6 +6,7 @@ tags: ['xpages', 'domino', 'ssjs', 'java']
 canonical_url: false
 description: 'getting values in a consistent format'
 category: xpages
+permalink: /xpages/consistent-multivalue-formatting
 ---
 
 ### Consistent Multi-Value Formatting

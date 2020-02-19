@@ -7,6 +7,7 @@ series: servlet-series
 tags: ['scm', 'git', 'npm', 'gulp']
 canonical_url: false
 category: xpages
+permalink: /xpages/rebirth-an-app-of-ice-and-fire
 ---
 
 ### Intro

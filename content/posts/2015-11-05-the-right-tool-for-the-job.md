@@ -6,6 +6,7 @@ published: true
 tags: ['github-pages', 'github', 'jekyll', 'hugo', 'blog', 'markdown', 'git', 'scm', 'static', 'generator']
 canonical_url: false
 category: web
+permalink: /web/the-right-tool-for-the-job
 ---
 
 <!-- {% include toc.html %} -->

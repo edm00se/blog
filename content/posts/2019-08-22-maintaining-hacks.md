@@ -6,6 +6,7 @@ published: true
 tags: ['web', 'architecture', 'structure', 'amp', 'mobile', 'content']
 canonical_url: false
 category: web
+permalink: /web/maintaining-hacks
 ---
 
 Writing a hacky bit of software to "make something work" is rarely anything a developer wishes to do. They're ~~crimes~~ acts of necessity, born of the moment. True innovation exists within the **need** to achieve a task, but sometimes we merely do what we need to do to get the job done. This post exemplifies one such effort on my part, along with my further efforts to keep the madness at bay.

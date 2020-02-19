@@ -19,7 +19,7 @@
     </div>
 
     <div v-if="isProd" class="post-comments">
-      <vue-disqus shortname="em-devblog"></vue-disqus>
+      <vue-disqus shortname="em-devblog" :identifier="hasPermalink ? '' : page_id"></vue-disqus>
     </div>
 
     <Author class="post-author"/>
@@ -55,18 +55,24 @@ export default {
             'https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css'
             // 'https://unpkg.com/github-syntax-light@0.5.0/lib/github-light.css'
             // 'https://unpkg.com/github-syntax-dark@0.5.0/lib/github-dark.css'
-        } // TODO: switch to local styles, to accomodate for dark/light theme
+        }, // TODO: switch to local styles, to accomodate for dark/light theme
+        {
+          rel: 'stylesheet',
+          href: '/prismjs/themes/prism-dark.css'
+        }
       ]
     };
   },
   computed: {
     isProd: function() {
       return process.env.NODE_ENV !== 'development';
+    },
+    hasPermalink: function() {
+      return this.$page.post.permalink;
     }
   },
   mounted() {
     // TODO: change when theme is toggled
-    require(`prismjs/themes/prism${window.__theme == 'dark' ? '-dark' : ''}.css`);
     
     // only load twitter embed script if twitter content detected
     if (this.$page.post.content.includes('https://twitter.com')) {
@@ -98,7 +104,7 @@ query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    date (format: "D MMMM YYYY")
     timeToRead
     tags {
       id
@@ -108,6 +114,7 @@ query Post ($id: ID!) {
     description
     content
     cover_image (width: 860, blur: 10)
+    permalink
   }
 }
 </page-query>

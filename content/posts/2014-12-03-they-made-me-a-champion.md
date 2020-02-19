@@ -5,6 +5,7 @@ date: 2014-12-03
 published: true
 tags: ['xpages', 'domino', 'ibm', 'champion']
 category: self-promotion
+permalink: /self-promotion/they-made-me-a-champion
 ---
 
 ### 2015 IBM Champions Announced

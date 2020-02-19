@@ -5,7 +5,7 @@ date: 2015-07-14
 published: true
 tags: ['web', 'front-end', 'development', 'json-server']
 category: web
-permanent: /front-end/alternate-front-end-development/
+permalink: /front-end/alternate-front-end-development/
 ---
 
 [Update]
