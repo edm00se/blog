@@ -62,7 +62,7 @@ export default {
     }
   },
   mounted() {
-    if (window.__theme == 'dark') {
+    if (window.__theme === 'dark') {
       this.darkTheme = true;
     }
   }

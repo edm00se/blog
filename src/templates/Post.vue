@@ -32,6 +32,22 @@ import PostTags from '~/components/PostTags';
 import Author from '~/components/Author.vue';
 import VueDisqus from '~/components/VueDisqus.vue';
 
+let linksAr = [
+  {
+    rel: 'stylesheet',
+    href:
+      'https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css'
+      // 'https://unpkg.com/github-syntax-light@0.5.0/lib/github-light.css'
+      // 'https://unpkg.com/github-syntax-dark@0.5.0/lib/github-dark.css'
+  } // TODO: switch to local styles, to accomodate for dark/light theme
+];
+if (window.__theme === 'dark') {
+  linksAr.push({
+    rel: 'stylesheet',
+    href: 'https://unpkg.com/prismjs@1.19.0/themes/prism-dark.css'
+  });
+}
+
 export default {
   components: {
     Author,
@@ -48,19 +64,7 @@ export default {
           content: this.$page.post.description
         }
       ],
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css'
-            // 'https://unpkg.com/github-syntax-light@0.5.0/lib/github-light.css'
-            // 'https://unpkg.com/github-syntax-dark@0.5.0/lib/github-dark.css'
-        }, // TODO: switch to local styles, to accomodate for dark/light theme
-        {
-          rel: 'stylesheet',
-          href: '/prismjs/themes/prism-dark.css'
-        }
-      ]
+      link: linksAr
     };
   },
   computed: {
@@ -120,6 +124,9 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+body[data-theme=dark] .gist {
+  filter: invert(1);
+}
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
