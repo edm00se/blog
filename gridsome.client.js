@@ -9,12 +9,4 @@ library.add(faLink, faTwitter, faGithub);
 
 export default function (Vue) {
   Vue.component('font-awesome', FontAwesomeIcon);
-  Vue.use(VueAnalytics, {
-    id: process.env.GRIDSOME_ANALYTICS_ID,
-    customResourceURL: 'https://analyzer.edm00se.codes/analyzer.js',
-    debug: {
-      sendHitTask: process.env.NODE_ENV === 'production'
-    },
-    disabled: process.isServer
-  })
 }
