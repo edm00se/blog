@@ -7,7 +7,7 @@
       </div>
       
       <div class="header__right">
-        <!-- TODO: <SearchBar /> -->
+        <!-- <SearchBar /> -->
         <ToggleTheme />
       </div>
     </header>
@@ -27,6 +27,7 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
+import SearchBar from '~/components/SearchBar.vue';
 
 export default {
   props: {
@@ -34,6 +35,7 @@ export default {
   },
   components: {
     Logo,
+    SearchBar,
     ToggleTheme
   }
 }
