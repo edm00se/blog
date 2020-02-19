@@ -73,8 +73,7 @@
         }, 0);
       },
       setBaseConfig (disqusConfig){
-        // TODO: migrate the existing comments and revert this or switch back to vue-disqus from npm
-        disqusConfig.page.identifier = (this.identifier); //  || this.$route.path || window.location.pathname
+        disqusConfig.page.identifier = (this.identifier);
         disqusConfig.page.url = (this.url || this.$el.baseURI);
         if (this.title){
           disqusConfig.page.title = this.title;

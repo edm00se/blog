@@ -31,22 +31,7 @@ import PostMeta from '~/components/PostMeta';
 import PostTags from '~/components/PostTags';
 import Author from '~/components/Author.vue';
 import VueDisqus from '~/components/VueDisqus.vue';
-
-let linksAr = [
-  {
-    rel: 'stylesheet',
-    href:
-      'https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css'
-      // 'https://unpkg.com/github-syntax-light@0.5.0/lib/github-light.css'
-      // 'https://unpkg.com/github-syntax-dark@0.5.0/lib/github-dark.css'
-  } // TODO: switch to local styles, to accomodate for dark/light theme
-];
-if (window.__theme === 'dark') {
-  linksAr.push({
-    rel: 'stylesheet',
-    href: 'https://unpkg.com/prismjs@1.19.0/themes/prism-dark.css'
-  });
-}
+import '~/assets/style/prism-dark.scss';
 
 export default {
   components: {
@@ -63,8 +48,7 @@ export default {
           name: 'description',
           content: this.$page.post.description
         }
-      ],
-      link: linksAr
+      ]
     };
   },
   computed: {
@@ -76,7 +60,11 @@ export default {
     }
   },
   mounted() {
-    // TODO: change when theme is toggled
+
+    // only load gist styles if gist embed content detected
+    if (this.$page.post.content.includes('https://gist.github.com')) {
+      require('~/assets/style/gist.scss');
+    }
     
     // only load twitter embed script if twitter content detected
     if (this.$page.post.content.includes('https://twitter.com')) {
