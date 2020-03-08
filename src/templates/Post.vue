@@ -3,18 +3,20 @@
     <div class="post-title">
       <h1 class="post-title__text">{{ $page.post.title }}</h1>
 
-      <PostMeta :post="$page.post"/>
+      <PostMeta :post="$page.post" />
     </div>
 
     <div class="post content-box">
       <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image"/>
+        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
-      <div class="post__content" v-html="$page.post.content"/>
+      <!-- <ToC :subtitles="$page.post.subtitles" /> -->
+
+      <div class="post__content" v-html="$page.post.content" />
 
       <div class="post__footer">
-        <PostTags :post="$page.post"/>
+        <PostTags :post="$page.post" />
       </div>
     </div>
 
@@ -22,15 +24,16 @@
       <vue-disqus shortname="em-devblog" :identifier="hasPermalink ? '' : page_id"></vue-disqus>
     </div>
 
-    <Author class="post-author"/>
+    <Author class="post-author" />
   </Layout>
 </template>
 
 <script>
 import PostMeta from '~/components/PostMeta';
 import PostTags from '~/components/PostTags';
-import Author from '~/components/Author.vue';
-import VueDisqus from '~/components/VueDisqus.vue';
+import Author from '~/components/Author';
+import ToC from '~/components/ToC';
+import VueDisqus from '~/components/VueDisqus';
 import '~/assets/style/prism-dark.scss';
 
 export default {
@@ -38,6 +41,7 @@ export default {
     Author,
     PostMeta,
     PostTags,
+    ToC,
     VueDisqus
   },
   metaInfo() {
@@ -52,10 +56,10 @@ export default {
     };
   },
   computed: {
-    isProd: function() {
+    isProd() {
       return process.env.NODE_ENV !== 'development';
     },
-    hasPermalink: function() {
+    hasPermalink() {
       return this.$page.post.permalink;
     }
   },
@@ -107,6 +111,11 @@ query Post ($id: ID!) {
     content
     cover_image (width: 860, blur: 10)
     permalink
+    subtitles: headings {
+      depth
+      value
+      anchor
+    }
   }
 }
 </page-query>
