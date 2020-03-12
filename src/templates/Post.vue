@@ -13,6 +13,8 @@
 
       <ToC v-if="$page.post.toc === true" :subtitles="$page.post.subtitles" />
 
+      <SeriesInfo :current="$page.post.id" :series="$page.post.series.belongsTo.edges" />
+
       <div class="post__content" v-html="$page.post.content" />
 
       <div class="post__footer">
@@ -33,6 +35,7 @@ import PostMeta from '~/components/PostMeta';
 import PostTags from '~/components/PostTags';
 import Author from '~/components/Author';
 import ToC from '~/components/ToC';
+import SeriesInfo from '~/components/SeriesInfo';
 import VueDisqus from '~/components/VueDisqus';
 import '~/assets/style/prism-dark.scss';
 
@@ -41,6 +44,7 @@ export default {
     Author,
     PostMeta,
     PostTags,
+    SeriesInfo,
     ToC,
     VueDisqus
   },
@@ -117,6 +121,20 @@ query Post ($id: ID!) {
       anchor
     }
     toc
+    series {
+      title
+      belongsTo {
+        edges {
+          node {
+            ...on Post {
+              id
+              title
+              path
+            }
+          }
+        }
+      }
+    }
   }
 }
 </page-query>
