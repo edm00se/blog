@@ -7,7 +7,10 @@
       </div>
       
       <div class="header__right">
-        <!-- <SearchBar /> -->
+        <g-link v-if="$route.path !== '/search'" class="search" to="/search">
+          <font-awesome :icon="['fas', 'search']"/> Search
+        </g-link>
+        &nbsp;
         <ToggleTheme />
       </div>
     </header>
@@ -27,7 +30,6 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
-import SearchBar from '~/components/SearchBar.vue';
 
 export default {
   props: {
@@ -35,7 +37,6 @@ export default {
   },
   components: {
     Logo,
-    SearchBar,
     ToggleTheme
   }
 }
@@ -55,6 +56,13 @@ export default {
   &__right {
     display: flex;
     align-items: center;
+  }
+
+  a.search {
+    color: var(--title-color);
+    &:hover {
+      color: var(--link-color);
+    }
   }
 
   @media screen and (min-width: 1300px) {
