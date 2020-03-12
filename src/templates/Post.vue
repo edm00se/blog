@@ -13,7 +13,7 @@
 
       <ToC v-if="$page.post.toc === true" :subtitles="$page.post.subtitles" />
 
-      <SeriesInfo :current="$page.post.id" :series="$page.post.series.belongsTo.edges" />
+      <SeriesInfo v-if="$page.post.series" :current="$page.post.id" :series="$page.post.series.belongsTo.edges" />
 
       <div class="post__content" v-html="$page.post.content" />
 
