@@ -7,6 +7,7 @@ series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: xpages-servlets
 permalink: /xpages-servlets/building-a-front-end-pt2-an-app-with-angular/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
@@ -14,8 +15,6 @@ permalink: /xpages-servlets/building-a-front-end-pt2-an-app-with-angular/
 ### Ever Onward
 
 For as much theory and verbiage as yesterday's post was, today's will be primarily code-driven; something I hope you're ready for. I'll run through this all and hopefully I can illustrate succinctly as we go.
-
-<!-- {% include toc.html %} -->
 
 ### HTML Templating
 

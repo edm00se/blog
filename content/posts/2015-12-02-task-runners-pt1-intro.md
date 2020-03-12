@@ -8,10 +8,10 @@ tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
 canonical_url: false
 category: web
 permalink: /web/task-runners-pt1-intro/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
-<!-- {% include toc.html %} -->
 
 ### Intro
 

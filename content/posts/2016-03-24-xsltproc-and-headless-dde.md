@@ -7,10 +7,10 @@ tags: ['xpages', 'dde', 'xsl', 'grunt', 'jenkins']
 canonical_url: false
 category: xpages
 permalink: /xpages/xsltproc-and-headless-dde/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
-<!-- {% include toc.html %} -->
 
 ### Intro
 

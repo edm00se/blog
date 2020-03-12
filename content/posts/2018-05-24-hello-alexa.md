@@ -8,6 +8,7 @@ tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'fa
 canonical_url: false
 category: serverless
 permalink: /serverless/hello-alexa
+toc: true
 ---
 
 <!-- {% include series.html %} -->
@@ -15,8 +16,6 @@ permalink: /serverless/hello-alexa
 ### Background
 
 Here's a post I've been working on for longer than I care to admit to. For a few months, I've been wanting to kick off a series on serverless development practices, theory behind why serverless is such a game changer, as well as a couple of demos. The fact of the matter is, each time I've started, I've gotten so bogged down in writing a post about _what serverless is_ and the backing theory, I've managed to loose blogging momentum and it has since idled in my drafts folder for a while. So, what I've settled on for now, is a brief introductory to my first Alexa Skill, and the basics of how it works.
-
-<!-- {% include toc.html %} -->
 
 ### Intro
 

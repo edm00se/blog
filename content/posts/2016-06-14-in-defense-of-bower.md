@@ -7,9 +7,8 @@ tags: ['node', 'npm', 'bower']
 canonical_url: false
 category: web
 permalink: /web/in-defense-of-bower
+toc: true
 ---
-
-<!-- {% include toc.html %} -->
 
 ### Where It Began
 

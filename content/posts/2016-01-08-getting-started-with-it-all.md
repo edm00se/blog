@@ -7,9 +7,8 @@ tags: ['dde', 'scm', 'git', 'cli', 'node', 'npm', 'structure']
 canonical_url: false
 category: xpages
 permalink: /xpages/getting-started-with-it-all/
+toc: true
 ---
-
-<!-- {% include toc.html %} -->
 
 ### Intro
 

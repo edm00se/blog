@@ -7,6 +7,7 @@ series: xpages-servlets
 tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
 category: xpages-servlets
 permalink: /xpages-servlets/building-a-front-end-pt1-a-quick-review/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
@@ -14,8 +15,6 @@ permalink: /xpages-servlets/building-a-front-end-pt1-a-quick-review/
 ### A Quick Review
 
 I had some trepidation about this post; it revolves around the fact that I'm "completing" my blog series with multiple giant topics, on top of the one primary one I've focused on for the majority of this blog series. So, before we get started, I'm going to summarize a couple things. But first, a ToC:
-
-<!-- {% include toc.html %} -->
 
 ##### Servlets
 

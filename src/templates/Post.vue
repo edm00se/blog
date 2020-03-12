@@ -11,7 +11,7 @@
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
-      <!-- <ToC :subtitles="$page.post.subtitles" /> -->
+      <ToC v-if="$page.post.toc === true" :subtitles="$page.post.subtitles" />
 
       <div class="post__content" v-html="$page.post.content" />
 
@@ -116,6 +116,7 @@ query Post ($id: ID!) {
       value
       anchor
     }
+    toc
   }
 }
 </page-query>

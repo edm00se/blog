@@ -6,6 +6,7 @@ published: true
 tags: ['web', 'front-end', 'development', 'json-server']
 category: web
 permalink: /front-end/alternate-front-end-development/
+toc: true
 ---
 
 [Update]
@@ -13,8 +14,6 @@ permalink: /front-end/alternate-front-end-development/
 This topic is so awesome I turned it into [a video for Notes in 9, check it out](/self-promotion/ni9-alt-front-end-dev).
 
 [/Update]
-
-<!-- {% include toc.html %} -->
 
 ### Intro
 

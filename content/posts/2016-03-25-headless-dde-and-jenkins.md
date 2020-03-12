@@ -8,10 +8,10 @@ tags: ['xpages', 'dde', 'jenkins']
 canonical_url: false
 category: xpages
 permalink: /xpages/headless-dde-and-jenkins/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
-<!-- {% include toc.html %} -->
 
 ### Intro
 

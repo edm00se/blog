@@ -8,10 +8,10 @@ series: node-express-iseries-nsf
 canonical_url: false
 category: node
 permalink: /node/node-and-express/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
-<!-- {% include toc.html %} -->
 
 ### Intro
 

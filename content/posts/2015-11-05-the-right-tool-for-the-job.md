@@ -7,9 +7,9 @@ tags: ['github-pages', 'github', 'jekyll', 'hugo', 'blog', 'markdown', 'git', 's
 canonical_url: false
 category: web
 permalink: /web/the-right-tool-for-the-job
+toc: true
 ---
 
-<!-- {% include toc.html %} -->
 ### Before We Get Started
 
 I'm currently following along with [Jesse Gallagher](https://frostillic.us/)'s "That Java Thing" series, as I'm hoping it demystifies the process of creating an OSGi plug-in for me, and I highly recommend any XPages developer out there follow along as well. Jesse is approaching things from a pretty good stand point and I'm sure it'll be worth the ride.

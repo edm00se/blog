@@ -7,9 +7,8 @@ tags: ['web', 'node', 'javascript', 'electron', 'atom', 'sublimetext', 'vs code'
 canonical_url: false
 category: web
 permalink: /web/enhanced-editors
+toc: true
 ---
-
-<!-- {% include toc.html %} -->
 
 ### Intro
 

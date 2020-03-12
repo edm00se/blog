@@ -8,6 +8,7 @@ tags: ['xpages', 'domino', 'java', 'servlet']
 canonical_url: false
 category: xpages-servlets
 permalink: /xpages-servlets/servlets-handling-data-round-house-kick/
+toc: true
 ---
 
 <!-- {% include series.html %} -->
@@ -17,8 +18,6 @@ permalink: /xpages-servlets/servlets-handling-data-round-house-kick/
 [As promised at the end of the last post (in this series)](/xpages-servlets/servlet-handling-requests/), this post will walk through the entire life cycle of data reception and response handling. This is where my [ConnectED demo app-that-never-was](/self-promotion/a-chalk-talk-talk/) comes in, we're going to build part of it. We're going to create an endpoint which governs the provision of a collection of the houses of note in our fictitious land of Os (it's out west). I'll be providing the `com.westeros.servlets.HouseServlet` class, which is an `AbstractXSPServlet` ([previously demonstrated](/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets)), to my `ServletFactory`.
 
 Note: I'll be sticking to the same, vanilla Java approach I've used previously in [this series](/servlet-series). I'll outright say it though, it'd be great to see how some of the processes involved in the setup can be automated and made easier, be it by `@` annotation or via other frameworks. I fully invite those more experienced in these methods to show us the way.
-
-<!-- {% include toc.html %} -->
 
 ### The Endpoint
 
