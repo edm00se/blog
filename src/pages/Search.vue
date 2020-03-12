@@ -24,6 +24,16 @@ export default {
     PostCard
   },
   mixins: [Search],
+  data: () => ({
+    searchTerm: ''
+  }),
+  computed: {
+    searchResults () {
+      const searchTerm = this.searchTerm
+      if (searchTerm.length < 3) return []
+      return this.$search.search({ query: searchTerm, limit: 5 })
+    }
+  },
   mounted() {
     let queryParm = (this.$route.query.q||this.$route.query.query||'');
     if(queryParm){
