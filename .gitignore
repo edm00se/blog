@@ -1,6 +1,8 @@
-_site
-arch
-node_modules
-.jekyll-metadata
-.sass-cache
+*.log
+.cache
 .DS_Store
+src/.temp
+node_modules
+dist
+.env
+.env.*

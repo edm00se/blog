@@ -1,8 +1,0 @@
-<amp-iframe width="600" height="140"
-  layout="responsive"
-  sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
-  resizable
-  frameborder="0"
-  src="{{ site.disqus_iframe_url }}?shortname={{ site.disqus_shortname }}&url={{ page.id | prepend: site.url | append: '/' | url_encode }}&hash={{ page.id | append: '/' | url_encode }}&title={{ page.title }}">
-  <div overflow tabindex="0" role="button" aria-label="Disqus Comments">Disqus Comments</div>
-</amp-iframe>

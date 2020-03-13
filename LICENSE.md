@@ -5,7 +5,7 @@ The textual content of the blog posts in this blog and its GitHub repository are
 ## The MIT License (MIT)
 
 ```
-Copyright (c) 2017 Eric McCormick
+Copyright (c) 2020 Eric McCormick
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
