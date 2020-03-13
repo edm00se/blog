@@ -10,7 +10,7 @@
     "explore": "gridsome explore",
     "lint": "npm run lint:md",
     "lint:md": "remark content/**/*.md",
-    "new": "node scripts/newPost.js"
+    "new": "node util/new.post.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
