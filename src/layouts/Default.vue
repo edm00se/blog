@@ -10,7 +10,7 @@
         <g-link v-if="$route.path !== '/search'" class="search" to="/search">
           <font-awesome :icon="['fas', 'search']"/> Search
         </g-link>
-        &nbsp;
+        &nbsp;&nbsp;
         <ToggleTheme />
       </div>
     </header>
@@ -62,6 +62,9 @@ export default {
     color: var(--title-color);
     &:hover {
       color: var(--link-color);
+    }
+    & svg {
+      vertical-align: middle;
     }
   }
 
