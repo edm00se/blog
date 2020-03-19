@@ -88,10 +88,6 @@ The key for us was, as mentioned above, not stressing out over  the small things
   - maybe make some pizza dough and do pizzas on a stone or on the grill
   - the strange science of baking is pretty fun for kids to learn about too
 
-## Summary
-
-asdf
-
 ### Extra Referenes
 
 Here are a few online things that can help aid you and your kids. A good number of items are on YouTube.
@@ -109,6 +105,6 @@ Here are a few online things that can help aid you and your kids. A good number 
 - [BA Test Kitchen](https://www.youtube.com/channel/UCbpMy0Fg74eXXkvxJrtEn3w) does a bunch of neat videos, from gourmet makes to "it's alive" and beyond; just be forewarned a bit of expletives fly, although most of them are bleeped from my watching
 - [4 Levels of Burritos](https://www.youtube.com/watch?v=BgTsKiZODZU), Epicurious has a bunch of those "4 Levels of..." videos, but this burrito video is the gold standard in my opinion.
 
-#### More
+## Summary
 
 There's so much more, like using [a Pomodoro timer](https://splode.github.io/pomotroid/) to keep yourself on task with structured breaks for yourself (which I recommend for software development anyway, as available), getting a good desk chair, taking a walk and stretching regularly, and making sure to do social things with your family now that you see each other even more. [I highly recommend a nice board game](https://splode.github.io/pomotroid/). This is a bit of an endless topic, so feel free to drop some comments and/or share what works for you. Ultimately, stay safe, wash, and look out for each other out there.
