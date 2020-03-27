@@ -16,6 +16,7 @@
     <p class="author__links">
       <a href="https://twitter.com/edm00se"><font-awesome :icon="['fab', 'twitter']" /> Twitter</a>
       <a href="https://github.com/edm00se"><font-awesome :icon="['fab', 'github']" /> GitHub</a>
+      <a href="https://instagram.com/edm00se"><font-awesome :icon="['fab', 'instagram']" /> Instagram</a>
     </p>
   </div>
 </template>
