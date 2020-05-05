@@ -3,4 +3,4 @@
   publish = "/dist/"
   command = "npm run build && npm run build:sw"
 [[plugins]]
-  package = "netlify-plugin-gatsby-cache"
+  package = "netlify-plugin-gridsome-cache"
