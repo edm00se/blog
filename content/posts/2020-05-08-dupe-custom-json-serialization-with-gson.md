@@ -7,7 +7,7 @@ tags:
   - java
   - xpages
 canonical_url: false
-permalink: /java/custom-json-serilization/
+permalink: /java/dupe-custom-json-serilization/
 category: java
 ---
 
