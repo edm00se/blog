@@ -123,11 +123,10 @@ module.exports = {
       plugins: [
         '@gridsome/remark-prismjs',
         'remark-attr',
-        [ 'gridsome-plugin-remark-codesandbox' ],
         [
           '@noxify/gridsome-plugin-remark-embed',
           {
-            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'JSFiddle'],
+            enabledProviders: ['Youtube', 'Twitter', 'Gist', 'JSFiddle', 'CodeSandbox'],
             'JSFiddle': {
               secureConnection: true
             }
