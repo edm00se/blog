@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: edm00se/blog
-  branch: next
 
+publish_mode: editorial_workflow
 media_folder: "content/posts/images" # Media files will be stored in the repo under content/posts/images
 public_folder: "./images" # The src attribute for uploaded media will begin with ./images
 collections:
