@@ -1,7 +1,10 @@
 <template>
    <div class="post-tags">
    		<g-link class="post-tags__link" v-for="tag in post.tags" :key="tag.id" :to="tag.path">
-   			<span># {{ tag.title }}</span>
+   			<span>
+					<font-awesome :icon="['fas', 'tag']" :class="'w-5 sm:w-6 fill-current mx-auto mb-1'" size="3x" />
+				  {{ tag.title }}
+				</span>
    		</g-link>
     </div>
 </template>
