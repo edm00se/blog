@@ -23,7 +23,7 @@
     </div>
 
     <div v-if="isProd" class="post-comments">
-      <vue-disqus shortname="em-devblog" :identifier="hasPermalink ? ' ' : $page.post.title" />
+      <vue-disqus shortname="em-devblog" :identifier="hasPermalink ? '' : $page.post.title" />
     </div>
 
     <Author class="post-author" />
@@ -36,6 +36,7 @@ import PostTags from '~/components/PostTags';
 import Author from '~/components/Author';
 import ToC from '~/components/ToC';
 import SeriesInfo from '~/components/SeriesInfo';
+import VueDisqus from '~/components/VueDisqus';
 import '~/assets/style/prism-dark.scss';
 
 export default {
@@ -44,7 +45,8 @@ export default {
     PostMeta,
     PostTags,
     SeriesInfo,
-    ToC
+    ToC,
+    VueDisqus
   },
   metaInfo() {
     return {

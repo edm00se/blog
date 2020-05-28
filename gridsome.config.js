@@ -12,6 +12,7 @@ module.exports = {
     'software development, operations, tooling, and musings on technology',
   siteUrl: 'https://edm00se.io',
   icon: './src/favicon.png',
+  titleTemplate: '%s',
 
   templates: {
     Post: [{
