@@ -8,6 +8,10 @@ workbox.setConfig({
 // enable workbox GA
 workbox.googleAnalytics.initialize();
 
+// Updating SW lifecycle to update the app after user triggered refresh
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
+
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 workbox.routing.registerRoute(
