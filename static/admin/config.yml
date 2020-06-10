@@ -23,7 +23,7 @@ collections:
         field: {label: Name, name: name, widget: string, default: "tag"}
       - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
       - label: "Category"
-        name: "tags"
+        name: "category"
         widget: "select"
         field: {label: Name, name: name, widget: string, default: "category"}
       - {label: "Canonical URL", name: "canonical_url", widget: "boolean", required: true, default: false}
