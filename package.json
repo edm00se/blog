@@ -45,5 +45,16 @@
     "plugins": [
       "remark-preset-lint-recommended"
     ]
+  },
+  "homepage": "https://edm00se.io/",
+  "author": {
+    "name": "Eric McCormick",
+    "email": "edm00se@gmail.com",
+    "url": "https://edm00se.codes/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edm00se/blog.git"
   }
 }

@@ -15,9 +15,11 @@
       </div>
     </header>
 
-    <main class="main">
-      <slot/>
-    </main>
+    <transition name="fade" appear>
+      <main class="main">
+        <slot/>
+      </main>
+    </transition>
 
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
@@ -43,6 +45,13 @@ export default {
 </script>
 
 <style lang="scss">
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
 .header {
   display: flex;
   justify-content: space-between;
