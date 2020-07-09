@@ -13,7 +13,7 @@ permalink: /docker/quick-tips/
 
 If you have been living under a rock, Docker is pretty much amazing. If you haven't been living under a rock, you may be getting used to the idea of Docker, but still have the occasional question. I've found myself using Docker in increasing amounts and complexity over the last year or so. I've recently decided to start recording some of the tasks I've found useful, some of which may be less familiar to a beginner. If you're so inclined, check out the playlist, embedded here.
 
-https://www.youtube.com/watch?list=PLk_BgI9qpsGjVwLPqBpVKqA3M4Sdv8wlw&v=47FfdVddCFA
+https://www.youtube.com/watch?v=47FfdVddCFA&list=PLk_BgI9qpsGjVwLPqBpVKqA3M4Sdv8wlw
 
 [View this playlist on YouTube.com][docker-tips-playlist]
 
