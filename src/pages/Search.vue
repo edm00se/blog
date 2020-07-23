@@ -52,7 +52,7 @@ export default {
           title:tag
         };
       });
-      tmp.date = dateformat(tmp.date, "dd mmmm, yyyy");
+      tmp.date = dateformat(Date(tmp.date), "dd mmmm, yyyy");
       tmp.tags = transformedTags;
       return tmp;
     }
