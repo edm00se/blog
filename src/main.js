@@ -14,9 +14,11 @@ if (process.isClient && process.env.NODE_ENV === 'production' && 'serviceWorker'
   const {Workbox} = require('workbox-window');
   console.log('service worker time baby!');
   const wb = new Workbox('/sw.js');
-  wb.addEventListener('installed', event => {
-    if (event.isUpdate) {
-      if (window.confirm('New content is available. Reload to view the latest?')) {
+  wb.addEventListener('message', (event) => {
+    if (event.data.type === 'CACHE_UPDATED') {
+      const {updatedURL} = event.data.payload;
+  
+      if (window.confirm(`New content for ${updatedURL} is available. Reload to view the latest?`)) {
         window.location.reload();
       }
     }
