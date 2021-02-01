@@ -14,6 +14,9 @@ if (process.isClient && process.env.NODE_ENV === 'production' && 'serviceWorker'
   const {Workbox} = require('workbox-window');
   console.log('service worker time baby!');
   const wb = new Workbox('/sw.js');
+  wb.addEventListener('installed', event => {
+    console.log('sw installged, event.isUpdate? ', event.isUpdate);
+  });
   wb.addEventListener('message', (event) => {
     console.log('message: ', event);
     if (event.data.type === 'CACHE_UPDATED') {
