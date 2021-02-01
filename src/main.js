@@ -15,6 +15,7 @@ if (process.isClient && process.env.NODE_ENV === 'production' && 'serviceWorker'
   console.log('service worker time baby!');
   const wb = new Workbox('/sw.js');
   wb.addEventListener('message', (event) => {
+    console.log('message: ', event);
     if (event.data.type === 'CACHE_UPDATED') {
       const {updatedURL} = event.data.payload;
   
