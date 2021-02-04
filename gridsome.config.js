@@ -112,6 +112,17 @@ module.exports = {
         enforceTrailingSlashes: false,
         filterNodes: (node) => true
       }
+    },
+    {
+      use: 'gridsome-plugin-manifest',
+      options: {
+        background_color: '#0d2538',
+        icon_path: './static/logo_600.png',
+        name: 'Dev | Blog',
+        short_name: 'devblog',
+        theme_color: '#FFFFFF',
+        lang: 'en',
+      },
     }
   ],
 
