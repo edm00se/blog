@@ -1,12 +1,15 @@
 ---
-title: "Making Working From Home Work"
-description: "making the best of a work from home situation, so it works for you"
+title: Making Working From Home Work
+description: making the best of a work from home situation, so it works for you
 date: 2020-03-18 17:21:57
 published: true
-tags: ['work', 'home', 'remote',]
+tags:
+  - work
+  - home
+  - remote
 cover_image: ./images/wfh-djurdjica-boskovic-unsplash.jpg
-canonical_url: false
 category: aside
+canonical_url: false
 ---
 
 This is a cross-post from my [miscellanea blog](https://misc.edm00se.codes/making-working-from-home-work/).
@@ -15,7 +18,7 @@ This is a cross-post from my [miscellanea blog](https://misc.edm00se.codes/makin
 
 Happy Saint Patrick's Day! 🍀🇮🇪🍻☘️
 
-It may not be a great time for going out, but it's my hope everyone finds some small way to celebrate and have a bit of fun, since lots of peoples's anxiety levels are probably elevated. In any case, have a good, fun time, and hopefully don't do anything that'll scare the pets, kids, or your spouse. 😆
+It may not be a great time for going out, but it's my hope everyone finds some small way to celebrate and have a bit of fun, since lots of people's anxiety levels are probably elevated. In any case, have a good, fun time, and hopefully don't do anything that'll scare the pets, kids, or your spouse. 😆
 
 ## Making Working From Home Work
 
