@@ -1,15 +1,19 @@
 ---
-title: 'Side Benefits of Static Typing'
-description: 'static typing your JavaScript carries more than the obvious'
+title: Side Benefits of Static Typing
+description: static typing your JavaScript carries more than the obvious
 date: 2019-11-11
 published: true
-tags: ['web', 'javascript', 'typescript', 'preprocessing']
-canonical_url: false
+tags:
+  - web
+  - javascript
+  - typescript
+  - preprocessing
 category: web
+canonical_url: false
 permalink: /web/side-benefits-of-static-typing
 ---
 
-Regardless of your being for or against statically typing and transpiling your JavaScript code, there are advantages to doing so. No system is absolute and yes, it does transpile into JavaScript proper. That said, there can be a great number of conveniences brought in by typing your JS source code. The most obvious major reasos is that, properly defined, your models, API use, and function input and output will be consistently to an expected format. This addresses one of the largest complaints about JavaScript as a language, that everything is so [loosey-goosey](https://m-w.com/dictionary/loosey-goosey).
+Regardless of your being for or against statically typing and transpiling your JavaScript code, there are advantages to doing so. No system is absolute and yes, it does transpile into JavaScript proper. That said, there can be a great number of conveniences brought in by typing your JS source code. The most obvious major reason is that, properly defined, your models, API use, and function input and output will be consistently to an expected format. This addresses one of the largest complaints about JavaScript as a language, that everything is so [loosey-goosey](https://m-w.com/dictionary/loosey-goosey).
 
 ![the (un)titled goose](./images/untitledGoose.png){.skinny}
 *The titular antihero and miscreant of the [Untitled Goose Game](https://goose.game/)*
