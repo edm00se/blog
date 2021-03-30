@@ -19,9 +19,7 @@ The web stack has been evolving and accelerating over the last few years. One of
 
 The context here is from browser logic, in JavaScript; not server-side handling, which is usually managed through frameworks for defining server logic. I ran across the need recently for a one-off thing in which I needed to parse and grab a query parameter's value. This is easy to do now, and has been for a while provided you don't need to support IE.
 
-#### A Flash From The Past
-
-![past Flash](./images/old_flash.jpg)
+#### A Blast From The Past
 
 It used to be that without the ability to rely on the native web api, we could either turn to libraries (such as jquery or dojo) or write our own utility function to handle that need. There's nothing to stop a person from doing so today, it's just not as common over something as simple as url query param parsing.
 
