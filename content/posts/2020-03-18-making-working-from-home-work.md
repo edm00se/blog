@@ -1,7 +1,7 @@
 ---
 title: Making Working From Home Work
 description: making the best of a work from home situation, so it works for you
-date: 2020-03-18 17:21:57
+date: 2020-03-18
 published: true
 tags:
   - work
