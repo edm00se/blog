@@ -32,20 +32,7 @@ Having had to walk this path before, it basically amounted to:
 
 Example:
 
-```js
-function getQueryParam(searchKey){
-  var qs = window.location.split('?')[1];
-  var parmAr = qs.split('&');
-  var parm = {};
-  for(i = 0; i<parmAr.length; i++) {
-    var cur = parmAr[i].split('=');
-    var key = cur[0];
-    var val = cur[1];
-    parm[key] = val;
-  }
-  return parm[searchKey];
-}
-```
+https://gist.github.com/edm00se/abae980afeda1b2086d9581b36e24f99
 
 This example is somewhat contrived but illustrates the approach. Ultimately, this thankfully feels like nails on a chalkboard after living with JavaScript after es6 (EcmaScript2015) for some time now. It reminds me that I hated writing es5 (or below!) compliant code and supporting Internet Explorer.
 
