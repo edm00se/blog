@@ -2,7 +2,7 @@
 title: Signs of an Advancing Web
 description: a flash back to a bygone era, signs that the web is maturing,
   evolving, getting stronger, better
-date: 2021-03-30T19:00:03.533Z
+date: 2021-03-31
 published: true
 tags:
   - web
