@@ -10,7 +10,13 @@ export default function(Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout);
 }
 
-if (process.isClient && process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+if (
+  process.isClient &&
+  process.env.NODE_ENV === 'production' &&
+  'serviceWorker' in navigator
+) {
+  console.log('no service worker time... baby');
+  /*
   const {Workbox} = require('workbox-window');
   console.log('service worker time baby!');
   const wb = new Workbox('/sw.js');
@@ -22,4 +28,5 @@ if (process.isClient && process.env.NODE_ENV === 'production' && 'serviceWorker'
     }
   });
   wb.register();
+  */
 }
