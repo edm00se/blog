@@ -29,7 +29,7 @@ if (
         window.location.reload();
       });
 
-      messageSkipWaiting();
+      wb.messageSkipWaiting();
     }
   };
 
