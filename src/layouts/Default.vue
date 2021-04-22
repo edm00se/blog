@@ -7,7 +7,7 @@
 
       <div class="header__right">
         <g-link v-if="$route.path !== '/search'" class="search" to="/search">
-          <font-awesome :icon="['fas', 'search']" /> Searchy search
+          <font-awesome :icon="['fas', 'search']" /> Search
         </g-link>
         &nbsp;&nbsp;
         <ToggleTheme />
