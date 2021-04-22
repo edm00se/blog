@@ -15,18 +15,27 @@ if (
   process.env.NODE_ENV === 'production' &&
   'serviceWorker' in navigator
 ) {
-  console.log('no service worker time... baby');
-  /*
-  const {Workbox} = require('workbox-window');
-  console.log('service worker time baby!');
+  console.log('service worker time baby');
+  const { Workbox, messageSkipWaiting } = require('workbox-window');
   const wb = new Workbox('/sw.js');
-  wb.addEventListener('installed', event => {
-    if (event.isUpdate) {
-      if (window.confirm('New content is available. Reload to view the latest?')) {
-        window.location.reload();
+  let registration;
+
+  const showSkipWaitingPrompt = event => {
+    const prompt = createUIPrompt({
+      onAccept: () => {
+        wb.addEventListener('controlling', event => {
+          window.location.reload();
+        });
+
+        messageSkipWaiting();
+      },
+
+      onReject: () => {
+        prompt.dismiss();
       }
-    }
-  });
+    });
+  };
+
+  wb.addEventListener('waiting', showSkipWaitingPrompt);
   wb.register();
-  */
 }
