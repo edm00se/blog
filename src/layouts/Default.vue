@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-
     <header class="header">
       <div class="header__left">
         <Logo v-if="showLogo" />
       </div>
-      
+
       <div class="header__right">
         <g-link v-if="$route.path !== '/search'" class="search" to="/search">
-          <font-awesome :icon="['fas', 'search']"/> Search
+          <font-awesome :icon="['fas', 'search']" /> Search
         </g-link>
         &nbsp;&nbsp;
         <ToggleTheme />
@@ -17,21 +16,24 @@
 
     <transition name="fade" appear>
       <main class="main">
-        <slot/>
+        <slot />
       </main>
     </transition>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="https://gridsome.org"> Gridsome </a></span>
+      <span class="footer__copyright"
+        >Copyright © {{ new Date().getFullYear() }}.
+      </span>
+      <span class="footer__links"
+        >Powered by <a href="https://gridsome.org"> Gridsome </a></span
+      >
     </footer>
-
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
+import Logo from '~/components/Logo.vue';
+import ToggleTheme from '~/components/ToggleTheme.vue';
 
 export default {
   props: {
@@ -41,12 +43,12 @@ export default {
     Logo,
     ToggleTheme
   }
-}
+};
 </script>
 
 <style lang="scss">
 .fade-enter-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .fade-enter {
@@ -58,7 +60,7 @@ export default {
   align-items: center;
   min-height: var(--header-height);
   padding: 0 calc(var(--space) / 2);
-  top:0;
+  top: 0;
   z-index: 10;
 
   &__left,
@@ -95,10 +97,10 @@ export default {
   justify-content: center;
   padding: calc(var(--space) / 2);
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
 
   > span {
-    margin: 0 .35em;
+    margin: 0 0.35em;
   }
 
   a {
