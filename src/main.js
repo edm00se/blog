@@ -21,19 +21,16 @@ if (
   let registration;
 
   const showSkipWaitingPrompt = event => {
-    const prompt = createUIPrompt({
-      onAccept: () => {
-        wb.addEventListener('controlling', event => {
-          window.location.reload();
-        });
+    const prompt = window.confirm(
+      'New content is available. Reload to view the latest?'
+    );
+    if (prompt) {
+      wb.addEventListener('controlling', event => {
+        window.location.reload();
+      });
 
-        messageSkipWaiting();
-      },
-
-      onReject: () => {
-        prompt.dismiss();
-      }
-    });
+      messageSkipWaiting();
+    }
   };
 
   wb.addEventListener('waiting', showSkipWaitingPrompt);
