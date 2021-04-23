@@ -15,12 +15,6 @@ if (
   process.env.NODE_ENV === 'production' &&
   'serviceWorker' in navigator
 ) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((reg) => console.log('service worker registerd successfully'))
-      .catch((err) => console.error(err));
-  });
   // console.log('no service worker time... baby');
   /*
   const { Workbox, messageSkipWaiting } = require('workbox-window');
