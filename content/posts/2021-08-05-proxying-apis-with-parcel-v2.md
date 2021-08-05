@@ -32,10 +32,12 @@ Previously, what was required to proxy api calls to say `/api` involved writing 
 You can read [the documentation here](https://v2.parceljs.org/features/api-proxy/), as they have a page on just this topic, but the short version is to do two things:
 
 1. install a middleware package alongside your other dev dependencies
+
 ```
 npm install --develop http-proxy-middleware
 ```
 2. generate a `.proxyrc` configuration, like so:
+
 ```
 #.proxyrc
 {
