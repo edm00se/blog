@@ -14,6 +14,7 @@ tags:
 cover_image: ./images/which-way.jpg
 category: web
 canonical_url: false
+permalink: /web/proxying-apis-with-parcel-v2/
 ---
 It's no secret I've been a fan of [Parcel](https://parceljs.org/) for some time. As a bundler, it's taken what's best about webpack and made it more friendly towards end users, uses more sane defaults, and allowed for some really powerful adaptations that would otherwise not be incredibly available. Previously I've blogged about the ease of setting up a local proxy to use with parcel, so that any back-end components can have their traffic accordingly directed. There's an update now with [the v2 release candidate available](https://v2.parceljs.org/blog/rc0/), so I figure it's worth talking about again.
 
