@@ -5,6 +5,7 @@ description: parcel as a local dev server with back-end/api call proxying has
 date: 2021-08-05
 published: true
 tags: []
+cover_image: ./images/which-way.jpg
 category: web
 canonical_url: false
 ---
