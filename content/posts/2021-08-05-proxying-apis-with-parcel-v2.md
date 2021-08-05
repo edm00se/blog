@@ -10,6 +10,7 @@ tags:
   - tooling
   - proxy
   - parcel
+  - javascript
 cover_image: ./images/which-way.jpg
 category: web
 canonical_url: false
