@@ -4,7 +4,12 @@ description: parcel as a local dev server with back-end/api call proxying has
   been updated with the Parcel v2 Release Candidate
 date: 2021-08-05
 published: true
-tags: []
+tags:
+  - development
+  - web
+  - tooling
+  - proxy
+  - parcel
 cover_image: ./images/which-way.jpg
 category: web
 canonical_url: false
