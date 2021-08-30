@@ -30,7 +30,7 @@ Previously, what was required to proxy api calls to say `/api` involved writing 
 
 ### Doing It With v2
 
-You can read [the documentation here](https://v2.parceljs.org/features/api-proxy/), as they have a page on just this topic, but the short version is to do two things:
+You can read [the documentation here](https://v2.parceljs.org/features/development/#api-proxy), as they have a page on just this topic, but the short version is to do two things:
 
 1. install a middleware package alongside your other dev dependencies
 
