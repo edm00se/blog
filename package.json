@@ -13,9 +13,9 @@
     "new": "node util/new.post.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@gridsome/plugin-google-analytics": "^0.1.2",
     "@gridsome/plugin-sitemap": "^0.4.0",
@@ -29,16 +29,16 @@
     "gridsome-plugin-flexsearch": "^2.0.1",
     "remark-attr": "^0.11.1",
     "vue-svg-loader": "^0.16.0",
-    "workbox-build": "^6.1.5",
-    "workbox-window": "^6.1.5"
+    "workbox-build": "^6.2.4",
+    "workbox-window": "^6.2.4"
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
     "gridsome-plugin-manifest": "^0.3.5",
     "netlify-plugin-gridsome-cache": "^1.0.3",
     "node-sass": "^5.0.0",
-    "remark-cli": "^9.0.0",
-    "remark-preset-lint-recommended": "^5.0.0",
+    "remark-cli": "^10.0.0",
+    "remark-preset-lint-recommended": "^6.0.1",
     "sass-loader": "^10.1.1"
   },
   "keywords": [],
