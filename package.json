@@ -30,7 +30,7 @@
     "remark-attr": "^0.11.1",
     "vue-svg-loader": "^0.16.0",
     "workbox-build": "^6.1.5",
-    "workbox-window": "^6.1.5"
+    "workbox-window": "^6.2.4"
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
