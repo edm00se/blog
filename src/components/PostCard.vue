@@ -10,7 +10,7 @@
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
 
-      <g-link class="post-card__link" :to="post.node.path">Link</g-link>
+      <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
   </div>
 </template>

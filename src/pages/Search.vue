@@ -43,7 +43,8 @@ export default {
   methods: {
     transformPost: (raw) => {
       let tmp = {
-        ...raw
+        ...raw,
+        ...raw.node
       };
       const transformedTags = JSON.parse(raw.tags).map(tag => {
         // console.log(tag);
@@ -53,7 +54,9 @@ export default {
           title:tag.title
         };
       });
-      tmp.date = dateformat(Date(tmp.date), "dd mmmm, yyyy");
+      if(tmp.date){
+        tmp.date = dateformat(Date(tmp.date.split('T')[0]), "dd mmmm, yyyy");
+      }
       tmp.tags = transformedTags;
       return tmp;
     }
