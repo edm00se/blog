@@ -50,7 +50,7 @@ export default {
         // console.log(tag);
         return {
           id:tag.id,
-          path:`/tag/${tag.path}/`,
+          path:tag.path,
           title:tag.title
         };
       });
