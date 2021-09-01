@@ -67,7 +67,7 @@ module.exports = {
           {
             typeName: 'Post',
             indexName: 'Post',
-            fields: ['title', 'description', 'tags', 'date']
+            fields: ['title', 'description', 'tags', 'date', 'path']
           }
         ],
         searchFields: ['title', 'description', 'tags']
