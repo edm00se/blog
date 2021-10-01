@@ -29,7 +29,7 @@
     "gridsome-plugin-flexsearch": "^2.0.2",
     "remark-attr": "^0.11.1",
     "vue-svg-loader": "^0.16.0",
-    "workbox-build": "^6.2.4",
+    "workbox-build": "^6.3.0",
     "workbox-window": "^6.3.0"
   },
   "devDependencies": {
