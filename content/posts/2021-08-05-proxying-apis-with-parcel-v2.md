@@ -28,6 +28,8 @@ The release candidate is exciting to me as it is the culmination of a couple yea
 
 Previously, what was required to proxy api calls to say `/api` involved writing a thin node script implementation, making use of `http-proxy` and directing any traffic matching your api endpint's starting path, like `/api`, and forwarding the rest to parcel's local dev server. The parcel api made this all possible from a single script file, so to me it was a great win for power and simplicity. It also took slightly more effort up front, but was a relatively lean implementation of a development dependency. Ideally this is something that would live in a configuration and not an application script, which is exactly what the parcel team seemed to think.
 
+note: if you're looking for an example of this, [I've previously blogged about this approach](/web/proxying-parcel/) and used it somewhat extensively
+
 ### Doing It With v2
 
 You can read [the documentation here](https://v2.parceljs.org/features/development/#api-proxy), as they have a page on just this topic, but the short version is to do two things:
