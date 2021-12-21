@@ -74,9 +74,11 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: 'gridsome-plugin-gtag',
       options: {
-        id: process.env.GRIDSOME_ANALYTICS_ID
+        config: {
+          id: process.env.GRIDSOME_ANALYTICS_ID
+        }
       }
     },
     {
