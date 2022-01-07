@@ -55,7 +55,10 @@ export default {
         };
       });
       if(tmp.date){
-        tmp.date = dateformat(Date(tmp.date.split('T')[0]), "dd mmmm, yyyy");
+        console.log(tmp.date);
+        const dt = new Date(`${tmp.date.split('T')[0]}`)
+          .toLocaleString('en-US', { timeZone: 'UTC' });
+        tmp.date = dateformat(dt, "dd mmmm, yyyy");
       }
       tmp.tags = transformedTags;
       return tmp;
