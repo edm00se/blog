@@ -29,7 +29,7 @@
     "gridsome-plugin-gtag": "^0.1.10",
     "remark-attr": "^0.11.1",
     "vue-svg-loader": "^0.16.0",
-    "workbox-build": "^6.5.2",
+    "workbox-build": "^6.5.3",
     "workbox-window": "^6.5.0"
   },
   "devDependencies": {
