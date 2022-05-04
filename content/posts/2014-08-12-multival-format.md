@@ -1,11 +1,15 @@
 ---
-title: 'Consistent Multi-Value Formatting'
+title: Consistent Multi-Value Formatting
+description: getting values in a consistent format
 date: 2014-08-12
 published: true
-tags: ['xpages', 'domino', 'ssjs', 'java']
-canonical_url: false
-description: 'getting values in a consistent format'
+tags:
+  - xpages
+  - domino
+  - ssjs
+  - java
 category: xpages
+canonical_url: false
 permalink: /xpages/consistent-multivalue-formatting
 ---
 
@@ -13,7 +17,7 @@ permalink: /xpages/consistent-multivalue-formatting
 
 The Notes/Domino API is, to be polite, nuanced. It produces interesting results when a sane person might expect a more reasoned approach. For example, one of the staples of Notes/Domino API is the ability to have multi-value fields. Approaching Domino/XPages as a novice a couple years ago, I found it odd that performing a (NotesDocument)getItemValue on a field with multiple values checked in the field properties of the Form, from which the given document was computed (making it effectively a programmatic schema), would still yield a `java.lang.String` (or its respective object type) when a single value. When the field has multiple values, it returns a `java.util.Vector` containing the respective objects for its values. To account for this sort of situation, a developer then needs to account for the different types of returned values. This makes an otherwise simple call a bit tedious.
 
-Unbeknownst to me, Mark Leusink must have felt the same, as he posted a helper function to convert any value to an `Array` in his [\$U.toArray XSnippet from December 2, 2011](https://openntf.org/XSnippets.nsf/snippet.xsp?id=convert-any-value-to-an-array). Since I didn't find XSnippets (somehow, I'm not certain how), I created my own version working directly with `java.util.Vector` s. I believe there is still merit to this, as when it performs the typeof, if it's already a `java.util.Vector`, it does no conversion, as opposed to invoking an additional `toArray()` call. My version also makes use of a switch block, which means that it handles unexpected results, in my opinion, somewhat gracefully. Have a look.
+Unbeknownst to me, Mark Leusink must have felt the same, as he posted a helper function to convert any value to an `Array` in his [$U.toArray XSnippet from December 2, 2011](https://openntf.org/XSnippets.nsf/snippet.xsp?id=convert-any-value-to-an-array). Since I didn't find XSnippets (somehow, I'm not certain how), I created my own version working directly with `java.util.Vector` s. I believe there is still merit to this, as when it performs the typeof, if it's already a `java.util.Vector`, it does no conversion, as opposed to invoking an additional `toArray()` call. My version also makes use of a switch block, which means that it handles unexpected results, in my opinion, somewhat gracefully. Have a look.
 
 https://gist.github.com/edm00se/8301433
 
