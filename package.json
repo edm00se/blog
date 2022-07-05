@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "build:sw": "node util/workbox-build.js",
     "develop": "gridsome develop",
     "dev": "npm run develop",
     "explore": "gridsome explore",
@@ -28,9 +27,7 @@
     "gridsome-plugin-flexsearch": "^2.0.2",
     "gridsome-plugin-gtag": "^0.1.10",
     "remark-attr": "^0.11.1",
-    "vue-svg-loader": "^0.16.0",
-    "workbox-build": "^6.5.3",
-    "workbox-window": "^6.5.0"
+    "vue-svg-loader": "^0.16.0"
   },
   "devDependencies": {
     "fs-extra": "^10.1.0",
