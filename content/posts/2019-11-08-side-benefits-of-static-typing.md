@@ -20,7 +20,7 @@ Regardless of your being for or against statically typing and transpiling your J
 
 Beyond this primary advantage, there are a good number of side benefits to using a static typed system in front of your JavaScript code base.
 
-### Side benefits
+### Core and Adjacent Principles
 
 Adding static typing to your JavaScript, such as with TypeScript, brings with it a couple of concepts by the sheer nature of the fact that there's a build phase of the source code to create the ultimately consumed JavaScript. This would happen the same if we used a build tool and [babel](https://babeljs.io/) to process JavaScript, so while it's not entirely unique to add to the process around JS, it carries with it some benefits as well.
 
