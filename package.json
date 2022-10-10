@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "fs-extra": "^10.1.0",
-    "gridsome-plugin-manifest": "^0.3.5",
     "netlify-plugin-gridsome-cache": "^1.0.3",
     "node-sass": "^6.0.1",
     "remark-cli": "^11.0.0",
