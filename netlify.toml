@@ -2,5 +2,5 @@
   base = "/"
   publish = "/dist/"
   command = "npm rebuild --verbose sharp && npm run build"
-[[plugins]]
-  package = "netlify-plugin-gridsome-cache"
+#[[plugins]]
+#  package = "netlify-plugin-gridsome-cache"
