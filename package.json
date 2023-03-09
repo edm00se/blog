@@ -3,7 +3,7 @@
   "description": "software development, operations, tooling, and tech musings",
   "private": true,
   "scripts": {
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; gridsome build",
+    "build": "gridsome build",
     "develop": "gridsome develop",
     "dev": "npm run develop",
     "explore": "gridsome explore",
