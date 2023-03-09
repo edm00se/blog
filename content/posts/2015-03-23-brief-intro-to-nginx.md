@@ -15,8 +15,7 @@ This is a brief intro to nginx, the reverse proxying web server I've fallen in l
 
 While setting myself up for editing the AngularJS version of my app for [my Java servlet series](/servlet-series/), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
 
-https://twitter.com/edm00se/status/579458988883988480
-
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/579458988883988480/">failed to load</iframe>
 
 ### Nginx: the 'What' and 'Why'
 
@@ -58,7 +57,7 @@ https://gist.github.com/edm00se/306e8dacaac50ec49e56#nginx.conf
 
 I tweeted a pretty strong sounding result. In fact, I believe that my DDE local web preview being freshly restarted was part of the ridiculously long response for my data set, but there was still a significant improvement of around 400-500ms (down from just over a full second to just over half of one); which shows the improvements gained from *gzip*ing the static elements.
 
-https://twitter.com/edm00se/status/579719285012094976
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/579719285012094976/">failed to load</iframe>
 
 ### Summary
 

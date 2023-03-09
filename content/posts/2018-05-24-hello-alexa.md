@@ -25,7 +25,7 @@ Have you gotten past your fears of an always listening device in your home? Has 
 
 A while back I tweeted out a short poll on what sort of Alexa Skill I should build. I included a couple options and got a couple votes back. Here are the results.
 
-https://twitter.com/edm00se/status/845786561186795521
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/845786561186795521/">failed to load</iframe>
 
 This will feed the next post, which covers the Alexa Skill I built. For now, let's have a look at how a basic Alexa Skill is structured.
 

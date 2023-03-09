@@ -30,7 +30,7 @@ Version 901v00_13.20150611-0803 was released today, the 10th of July, 2015. This
 
 Plenty more, it would seem. This is just the initial launch and brings in line some of the best of what's to offer from IBM's existing, enterprise application and collaboration offerings with their flagship cloud solutions. Needless to say, I'm excited. This brings in only more excellent possibilities and opens the door for many things to come.
 
-https://twitter.com/edm00se/status/619506133452103680
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/619506133452103680/">failed to load</iframe>
 
 The XPages runtime is considered "experimental", it's not 'alpha' but it's not 'beta'. I still managed to throw together some Pratt Keeping for Bluemix though.
 

@@ -20,7 +20,7 @@ https://twitter.com/kentcdodds/status/739938603187343360
 
 I took the tweet with a grain of salt and even refrained from tweeting some snark back (see that Internet? self-restraint _is_ a thing); although that didn't keep me from musing on comparing tools in my own tweet later on. That's not to say that he doesn't have a point, but Twitter's 140 character limit is a pretty lightweight medium for what is, IMO, a pretty complex comparison.
 
-https://twitter.com/edm00se/status/739979758411386880
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/739979758411386880/">failed to load</iframe>
 
 Mr. Dodds is a rather talented developer whose projects and ongoing efforts are noteworthy, I just felt he _may have skipped over a something in the name of progress_. What I felt was missing was all the _good_ things about bower. This post explores the relevance of bower, the complexities involve in comparing bower and npm for front-end dependencies, and will not further mention Mr. Dodds after this paragraph; although I will plug his (updated) [slide deck on ES6 modules](https://slides.com/kentcdodds/es6-modules), which came up recently.
 

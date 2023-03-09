@@ -13,7 +13,7 @@ permalink: /scm/scm-survey-results
 
 The TLCC + Teamstudio webinar today is "Getting Started with the OpenNTF Domino API", presented by Paul Withers and Jesse Gallagher. I've been listening/watching while working and if you're looking to ease your pain with some of the idiosynchrises in XPages, you'll want to check out the webinar (a recording of the webinar should pop up before long, I'll link to it here) and give the [OpenNTF Domino API](https://openntf.org/main.nsf/project.xsp?r=project/OpenNTF%20Domino%20API) a go.
 
-https://twitter.com/edm00se/status/719903028661338113
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/719903028661338113/">failed to load</iframe>
 
 ### Intro
 

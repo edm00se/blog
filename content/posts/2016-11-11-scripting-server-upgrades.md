@@ -13,7 +13,7 @@ permalink: /docker/scripting-server-upgrades
 
 This one might be slight departure from my usual, but those that have followed my blogging this past year will have noticed a bit more of a leaning towards DevOps in some of my posts. This echoes a lot of what I've been concluding as increasingly a necessary part of _development_; that we need to consider a picture large enough to encompass the themes surrounding development functions and, like any good developer (DRY ~= "lazy"), automate the heck out of it.
 
-https://twitter.com/edm00se/status/796390523032498176
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/796390523032498176/">failed to load</iframe>
 
 ### Overview
 

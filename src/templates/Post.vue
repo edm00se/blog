@@ -245,4 +245,16 @@ body[data-theme=dark] .gist {
 .post-author {
   margin-top: calc(var(--space) / 2);
 }
+
+iframe.tweetbu {
+  width: 100%;
+  height: auto;
+  min-height: 32em;
+  border: 1px solid var(--link-color);;
+  border-radius: 1em;
+}
+
+[data-theme=dark] iframe.tweetbu {
+  background-color: white;
+}
 </style>

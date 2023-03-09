@@ -15,7 +15,7 @@ Here's something that I cooked up a little while back, then found a further use 
 
 Building on what I've been talking about recently, between a greater understanding of front-end development tooling and practices along with a skill set that reaches outside our day-to-day work, here's an interesting thing I did recently to solve a unique problem.
 
-https://twitter.com/edm00se/status/664661632337997824
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/664661632337997824/">failed to load</iframe>
 
 ### Ultra Nerdy
 

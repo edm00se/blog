@@ -44,7 +44,7 @@ On the side, over the last year, I've also taken up the hobbies of 3D printing, 
 
 ### More Recently
 
-https://twitter.com/edm00se/status/954467891453284353
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/954467891453284353/">failed to load</iframe>
 
 Recently, just this past week in fact, I created and launched a "recipe" for [Franz][franz-messenger]. Franz is an [Electron based][electron] application client that wraps around many messenger formats, including WhatsApp, Skype, Slack, and other web services, such as Google Inbox, and more.
 

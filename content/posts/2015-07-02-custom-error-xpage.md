@@ -12,7 +12,7 @@ permalink: /xpages/custom-error-xpage/
 
 Here's an interesting thing. The best part is that I can't attribute myself with credit for the majority of the body of work involved. In fact, I had some help from an [eagle-eyed Marky Roden](https://stackoverflow.com/a/30925635/1720082) who spotted a contributing issue, and an astounding three answers from Sven Hasselbach on [a StackOverflow question on a key component subject](https://stackoverflow.com/questions/30925066/custom-error-xpage-ability-for-browser-to-load-and-execute-js-script-link-or-bl/).
 
-https://twitter.com/edm00se/status/611629455069425664
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/611629455069425664/">failed to load</iframe>
 
 ### Custom Error XPage
 

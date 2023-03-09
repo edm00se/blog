@@ -25,7 +25,8 @@ I'm launching a series of mini-projects revolving entirely around the concepts o
 
 Thanks to spotting a tweet about a giveaway from IBM in relation to their Watson services on Bluemix and their Watson IoT platform, I wound up with a Raspberry Pi 3 courtesy of Big Blue. It's everything I love about the Raspberry Pi, but with baked in bluetooth and wifi. If you're looking to learn more about [IBM's Watson IoT platform and Raspberry Pi, check out their link](https://www.ibm.com/internet-of-things/ecosystem/devices/raspberry-pi/).
 
-https://twitter.com/edm00se/status/704371556156207104
+<iframe class="tweetbu" src="https://tweets.edm00se.codes/704371556156207104/">failed to load</iframe>
+
 
 At the base level, the Raspberry Pi is a great device for IoT application. It runs a true linux distribution (usually a Debian fork made for the Raspberry Pi, called Raspbian) making it immediately familiar to anyone with *nix experience, is greatly, and consistently (across devices), extensible, via their 40-pin GPIO (general purpose input-output) connector, requires low power (a decent phone charger will suffice) to run, runs from a micro-SD card, has USB ports (even more in the recent models), and connects natively to HDMI for convenience (and can use an adapter cable to connect to RCA component). All in all, it's no wonder it's done quite well as a device. I've even [built a couple of projects using them before](https://github.com/samuelclay/Raspberry-Pi-Photo-Frame/pull/6), to great success.
 
