@@ -112,7 +112,13 @@ module.exports = {
         maxItems: 25,
         htmlFields: null,
         enforceTrailingSlashes: false,
-        filterNodes: (node) => true
+        filterNodes: (node) => true,
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          content: node.content,
+          description: node.description
+        })
       }
     },
     {
