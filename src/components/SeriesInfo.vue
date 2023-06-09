@@ -4,7 +4,7 @@
       <summary>
         <h3>Posts in This Series</h3>
       </summary>
-      <ul class="series-list">
+      <ol class="series-list">
         <li v-for="post in orderedSeries" :key="post.node.id">
           <span v-if="post.node.id == current">
             <font-awesome title="you are here" :icon="['fas', 'chevron-right']" :class="'w-5 sm:w-6 fill-current mx-auto mb-1'" size="3x" style="vertical-align: middle;color: var(--link-color);" />
@@ -14,7 +14,7 @@
             {{ post.node.title }}
           </g-link>
         </li>
-      </ul>
+      </ol>
     </details>
   </div>
 </template>
@@ -44,9 +44,6 @@ export default {
   }
   details summary h3 {
     display: inline;
-  }
-  .series-list {
-    list-style: none;
   }
   .series-list li a:hover {
     border-bottom: 2px solid var(--link-color);
