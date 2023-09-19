@@ -2,4 +2,7 @@ User-Agent: *
 Disallow: 
 Allow: /
 
+User-agent: GPTBot
+Disallow: /
+
 Sitemap: /sitemap.xml
