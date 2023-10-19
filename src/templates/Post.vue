@@ -141,9 +141,11 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+  /*
 body[data-theme=dark] .gist {
   filter: invert(1);
 }
+  */
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
