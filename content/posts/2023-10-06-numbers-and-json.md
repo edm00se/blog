@@ -17,7 +17,7 @@ I know it's been a while, figured I'd pop up write a quick blog.
 
 ![a kraken lifting a sailing ship above water, cracking it in half, and dumping the people into the sea](./images/kraken.gif){.skinny}
 
-Numbers came up as a topic today, you know, thse primitive entities in JavaScript. Yeah, I was surprised as well.
+Numbers came up as a topic today, you know, those primitive entities in JavaScript. Yeah, I was surprised as well.
 
 ### The Problem
 
