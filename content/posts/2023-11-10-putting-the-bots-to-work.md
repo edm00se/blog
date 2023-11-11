@@ -65,7 +65,7 @@ I know many like to joke about the volatility and pace of web development compar
 
 #### Verdict
 
-This wasn't a bad place to start, but I decided to try the others once this split the fields into two. This combined with the dated knowledge of node made me wonder if that was what I should persue as I was really looking for a drop-in solution that required no other files.
+This wasn't a bad place to start, but I decided to try the others once this split the files into two. This combined with the dated knowledge of node made me wonder if that was what I should persue as I was really looking for a drop-in solution that required no other files.
 
 #### [Google Bard](https://bard.google.com)
 
