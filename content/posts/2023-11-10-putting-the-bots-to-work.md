@@ -101,7 +101,7 @@ https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#4_bing_chat_act
 
 #### Verdict
 
-I was intrigued, in spite of having already moved on. Maybe I'll consider checking against Bing in the future, as this seemed the most cohesive and likely to work out of the box. Then again it carries a downside of bing a BASH script at its heart, not a problem per say, but I do spend most of my time in JS/TS/Node and something in that flavor makes it instantly more easy to maintain.
+I was intrigued, in spite of having already moved on. Maybe I'll consider checking against Bing in the future, as this seemed the most cohesive and likely to work out of the box. Then again it carries a downside of bing a BASH script at its heart, not a problem per se, but I do spend most of my time in JS/TS/Node and something in that flavor makes it instantly more easy to maintain.
 
 ### How I Concluded Things
 
