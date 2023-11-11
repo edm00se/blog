@@ -51,7 +51,7 @@ The wiring up of the GitHub Action via its workflow YAML was also quite straight
 
 https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#1b_openai_config.yml
 
-After my follow up to allow for allowing for the label to override the failing check when present.
+After my follow up to allow for the label to override the failing check when present.
 
 https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#1c_openai_updated_script_snippet.js
 
