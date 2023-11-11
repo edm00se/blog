@@ -1,6 +1,6 @@
 ---
 title: "Putting The Bots To Work"
-description: "when you can't beat 'em, sick the bots on 'em"
+description: "when you can't beat 'em, sic the bots on 'em"
 date: 2023-11-10 21:58:45
 published: true
 tags:
