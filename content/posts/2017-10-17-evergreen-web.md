@@ -66,7 +66,7 @@ In the end, the question I've been asking myself is:
 
 I'm fairly certain this will need to be [grassroots][grassroots-about] in nature. We need to "bubble up" our need to move on from inflexible browsers; previously, I would include something like the [browse happy][browse-happy] include (\*this is limited, as it is generally detecting IE specifically) and point those with outdated browsers to it, but it still lists IE 11; part of what I'm trying to avoid.
 
-\*Note: I don't mean to hate on IE, rather Microsoft has moved on with Edge and while they have taken a very business stance of supporting IE for a longer time than I would prefer, but it's for their business customers who have locked-in requirements of older software requiring, say, IE 7 ð. This is rather meant to highlight the need for us as the development community to force the movement and let the "norm" be something favorable to everyone.
+\*Note: I don't mean to hate on IE, rather Microsoft has moved on with Edge and while they have taken a very business stance of supporting IE for a longer time than I would prefer, but it's for their business customers who have locked-in requirements of older software requiring, say, IE 7. This is rather meant to highlight the need for us as the development community to force the movement and let the "norm" be something favorable to everyone.
 
 Until next time, 🍻!
 
