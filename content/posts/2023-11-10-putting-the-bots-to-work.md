@@ -56,7 +56,7 @@ After my follow up to allow for the label to override the failing check when pre
 
 https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#1c_openai_updated_script_snippet.js
 
-#### The Other Thing
+##### The Other Thing
 
 The Eagle eyed among you may have noticed something which dates the response and the built LLM a bit. While everything seemed functional, the node version specified was node 14. Node 14 was in active LTS for a while, then moved to maintenance for security updates, and then was End Of Life'd in April of this year (2023) in accordance with the [node release schedule](https://nodejs.org/en/about/previous-releases). I asked for it to be updated to latest LTS and was basically told to figure it out myself.
 
@@ -64,7 +64,7 @@ The Eagle eyed among you may have noticed something which dates the response and
 
 I know many like to joke about the volatility and pace of web development compared to other development circles, but I found it a little remarkable that ChatGPT couldn't just do a basic query to at least tell me what to update to for the latest LTS. It's not that I needed it, but that it would be incredibly simple and highlights the limits of LLMs being trained as they were when that one was built.
 
-#### Verdict
+##### Verdict
 
 This wasn't a bad place to start, but I decided to try the others once this split the files into two. This combined with the dated knowledge of node made me wonder if that was what I should persue as I was really looking for a drop-in solution that required no other files.
 
@@ -78,7 +78,7 @@ A nice feature I noticed only for Bard was the citation of sources. That's right
 
 ![Bard cites specific sources under some circumstances, footer note with hyperlink shown](./images/bard_citing_source.png)
 
-#### Verdict
+##### Verdict
 
 This looked promising, so promising that I attempted to implement the action, in a test repository at first. Until it was deployed in my actual repository with other people submitting PRs I didn't realize that I was apparently the noted "author" and had to make more changes. So this one was my starting point, but it was no out of the box working experience. That said, knowing the source it used to help come up with the answer was good, in that I could read up on what the human being that it pulled from was talking about.
 
@@ -90,7 +90,7 @@ https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#3b_claude_acito
 
 Right out the gate, wherever Claude pulled this from was attempting to execute the action only on `workflow_dispatch`, which being familiar with GitHub Actions I can tell you is only [for manual invocations](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch), meaning someone would have to go to the Actions tab in the repository and click the "Run Workflow" button. It looked like the assumption from the response was that I'd be providing both the author and repo name and it would spit back the number count of `state: open` PRs, as detected via `octokit/request-action`.
 
-#### Verdict
+##### Verdict
 
 This wasn't for my need, so I moved on.
 
@@ -100,7 +100,7 @@ Officially, Microsoft's Bing team acts like Bing Chat is only available from MS 
 
 https://gist.github.com/edm00se/7e03ec794c947f58ec376b38920632ab#4_bing_chat_action_updated.yml
 
-#### Verdict
+##### Verdict
 
 I was intrigued, in spite of having already moved on. Maybe I'll consider checking against Bing in the future, as this seemed the most cohesive and likely to work out of the box. Then again it carries a downside of bing a BASH script at its heart, not a problem per se, but I do spend most of my time in JS/TS/Node and something in that flavor makes it instantly more easy to maintain.
 
