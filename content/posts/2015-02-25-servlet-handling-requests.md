@@ -12,7 +12,7 @@ permalink: /xpages-servlets/servlet-handling-requests/
 
 <!-- {% include series.html %} -->
 
-### Previously, on [#ASagaOfServlets](//twitter.com/search?q=%23ASagaOfServlets)
+### Previously, on [#ASagaOfServlets](/servlet-series/)
 
 So far in [this series](/servlet-series/) I've covered some [basics](/xpages-servlets/servlet-intro-and-flavors) on servlets, implementing our methods along with a showing of the ["flavors"](/xpages-servlets/servlet-intro-and-flavors/#flavors-of-servlets) of servlets, and how to implement these servlets [via a ServletFactory](/xpages-servlets/servlet-implementation/). This has been the ground work for everything that comes next.
 
