@@ -9,7 +9,7 @@ const paramCase = require('param-case');
 module.exports = {
   siteName: 'Dev | Blog',
   siteDescription:
-    'software development, operations, tooling, and musings on technology',
+    'software development, operations, tooling, and musings on technology by Eric McCormick',
   siteUrl: 'https://edm00se.io',
   icon: './src/favicon.png',
   titleTemplate: '%s',
