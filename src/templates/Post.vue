@@ -239,6 +239,7 @@ body[data-theme=dark] .gist {
 
 .post-comments {
   padding: calc(var(--space) / 2);
+  background-color: whitesmoke;
 
   &:empty {
     display: none;
