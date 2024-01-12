@@ -2,7 +2,7 @@
 title: 'DesignerFacesServlets on Bluemix'
 description: "everyone's a critic"
 date: 2015-09-25
-published: true
+published: false
 tags: ['xpages', 'bluemix', 'xpages-servlets']
 canonical_url: false
 category: bluemix
