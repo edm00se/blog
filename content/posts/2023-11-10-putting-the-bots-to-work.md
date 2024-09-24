@@ -32,7 +32,7 @@ is:pr created:2023-10-01..2023-10-31
 
 To filter out dependabot, which showed up under two names in my repo, add `-author:app/dependabot -author:app/dependabot-preview`.
 
-If you want to see merged, tack on `state:merged` to that query. [Here's the merged search for this October for reference](https://github.com/edm00se/awesome-board-games/pulls?q=is%3Apr+created%3A2018-10-01..2018-10-31+-author%3Aapp%2Fdependabot+-author%3Aapp%2Fdependabot-preview+state%3Amerged+).
+If you want to see merged, tack on `state:merged` to that query. [Here's the merged search for this October for reference](https://github.com/edm00se/awesome-board-games/pulls?q=is%3Apr+created%3A2023-10-01..2023-10-31+-author%3Aapp%2Fdependabot+-author%3Aapp%2Fdependabot-preview+state%3Amerged+).
 
 ### When Do The Bots Come In?
 
