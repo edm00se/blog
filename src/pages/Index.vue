@@ -3,6 +3,8 @@
     <!-- Author intro -->
     <Author :show-title="true"/>
 
+    <ArchivalBanner />
+
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
@@ -43,9 +45,11 @@ query($page: Int) {
 import Author from '~/components/Author.vue';
 import PostCard from '~/components/PostCard.vue';
 import { Pager } from 'gridsome';
+import ArchivalBanner from '~/components/ArchivalBanner.vue'; 
 
 export default {
   components: {
+    ArchivalBanner,
     Author,
     PostCard,
     Pager

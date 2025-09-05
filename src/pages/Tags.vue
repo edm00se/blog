@@ -9,6 +9,8 @@
         </h1>
       </div>
     </header>
+
+    <ArchivalBanner />
     
     <tag-item v-for="edge in tagsByCount" :key="edge.node.title" :tag="edge.node" />
     
@@ -16,11 +18,13 @@
 </template>
 
 <script>
-import config from '~/../gridsome.config.js'
-import TagItem from '@/components/TagItem'
+import config from '~/../gridsome.config.js';
+import TagItem from '@/components/TagItem';
+import ArchivalBanner from '~/components/ArchivalBanner.vue';
 
 export default {
   components: {
+    ArchivalBanner,
     TagItem
   },
   metaInfo () {
