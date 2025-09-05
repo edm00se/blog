@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style>
 /* Message Box */
 .message-box {
 	--color-message-box: #ffc;
@@ -25,9 +25,9 @@
 	margin-top: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	.message-box {
 		--color-message-box: #082840;
 	}
-}
+} */
 </style>
