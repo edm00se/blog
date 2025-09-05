@@ -13,10 +13,9 @@
 <style>
 /* Message Box */
 .message-box {
-	--color-message-box: #ffc;
 	display: block;
 	background-color: var(--color-message-box);
-	color: var(--color-gray-90);
+	color: var(--color-message-box-text);
 	padding: 1em 0.625em; /* 16px 10px /16 */
   margin-bottom: 2em;
 }
@@ -24,10 +23,4 @@
 .message-box ol {
 	margin-top: 0;
 }
-
-/* @media (prefers-color-scheme: dark) {
-	.message-box {
-		--color-message-box: #082840;
-	}
-} */
 </style>
