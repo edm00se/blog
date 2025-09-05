@@ -6,10 +6,14 @@ import DefaultLayout from '~/layouts/Default.vue';
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { router, head, isClient }) {
-  // set gh link rel=me
+  // set gh link rel=me and webmentions
   head.link.push({
     rel: 'me',
     href: 'https://github.com/edm00se'
+  });
+  head.link.push({
+    rel: 'webmention',
+    href: 'https://webmention.io/edm00se.io/webmention'
   });
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
