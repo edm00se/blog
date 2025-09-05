@@ -4,7 +4,7 @@
     <ol>
       <li>Check out my other projects, easily indexed from <a href="https://edm00se.codes/">edm00se.codes</a></li>
       <li>Connect with me on the fediverse, such as my mastodon account <a href="https://hachyderm.io/@edm00se">@edm00se@hachyderm.io</a>.</li>
-      <li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
+      <li>I've been drawing down my social media presence and if you <i>really, really</i> need to get ahold of me, you can either <a href="https://github.com/edm00se/ama">ask a question on my GitHub AMA</a> or use this <a href="https://edm00.se/contact">contact form</a>. I'll get an email notification and will respond when I'm able to.</li>
     </ol>
     <p>This blog is being maintained for archival purposes and should eventually be converted to a purely static site. If you find something useful here, that's great! Just note that the passage of time may color the writings contained herein. Date of posting should be viewable on every post, so double check that please.</p>
   </div>
