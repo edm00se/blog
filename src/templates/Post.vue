@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div v-if="isProd" class="post-comments">
+    <div v-if="false" class="post-comments">
       <vue-disqus shortname="em-devblog" :identifier="hasPermalink ? undefined : $page.post.title" :url="`https://edm00se.io${$page.post.path}`" />
     </div>
 
