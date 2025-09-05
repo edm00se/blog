@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <ArchivalBanner />
     <div class="search-box">
       <input
         id="search"
@@ -16,11 +17,13 @@
 
 <script>
 import Search from 'gridsome-plugin-flexsearch/SearchMixin';
+import ArchivalBanner from '~/components/ArchivalBanner.vue';
 import PostCard from '~/components/PostCard.vue';
 const dateformat = require('dateformat');
 
 export default {
   components: {
+    ArchivalBanner,
     PostCard
   },
   mixins: [Search],

@@ -7,7 +7,7 @@ A blog for capturing my efforts, thoughts, and more in dev, ops, cloud, and othe
 ## Built With
 
 - [gridsome](https://gridsome.org/)
-- [gridsome-starter-blog](https://gridsome-starter-blog.netlify.com)
+- [gridsome-starter-blog](https://github.com/gridsome/gridsome-starter-blog)
 
 ## [License](LICENSE.md)
 
