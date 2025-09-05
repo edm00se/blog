@@ -6,6 +6,8 @@
       <PostMeta :post="$page.post" />
     </div>
 
+    <ArchivalBanner />
+
     <div class="post content-box">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
@@ -34,6 +36,7 @@
 import PostMeta from '~/components/PostMeta';
 import PostTags from '~/components/PostTags';
 import Author from '~/components/Author';
+import ArchivalBanner from '~/components/ArchivalBanner.vue';
 import ToC from '~/components/ToC';
 import SeriesInfo from '~/components/SeriesInfo';
 import VueDisqus from '~/components/VueDisqus';
@@ -41,6 +44,7 @@ import '~/assets/style/prism-dark.scss';
 
 export default {
   components: {
+    ArchivalBanner,
     Author,
     PostMeta,
     PostTags,
